@@ -1,0 +1,305 @@
+.wide-workspace {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+.live-rail button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: #202020;
+  min-width: 75px;
+  padding: 10px;
+}
+.live-rail button.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+.live-rail button img {
+  width: 26px;
+  height: 26px;
+}
+.live-list {
+  padding: 0 18px;
+}
+.live-score {
+  margin-left: auto;
+  color: var(--accent);
+}
+.sports-filter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 10px 0 20px;
+}
+.sports-filter select {
+  background: #242424;
+  color: #eee;
+  border: 1px solid #444;
+  padding: 10px;
+  max-width: 75%;
+}
+.sports-rail::-webkit-scrollbar {
+  display: none;
+}
+.global-search-field input {
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: none;
+  color: white;
+}
+.event-breadcrumb {
+  padding: 20px 0;
+  color: #aaa;
+}
+.fixture-hero {
+  background: linear-gradient(120deg, #0b3b29, #173e31);
+  padding: 28px 30px;
+  text-align: center;
+  min-height: 175px;
+  border-radius: 8px;
+}
+.fixture-hero > span {
+  color: #bbc5bf;
+  font-size: 12px;
+}
+.fixture-hero > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 25px;
+}
+.fixture-hero > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  font-size: 23px;
+}
+.fixture-hero img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+.fixture-vs {
+  position: absolute;
+  right: 0;
+  color: #aaa;
+  font-size: 15px;
+}
+.event-categories {
+  margin: 20px 0 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.event-categories .pill {
+  background: none;
+  flex: none;
+  padding-top: 12px;
+}
+.market-search {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: 15px 0;
+}
+.market-search input {
+  padding: 10px;
+  background: #252525;
+  border: 1px solid #444;
+  color: #fff;
+  flex: 1;
+  min-width: 0;
+}
+.event-market {
+  margin: 12px 0;
+  background: #212121;
+  border: 1px solid #333;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.event-market summary {
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.event-market summary span {
+  float: right;
+  color: #aaa;
+  margin-right: 15px;
+}
+.market-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+  padding: 0 8px 10px;
+}
+.market-options.market-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.market-options .odd {
+  min-height: 52px;
+  padding: 12px;
+}
+.market-options .odd span {
+  display: block;
+}
+.market-options .odd strong {
+  color: #ffdf1b;
+}
+.local-betslip {
+  position: fixed;
+  bottom: 0;
+  right: max(15px, calc((100vw - 1410px) / 2));
+  z-index: 80;
+  width: 380px;
+  max-width: 100vw;
+  background: #202020;
+  color: #eee;
+  box-shadow: 0 -4px 30px #0008;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+.local-slip-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #187657;
+  color: #fff;
+  padding: 13px 15px;
+  text-align: left;
+}
+.local-slip-bar > b {
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  color: #126e51;
+  display: grid;
+  place-items: center;
+  border-radius: 2px;
+}
+.local-slip-bar strong {
+  margin-left: auto;
+}
+.local-slip-content {
+  max-height: 75dvh;
+  overflow: auto;
+  padding: 0 15px 15px;
+}
+.slip-selection-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.slip-selection-head button,
+.remove-pick {
+  background: none;
+  color: #aaa;
+}
+.remove-pick {
+  flex: none;
+  align-self: flex-start;
+  padding: 0 7px 0 0;
+}
+.local-betslip .slip-selection {
+  display: flex;
+}
+.local-betslip .slip-selection-info {
+  flex: 1;
+  min-width: 0;
+}
+.local-betslip .slip-selection-fixture {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 6px;
+}
+.local-slip-mask {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0007;
+  z-index: 79;
+}
+.local-slip-mask.show {
+  display: block;
+}
+.local-betslip .slip-actions {
+  display: flex;
+}
+.local-betslip .slip-stake {
+  width: 90px;
+}
+.local-betslip .slip-stake-input {
+  width: 100%;
+}
+.local-betslip .slip-place {
+  flex: 1;
+}
+.local-betslip .slip-place small {
+  display: block;
+  margin-top: 4px;
+}
+.app-shell .global-search-field {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.promotion-arrow.prev {
+  display: none;
+}
+.game-shell .local-betslip {
+  display: none;
+}
+@media (max-width: 700px) {
+  .fixture-hero {
+    padding: 20px 10px;
+    min-height: 155px;
+  }
+  .fixture-hero > div > div {
+    font-size: 16px;
+    gap: 8px;
+  }
+  .fixture-hero img {
+    width: 30px;
+    height: 30px;
+  }
+  .fixture-vs {
+    right: -4px;
+  }
+  .event-categories {
+    gap: 16px;
+  }
+  .market-search {
+    display: grid;
+    gap: 8px;
+  }
+  .market-options .odd {
+    font-size: 11px;
+    padding: 10px 7px;
+  }
+  .local-betslip {
+    right: 0;
+    bottom: 60px;
+    width: 100%;
+    border-radius: 0;
+  }
+  .local-betslip .local-slip-content {
+    max-height: 67dvh;
+  }
+  .sports-filter {
+    gap: 8px;
+  }
+  .live-list {
+    padding: 0 8px;
+  }
+  .sports-rail.live-rail {
+    padding: 12px 8px;
+  }
+  .local-betslip .slip-selection {
+    padding: 12px 0;
+  }
+}

@@ -1,0 +1,14 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M25 11.615C32.392 11.615 38.385 17.608 38.385 25C38.385 32.392 32.392 38.385 25 38.385C17.608 38.385 11.615 32.392 11.615 25C11.615 17.608 17.608 11.615 25 11.615ZM21.227 18.432V31.568L32.487 25L21.227 18.432Z" fill="url(#streaming-a)"/>
+<path d="M25 0C38.807 0 50 11.193 50 25C50 38.807 38.807 50 25 50C11.193 50 0 38.807 0 25C0 11.193 11.193 0 25 0ZM25 3.18C12.949 3.18 3.18 12.949 3.18 25C3.18 37.051 12.949 46.82 25 46.82C37.051 46.82 46.82 37.051 46.82 25C46.82 12.949 37.051 3.18 25 3.18Z" fill="url(#streaming-b)"/>
+<defs>
+<linearGradient id="streaming-a" x1="25" y1="11.615" x2="25" y2="38.385" gradientUnits="userSpaceOnUse">
+<stop stop-color="#54FFCA"/>
+<stop offset="1" stop-color="#00F9AB"/>
+</linearGradient>
+<linearGradient id="streaming-b" x1="25" y1="0" x2="25" y2="50" gradientUnits="userSpaceOnUse">
+<stop stop-color="#54FFCA"/>
+<stop offset="1" stop-color="#00F9AB"/>
+</linearGradient>
+</defs>
+</svg>

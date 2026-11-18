@@ -1,0 +1,21 @@
+<header class="registration-header">
+    <img class="registration-brand" src="/releases/20261117234105344-1f7bfdfb6fde/assets/images/brasabet-logo-6e195a6f51.png" alt="BrasaBet" width="180" height="38">
+    <h2 id="modal-title" class="registration-title">Registre-se</h2>
+  </header>
+  <div class="registration-body">
+    <p class="registration-intro">Crie sua conta em poucos segundos. Seu e-mail será usado para entrar e para avisos importantes da conta.</p>
+    <form id="auth-form" class="registration-form" data-register="true">
+      <div class="registration-fields">
+        <label class="registration-control"><span class="sr-only">Nome completo</span><input name="name" type="text" placeholder="Nome completo" autocomplete="name" minlength="5" maxlength="120" required="" style=""></label>
+        <label class="registration-control"><span class="sr-only">CPF</span><input name="cpf" type="text" placeholder="CPF" inputmode="numeric" autocomplete="off" maxlength="14" pattern="[0-9]{3}[.][0-9]{3}[.][0-9]{3}-[0-9]{2}" title="Informe os 11 dígitos do seu CPF." required="" style=""></label>
+        <label class="registration-control"><span class="sr-only">Endereço de e-mail</span><input name="email" type="email" placeholder="Endereço de e-mail" autocomplete="email" maxlength="254" required="" style=""></label>
+        <label class="registration-control phone-control"><span class="sr-only">Número de celular com DDD, Brasil +55</span><span class="phone-prefix" aria-hidden="true">+55</span><input name="phone" type="tel" placeholder="Número de celular" inputmode="tel" autocomplete="tel-national" maxlength="15" pattern="[(][1-9][0-9][)] 9[0-9]{4}-[0-9]{4}" title="Informe somente os 11 dígitos do celular com DDD." required="" style=""></label>
+        <div class="registration-control password-control"><label class="sr-only" for="registration-password">Senha</label><input id="registration-password" name="password" type="password" placeholder="Senha" autocomplete="new-password" minlength="6" maxlength="30" aria-describedby="password-help" required="" style=""><button type="button" data-action="toggle-password" aria-controls="registration-password" aria-pressed="false">Mostrar</button></div>
+      </div>
+      <p id="password-help" class="password-help">Use entre 6 e 30 caracteres. Evite sequências como 123456 e dados seus (nome, e-mail, CPF ou celular).</p>
+      <label class="registration-consent"><input type="checkbox" name="adult" required="" style=""><span>Tenho 18 anos ou mais e li e aceito os <a href="/termos.html" target="_blank" rel="noopener">Termos e Condições</a>, as <a href="/termos.html#regras" target="_blank" rel="noopener">Regras de Apostas</a> e a <a href="/termos.html#privacidade" target="_blank" rel="noopener">Política de Privacidade</a>.</span></label>
+      <p class="form-error" id="auth-error" role="alert" hidden=""></p>
+      <button type="submit" class="registration-submit">Registre-se</button>
+    </form>
+    <p class="registration-login">Já tem uma conta? <button type="button" class="text-button" data-action="login">Login</button></p>
+  </div><p class="recaptcha-notice">Protegido pelo reCAPTCHA. Aplicam-se a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> e os <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Termos de Serviço</a> do Google.</p>

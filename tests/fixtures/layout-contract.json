@@ -1,0 +1,3677 @@
+{
+  "components": {
+    "src/app/layout.tsx": [
+      {
+        "tag": "html",
+        "className": ""
+      },
+      {
+        "tag": "head",
+        "className": ""
+      },
+      {
+        "tag": "link",
+        "className": ""
+      },
+      {
+        "tag": "body",
+        "className": "\"app-shell\""
+      },
+      {
+        "tag": "Suspense",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"boot-screen\""
+      },
+      {
+        "tag": "SiteProvider",
+        "className": ""
+      },
+      {
+        "tag": "Shell",
+        "className": ""
+      }
+    ],
+    "src/components/account/account-icon.tsx": [
+      {
+        "tag": "path",
+        "className": ""
+      },
+      {
+        "tag": "path",
+        "className": ""
+      },
+      {
+        "tag": "rect",
+        "className": ""
+      },
+      {
+        "tag": "path",
+        "className": ""
+      },
+      {
+        "tag": "circle",
+        "className": ""
+      },
+      {
+        "tag": "path",
+        "className": ""
+      },
+      {
+        "tag": "circle",
+        "className": ""
+      },
+      {
+        "tag": "path",
+        "className": ""
+      },
+      {
+        "tag": "path",
+        "className": ""
+      },
+      {
+        "tag": "circle",
+        "className": ""
+      },
+      {
+        "tag": "path",
+        "className": ""
+      },
+      {
+        "tag": "rect",
+        "className": ""
+      },
+      {
+        "tag": "path",
+        "className": ""
+      },
+      {
+        "tag": "circle",
+        "className": ""
+      },
+      {
+        "tag": "path",
+        "className": ""
+      },
+      {
+        "tag": "svg",
+        "className": ""
+      }
+    ],
+    "src/components/account/account-page.tsx": [
+      {
+        "tag": "label",
+        "className": "\"me-field\""
+      },
+      {
+        "tag": "span",
+        "className": "\"sr-only\""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-label\""
+      },
+      {
+        "tag": "label",
+        "className": "\"me-select\""
+      },
+      {
+        "tag": "span",
+        "className": "\"sr-only\""
+      },
+      {
+        "tag": "select",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-message\""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-message ok\""
+      },
+      {
+        "tag": "button",
+        "className": "\"me-submit\""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text\""
+      },
+      {
+        "tag": "button",
+        "className": "\"me-submit\""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-balance\""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-balance-main\""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-available\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-balance-actions\""
+      },
+      {
+        "tag": "button",
+        "className": "\"me-action\""
+      },
+      {
+        "tag": "i",
+        "className": "\"in\""
+      },
+      {
+        "tag": "button",
+        "className": "\"me-action\""
+      },
+      {
+        "tag": "i",
+        "className": "\"out\""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-balance-side\""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text strong\""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text\""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text\""
+      },
+      {
+        "tag": "form",
+        "className": ""
+      },
+      {
+        "tag": "Field",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": "\"me-card\""
+      },
+      {
+        "tag": "h2",
+        "className": "\"me-subtitle\""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-note\""
+      },
+      {
+        "tag": "Field",
+        "className": ""
+      },
+      {
+        "tag": "Field",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text strong\""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text\""
+      },
+      {
+        "tag": "form",
+        "className": ""
+      },
+      {
+        "tag": "Field",
+        "className": ""
+      },
+      {
+        "tag": "Choice",
+        "className": ""
+      },
+      {
+        "tag": "option",
+        "className": ""
+      },
+      {
+        "tag": "option",
+        "className": ""
+      },
+      {
+        "tag": "form",
+        "className": ""
+      },
+      {
+        "tag": "Choice",
+        "className": ""
+      },
+      {
+        "tag": "option",
+        "className": ""
+      },
+      {
+        "tag": "Choice",
+        "className": ""
+      },
+      {
+        "tag": "option",
+        "className": ""
+      },
+      {
+        "tag": "option",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-note\""
+      },
+      {
+        "tag": "Choice",
+        "className": ""
+      },
+      {
+        "tag": "option",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "className": "\"me-subtitle\""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text strong\""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-yesno-row\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-yesno\""
+      },
+      {
+        "tag": "button",
+        "className": "{choice === value ? \"on\" : \"\"}"
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text\""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-device-local\""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"me-submit\""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text strong\""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text\""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text\""
+      },
+      {
+        "tag": "div",
+        "className": "\"account-transaction\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "form",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text\""
+      },
+      {
+        "tag": "Field",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"me-link\""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text strong\""
+      },
+      {
+        "tag": "p",
+        "className": "\"me-text\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"me-link\""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-label\""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-pair\""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"me-link\""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-label\""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-pair\""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"me-label\""
+      },
+      {
+        "tag": "form",
+        "className": ""
+      },
+      {
+        "tag": "Field",
+        "className": ""
+      },
+      {
+        "tag": "Field",
+        "className": ""
+      },
+      {
+        "tag": "Field",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"me-cancel\""
+      },
+      {
+        "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": "\"me\""
+      },
+      {
+        "tag": "nav",
+        "className": "\"me-nav\""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "{id === section ? \"on\" : \"\"}"
+      },
+      {
+        "tag": "div",
+        "className": "\"me-main\""
+      },
+      {
+        "tag": "h1",
+        "className": "\"me-title\""
+      },
+      {
+        "tag": "AccountContent",
+        "className": ""
+      }
+    ],
+    "src/components/account/account-surfaces.tsx": [
+      {
+        "tag": "p",
+        "className": "\"demo-note\""
+      },
+      {
+        "tag": "Dialog",
+        "className": "\"acc-menu account-menu-dialog\""
+      },
+      {
+        "tag": "div",
+        "className": "\"acc-top\""
+      },
+      {
+        "tag": "div",
+        "className": "\"acc-who\""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"acc-amount\""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"acc-refresh\""
+      },
+      {
+        "tag": "div",
+        "className": "\"acc-pay\""
+      },
+      {
+        "tag": "button",
+        "className": "\"acc-out\""
+      },
+      {
+        "tag": "button",
+        "className": "\"acc-in\""
+      },
+      {
+        "tag": "div",
+        "className": "\"acc-funds\""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "nav",
+        "className": "\"acc-tabs\""
+      },
+      {
+        "tag": "button",
+        "className": "{tab === id ? \"on\" : \"\"}"
+      },
+      {
+        "tag": "div",
+        "className": "\"acc-tiles\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"acc-tile\""
+      },
+      {
+        "tag": "AccountIcon",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"acc-links\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"acc-links\""
+      },
+      {
+        "tag": "button",
+        "className": "\"acc-exit\""
+      },
+      {
+        "tag": "p",
+        "className": "\"acc-offers\""
+      },
+      {
+        "tag": "div",
+        "className": "\"acc-alerts\""
+      },
+      {
+        "tag": "label",
+        "className": "\"acc-alert\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"acc-alert\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"acc-alert\""
+      },
+      {
+        "tag": "Dialog",
+        "className": "\"pix-dialog\""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcpx-panel\""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcpx-head\""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"bcpx-x\""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcpx-bal\""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcpx-tabs\""
+      },
+      {
+        "tag": "button",
+        "className": "{id === tab ? \"on\" : \"\"}"
+      },
+      {
+        "tag": "div",
+        "className": "\"bcpx-body\""
+      },
+      {
+        "tag": "WalletResult",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"pix-generated\""
+      },
+      {
+        "tag": "h3",
+        "className": ""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"demo-qr\""
+      },
+      {
+        "tag": "code",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"bcpx-btn\""
+      },
+      {
+        "tag": "DemoNote",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"form-error\""
+      },
+      {
+        "tag": "button",
+        "className": "\"bcpx-btn simulate-pix\""
+      },
+      {
+        "tag": "form",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcpx-kv\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "label",
+        "className": "\"bcpx-f\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcpx-money\""
+      },
+      {
+        "tag": "i",
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcpx-chips\""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"bcpx-link\""
+      },
+      {
+        "tag": "label",
+        "className": "\"bcpx-f\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "className": "\"bcpx-in\""
+      },
+      {
+        "tag": "p",
+        "className": "\"bcpx-note\""
+      },
+      {
+        "tag": "label",
+        "className": "\"bcpx-f\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"pix-key-tabs\""
+      },
+      {
+        "tag": "button",
+        "className": "{type === keyType ? \"on\" : \"\"}"
+      },
+      {
+        "tag": "label",
+        "className": "\"bcpx-f\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "className": "\"bcpx-in\""
+      },
+      {
+        "tag": "p",
+        "className": "\"bcpx-note\""
+      },
+      {
+        "tag": "p",
+        "className": "\"bcpx-note\""
+      },
+      {
+        "tag": "p",
+        "className": "\"form-error\""
+      },
+      {
+        "tag": "button",
+        "className": "\"bcpx-btn\""
+      },
+      {
+        "tag": "RecaptchaNote",
+        "className": ""
+      },
+      {
+        "tag": "h4",
+        "className": "\"withdrawals-title\""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"bcpx-note\""
+      },
+      {
+        "tag": "EventStatsDialog",
+        "className": ""
+      },
+      {
+        "tag": "SearchDialog",
+        "className": ""
+      },
+      {
+        "tag": "AuthDialog",
+        "className": ""
+      },
+      {
+        "tag": "AuthDialog",
+        "className": ""
+      },
+      {
+        "tag": "AccountMenu",
+        "className": ""
+      },
+      {
+        "tag": "Pix",
+        "className": ""
+      },
+      {
+        "tag": "Dialog",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"information-body\""
+      },
+      {
+        "tag": "button",
+        "className": "\"button button-accent full-width\""
+      }
+    ],
+    "src/components/account/auth-dialog.tsx": [
+      {
+        "tag": "p",
+        "className": "\"recaptcha-notice\""
+      },
+      {
+        "tag": "a",
+        "className": ""
+      },
+      {
+        "tag": "a",
+        "className": ""
+      },
+      {
+        "tag": "Dialog",
+        "className": "\"registration-dialog\""
+      },
+      {
+        "tag": "header",
+        "className": "\"registration-header\""
+      },
+      {
+        "tag": "img",
+        "className": "\"registration-brand\""
+      },
+      {
+        "tag": "h2",
+        "className": "\"registration-title\""
+      },
+      {
+        "tag": "div",
+        "className": "\"registration-body\""
+      },
+      {
+        "tag": "p",
+        "className": "\"registration-intro\""
+      },
+      {
+        "tag": "form",
+        "className": "\"registration-form\""
+      },
+      {
+        "tag": "div",
+        "className": "\"registration-fields\""
+      },
+      {
+        "tag": "label",
+        "className": "\"registration-control\""
+      },
+      {
+        "tag": "span",
+        "className": "\"sr-only\""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "label",
+        "className": "\"registration-control\""
+      },
+      {
+        "tag": "span",
+        "className": "\"sr-only\""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "label",
+        "className": "\"registration-control\""
+      },
+      {
+        "tag": "span",
+        "className": "\"sr-only\""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "label",
+        "className": "\"registration-control phone-control\""
+      },
+      {
+        "tag": "span",
+        "className": "\"sr-only\""
+      },
+      {
+        "tag": "span",
+        "className": "\"phone-prefix\""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"registration-control password-control\""
+      },
+      {
+        "tag": "label",
+        "className": "\"sr-only\""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"password-help\""
+      },
+      {
+        "tag": "label",
+        "className": "\"registration-consent\""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"form-error\""
+      },
+      {
+        "tag": "button",
+        "className": "\"registration-submit\""
+      },
+      {
+        "tag": "p",
+        "className": "\"registration-login\""
+      },
+      {
+        "tag": "button",
+        "className": "\"text-button\""
+      },
+      {
+        "tag": "p",
+        "className": "\"demo-note\""
+      },
+      {
+        "tag": "RecaptchaNote",
+        "className": ""
+      },
+      {
+        "tag": "Dialog",
+        "className": "\"login-dialog\""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "form",
+        "className": ""
+      },
+      {
+        "tag": "label",
+        "className": "\"field\""
+      },
+      {
+        "tag": "span",
+        "className": "\"sr-only\""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "label",
+        "className": "\"field\""
+      },
+      {
+        "tag": "span",
+        "className": "\"sr-only\""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"form-error\""
+      },
+      {
+        "tag": "button",
+        "className": "\"button button-accent full-width\""
+      },
+      {
+        "tag": "div",
+        "className": "\"login-links\""
+      },
+      {
+        "tag": "button",
+        "className": "\"login-register\""
+      },
+      {
+        "tag": "span",
+        "className": "\"login-recovery\""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"login-responsible\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "RecaptchaNote",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"demo-explore\""
+      }
+    ],
+    "src/components/account/wallet-result.tsx": [
+      {
+        "tag": "section",
+        "className": "{`bcpx-result bcpx-result-${paid ? \"success\" : \"pending\"}`}"
+      },
+      {
+        "tag": "div",
+        "className": "\"bcpx-result-animation\""
+      },
+      {
+        "tag": "i",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcpx-result-icon\""
+      },
+      {
+        "tag": "svg",
+        "className": ""
+      },
+      {
+        "tag": "path",
+        "className": "\"bcpx-result-check\""
+      },
+      {
+        "tag": "circle",
+        "className": ""
+      },
+      {
+        "tag": "path",
+        "className": ""
+      },
+      {
+        "tag": "h3",
+        "className": ""
+      },
+      {
+        "tag": "strong",
+        "className": "\"bcpx-result-amount\""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"bcpx-btn\""
+      },
+      {
+        "tag": "button",
+        "className": "\"bcpx-link\""
+      }
+    ],
+    "src/components/casino/casino.tsx": [
+      {
+        "tag": "article",
+        "className": "\"bcc-g\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"bcc-game-launch\""
+      },
+      {
+        "tag": "span",
+        "className": "\"bcc-g-img\""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"bcc-g-info\""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"bcc-i\""
+      },
+      {
+        "tag": "section",
+        "className": "{`bcc-sec ${style}`}"
+      },
+      {
+        "tag": "div",
+        "className": "\"bcc-head\""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"bcc-os\""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "i",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcc-row\""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcc-trilho\""
+      },
+      {
+        "tag": "GameCard",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "{`casino-arrows ${list.length < 9 ? \"casino-arrows-few\" : \"\"}`}"
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "ChevronLeft",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "ChevronRight",
+        "className": ""
+      },
+      {
+        "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"casino-page bcc\""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcc-top\""
+      },
+      {
+        "tag": "form",
+        "className": "\"bcc-busca\""
+      },
+      {
+        "tag": "Search",
+        "className": "\"bcc-lupa\""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "nav",
+        "className": "\"bcc-cats\""
+      },
+      {
+        "tag": "Link",
+        "className": "{`bcc-cat ${category === item.id ? \"on\" : \"\"}`}"
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": "\"bcc-sec\""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcc-head\""
+      },
+      {
+        "tag": "h1",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"casino-local-grid\""
+      },
+      {
+        "tag": "GameCard",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"empty-local\""
+      },
+      {
+        "tag": "Pagination",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "GameRow",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": "\"bcc-sec\""
+      },
+      {
+        "tag": "div",
+        "className": "\"bcc-head\""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"casino-providers\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "main",
+        "className": "\"casino-play\""
+      },
+      {
+        "tag": "header",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"casino-play-stage\""
+      },
+      {
+        "tag": "section",
+        "className": "\"casino-demo\""
+      },
+      {
+        "tag": "img",
+        "className": "\"casino-demo-cover\""
+      },
+      {
+        "tag": "p",
+        "className": "\"casino-demo-label\""
+      },
+      {
+        "tag": "div",
+        "className": "{`demo-reels ${spinning ? \"spinning\" : \"\"}`}"
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "strong",
+        "className": "\"casino-demo-credit\""
+      },
+      {
+        "tag": "button",
+        "className": "\"button button-accent\""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"button\""
+      }
+    ],
+    "src/components/dialog.tsx": [
+      {
+        "tag": "dialog",
+        "className": "{className}"
+      },
+      {
+        "tag": "button",
+        "className": "\"modal-close icon-button\""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      }
+    ],
+    "src/components/info/info.tsx": [
+      {
+        "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "article",
+        "className": "\"section-page\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "h1",
+        "className": ""
+      },
+      {
+        "tag": "details",
+        "className": "\"event-market\""
+      },
+      {
+        "tag": "summary",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"button button-outline\""
+      },
+      {
+        "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "article",
+        "className": "\"section-page\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "h1",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"button button-accent\""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "article",
+        "className": "\"section-page\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "h1",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "article",
+        "className": "\"section-page\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "h1",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"button button-accent\""
+      }
+    ],
+    "src/components/rewards/rewards.tsx": [
+      {
+        "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": "\"rewards-page\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"reward-back\""
+      },
+      {
+        "tag": "h1",
+        "className": ""
+      },
+      {
+        "tag": "Gift",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"reward-overview\""
+      },
+      {
+        "tag": "article",
+        "className": "\"reward-active\""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "article",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "article",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"reward-empty\""
+      },
+      {
+        "tag": "Gift",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"button button-accent\""
+      },
+      {
+        "tag": "div",
+        "className": "\"rewards-promotions\""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"reward-tabs\""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      }
+    ],
+    "src/components/shell.tsx": [
+      {
+        "tag": "div",
+        "className": "{`brasa-app ${game ? \"game-shell\" : \"\"}`}"
+      },
+      {
+        "tag": "a",
+        "className": "\"skip-link\""
+      },
+      {
+        "tag": "div",
+        "className": "\"install-strip\""
+      },
+      {
+        "tag": "div",
+        "className": "\"install-inner\""
+      },
+      {
+        "tag": "span",
+        "className": "\"install-logo\""
+      },
+      {
+        "tag": "br",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"install-cta\""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "X",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"responsible-bar\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"responsible-symbol\""
+      },
+      {
+        "tag": "header",
+        "className": "\"header\""
+      },
+      {
+        "tag": "div",
+        "className": "\"header-inner\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"brand\""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "nav",
+        "className": "\"primary-nav\""
+      },
+      {
+        "tag": "Link",
+        "className": "{ view === \"home\" || view === \"event\" ? \"active\" : \"\" }"
+      },
+      {
+        "tag": "Link",
+        "className": "{view === \"live\" ? \"active\" : \"\"}"
+      },
+      {
+        "tag": "Link",
+        "className": "{view === \"bets\" ? \"active\" : \"\"}"
+      },
+      {
+        "tag": "Link",
+        "className": "{view === \"casino\" ? \"active\" : \"\"}"
+      },
+      {
+        "tag": "button",
+        "className": "\"header-search\""
+      },
+      {
+        "tag": "Search",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"rewards-link\""
+      },
+      {
+        "tag": "div",
+        "className": "\"account-actions\""
+      },
+      {
+        "tag": "button",
+        "className": "\"acc-balance\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "i",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"account-avatar\""
+      },
+      {
+        "tag": "span",
+        "className": "\"hrm-fd hrm-33\""
+      },
+      {
+        "tag": "UserRound",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"button button-outline registration-trigger\""
+      },
+      {
+        "tag": "button",
+        "className": "\"button button-outline\""
+      },
+      {
+        "tag": "nav",
+        "className": "\"mobile-nav\""
+      },
+      {
+        "tag": "Link",
+        "className": "{path === url ? \"active\" : \"\"}"
+      },
+      {
+        "tag": "Icon",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "SportsBetSlip",
+        "className": ""
+      },
+      {
+        "tag": "AccountSurfaces",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": "\"marketing-consent\""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"marketing-consent-actions\""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "footer",
+        "className": "\"footer\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"transmission-note\""
+      },
+      {
+        "tag": "div",
+        "className": "\"footer-columns\""
+      },
+      {
+        "tag": "section",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"footer-responsible\""
+      },
+      {
+        "tag": "span",
+        "className": "\"age-badge\""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "br",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"footer-copyright\""
+      }
+    ],
+    "src/components/sports/bet-slip.tsx": [
+      {
+        "tag": "button",
+        "className": "\"slip-backdrop\""
+      },
+      {
+        "tag": "aside",
+        "className": "\"betslip mobile-open\""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "header",
+        "className": "\"demo-slip-heading\""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": "\"slip-builder\""
+      },
+      {
+        "tag": "button",
+        "className": "\"slip-icon slip-close\""
+      },
+      {
+        "tag": "header",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"slip-builder-event\""
+      },
+      {
+        "tag": "div",
+        "className": "\"slip-builder-selection\""
+      },
+      {
+        "tag": "button",
+        "className": "\"slip-icon slip-close\""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"slip-selection-title\""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": "\"slip-selection-market\""
+      },
+      {
+        "tag": "div",
+        "className": "{`slip-selection ${pick.kind === \"boost\" ? \"slip-boost\" : \"\"}`}"
+      },
+      {
+        "tag": "button",
+        "className": "\"slip-icon slip-close\""
+      },
+      {
+        "tag": "div",
+        "className": "\"slip-selection-info\""
+      },
+      {
+        "tag": "div",
+        "className": "\"slip-selection-title\""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": "\"slip-selection-market\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"slip-selection-fixture\""
+      },
+      {
+        "tag": "span",
+        "className": "\"slip-selection-badge slip-selection-badge-pa\""
+      },
+      {
+        "tag": "span",
+        "className": "\"slip-selection-badge slip-selection-badge-boost\""
+      },
+      {
+        "tag": "form",
+        "className": "\"slip-form\""
+      },
+      {
+        "tag": "p",
+        "className": "\"form-error\""
+      },
+      {
+        "tag": "div",
+        "className": "\"slip-actions\""
+      },
+      {
+        "tag": "label",
+        "className": "\"slip-stake\""
+      },
+      {
+        "tag": "input",
+        "className": "\"slip-stake-input\""
+      },
+      {
+        "tag": "button",
+        "className": "\"slip-place\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"demo-slip-minimize\""
+      },
+      {
+        "tag": "section",
+        "className": "\"demo-slip-reopen\""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "ChevronUp",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      }
+    ],
+    "src/components/sports/bets.tsx": [
+      {
+        "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": "\"my-bets\""
+      },
+      {
+        "tag": "h1",
+        "className": "\"sr-only\""
+      },
+      {
+        "tag": "nav",
+        "className": "\"mb-tabs\""
+      },
+      {
+        "tag": "Link",
+        "className": "{item.id === tab.id ? \"active\" : undefined}"
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-empty mb-signin\""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"button button-accent\""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-list\""
+      },
+      {
+        "tag": "MyBetCard",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-empty\""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "nav",
+        "className": "\"mb-pagination\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      }
+    ],
+    "src/components/sports/event-detail.tsx": [
+      {
+        "tag": "details",
+        "className": "\"market-group\""
+      },
+      {
+        "tag": "summary",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "em",
+        "className": "\"market-offer\""
+      },
+      {
+        "tag": "button",
+        "className": "\"market-builder\""
+      },
+      {
+        "tag": "div",
+        "className": "{`market-options ${market.options.length === 3 ? \"three-way\" : \"\"} ${market.name === \"Dupla Chance\" ? \"double-chance\" : \"\"}`}"
+      },
+      {
+        "tag": "Odd",
+        "className": ""
+      },
+      {
+        "tag": "details",
+        "className": "\"market-group boost-pod\""
+      },
+      {
+        "tag": "summary",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"boost-title\""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "i",
+        "className": "\"boost-chev boost-chev-big\""
+      },
+      {
+        "tag": "div",
+        "className": "\"boost-body\""
+      },
+      {
+        "tag": "div",
+        "className": "\"boost-grid\""
+      },
+      {
+        "tag": "button",
+        "className": "{`boost-card ${offer.pernas.length > 1 ? \"boost-card-builder\" : \"\"} ${selected ? \"selected\" : \"\"}`}"
+      },
+      {
+        "tag": "span",
+        "className": "\"boost-text\""
+      },
+      {
+        "tag": "span",
+        "className": "\"boost-name\""
+      },
+      {
+        "tag": "span",
+        "className": "\"boost-legs\""
+      },
+      {
+        "tag": "span",
+        "className": "\"boost-leg\""
+      },
+      {
+        "tag": "i",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"boost-market\""
+      },
+      {
+        "tag": "span",
+        "className": "\"boost-odd\""
+      },
+      {
+        "tag": "span",
+        "className": "\"boost-price\""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "s",
+        "className": ""
+      },
+      {
+        "tag": "i",
+        "className": "\"boost-chev\""
+      },
+      {
+        "tag": "span",
+        "className": "\"boost-price\""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": "\"match-header\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"event-back\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "ArrowLeft",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"match-heading\""
+      },
+      {
+        "tag": "p",
+        "className": "\"match-meta-heading\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "time",
+        "className": ""
+      },
+      {
+        "tag": "h1",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"event-team-fragment\""
+      },
+      {
+        "tag": "span",
+        "className": "\"match-versus\""
+      },
+      {
+        "tag": "span",
+        "className": "\"match-team\""
+      },
+      {
+        "tag": "img",
+        "className": "\"team-logo\""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"match-form\""
+      },
+      {
+        "tag": "i",
+        "className": "{`form-${result.toLowerCase()}`}"
+      },
+      {
+        "tag": "Link",
+        "className": "\"match-markets-jump\""
+      },
+      {
+        "tag": "div",
+        "className": "\"market-tabs-bar\""
+      },
+      {
+        "tag": "button",
+        "className": "\"market-tabs-arrow event-visible-arrow\""
+      },
+      {
+        "tag": "ChevronLeft",
+        "className": ""
+      },
+      {
+        "tag": "nav",
+        "className": "\"market-tabs\""
+      },
+      {
+        "tag": "button",
+        "className": "{category === tab ? \"active\" : \"\"}"
+      },
+      {
+        "tag": "button",
+        "className": "\"market-tabs-arrow event-visible-arrow\""
+      },
+      {
+        "tag": "ChevronRight",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"builder-notice\""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"event-markets-list\""
+      },
+      {
+        "tag": "BoostedMarkets",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "MarketGroup",
+        "className": ""
+      },
+      {
+        "tag": "BoostedMarkets",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"market-empty\""
+      }
+    ],
+    "src/components/sports/event-stats-dialog.tsx": [
+      {
+        "tag": "Dialog",
+        "className": "\"event-stats-dialog\""
+      },
+      {
+        "tag": "div",
+        "className": "\"information-page\""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"statistics-score\""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"button button-outline\""
+      }
+    ],
+    "src/components/sports/live.tsx": [
+      {
+        "tag": "button",
+        "className": "{`live-favorite ${active ? \"active\" : \"\"}`}"
+      },
+      {
+        "tag": "Star",
+        "className": ""
+      },
+      {
+        "tag": "aside",
+        "className": "\"live-overview\""
+      },
+      {
+        "tag": "div",
+        "className": "\"local-live-panel\""
+      },
+      {
+        "tag": "header",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "nav",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "{tab === label ? \"active\" : \"\"}"
+      },
+      {
+        "tag": "div",
+        "className": "\"local-live-statistics\""
+      },
+      {
+        "tag": "div",
+        "className": "\"local-stat-wheels\""
+      },
+      {
+        "tag": "section",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"local-stat-ring\""
+      },
+      {
+        "tag": "i",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"local-shots\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "i",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": "\"local-stat-line\""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "i",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"local-live-details\""
+      },
+      {
+        "tag": "h3",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "footer",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"event-list-content\""
+      },
+      {
+        "tag": "div",
+        "className": "\"live-board\""
+      },
+      {
+        "tag": "div",
+        "className": "\"live-table\""
+      },
+      {
+        "tag": "nav",
+        "className": "\"live-navigation\""
+      },
+      {
+        "tag": "Link",
+        "className": "{sport === id ? \"active\" : \"\"}"
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"live-nav-symbol\""
+      },
+      {
+        "tag": "h1",
+        "className": "\"sr-only\""
+      },
+      {
+        "tag": "section",
+        "className": "{`live-sport live-sport-${sportId}`}"
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "nav",
+        "className": "\"live-market-tabs\""
+      },
+      {
+        "tag": "button",
+        "className": "{marketTab === id ? \"active\" : \"\"}"
+      },
+      {
+        "tag": "section",
+        "className": "\"live-competition\""
+      },
+      {
+        "tag": "header",
+        "className": "\"live-competition-heading\""
+      },
+      {
+        "tag": "div",
+        "className": "\"live-league-title\""
+      },
+      {
+        "tag": "Favorite",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "{`live-column-labels ${rows?.[0] && resultMarket(rows[0])?.options.length === 2 ? \"live-column-labels-two\" : \"\"}`}"
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"live-media-space\""
+      },
+      {
+        "tag": "article",
+        "className": "\"live-row\""
+      },
+      {
+        "tag": "div",
+        "className": "\"live-row-body\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"live-teams\""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "img",
+        "className": "\"team-logo\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "{`live-prices ${market?.options.length === 2 ? \"local-live-two\" : \"\"} ${marketTab === \"totals\" ? \"live-prices-totals\" : \"\"}`}"
+      },
+      {
+        "tag": "Odd",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"live-price-unavailable\""
+      },
+      {
+        "tag": "button",
+        "className": "{`live-match-link ${chosen?.id === event.id ? \"active\" : \"\"}`}"
+      },
+      {
+        "tag": "Goal",
+        "className": ""
+      },
+      {
+        "tag": "footer",
+        "className": ""
+      },
+      {
+        "tag": "Favorite",
+        "className": ""
+      },
+      {
+        "tag": "time",
+        "className": "\"match-clock\""
+      },
+      {
+        "tag": "button",
+        "className": "\"live-stats\""
+      },
+      {
+        "tag": "ChartNoAxesColumn",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"empty-local\""
+      },
+      {
+        "tag": "StatisticsPanel",
+        "className": ""
+      }
+    ],
+    "src/components/sports/my-bet-card.tsx": [
+      {
+        "tag": "div",
+        "className": "\"mb-game\""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-fixture\""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "img",
+        "className": "\"team-logo\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-clock\""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-selection\""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-selection-row\""
+      },
+      {
+        "tag": "i",
+        "className": "{`mb-result-icon ${status.color}${status.symbol === \"×\" ? \" is-cross\" : \"\"}`}"
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "em",
+        "className": "\"mb-live\""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-pa\""
+      },
+      {
+        "tag": "span",
+        "className": "\"mb-pa-tag\""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-market\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"mb-event\""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-item\""
+      },
+      {
+        "tag": "details",
+        "className": "{`mb-card ${settled ? \"resolved\" : \"pending\"} ${status.color}`}"
+      },
+      {
+        "tag": "summary",
+        "className": "\"mb-head\""
+      },
+      {
+        "tag": "span",
+        "className": "\"mb-stake\""
+      },
+      {
+        "tag": "span",
+        "className": "\"mb-type\""
+      },
+      {
+        "tag": "span",
+        "className": "\"mb-aum\""
+      },
+      {
+        "tag": "span",
+        "className": "{`mb-pill ${status.color}`}"
+      },
+      {
+        "tag": "em",
+        "className": "\"mb-live-badge\""
+      },
+      {
+        "tag": "i",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"mb-summary\""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-body\""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-aum-line\""
+      },
+      {
+        "tag": "span",
+        "className": "\"mb-aum\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-actions\""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "Share",
+        "className": ""
+      },
+      {
+        "tag": "BetSelection",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-totals\""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "{`mb-result ${status.color}`}"
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"mb-local-cancel\""
+      },
+      {
+        "tag": "div",
+        "className": "\"mb-cashout\""
+      },
+      {
+        "tag": "button",
+        "className": "{`mb-co ${busy ? \"busy\" : confirmCashout ? \"confirm\" : \"\"}`}"
+      },
+      {
+        "tag": "b",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"mb-notice\""
+      }
+    ],
+    "src/components/sports/search-dialog.tsx": [
+      {
+        "tag": "Dialog",
+        "className": "\"demo-search-dialog\""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "label",
+        "className": "\"demo-search-input\""
+      },
+      {
+        "tag": "Search",
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"demo-search-results\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"search-panel-item\""
+      },
+      {
+        "tag": "img",
+        "className": "\"search-panel-icon\""
+      },
+      {
+        "tag": "div",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"search-panel-main\""
+      },
+      {
+        "tag": "div",
+        "className": "\"search-panel-sub\""
+      },
+      {
+        "tag": "p",
+        "className": "\"search-panel-empty\""
+      }
+    ],
+    "src/components/sports/workspace.tsx": [
+      {
+        "tag": "aside",
+        "className": "\"sidebar\""
+      },
+      {
+        "tag": "p",
+        "className": "\"sidebar-title\""
+      },
+      {
+        "tag": "nav",
+        "className": "\"featured-navigation\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"sidebar-title\""
+      },
+      {
+        "tag": "nav",
+        "className": "\"sports-navigation\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"sport-link\""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"sport-link\""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"sport-link\""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"sidebar-footer\""
+      },
+      {
+        "tag": "br",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "{`layout ${!sidebar ? \"wide-workspace\" : \"\"}`}"
+      },
+      {
+        "tag": "Sidebar",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"content-column\""
+      },
+      {
+        "tag": "form",
+        "className": "\"global-search-field\""
+      },
+      {
+        "tag": "Search",
+        "className": ""
+      },
+      {
+        "tag": "input",
+        "className": ""
+      },
+      {
+        "tag": "main",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": "\"search-local\""
+      },
+      {
+        "tag": "div",
+        "className": "\"section-heading\""
+      },
+      {
+        "tag": "h1",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": ""
+      },
+      {
+        "tag": "MatchCard",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": "\"empty-local\""
+      },
+      {
+        "tag": "Footer",
+        "className": ""
+      },
+      {
+        "tag": "nav",
+        "className": "\"sports-rail\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "section",
+        "className": "\"promotion-carousel\""
+      },
+      {
+        "tag": "div",
+        "className": "\"promotion-rail\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"promotion-card\""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"promotion-card\""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"promotion-card\""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"promotion-status\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"promotion-card promotion-card-casino\""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": "\"promotion-casino-copy\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "br",
+        "className": ""
+      },
+      {
+        "tag": "small",
+        "className": ""
+      },
+      {
+        "tag": "button",
+        "className": "\"promotion-arrow prev\""
+      },
+      {
+        "tag": "button",
+        "className": "\"promotion-arrow next\""
+      },
+      {
+        "tag": "button",
+        "className": "{`odd ${selected ? \"selected\" : \"\"} ${compact ? \"compact-odd\" : \"\"}`}"
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "strong",
+        "className": ""
+      },
+      {
+        "tag": "LockKeyhole",
+        "className": ""
+      },
+      {
+        "tag": "article",
+        "className": "{`event-row reference-event ${live ? \"live-card\" : \"\"}`}"
+      },
+      {
+        "tag": "div",
+        "className": "\"event-body\""
+      },
+      {
+        "tag": "Link",
+        "className": "\"event-open\""
+      },
+      {
+        "tag": "div",
+        "className": "\"teams\""
+      },
+      {
+        "tag": "div",
+        "className": "\"team\""
+      },
+      {
+        "tag": "img",
+        "className": "\"team-logo\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "b",
+        "className": "\"live-score\""
+      },
+      {
+        "tag": "div",
+        "className": "{`odds-grid ${market?.options.length === 2 ? \"two-way\" : \"\"}`}"
+      },
+      {
+        "tag": "Odd",
+        "className": ""
+      },
+      {
+        "tag": "footer",
+        "className": "\"match-meta\""
+      },
+      {
+        "tag": "span",
+        "className": "\"match-league\""
+      },
+      {
+        "tag": "div",
+        "className": "\"match-details\""
+      },
+      {
+        "tag": "time",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"market-count\""
+      },
+      {
+        "tag": "button",
+        "className": "\"event-stats\""
+      },
+      {
+        "tag": "ChartNoAxesColumn",
+        "className": ""
+      },
+      {
+        "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "SportsRail",
+        "className": ""
+      },
+      {
+        "tag": "Promotions",
+        "className": ""
+      },
+      {
+        "tag": "nav",
+        "className": "\"home-tabs\""
+      },
+      {
+        "tag": "Link",
+        "className": "{tab === id ? \"active\" : \"\"}"
+      },
+      {
+        "tag": "section",
+        "className": "\"competition reference-competition\""
+      },
+      {
+        "tag": "div",
+        "className": "\"competition-title\""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "img",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"competition-heading\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"column-labels\""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "MatchCard",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"empty-local\""
+      },
+      {
+        "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "SportsRail",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"section-heading\""
+      },
+      {
+        "tag": "h1",
+        "className": ""
+      },
+      {
+        "tag": "span",
+        "className": ""
+      },
+      {
+        "tag": "form",
+        "className": "\"sports-filter\""
+      },
+      {
+        "tag": "label",
+        "className": ""
+      },
+      {
+        "tag": "select",
+        "className": ""
+      },
+      {
+        "tag": "option",
+        "className": ""
+      },
+      {
+        "tag": "option",
+        "className": ""
+      },
+      {
+        "tag": "MatchCard",
+        "className": ""
+      },
+      {
+        "tag": "div",
+        "className": "\"empty-local\""
+      },
+      {
+        "tag": "h2",
+        "className": ""
+      },
+      {
+        "tag": "p",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "\"button button-outline\""
+      },
+      {
+        "tag": "Pagination",
+        "className": ""
+      },
+      {
+        "tag": "nav",
+        "className": "\"page-nav\""
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "ChevronLeft",
+        "className": ""
+      },
+      {
+        "tag": "Link",
+        "className": "{number === page ? \"active\" : \"\"}"
+      },
+      {
+        "tag": "Link",
+        "className": ""
+      },
+      {
+        "tag": "ChevronRight",
+        "className": ""
+      }
+    ]
+  },
+  "styles": {
+    "src/app/globals.css": "e56c3c8a313a579a84cf40f4b89e3b113cc72da64a03623153e75a3f17bcfae9",
+    "src/components/account/account.css": "71488a42d41a291359df7963e316aa5702b57fe07bdbb3d225a68064378769fe",
+    "src/components/casino/casino.css": "6048aff119171575d1cb25deca4211a0475fe9d235f76034d4cb1eeaa621e371",
+    "src/components/sports/bet-slip.css": "e47aafdefd74d7fc1e6c40eeb0e3a13ed239527a898d5f68952d9162ec7cfc73",
+    "src/components/sports/bets.css": "4cab5ce4fac4a2cc8faa021b273381f013b3f39bc9b87a6e5935aced8065a7cd",
+    "src/components/sports/event.css": "c77fc3a3deca8e4fa5489472c43651ce0817e04d8b6cd2c32e9c9b753901ffc6",
+    "src/components/sports/live.css": "3d25e4dd3c9211d0afb4c73446f4248b89d56c567bd534e4a090f1259a1d1cc8",
+    "src/components/sports/sports.css": "27ef41326010fb8391920edd093e9c29cb6acf156104e8070fa587e7dcbc9257",
+    "public/reference.css": "4ebf21e8ecae8e9ff410be235405054d9c5fcbf9f160d3ff95ab8db2cfa409b3"
+  }
+}

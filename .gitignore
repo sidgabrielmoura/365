@@ -1,0 +1,15 @@
+node_modules/
+.next/
+.next-demo/
+.local/
+.env*
+!.env.example
+evidence/local/backoffice-*
+*.tsbuildinfo
+evidence/rea-auth-inspection.json
+evidence/auth-*.html
+evidence/auth-*.json
+evidence/auth-*.png
+evidence/fragment-*.html
+test-results/
+playwright-report/

@@ -1,0 +1,224 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+@source "../components";
+@source "./";
+
+.brasa-app {
+  min-height: 100dvh;
+  background: #111;
+}
+.boot-screen {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  color: #ffdf1b;
+  font-size: 40px;
+  font-weight: 800;
+  background: #0b3428;
+}
+.install-strip {
+  height: 60px;
+  background: linear-gradient(100deg, #0e5147, #05241a);
+  color: #fff;
+}
+.install-inner {
+  height: 100%;
+  max-width: 1450px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.install-logo {
+  display: grid;
+  align-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #0b554b;
+  line-height: 12px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+}
+.install-logo b {
+  color: #ffdf1b;
+}
+.install-inner > div {
+  display: grid;
+  gap: 5px;
+}
+.install-inner strong {
+  font-size: 15px;
+}
+.install-inner > div span {
+  font-size: 12px;
+}
+.install-inner > button {
+  background: none;
+  color: #b8c4c5;
+  padding: 8px;
+}
+.install-cta {
+  margin-left: auto;
+  background: #ffdf1b;
+  color: #111;
+  padding: 12px 17px;
+  border-radius: 25px;
+  font-weight: 700;
+}
+.app-shell .responsible-bar {
+  justify-content: flex-end;
+  background: #202020;
+  color: #fff;
+}
+.responsible-symbol {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background: url("/assets/images/responsible-gaming.svg") center/contain
+    no-repeat;
+  vertical-align: middle;
+}
+.app-shell.has-install-strip .layout {
+  height: calc(100dvh - 175px);
+}
+.section-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 30px 22px;
+  min-height: 70vh;
+}
+.section-page h1 {
+  font-size: 26px;
+}
+.section-page h2 {
+  font-size: 19px;
+}
+.section-page p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #bbc3bd;
+}
+.demo-note {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #818181;
+  text-align: center;
+  margin: 12px 0 0;
+}
+.page-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin: 24px 0;
+}
+.page-nav a,
+.page-nav button {
+  padding: 9px 13px;
+  border: 1px solid #444;
+  background: #202020;
+  border-radius: 4px;
+}
+.page-nav .active {
+  background: var(--accent);
+  color: #082f22;
+}
+.empty-local {
+  padding: 60px 20px;
+  text-align: center;
+  color: #aaa;
+}
+.empty-local h2 {
+  color: #eee;
+}
+.empty-local p {
+  line-height: 1.6;
+}
+.empty-local .button {
+  margin-top: 12px;
+}
+.form-error {
+  line-height: 1.5;
+}
+@media (max-width: 700px) {
+  .install-strip {
+    height: 60px;
+  }
+  .install-inner {
+    padding: 0 10px;
+    gap: 8px;
+  }
+  .install-inner > div span {
+    font-size: 10px;
+  }
+  .install-inner strong {
+    font-size: 12px;
+  }
+  .install-logo {
+    width: 32px;
+    height: 32px;
+    font-size: 10px;
+  }
+  .install-cta {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+  .app-shell.has-install-strip .layout {
+    height: calc(100dvh - 168px - env(safe-area-inset-bottom));
+  }
+  .rewards-link {
+    display: none;
+  }
+  .demo-note {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.registration-trigger {
+  color: #ffdf1b !important;
+  border-color: #ffdf1b !important;
+}
+
+.demo-search-dialog {
+  background: #282828;
+  color: #fff;
+  max-width: 650px;
+  width: calc(100% - 24px);
+  padding: 20px;
+}
+.demo-search-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #383838;
+  padding: 14px;
+}
+.demo-search-input input {
+  color: #fff;
+  background: none;
+  width: 100%;
+  border: 0;
+  outline: none;
+}
+.demo-search-results {
+  max-height: 55vh;
+  overflow: auto;
+  margin-top: 12px;
+}
+.demo-search-dialog h2 {
+  font-size: 20px;
+}

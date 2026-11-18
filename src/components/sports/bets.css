@@ -1,0 +1,32 @@
+.mb-signin .button {
+  margin-top: 14px;
+}
+.mb-local-cancel {
+  justify-self: start;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #c9cecb;
+  font: inherit;
+  font-size: 11px;
+  text-decoration: underline;
+}
+.mb-local-cancel:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+.mb-local-cancel:focus-visible {
+  outline: 2px solid #28ffbb;
+  outline-offset: 4px;
+}
+@media (max-width: 700px) {
+  .mb-selection-row {
+    flex-wrap: wrap;
+  }
+  .mb-pa {
+    max-width: 100%;
+  }
+  .mb-pill {
+    max-width: 110px;
+  }
+}

@@ -1,0 +1,95 @@
+.slip-selection-badge-soft{background:#3a3a3a;color:#ddd}
+.slip-builder{margin:12px 10px;border:1px solid #444;border-radius:4px;overflow:hidden}
+.slip-builder header{display:flex;align-items:center;justify-content:space-between;padding:10px 12px 4px;font-size:14px;color:#28ffbb}
+.slip-builder header small{margin-left:5px;color:#aaa;font-size:11px}
+.slip-builder-event{margin:4px 12px 9px;color:#aaa;font-size:11px}
+.slip-builder .slip-builder-selection{display:flex;gap:8px;align-items:flex-start;padding:10px 12px;border-top:1px solid #ffffff16}
+.slip-builder-selection>div{min-width:0;flex:1}
+.slip-builder .slip-builder-selection .icon-button{position:static;flex:0 0 22px;margin:0}
+.slip-builder-dot{width:6px;height:6px;margin-top:5px;border-radius:50%;background:#28ffbb;flex:0 0 6px}
+.slip-builder .slip-selection-blocked strong,.slip-selection.slip-selection-blocked>strong{color:#ffb3aa;text-decoration:line-through}
+.slip-selection-badge{display:inline-block;margin-top:4px;padding:1px 6px;border-radius:9px;background:#a50e0e;color:#fff;font-size:10px}
+.slip-header b{display:inline-block}
+.betslip{position:sticky;top:86px;margin:16px 12px 0 0;background:#1f1f1f;border-radius:5px;overflow:hidden}
+.slip-tabs{display:flex;align-items:center;gap:12px;padding:16px 12px;border-bottom:1px solid #ffffff14;font-size:12px}
+.slip-tabs>span{font-weight:700;color:var(--accent)}
+.slip-tabs button{background:none;color:#aaa;font-size:11px;padding:0}
+.slip-tabs [data-action=history]{margin-left:auto}
+.slip-minimize{display:none;color:#fff;font-weight:700}
+.slip-backdrop,.slip-reuse{display:none}
+.slip-header{display:flex;justify-content:space-between;padding:15px 16px;font-size:12px;font-weight:700}
+.slip-header b{font-size:10px;font-weight:400;color:#999}
+.slip-empty{padding:28px 20px 38px;text-align:center}
+.slip-symbol{display:block;margin:0 auto 16px;font-size:42px;color:#666}
+.slip-empty strong{font-size:13px;font-weight:400}
+.slip-empty p{font-size:12px;color:#aaa;line-height:1.8}
+.slip-footer{display:flex;justify-content:space-between;gap:10px;padding:15px 12px;border-top:1px solid #ffffff12;font-size:9px;color:#888}
+.slip-selection{padding:16px;position:relative;border-block:1px solid #ffffff12;background:#282828}
+.slip-selection small{display:block;color:#aaa;font-size:11px;margin-bottom:8px;padding-right:16px}
+.slip-selection strong{display:block;font-size:13px;line-height:1.7}
+.slip-selection+.slip-selection{border-top:0}
+.slip-selection .icon-button{position:absolute;top:10px;right:10px}
+.slip-kind{margin:0 0 12px;color:var(--accent);font-size:12px;font-weight:700}
+.slip-note{margin:0 0 12px;color:#aaa;font-size:12px;line-height:1.45}
+.slip-form{padding:16px}
+@(max-width:1000px) .betslip{display:none}
+@(max-width:1000px) .slip-minimize{display:inline;margin-left:auto}
+@(max-width:1000px) .slip-tabs [data-action=history]{margin-left:12px}
+@(max-width:1000px) body:has(.betslip.mobile-open) .slip-backdrop{display:block;position:fixed;inset:0;z-index:19;border:0;border-radius:0;background:#0009;padding:0}
+@(max-width:1000px) .betslip.mobile-open{display:block;position:fixed;z-index:20;right:8px;bottom:66px;top:auto;width:320px;max-width:calc(100vw - 16px);max-height:75vh;overflow-y:auto;border:1px solid #555;margin:0}
+@(max-width:1000px) body.slip-filled .betslip.mobile-open{bottom:calc(116px + env(safe-area-inset-bottom))}
+@(max-width:1000px) .slip-reuse-main{display:flex;align-items:center;gap:10px;flex:1;min-width:0;height:100%;padding:0;background:none;color:inherit;text-align:left}
+@(max-width:1000px) .slip-reuse-count{display:grid;place-items:center;flex:none;width:22px;height:22px;border-radius:50%;background:#128a3e;color:#fff;font-size:13px;font-weight:700}
+@(max-width:1000px) .slip-reuse-title{font-size:14px;font-weight:700;color:#222;white-space:nowrap}
+@(max-width:1000px) .slip-reuse-balance{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;margin-left:auto;height:100%;padding:0 4px;border:0;border-radius:0;background:none;color:inherit;line-height:1.15}
+@(max-width:1000px) .slip-reuse-balance small{font-size:11px;font-weight:400;color:#555}
+@(max-width:1000px) .slip-reuse-balance strong{font-size:14px;font-weight:700;color:#111}
+@(max-width:1000px) .slip-reuse-x{flex:none;width:36px;height:36px;padding:0;border:0;background:none;color:#222;font-size:22px;line-height:1}
+.is-casino .sidebar,.is-casino .betslip{display:none}
+.app-shell .betslip{display:none;position:fixed;width:360px;max-width:calc(100vw - 16px);right:20px;bottom:18px;top:auto;margin:0;z-index:30;max-height:75dvh;overflow:auto;box-shadow:0 8px 40px #0008;border:1px solid #484848;border-radius:8px;background:#202020}
+.app-shell.slip-filled:not(.slip-dismissed) .betslip,.app-shell .betslip.mobile-open{display:block}
+@(max-width:1000px) .app-shell.slip-filled:not(.slip-dismissed) .betslip{display:none}
+@(max-width:1000px) .app-shell .betslip.mobile-open{display:block!important;bottom:calc(116px + env(safe-area-inset-bottom));right:8px;width:360px;max-height:calc(100dvh - 190px)}
+.app-shell .betslip{position:fixed;inset:auto auto 40px 50%;transform:translate(-50%);width:450px;max-width:100vw;max-height:calc(100dvh - 130px);margin:0;padding:0;overflow:hidden auto;z-index:40;color:#444;background:#fff;border:0;border-radius:5px 5px 0 0;box-shadow:0 -2px 14px #00000059}
+.app-shell .betslip #slip-content{display:block}
+.app-shell .betslip .slip-selection{position:relative;display:block;min-height:80px;margin:0;padding:10px 10px 15px 31px;color:#444;background:#fff;border:0;border-top:1px solid #eee}
+.app-shell .betslip #slip-content>.slip-selection:first-child{border-top:0}
+.app-shell .betslip .slip-selection>.slip-close{position:absolute;top:0;right:auto;left:0;width:32px;height:40px;margin:0}
+.app-shell .betslip .slip-selection small{margin:0;padding:0}
+.app-shell .betslip .slip-selection-title strong{margin:0;color:#126e51;font-size:15px;font-weight:800;line-height:20px}
+.app-shell .betslip .slip-selection-title b{flex:none;color:#444;font-size:15px;font-weight:700;line-height:20px}
+.app-shell .betslip .slip-selection-title b.slip-odd-up{color:#0f8f5f}
+.app-shell .betslip .slip-selection-title b.slip-odd-down,.app-shell .betslip .slip-selection-title b.slip-odd-unavailable{color:#bf4141}
+.app-shell .betslip .slip-selection-title b s{display:block;color:#8a8a8a;font-size:12px;font-weight:600;line-height:14px;text-align:right}
+.app-shell .betslip .slip-selection-market{display:block;color:#444;font-size:13px;font-weight:700;line-height:20px}
+.app-shell .betslip .slip-selection-fixture{display:block;color:#444;font-size:12px;font-weight:400;line-height:15px}
+.app-shell .betslip .slip-selection-blocked{background:#fdf1f1}
+.app-shell .betslip .slip-selection-blocked .slip-selection-title strong{color:#bf4141;text-decoration:line-through}
+.app-shell .betslip .slip-selection-badge{display:inline-block;margin:5px 0 0;padding:1px 6px;color:#fff;background:#bf4141;border:0;border-radius:3px;font-size:11px;font-weight:700;line-height:15px}
+.app-shell .betslip .slip-selection-badge-soft{color:#126e51;background:#e3f3ee}
+.app-shell .betslip .slip-selection-badge-pa{color:#126e51;background:transparent;border:1px solid #126e51;font-style:italic;text-transform:uppercase;font-size:10px;margin-right:6px}
+.app-shell .betslip .slip-builder{position:relative;margin:0;padding:10px 10px 10px 30px;background:#fff;border:0;border-top:1px solid #eee;border-radius:0}
+.app-shell .betslip .slip-card>.slip-builder:first-child{border-top:0}
+.app-shell .betslip .slip-builder>.slip-close{position:absolute;top:0;left:0;width:32px;height:40px}
+.app-shell .betslip .slip-builder header{display:block;margin:0;padding:0 0 3px;color:#444;background:none;border:0;font-size:13px;font-style:italic;font-weight:800;line-height:15px;text-transform:uppercase}
+.app-shell .betslip .slip-builder-event{flex:1;min-width:0;margin:0;padding:10px 0;color:#444;font-size:13px;font-weight:700;line-height:20px}
+.app-shell .betslip .slip-builder .slip-builder-selection{position:relative;min-height:0;padding:5px 10px 5px 49px;background:transparent;border:0}
+.app-shell .betslip .slip-builder-selection:before{content:"";position:absolute;z-index:1;top:12px;left:33px;width:7px;height:7px;box-sizing:border-box;background:#fff;border:1px solid #666;border-radius:50%}
+.app-shell .betslip .slip-builder-selection:not(:last-child):after{content:"";position:absolute;top:19px;bottom:-12px;left:36px;width:1px;background:#999}
+.app-shell .betslip .slip-builder-selection>.slip-close{position:absolute;top:0;left:0;width:32px;height:30px;margin:0}
+.app-shell .betslip .slip-builder-selection .slip-selection-title strong{font-size:15px;line-height:20px}
+.app-shell .betslip .slip-builder .slip-selection-market{line-height:20px}
+.app-shell .betslip .combination-status{margin:0;padding:8px 12px;color:#444;background:#f7f7f7;border:0;font-size:12px;line-height:16px}
+.app-shell .betslip .combination-status-blocked{color:#a32f2f;background:#fdf1f1}
+.app-shell .betslip .slip-form{position:sticky;bottom:0;margin:0;padding:0;background:#222;border:0}
+.app-shell .betslip .form-error{margin:0;padding:7px 12px;color:#fff;background:#bf4141;font-size:12px;line-height:16px}
+.app-shell .betslip .slip-form-list{position:static;padding:0;background:#f0f0f0}
+.app-shell .betslip .slip-selection-staked{display:flex;justify-content:space-between;gap:10px;min-height:75px;padding:10px 10px 15px 31px}
+@(max-width:1000px) .app-shell .betslip,.app-shell .betslip.mobile-open,body.app-shell.slip-filled .betslip.mobile-open{left:0;right:0;bottom:calc(60px + env(safe-area-inset-bottom));transform:none;width:100%;max-width:none;max-height:calc(100dvh - 124px)}
+@(max-width:1000px) .app-shell:has(.betslip.mobile-open) .slip-reuse{display:none}
+.app-shell.is-me .sidebar,.app-shell.is-me .betslip,.app-shell.is-me .global-search-field{display:none}
+.app-shell .betslip .slip-boost{border-left:3px solid #28ffbb}
+.app-shell .betslip .slip-boost .slip-selection-title b s{color:#9b9b9b;font-weight:400;margin-right:6px}
+.app-shell .betslip .slip-selection-badge-boost{background:#28ffbb;color:#111}
+.app-shell .betslip .slip-boost-legs{margin:4px 0 0;padding:0;list-style:none;font-size:11px;color:#bdbdbd}
+.app-shell .betslip .slip-boost-legs li:before{content:"• ";color:#28ffbb}

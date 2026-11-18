@@ -1,0 +1,1652 @@
+{
+  "categories": [
+    {
+      "id": "aovivo",
+      "name": "Ao Vivo",
+      "count": 179
+    },
+    {
+      "id": "inicio",
+      "name": "Início",
+      "count": 7369
+    },
+    {
+      "id": "novidades",
+      "name": "Novidades",
+      "count": 8
+    },
+    {
+      "id": "slots",
+      "name": "Slots",
+      "count": 6951
+    },
+    {
+      "id": "mesa",
+      "name": "Mesa e Cartas",
+      "count": 377
+    },
+    {
+      "id": "crash",
+      "name": "Arcade",
+      "count": 37
+    },
+    {
+      "id": "jackpots",
+      "name": "Jackpots",
+      "count": 23
+    },
+    {
+      "id": "todos",
+      "name": "Todos",
+      "count": 7369
+    }
+  ],
+  "sections": [
+    {
+      "id": "mes",
+      "title": "Jogos do Mês",
+      "style": "featured",
+      "category": "",
+      "provider": "",
+      "games": [
+        {
+          "id": "PGSOFT:1543462",
+          "code": "1543462",
+          "name": "Fortune Rabbit",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1543462.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:1695365",
+          "code": "1695365",
+          "name": "Fortune Dragon",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1695365.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:126",
+          "code": "126",
+          "name": "Fortune Tiger",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_126.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:98",
+          "code": "98",
+          "name": "Fortune Ox",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_98.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:1492288",
+          "code": "1492288",
+          "name": "Pinata Wins",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1492288.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs20olympgate",
+          "code": "vs20olympgate",
+          "name": "Gates of Olympus",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs20olympgate.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs10txbigbass",
+          "code": "vs10txbigbass",
+          "name": "Big Bass Splash",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs10txbigbass.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "novidades",
+      "title": "Descubra as Novidades",
+      "style": "two-row",
+      "category": "novidades",
+      "provider": "",
+      "games": [
+        {
+          "id": "PGSOFT:2035783",
+          "code": "2035783",
+          "name": "Funky Fortunez",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_2035783.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:2024510",
+          "code": "2024510",
+          "name": "Perfect Strike",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_2024510.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:1997301",
+          "code": "1997301",
+          "name": "Mayan Destiny",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1997301.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:1950910",
+          "code": "1950910",
+          "name": "Inferno Mayhem",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1950910.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:2100928",
+          "code": "2100928",
+          "name": "Fortune Horse",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_2100928.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:1981965",
+          "code": "1981965",
+          "name": "Forbidden Alchemy",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1981965.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:1849515",
+          "code": "1849515",
+          "name": "Mythical Guardians",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1849515.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:2009635",
+          "code": "2009635",
+          "name": "Poker Kingdom Win",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_2009635.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "top10",
+      "title": "10 Jogos em Destaque",
+      "style": "top10",
+      "category": "",
+      "provider": "",
+      "games": [
+        {
+          "id": "PGSOFT:1543462",
+          "code": "1543462",
+          "name": "Fortune Rabbit",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1543462.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:1695365",
+          "code": "1695365",
+          "name": "Fortune Dragon",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1695365.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:126",
+          "code": "126",
+          "name": "Fortune Tiger",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_126.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:98",
+          "code": "98",
+          "name": "Fortune Ox",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_98.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:1492288",
+          "code": "1492288",
+          "name": "Pinata Wins",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1492288.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs20olympgate",
+          "code": "vs20olympgate",
+          "name": "Gates of Olympus",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs20olympgate.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs10txbigbass",
+          "code": "vs10txbigbass",
+          "name": "Big Bass Splash",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs10txbigbass.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:2035783",
+          "code": "2035783",
+          "name": "Funky Fortunez",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_2035783.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:2024510",
+          "code": "2024510",
+          "name": "Perfect Strike",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_2024510.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:1997301",
+          "code": "1997301",
+          "name": "Mayan Destiny",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1997301.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "aovivo",
+      "title": "Ao Vivo",
+      "style": "row",
+      "category": "aovivo",
+      "games": [
+        {
+          "id": "OFICIAL - EVOLUTION LIVE:GPKEVO_29ed052f0aec9874f05724616edc6841",
+          "code": "GPKEVO_29ed052f0aec9874f05724616edc6841",
+          "name": "Crazy Time Brasil",
+          "provider": "OFICIAL - EVOLUTION LIVE",
+          "image": "https://imagensfivers.com/Games/Evolution-Live/GPKEVO_29ed052f0aec9874f05724616edc6841.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - EVOLUTION LIVE:GPKEVO_cc4a086d818486c50e0d2f6f7ade3bd9",
+          "code": "GPKEVO_cc4a086d818486c50e0d2f6f7ade3bd9",
+          "name": "Bac Bo Ao Vivo",
+          "provider": "OFICIAL - EVOLUTION LIVE",
+          "image": "https://imagensfivers.com/Games/Evolution-Live/GPKEVO_cc4a086d818486c50e0d2f6f7ade3bd9.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - EVOLUTION LIVE:GPKEVO_8a7f9e6f82d955eb7941cccdbdce8ae4",
+          "code": "GPKEVO_8a7f9e6f82d955eb7941cccdbdce8ae4",
+          "name": "Blackjack - Todas as Mesas",
+          "provider": "OFICIAL - EVOLUTION LIVE",
+          "image": "https://imagensfivers.com/Games/Evolution-Live/GPKEVO_8a7f9e6f82d955eb7941cccdbdce8ae4.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - EVOLUTION LIVE:GPKEVO_c99095046c273241707e9738ff6befbc",
+          "code": "GPKEVO_c99095046c273241707e9738ff6befbc",
+          "name": "Bacará Sempre 9",
+          "provider": "OFICIAL - EVOLUTION LIVE",
+          "image": "https://imagensfivers.com/Games/Evolution-Live/GPKEVO_c99095046c273241707e9738ff6befbc.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_aviator",
+          "code": "SPB_aviator",
+          "name": "Aviator",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_aviator.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - EVOLUTION LIVE:GPKEVO_c74c4cfae894425d5d34da33f16a1757",
+          "code": "GPKEVO_c74c4cfae894425d5d34da33f16a1757",
+          "name": "Roleta Ao Vivo",
+          "provider": "OFICIAL - EVOLUTION LIVE",
+          "image": "https://imagensfivers.com/Games/Evolution-Live/GPKEVO_c74c4cfae894425d5d34da33f16a1757.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - EVOLUTION LIVE:GPKEVO_9722efbbe4b6e43400c617cff43310a2",
+          "code": "GPKEVO_9722efbbe4b6e43400c617cff43310a2",
+          "name": "Roleta Relâmpago",
+          "provider": "OFICIAL - EVOLUTION LIVE",
+          "image": "https://imagensfivers.com/Games/Evolution-Live/GPKEVO_9722efbbe4b6e43400c617cff43310a2.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - EVOLUTION LIVE:GPKEVO_578fb59f7c2c043c35312675f6e70d8d",
+          "code": "GPKEVO_578fb59f7c2c043c35312675f6e70d8d",
+          "name": "Blackjack Ilimitado Ao Vivo",
+          "provider": "OFICIAL - EVOLUTION LIVE",
+          "image": "https://imagensfivers.com/Games/Evolution-Live/GPKEVO_578fb59f7c2c043c35312675f6e70d8d.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - EVOLUTION LIVE:GPKEVO_c605e257bc20ba94849999cdc3007f72",
+          "code": "GPKEVO_c605e257bc20ba94849999cdc3007f72",
+          "name": "Bacará Rápido",
+          "provider": "OFICIAL - EVOLUTION LIVE",
+          "image": "https://imagensfivers.com/Games/Evolution-Live/GPKEVO_c605e257bc20ba94849999cdc3007f72.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - EVOLUTION LIVE:GPKEVO_f802859eea84d8ce3869f13cd38c3e50",
+          "code": "GPKEVO_f802859eea84d8ce3869f13cd38c3e50",
+          "name": "Baccarat Rápido ao Vivo 1",
+          "provider": "OFICIAL - EVOLUTION LIVE",
+          "image": "https://imagensfivers.com/Games/Evolution-Live/GPKEVO_f802859eea84d8ce3869f13cd38c3e50.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - EVOLUTION LIVE:GPKEVO_f8e50a8bdaec45ecc71c46a42e3dde51",
+          "code": "GPKEVO_f8e50a8bdaec45ecc71c46a42e3dde51",
+          "name": "Pôquer - Todas as Mesas",
+          "provider": "OFICIAL - EVOLUTION LIVE",
+          "image": "https://imagensfivers.com/Games/Evolution-Live/GPKEVO_f8e50a8bdaec45ecc71c46a42e3dde51.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - EVOLUTION LIVE:GPKEVO_4f1117af3b2eab6056afed1ca6ed17fe",
+          "code": "GPKEVO_4f1117af3b2eab6056afed1ca6ed17fe",
+          "name": "Blackjack B",
+          "provider": "OFICIAL - EVOLUTION LIVE",
+          "image": "https://imagensfivers.com/Games/Evolution-Live/GPKEVO_4f1117af3b2eab6056afed1ca6ed17fe.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "p:PG Soft",
+      "title": "PG Soft",
+      "style": "row",
+      "category": "",
+      "provider": "PGSOFT",
+      "games": [
+        {
+          "id": "PGSOFT:126",
+          "code": "126",
+          "name": "Fortune Tiger",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_126.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:1543462",
+          "code": "1543462",
+          "name": "Fortune Rabbit",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1543462.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:98",
+          "code": "98",
+          "name": "Fortune Ox",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_98.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:68",
+          "code": "68",
+          "name": "Fortune Mouse",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_68.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:104",
+          "code": "104",
+          "name": "Wild Bandito",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_104.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:1695365",
+          "code": "1695365",
+          "name": "Fortune Dragon",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_1695365.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:42",
+          "code": "42",
+          "name": "Ganesha Gold",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_42.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:57",
+          "code": "57",
+          "name": "Dragon Hatch",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_57.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:48",
+          "code": "48",
+          "name": "Double Fortune",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_48.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:7",
+          "code": "7",
+          "name": "Medusa",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_7.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:25",
+          "code": "25",
+          "name": "Plushie Frenzy",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_25.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:29",
+          "code": "29",
+          "name": "Dragon Legend",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_29.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:35",
+          "code": "35",
+          "name": "Mr. Hallow-Win",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_35.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:34",
+          "code": "34",
+          "name": "Legend of Hou Yi",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_34.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "p:Pragmatic Play",
+      "title": "Pragmatic Play",
+      "style": "row",
+      "category": "",
+      "provider": "PRAGMATIC",
+      "games": [
+        {
+          "id": "PRAGMATIC:vs20olympgate",
+          "code": "vs20olympgate",
+          "name": "Gates of Olympus",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs20olympgate.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs20fruitsw",
+          "code": "vs20fruitsw",
+          "name": "Sweet Bonanza",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs20fruitsw.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs10txbigbass",
+          "code": "vs10txbigbass",
+          "name": "Big Bass Splash",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs10txbigbass.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs20sugarrush",
+          "code": "vs20sugarrush",
+          "name": "Sugar Rush",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs20sugarrush.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs20starlight",
+          "code": "vs20starlight",
+          "name": "Starlight Princess",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs20starlight.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs20olympx",
+          "code": "vs20olympx",
+          "name": "Gates of Olympus 1000",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs20olympx.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs20fruitswx",
+          "code": "vs20fruitswx",
+          "name": "Sweet Bonanza 1000",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs20fruitswx.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs20doghouse",
+          "code": "vs20doghouse",
+          "name": "The Dog House",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs20doghouse.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs20portals",
+          "code": "vs20portals",
+          "name": "Fire Portals",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs20portals.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vs25sea",
+          "code": "vs25sea",
+          "name": "Great Reef",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs25sea.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "mesa",
+      "title": "Mesa e Cartas",
+      "style": "row",
+      "category": "mesa",
+      "provider": "",
+      "games": [
+        {
+          "id": "PRAGMATIC:vs1024dtiger",
+          "code": "vs1024dtiger",
+          "name": "The Dragon Tiger",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/PP_vs1024dtiger.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PRAGMATIC:vswayshuffpbh",
+          "code": "vswayshuffpbh",
+          "name": "Dragon Tiger Fortunes",
+          "provider": "PRAGMATIC",
+          "image": "https://imagensfivers.com/Games/Pragmatic-Play/vswayshuffpbh.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:63",
+          "code": "63",
+          "name": "Dragon Tiger Luck",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_63.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "PGSOFT:2009635",
+          "code": "2009635",
+          "name": "Poker Kingdom Win",
+          "provider": "PGSOFT",
+          "image": "https://imagensfivers.com/Games/PG-Soft/PGS_2009635.webp",
+          "original": false,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "spribe",
+      "title": "Spribe",
+      "provider": "OFICIAL - SPRIBE",
+      "games": [
+        {
+          "id": "OFICIAL - SPRIBE:SPB_aviator",
+          "code": "SPB_aviator",
+          "name": "Aviator",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_aviator.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_goal",
+          "code": "SPB_goal",
+          "name": "Goal",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_goal.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_dice",
+          "code": "SPB_dice",
+          "name": "Dice",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_dice.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_plinko",
+          "code": "SPB_plinko",
+          "name": "Plinko",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_plinko.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_mines",
+          "code": "SPB_mines",
+          "name": "Mines",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_mines.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_hi-lo",
+          "code": "SPB_hi-lo",
+          "name": "Hilo",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_hi-lo.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_keno",
+          "code": "SPB_keno",
+          "name": "Keno",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_keno.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_mini-roulette",
+          "code": "SPB_mini-roulette",
+          "name": "Mini Roulette",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_mini-roulette.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_hotline",
+          "code": "SPB_hotline",
+          "name": "Hotline",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_hotline.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_multikeno",
+          "code": "SPB_multikeno",
+          "name": "Keno 80",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_multikeno.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_balloon",
+          "code": "SPB_balloon",
+          "name": "Balloon",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_balloon.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_trader",
+          "code": "SPB_trader",
+          "name": "Trader",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_trader.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_pilot-chicken",
+          "code": "SPB_pilot-chicken",
+          "name": "Pilot Chicken",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_pilot-chicken.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        },
+        {
+          "id": "OFICIAL - SPRIBE:SPB_aviator2",
+          "code": "SPB_aviator2",
+          "name": "Aviator #2",
+          "provider": "OFICIAL - SPRIBE",
+          "image": "https://imagensfivers.com/Games/Spribe/SPB_aviator2.webp",
+          "original": true,
+          "languages": [
+            "pt",
+            "en",
+            "es",
+            "ja",
+            "zh",
+            "ru",
+            "th",
+            "hi"
+          ],
+          "available": true
+        }
+      ]
+    }
+  ],
+  "providers": [
+    {
+      "name": "PGSOFT",
+      "title": "PG Soft",
+      "image": "https://imagensfivers.com/Provedores/PGSOFT.webp",
+      "total": 146
+    },
+    {
+      "name": "PRAGMATIC",
+      "title": "Pragmatic Play",
+      "image": "https://imagensfivers.com/Provedores/PRAGMATIC-SLOTS.webp",
+      "total": 481
+    },
+    {
+      "name": "OFICIAL - SPRIBE",
+      "title": "Spribe",
+      "image": "https://imagensfivers.com/Provedores/SPRIBE.webp",
+      "total": 14
+    }
+  ],
+  "total": 7369,
+  "availability": {
+    "revision": "97c916fb6e72db1afc2b3dac",
+    "refreshAfterMs": 10000,
+    "availableProviders": [
+      "AMUSNET",
+      "BOOONGO",
+      "CQ9",
+      "CRASH GAMES",
+      "DIGITAIN OFICIAL",
+      "DREAMTECH",
+      "DUSLOT",
+      "EGT",
+      "EVOPLAY",
+      "FACHAI",
+      "FASTSPIN",
+      "FATPANDA",
+      "HABANERO",
+      "HACKSAW",
+      "JILI",
+      "OFICIAL - 3OAKS",
+      "OFICIAL - ADVANTPLAY",
+      "OFICIAL - ALIZE SLOTS",
+      "OFICIAL - ASKMESLOT",
+      "OFICIAL - AVIATRIX",
+      "OFICIAL - BGAMING",
+      "OFICIAL - BIG TIME GAMING",
+      "OFICIAL - BOOMING",
+      "OFICIAL - CG",
+      "OFICIAL - CP GAMES",
+      "OFICIAL - CQ9",
+      "OFICIAL - CQ9 Live",
+      "OFICIAL - DREAMGAMING LIVE",
+      "OFICIAL - EPICWIN",
+      "OFICIAL - EVOLUTION LIVE",
+      "OFICIAL - EVOPLAY",
+      "OFICIAL - EZUGI",
+      "OFICIAL - FACHAI",
+      "OFICIAL - FAT PANDA",
+      "OFICIAL - GTF",
+      "OFICIAL - HACKSAW",
+      "OFICIAL - JDB",
+      "OFICIAL - LIVE22",
+      "OFICIAL - LIVE88",
+      "OFICIAL - MICRO GAMING",
+      "OFICIAL - NETENT",
+      "OFICIAL - NOLIMIT CITY",
+      "OFICIAL - PG SOFT",
+      "OFICIAL - PRAGMATIC SLOTS",
+      "OFICIAL - QUEENMAKER",
+      "OFICIAL - RED TIGER",
+      "OFICIAL - SPADE GAMING",
+      "OFICIAL - SPINOMENAL",
+      "OFICIAL - SPRIBE",
+      "OFICIAL - TADA",
+      "OFICIAL - TURBO GAMES",
+      "OFICIAL - WINFINITY",
+      "OFICIAL - YELLOWBAT",
+      "PGSOFT",
+      "PLAYNGO",
+      "PLAYSON",
+      "POPOK",
+      "PRAGMATIC",
+      "REELKINGDOM",
+      "RUBYPLAY",
+      "SPADEGAMING",
+      "TADA",
+      "TOPTREND"
+    ],
+    "temporarilyUnavailable": false
+  }
+}

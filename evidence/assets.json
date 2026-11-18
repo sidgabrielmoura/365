@@ -1,0 +1,3954 @@
+{
+  "source": "REA retained network bodies and supplemental public asset GET requests",
+  "saved": [
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/brasabet-logo-6e195a6f51.png",
+      "local": "/assets/images/brasabet-logo-6e195a6f51.png",
+      "bytes": 20255,
+      "sha256": "596cecb010f948bf56de9642a991a2a33d53ec9715d2438a578ea18238ebd16a"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/responsible-gaming.svg",
+      "local": "/assets/images/responsible-gaming.svg",
+      "bytes": 5485,
+      "sha256": "f72f3bd0ababf1eaf8da32dbde0a40fda3de5b5ed98dc7eb1a92454ae220b948"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Soccer-72908a6a41.svg",
+      "local": "/assets/images/zClass_26_Soccer-72908a6a41.svg",
+      "bytes": 3317,
+      "sha256": "ec8271e76cc52589861195860ef5442bd329c9665ebc6b145751f71f214105da"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zlogo_nba_official-bc5752967c.svg",
+      "local": "/assets/images/zlogo_nba_official-bc5752967c.svg",
+      "bytes": 5936,
+      "sha256": "43fec0743cda196307593aaca21c5c626e197bcfffbed3df91fb8993a000cd10"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/NextToStart-ba9fb01ee0.svg",
+      "local": "/assets/images/NextToStart-ba9fb01ee0.svg",
+      "bytes": 611,
+      "sha256": "5fd2b13aa19f9d815742c125901fc79ecca21620cd28f22b8d1725bf9027cee2"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/1-5801621400.svg",
+      "local": "/assets/images/1-5801621400.svg",
+      "bytes": 3317,
+      "sha256": "ec8271e76cc52589861195860ef5442bd329c9665ebc6b145751f71f214105da"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/reference/banner-boost.webp",
+      "local": "/assets/reference/banner-boost.webp",
+      "bytes": 38554,
+      "sha256": "3983687a24752489c553a81b2bd58a315fc2428d61d0ef68976dac2ca798540a"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Table_Tennis-315a7fafaa.svg",
+      "local": "/assets/images/zClass_26_Table_Tennis-315a7fafaa.svg",
+      "bytes": 2346,
+      "sha256": "9d6bdd198edc1409a65bd70d8d77b14ead859272bf7ba36174b6482cfee54582"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/1967/logo.png",
+      "local": "/assets/remote/c66c290353e3f6644a.png",
+      "bytes": 8488,
+      "sha256": "64672808fd72a42c048aeb6b6dfcaed4f17e86c61a491cd1d5ffabf1e6e50ced"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/reference/banner-cashout.webp",
+      "local": "/assets/reference/banner-cashout.webp",
+      "bytes": 41832,
+      "sha256": "55d917290db27cb7909842108ede36c7471599beb5c5a3196dc8dc1fac570066"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/reference/banner-early.webp",
+      "local": "/assets/reference/banner-early.webp",
+      "bytes": 45214,
+      "sha256": "180307f1b8ee30defb991d9bec17a48e1e91efa41a3039853827c0333f877d3b"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/5981/logo.png",
+      "local": "/assets/remote/815cd24c36f040215e.png",
+      "bytes": 9127,
+      "sha256": "ccc1d9241f02b59057b9193806ffa09f21bde44fc86829c1bcf17a01f69ff2dd"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zlogo_mlb_official_oversized1_-3d6972ff4f.svg",
+      "local": "/assets/images/zlogo_mlb_official_oversized1_-3d6972ff4f.svg",
+      "bytes": 1491,
+      "sha256": "bcaa6131997511b3b4b648fcae02d992035b360fc0fddec4dc28e1cfa7f41d21"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/UCL-White-2daf2af7fc.svg",
+      "local": "/assets/images/UCL-White-2daf2af7fc.svg",
+      "bytes": 21104,
+      "sha256": "b8e954f213fa4bf67e02d660102901c6ca5d2744402136721d3542c1c056fc13"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/12-86aae73efc.svg",
+      "local": "/assets/images/12-86aae73efc.svg",
+      "bytes": 6220,
+      "sha256": "5d3eca8161c28ae0f00294869e71321ea7bc65ca5e1baefe1b404d0507d46284"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/21845/logo.png",
+      "local": "/assets/remote/47c047715b70466f17.png",
+      "bytes": 16870,
+      "sha256": "995e565bf3037a119e941ff81c36d44e510497b14899e4cab7c54a6811608791"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/9-4b680b34c4.svg",
+      "local": "/assets/images/9-4b680b34c4.svg",
+      "bytes": 2767,
+      "sha256": "8f698854fe962e7755b3a68d7c5a8852ebd64e2b781919b6e3325b7fd163d2a2"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/15-bd02d03622.svg",
+      "local": "/assets/images/15-bd02d03622.svg",
+      "bytes": 6835,
+      "sha256": "ed9ed79b02cb90845c538c1da544befb953b84e79c55c760cf9d49dee78d28bf"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/1982/logo.png",
+      "local": "/assets/remote/3088d88b2850f04806.png",
+      "bytes": 5368,
+      "sha256": "f0cf0967035956966b37dfc7064e8a1da070038ac9a18138b622dd298a6c5013"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Tennis-b9bc0430b5.svg",
+      "local": "/assets/images/zClass_26_Tennis-b9bc0430b5.svg",
+      "bytes": 1375,
+      "sha256": "ae4241f48445b667a5bd4037feab218038de0c290957636bdadc83a4ffe2a0c7"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/158_7s-07e0cb3d30.svg",
+      "local": "/assets/images/158_7s-07e0cb3d30.svg",
+      "bytes": 3571,
+      "sha256": "bd9a0ad9d99584d1b79808b828be32d75589cb0a15bf9ff1f98d459b0874fc0c"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zlogo_nfl_official-a6d44463db.svg",
+      "local": "/assets/images/zlogo_nfl_official-a6d44463db.svg",
+      "bytes": 4306,
+      "sha256": "613531f689047c22e750b449e15b835a4e1aa9377ec3368d96e1068951b9a673"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/1968/logo.png",
+      "local": "/assets/remote/96749da7eb9935097f.png",
+      "bytes": 14552,
+      "sha256": "3602dc240919ba18e17ab79479c88aec0037dcf4d5ea1c26a92c4ef2d69f6c1e"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/162-bc94bbe1d1.svg",
+      "local": "/assets/images/162-bc94bbe1d1.svg",
+      "bytes": 4376,
+      "sha256": "a3dde2d3f1c706eb8d16471dee409e1763a8a866720fb1b5c666d7feaffa64d3"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/78-6fa22747a4.svg",
+      "local": "/assets/images/78-6fa22747a4.svg",
+      "bytes": 3471,
+      "sha256": "60f2cd4efcb8b064d0a6b34bb247db6d69cceb7cd6243c47feb193481ec1b046"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/2012/logo.png",
+      "local": "/assets/remote/e11749f93e9b0a46cd.png",
+      "bytes": 14890,
+      "sha256": "7d3f8e0ecae8b56ea21b259e1ad4a216276282d38068437d43f54382161588bf"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/92-c67f3dddc7.svg",
+      "local": "/assets/images/92-c67f3dddc7.svg",
+      "bytes": 2346,
+      "sha256": "9d6bdd198edc1409a65bd70d8d77b14ead859272bf7ba36174b6482cfee54582"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zflag_brazil-717d17346b.svg",
+      "local": "/assets/images/zflag_brazil-717d17346b.svg",
+      "bytes": 1000,
+      "sha256": "3bf24ed30dc56c5fc5c8a1a2a6e947eeb8fa80dbdcb89123cac15b5ea47813fd"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/UFC_LOGO_RED-v3-8b2e0712df.svg",
+      "local": "/assets/images/UFC_LOGO_RED-v3-8b2e0712df.svg",
+      "bytes": 3420,
+      "sha256": "6052be7e4f2517c8905666e4189ddcae186e556a2334cb16db39dc05bc86a00c"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Basketball-91ca892bbb.svg",
+      "local": "/assets/images/zClass_26_Basketball-91ca892bbb.svg",
+      "bytes": 2512,
+      "sha256": "521e2d32ac7c6c5152213a5cc8e4140abb7fd0a1c8d5ab0367c401cc9f063350"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/16-61adf4d18c.svg",
+      "local": "/assets/images/16-61adf4d18c.svg",
+      "bytes": 2599,
+      "sha256": "7489059ebcd274a165b5d745f236ec6ccb111da8626190078f77dc746d73f741"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/36-5856fa85fd.svg",
+      "local": "/assets/images/36-5856fa85fd.svg",
+      "bytes": 1528,
+      "sha256": "c18340623a43f6427f8e57dc005295a8fa53ba26baffe64b85e77bfb017123d3"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/18-1a142a92d9.svg",
+      "local": "/assets/images/18-1a142a92d9.svg",
+      "bytes": 2512,
+      "sha256": "521e2d32ac7c6c5152213a5cc8e4140abb7fd0a1c8d5ab0367c401cc9f063350"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/13-c5357fe83b.svg",
+      "local": "/assets/images/13-c5357fe83b.svg",
+      "bytes": 1375,
+      "sha256": "ae4241f48445b667a5bd4037feab218038de0c290957636bdadc83a4ffe2a0c7"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Casino-8d32c62bc4.svg",
+      "local": "/assets/images/zClass_26_Casino-8d32c62bc4.svg",
+      "bytes": 3571,
+      "sha256": "bd9a0ad9d99584d1b79808b828be32d75589cb0a15bf9ff1f98d459b0874fc0c"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/91-4294f9027b.svg",
+      "local": "/assets/images/91-4294f9027b.svg",
+      "bytes": 3861,
+      "sha256": "80e1cbeffd72f53e370941cf7f3f40cf446639f63700daccad674a6fe8d46966"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Volleyball-294f04c20e.svg",
+      "local": "/assets/images/zClass_26_Volleyball-294f04c20e.svg",
+      "bytes": 3861,
+      "sha256": "80e1cbeffd72f53e370941cf7f3f40cf446639f63700daccad674a6fe8d46966"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/8-60610df28f.svg",
+      "local": "/assets/images/8-60610df28f.svg",
+      "bytes": 1264,
+      "sha256": "ea6e072cc28b4c002465c93c18d98f1bec9ca79d821777752a204740895b2aa0"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Next-5e3dbd7674.svg",
+      "local": "/assets/images/zClass_26_Next-5e3dbd7674.svg",
+      "bytes": 611,
+      "sha256": "5fd2b13aa19f9d815742c125901fc79ecca21620cd28f22b8d1725bf9027cee2"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/reference/banner-casino-new.webp",
+      "local": "/assets/reference/banner-casino-new.webp",
+      "bytes": 240736,
+      "sha256": "8f420f9bca00302750da4662a70e25f765e7506fdd774965ec268bfd9eb32475"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/brasabet-logo-6e195a6f51.png",
+      "local": "/assets/images/brasabet-logo-6e195a6f51.png",
+      "bytes": 20255,
+      "sha256": "596cecb010f948bf56de9642a991a2a33d53ec9715d2438a578ea18238ebd16a"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/responsible-gaming.svg",
+      "local": "/assets/images/responsible-gaming.svg",
+      "bytes": 5485,
+      "sha256": "f72f3bd0ababf1eaf8da32dbde0a40fda3de5b5ed98dc7eb1a92454ae220b948"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zlogo_nba_official-bc5752967c.svg",
+      "local": "/assets/images/zlogo_nba_official-bc5752967c.svg",
+      "bytes": 5936,
+      "sha256": "43fec0743cda196307593aaca21c5c626e197bcfffbed3df91fb8993a000cd10"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/NextToStart-ba9fb01ee0.svg",
+      "local": "/assets/images/NextToStart-ba9fb01ee0.svg",
+      "bytes": 611,
+      "sha256": "5fd2b13aa19f9d815742c125901fc79ecca21620cd28f22b8d1725bf9027cee2"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Soccer-72908a6a41.svg",
+      "local": "/assets/images/zClass_26_Soccer-72908a6a41.svg",
+      "bytes": 3317,
+      "sha256": "ec8271e76cc52589861195860ef5442bd329c9665ebc6b145751f71f214105da"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/casino/New_Colour_Icon.svg",
+      "local": "/assets/images/casino/New_Colour_Icon.svg",
+      "bytes": 1249,
+      "sha256": "49997f71892d49096bf125a63dba7697bdc27c10aac4d733c0d15a4465c315d2"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/casino/Slots_Colour_Icon.svg",
+      "local": "/assets/images/casino/Slots_Colour_Icon.svg",
+      "bytes": 5077,
+      "sha256": "f7c64511dd3a5c85ec5edda7ca98100ed55613ab8d0ec77c65933d6c2cb96626"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/casino/Table_Cards_Colour_Icon.svg",
+      "local": "/assets/images/casino/Table_Cards_Colour_Icon.svg",
+      "bytes": 12596,
+      "sha256": "a427963281cd84e7c1b8208d3eff6387111b96a1e3d4380528579e5168631c05"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/casino/Casino_Colour_Icon.svg",
+      "local": "/assets/images/casino/Casino_Colour_Icon.svg",
+      "bytes": 3272,
+      "sha256": "77a5ceadc24e1c4519b8d8da92eed1fca5966040cd9ea1d18d38eeec7a6e451f"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/casino/Jackpots_Colour_Icon.svg",
+      "local": "/assets/images/casino/Jackpots_Colour_Icon.svg",
+      "bytes": 3007,
+      "sha256": "cfed4154710b43d7a1b503e7236ce1c4db045a23736e58a50de04a94e4555cdb"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/casino/All_Games_Coloured_Icon.svg",
+      "local": "/assets/images/casino/All_Games_Coloured_Icon.svg",
+      "bytes": 978,
+      "sha256": "fd576a20d665bdf4719a0bdf1814342274fd286f098c308a778f9df31f13a862"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/casino/Home_Active.svg",
+      "local": "/assets/images/casino/Home_Active.svg",
+      "bytes": 969,
+      "sha256": "2958c2fdebb6aacd08695910fafde0976c5c77ea60f57df612d4a1a9101d470a"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/casino/Cash_Arcade_Icon.svg",
+      "local": "/assets/images/casino/Cash_Arcade_Icon.svg",
+      "bytes": 3232,
+      "sha256": "e09c659e6fb0e892da7bd0206dbbe6851dd7a07f2810ed30c0ad83c0b5a46b5b"
+    },
+    {
+      "url": "https://imagensfivers.com/Games/PG-Soft/PGS_1981965.webp",
+      "local": "/assets/remote/a869e1166af3142e1e.webp",
+      "bytes": 163518,
+      "sha256": "442e1b625509887f6b03c452f2fd98376a0bf1f35f990c25abbcb1c672af8590"
+    },
+    {
+      "url": "https://imagensfivers.com/Games/PG-Soft/PGS_1543462.webp",
+      "local": "/assets/remote/095c7990addaa1e6e9.webp",
+      "bytes": 195930,
+      "sha256": "bf23867c6ce7bf89be958aa6ff17f4599babad42a2c675925d27e1083881aabc"
+    },
+    {
+      "url": "https://imagensfivers.com/Games/PG-Soft/PGS_1695365.webp",
+      "local": "/assets/remote/6b1a35fe55859e6565.webp",
+      "bytes": 187502,
+      "sha256": "66a6d00a3dd79701efeb3fc700985f20e67d3f3b86055f986d5921b608935f16"
+    },
+    {
+      "url": "https://imagensfivers.com/Games/PG-Soft/PGS_126.webp",
+      "local": "/assets/remote/caef730cb39f318657.webp",
+      "bytes": 168520,
+      "sha256": "011de41ea0458452cf42cab81c3aacf64a2cd819c4e0c152379f9424a1822ea1"
+    },
+    {
+      "url": "https://imagensfivers.com/Games/PG-Soft/PGS_98.webp",
+      "local": "/assets/remote/4bdeae9d9b0a47264e.webp",
+      "bytes": 194046,
+      "sha256": "cf1cbd03e8ebd4d8d6edba6f36a0da47cc97ef5a37cd18eb42ce407355c9f68c"
+    },
+    {
+      "url": "https://imagensfivers.com/Games/PG-Soft/PGS_2035783.webp",
+      "local": "/assets/remote/c8c99aba59c9bc93ab.webp",
+      "bytes": 174724,
+      "sha256": "ddb4c2ba3c5113da8325f4f9093238e52e3a680e9fa0b6494c713976ecacc8ae"
+    },
+    {
+      "url": "https://imagensfivers.com/Games/PG-Soft/PGS_1997301.webp",
+      "local": "/assets/remote/46fce4c537befcf35c.webp",
+      "bytes": 172730,
+      "sha256": "75be399c60186e310581271dffb594774f326d0778bcce028a5620f5f6e59b94"
+    },
+    {
+      "url": "https://imagensfivers.com/Games/PG-Soft/PGS_2009635.webp",
+      "local": "/assets/remote/337bad376abfd21529.webp",
+      "bytes": 167702,
+      "sha256": "ec2fb86c9b6ccab5543ca6b0b202b4005734bee9730ff2181fe874a22556f8d6"
+    },
+    {
+      "url": "https://imagensfivers.com/Games/PG-Soft/PGS_2024510.webp",
+      "local": "/assets/remote/5a2040f72ed472936b.webp",
+      "bytes": 136094,
+      "sha256": "d517ae419704a579324ff986f0abca5d42aae0f333435458c64f06472d7df1a1"
+    },
+    {
+      "url": "https://imagensfivers.com/Provedores/PGSOFT.webp",
+      "local": "/assets/remote/dcd49b55e89c1d39f8.webp",
+      "bytes": 37692,
+      "sha256": "f4204f0674384164ab0ab792b39140de40ebe6255b34f1cbae42a7ab4d423f0b"
+    },
+    {
+      "url": "https://imagensfivers.com/Provedores/PRAGMATIC-SLOTS.webp",
+      "local": "/assets/remote/9b904a1480b7d60a3c.webp",
+      "bytes": 34360,
+      "sha256": "e7ce1f4cdd4452211d239a07bf633af92e964761a9b95cc82fee5613fe1b433a"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/brasabet-logo-6e195a6f51.png",
+      "local": "/assets/images/brasabet-logo-6e195a6f51.png",
+      "bytes": 20255,
+      "sha256": "596cecb010f948bf56de9642a991a2a33d53ec9715d2438a578ea18238ebd16a"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/responsible-gaming.svg",
+      "local": "/assets/images/responsible-gaming.svg",
+      "bytes": 5485,
+      "sha256": "f72f3bd0ababf1eaf8da32dbde0a40fda3de5b5ed98dc7eb1a92454ae220b948"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zlogo_nba_official-bc5752967c.svg",
+      "local": "/assets/images/zlogo_nba_official-bc5752967c.svg",
+      "bytes": 5936,
+      "sha256": "43fec0743cda196307593aaca21c5c626e197bcfffbed3df91fb8993a000cd10"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/NextToStart-ba9fb01ee0.svg",
+      "local": "/assets/images/NextToStart-ba9fb01ee0.svg",
+      "bytes": 611,
+      "sha256": "5fd2b13aa19f9d815742c125901fc79ecca21620cd28f22b8d1725bf9027cee2"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Soccer-72908a6a41.svg",
+      "local": "/assets/images/zClass_26_Soccer-72908a6a41.svg",
+      "bytes": 3317,
+      "sha256": "ec8271e76cc52589861195860ef5442bd329c9665ebc6b145751f71f214105da"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/13-c5357fe83b.svg",
+      "local": "/assets/images/13-c5357fe83b.svg",
+      "bytes": 1375,
+      "sha256": "ae4241f48445b667a5bd4037feab218038de0c290957636bdadc83a4ffe2a0c7"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/18-1a142a92d9.svg",
+      "local": "/assets/images/18-1a142a92d9.svg",
+      "bytes": 2512,
+      "sha256": "521e2d32ac7c6c5152213a5cc8e4140abb7fd0a1c8d5ab0367c401cc9f063350"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/91-4294f9027b.svg",
+      "local": "/assets/images/91-4294f9027b.svg",
+      "bytes": 3861,
+      "sha256": "80e1cbeffd72f53e370941cf7f3f40cf446639f63700daccad674a6fe8d46966"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/1-5801621400.svg",
+      "local": "/assets/images/1-5801621400.svg",
+      "bytes": 3317,
+      "sha256": "ec8271e76cc52589861195860ef5442bd329c9665ebc6b145751f71f214105da"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/92-c67f3dddc7.svg",
+      "local": "/assets/images/92-c67f3dddc7.svg",
+      "bytes": 2346,
+      "sha256": "9d6bdd198edc1409a65bd70d8d77b14ead859272bf7ba36174b6482cfee54582"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/996-f073578aab.svg",
+      "local": "/assets/images/996-f073578aab.svg",
+      "bytes": 1410,
+      "sha256": "6ceef9dcebec2640753c2bed6b3badaadb952ec9ff1a193bd6a9e0b58ed4d86b"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/14-c25bd3116b.svg",
+      "local": "/assets/images/14-c25bd3116b.svg",
+      "bytes": 3009,
+      "sha256": "f924a5e57db267c1f7db02d5e768b972ab062bbdb517d6dc17d61544c5c1654e"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/streaming.svg",
+      "local": "/assets/images/streaming.svg",
+      "bytes": 1065,
+      "sha256": "838cf117a9edee661d281baa8a5a1cbbf65796d48a7a8e38d6cf7725f8253b1e"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/477280/logo.png",
+      "local": "/assets/remote/b2ae70339dbd59f291.png",
+      "bytes": 5024,
+      "sha256": "9428f679bf370b85b5503edfa6cff0cbe3bef3474294e5deb9abcf499fd438ae"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/42575/logo.png",
+      "local": "/assets/remote/4d7fac90d25fa39b5a.png",
+      "bytes": 14019,
+      "sha256": "8f51d237425817a386afd059fff0000110270583eff706a21aa42ffcd9230e25"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/114259/logo.png",
+      "local": "/assets/remote/ea2375c042a2aeea3e.png",
+      "bytes": 13337,
+      "sha256": "90c024b1a64e8fdd25a16f1bcfcac8e256eca872938f38c80227952c6df67212"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/317961/logo.png",
+      "local": "/assets/remote/3a546d90c6bedaf856.png",
+      "bytes": 23006,
+      "sha256": "4805a2ca0397a21c714722ed670f3874daeaff7e838ad06073dae9f369dad25b"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/276757/logo.png",
+      "local": "/assets/remote/4e65ca36af3cfb8498.png",
+      "bytes": 26305,
+      "sha256": "88cb4ecead7e12ac923f76221ca922648e0046e2365c54c2def4e698bca4cf91"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/campinho/brasabet-logo.png",
+      "local": "/assets/campinho/brasabet-logo.png",
+      "bytes": 20255,
+      "sha256": "596cecb010f948bf56de9642a991a2a33d53ec9715d2438a578ea18238ebd16a"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/16-61adf4d18c.svg",
+      "local": "/assets/images/16-61adf4d18c.svg",
+      "bytes": 2599,
+      "sha256": "7489059ebcd274a165b5d745f236ec6ccb111da8626190078f77dc746d73f741"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/9-4b680b34c4.svg",
+      "local": "/assets/images/9-4b680b34c4.svg",
+      "bytes": 2767,
+      "sha256": "8f698854fe962e7755b3a68d7c5a8852ebd64e2b781919b6e3325b7fd163d2a2"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/15-bd02d03622.svg",
+      "local": "/assets/images/15-bd02d03622.svg",
+      "bytes": 6835,
+      "sha256": "ed9ed79b02cb90845c538c1da544befb953b84e79c55c760cf9d49dee78d28bf"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/158_7s-07e0cb3d30.svg",
+      "local": "/assets/images/158_7s-07e0cb3d30.svg",
+      "bytes": 3571,
+      "sha256": "bd9a0ad9d99584d1b79808b828be32d75589cb0a15bf9ff1f98d459b0874fc0c"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/zflag_brazil-717d17346b.svg",
+      "local": "/assets/images/zflag_brazil-717d17346b.svg",
+      "bytes": 1000,
+      "sha256": "3bf24ed30dc56c5fc5c8a1a2a6e947eeb8fa80dbdcb89123cac15b5ea47813fd"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/78-6fa22747a4.svg",
+      "local": "/assets/images/78-6fa22747a4.svg",
+      "bytes": 3471,
+      "sha256": "60f2cd4efcb8b064d0a6b34bb247db6d69cceb7cd6243c47feb193481ec1b046"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/162-bc94bbe1d1.svg",
+      "local": "/assets/images/162-bc94bbe1d1.svg",
+      "bytes": 4376,
+      "sha256": "a3dde2d3f1c706eb8d16471dee409e1763a8a866720fb1b5c666d7feaffa64d3"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/UCL-White-2daf2af7fc.svg",
+      "local": "/assets/images/UCL-White-2daf2af7fc.svg",
+      "bytes": 21104,
+      "sha256": "b8e954f213fa4bf67e02d660102901c6ca5d2744402136721d3542c1c056fc13"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/12-86aae73efc.svg",
+      "local": "/assets/images/12-86aae73efc.svg",
+      "bytes": 6220,
+      "sha256": "5d3eca8161c28ae0f00294869e71321ea7bc65ca5e1baefe1b404d0507d46284"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/8-60610df28f.svg",
+      "local": "/assets/images/8-60610df28f.svg",
+      "bytes": 1264,
+      "sha256": "ea6e072cc28b4c002465c93c18d98f1bec9ca79d821777752a204740895b2aa0"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/36-5856fa85fd.svg",
+      "local": "/assets/images/36-5856fa85fd.svg",
+      "bytes": 1528,
+      "sha256": "c18340623a43f6427f8e57dc005295a8fa53ba26baffe64b85e77bfb017123d3"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/1968/logo.png",
+      "local": "/assets/remote/96749da7eb9935097f.png",
+      "bytes": 14552,
+      "sha256": "3602dc240919ba18e17ab79479c88aec0037dcf4d5ea1c26a92c4ef2d69f6c1e"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/5981/logo.png",
+      "local": "/assets/remote/815cd24c36f040215e.png",
+      "bytes": 9127,
+      "sha256": "ccc1d9241f02b59057b9193806ffa09f21bde44fc86829c1bcf17a01f69ff2dd"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/2012/logo.png",
+      "local": "/assets/remote/e11749f93e9b0a46cd.png",
+      "bytes": 14890,
+      "sha256": "7d3f8e0ecae8b56ea21b259e1ad4a216276282d38068437d43f54382161588bf"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/1982/logo.png",
+      "local": "/assets/remote/3088d88b2850f04806.png",
+      "bytes": 5368,
+      "sha256": "f0cf0967035956966b37dfc7064e8a1da070038ac9a18138b622dd298a6c5013"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/21845/logo.png",
+      "local": "/assets/remote/47c047715b70466f17.png",
+      "bytes": 16870,
+      "sha256": "995e565bf3037a119e941ff81c36d44e510497b14899e4cab7c54a6811608791"
+    },
+    {
+      "url": "https://brasabetbr.com/api/participants/1967/logo.png",
+      "local": "/assets/remote/c66c290353e3f6644a.png",
+      "bytes": 8488,
+      "sha256": "64672808fd72a42c048aeb6b6dfcaed4f17e86c61a491cd1d5ffabf1e6e50ced"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/match-field.webp",
+      "local": "/assets/images/match-field.webp",
+      "bytes": 23920,
+      "sha256": "137cdbb38578f00d9c99907caebf692b991aefd9788c767e1f7e39dd5c47e32e"
+    },
+    {
+      "url": "https://brasabetbr.com/releases/20261117234105344-1f7bfdfb6fde/assets/images/market-lock.svg",
+      "local": "/assets/images/market-lock.svg",
+      "bytes": 145,
+      "sha256": "d67e7b5f1d089537d21e875d8625a704245a474090c7ad02e38bfcead2500c50"
+    },
+    {
+      "url": "/api/participants/402031/logo.png",
+      "local": "/assets/remote/eb0ace2ebc7029aa68.png",
+      "bytes": 16302,
+      "sha256": "87dd158dce52f1276e1fccdfbc014a2dc360f03eda1f57b39c316ffdb069e2bc"
+    },
+    {
+      "url": "/api/participants/133444/logo.png",
+      "local": "/assets/remote/b7ac9eb2b1fd388238.png",
+      "bytes": 15913,
+      "sha256": "323f219f6321a2ebc5f6ab2e6297cf9079c565a1368dbfbf3983274cd2261eb4"
+    },
+    {
+      "url": "/api/participants/967255/logo.png",
+      "local": "/assets/remote/44dd8a3a7868a7ab78.png",
+      "bytes": 33390,
+      "sha256": "c4fdc98d816b66cc177e1cacabac140b4b8a180d18b049250081a8097ad840d2"
+    },
+    {
+      "url": "/api/participants/218704/logo.png",
+      "local": "/assets/remote/7836f8164492bd2d2e.png",
+      "bytes": 21994,
+      "sha256": "ca6dd6d27db5d3e1dd745a874b46d47b6829a30c5bc59a80c4497df6e0abe3e7"
+    },
+    {
+      "url": "/api/participants/55393/logo.png",
+      "local": "/assets/remote/8cf5954225fdb674b2.png",
+      "bytes": 17841,
+      "sha256": "deab64c27a0048947369d75d5308b1cdb562e53788874bc44bab3ec5f77902ef"
+    },
+    {
+      "url": "/api/participants/375406/logo.png",
+      "local": "/assets/remote/3bad413a1bd99134ad.png",
+      "bytes": 22853,
+      "sha256": "f5606b8e91f2e12379b07fc482a4dc95938b3cc645c450c71041c6b96478e0e9"
+    },
+    {
+      "url": "/api/participants/1180041/logo.png",
+      "local": "/assets/remote/3133ed3125f261390a.png",
+      "bytes": 23270,
+      "sha256": "46dd78ceeca67dc9a90486981243c5bdb28fdb0880203a71290629d3445eb7d0"
+    },
+    {
+      "url": "/api/participants/602568/logo.png",
+      "local": "/assets/remote/fe3e86365779bb7414.png",
+      "bytes": 29323,
+      "sha256": "8ba3745bf16efd45f695684572fa1e3ec32831c006871d0b24901fd08283627c"
+    },
+    {
+      "url": "/api/participants/163820/logo.png",
+      "local": "/assets/remote/dae0cfa3e154ed77a8.png",
+      "bytes": 15182,
+      "sha256": "eff4b14caf049d5c8d69211ef11efff96dec73433632e1ab33f64aad4ad8df4e"
+    },
+    {
+      "url": "/api/participants/24346/logo.png",
+      "local": "/assets/remote/87333a93726db5005f.png",
+      "bytes": 15383,
+      "sha256": "37755b5385447a97eac6bf4423091a3820bc5ed205c6a059556a8da77dcc1686"
+    },
+    {
+      "url": "/api/participants/1180029/logo.png",
+      "local": "/assets/remote/8d7e358ecfe5afb668.png",
+      "bytes": 23788,
+      "sha256": "ab02ea3172b9729aa41841fe3a78920adafe98629140d57ceee4875b71cda830"
+    },
+    {
+      "url": "/api/participants/38322/logo.png",
+      "local": "/assets/remote/2e76b82087f8139fd9.png",
+      "bytes": 9603,
+      "sha256": "74497bb6c060dad1ef3944d5c2db78b1256dd085d08d2d7f0d89ba8531f1fe6a"
+    },
+    {
+      "url": "/api/participants/2807/logo.png",
+      "local": "/assets/remote/7f1235db2d6e5d2deb.png",
+      "bytes": 20783,
+      "sha256": "bd98f910dc1bf3b09e1bef4e63005f77b11abbe55796247305c380c26e572a8d"
+    },
+    {
+      "url": "/api/participants/5313/logo.png",
+      "local": "/assets/remote/77a4c62592a2646d8a.png",
+      "bytes": 28705,
+      "sha256": "feb55e65888a7a6aebcb512dcc446f50aee97c3a4d2f4ff96e819e8bcbff6343"
+    },
+    {
+      "url": "/api/participants/562732/logo.png",
+      "local": "/assets/remote/689d8fd59726ba5bd8.png",
+      "bytes": 22262,
+      "sha256": "590cf26e230056b22fe95c6c41f325a59b1ba13023af80cccc70662d6154ac78"
+    },
+    {
+      "url": "/api/participants/365992/logo.png",
+      "local": "/assets/remote/604bc0f8507b4847f6.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10000093830342/logo.png",
+      "local": "/assets/remote/30928d7c3dc73b4fb2.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10000625376075/logo.png",
+      "local": "/assets/remote/0756373148da94c0e6.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/294046/logo.png",
+      "local": "/assets/remote/2dda2bd760181235c2.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/445831/logo.png",
+      "local": "/assets/remote/17249135868e99cf40.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/48224/logo.png",
+      "local": "/assets/remote/45baf227d5401eb6fe.png",
+      "bytes": 17872,
+      "sha256": "e1aafc4dc7f45ac0acc725f435361a8429d39954672d607001eade4953bfb712"
+    },
+    {
+      "url": "/api/participants/5157/logo.png",
+      "local": "/assets/remote/56f80b0bcb6bafe273.png",
+      "bytes": 16751,
+      "sha256": "bbf643d6d45e4091bc248972842e0484a006c2b31adbc60e42b9b6611fc6cc0c"
+    },
+    {
+      "url": "/api/participants/24335/logo.png",
+      "local": "/assets/remote/146190760a92530a6a.png",
+      "bytes": 17264,
+      "sha256": "55d3311cc12482d4c54e6b9a6d60c5d8310bea74c0ba65eaaee670b4d54a3023"
+    },
+    {
+      "url": "/api/participants/368690/logo.png",
+      "local": "/assets/remote/de7314ba254390cee1.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/43981/logo.png",
+      "local": "/assets/remote/6dca68e614dfdfc5d5.png",
+      "bytes": 19004,
+      "sha256": "30655f49079c737442b261d83da28c1b6d0d3370af9d9314b07a98a3d4747a7d"
+    },
+    {
+      "url": "/api/participants/806270/logo.png",
+      "local": "/assets/remote/e77d6e3b8ce9413788.png",
+      "bytes": 34060,
+      "sha256": "536b9f41e91be173ad81760ea582b4df468b1776cb5367583c68180a8f1a4a8b"
+    },
+    {
+      "url": "/api/participants/610030/logo.png",
+      "local": "/assets/remote/53308dded91b53c6af.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10003889633498/logo.png",
+      "local": "/assets/remote/8f52db63e58b1eb872.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10002773692660/logo.png",
+      "local": "/assets/remote/a71b74fafca9568182.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/366888/logo.png",
+      "local": "/assets/remote/b256463b648483e8c3.png",
+      "bytes": 13835,
+      "sha256": "1d37cebe6ac31b269fe4e7d9b24981f1d218ccaa6913f6ee4e513c1d50d2f35e"
+    },
+    {
+      "url": "/api/participants/384678/logo.png",
+      "local": "/assets/remote/1e592b14c8227c3d9a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/493690/logo.png",
+      "local": "/assets/remote/f0c6c1b83ab8c3b0d0.png",
+      "bytes": 15087,
+      "sha256": "299c948608fdcb05c9112e8d3d41a95cff41e4d7d1c200b23b079d73689d468e"
+    },
+    {
+      "url": "/api/participants/1216999/logo.png",
+      "local": "/assets/remote/84ae1b6d3f5ddb0590.png",
+      "bytes": 20206,
+      "sha256": "0d29fa4bc31d076334d1b48b4a2d24fd9fcfd515476e99d891565850c8d892b0"
+    },
+    {
+      "url": "/api/participants/475488/logo.png",
+      "local": "/assets/remote/ae599b0af950cd8a76.png",
+      "bytes": 40341,
+      "sha256": "b693577b1d5bcf1755f0a7261ee8924c31a5eb1085e258faebc05c50f75d4fe6"
+    },
+    {
+      "url": "/api/participants/749377/logo.png",
+      "local": "/assets/remote/f9a5cd52552ab443a4.png",
+      "bytes": 6796,
+      "sha256": "319e2b96729fde38ce597451e02e56725917bc8792557be71e71891e6d9cbf85"
+    },
+    {
+      "url": "/api/participants/24364/logo.png",
+      "local": "/assets/remote/9384e20ff92bd4cad9.png",
+      "bytes": 17224,
+      "sha256": "19866cd6cb13bd163feb018143e74ee788288c126002cdfd040d7255841f3a4b"
+    },
+    {
+      "url": "/api/participants/10000279555928/logo.png",
+      "local": "/assets/remote/c8924c7d2d33aeb947.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10002422212160/logo.png",
+      "local": "/assets/remote/aab181163400535661.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/336781/logo.png",
+      "local": "/assets/remote/48946c1eb58e536155.png",
+      "bytes": 18303,
+      "sha256": "8c4d782a79ef1024a82c2b2e687d7aa90e10c36cec44549927f79b35aa15a54b"
+    },
+    {
+      "url": "/api/participants/493594/logo.png",
+      "local": "/assets/remote/db24ecfbfb68fa9dca.png",
+      "bytes": 10730,
+      "sha256": "51c91c16b8c6eeb063255419753520bb506d09fd957d91ec8e580a6fd0d07abc"
+    },
+    {
+      "url": "/api/participants/397522/logo.png",
+      "local": "/assets/remote/360ddcc1d43c879d76.png",
+      "bytes": 8217,
+      "sha256": "5eda6441a49c6e95f1ad2831cd515a531bf231ff5e0af6fba614889f01be64d6"
+    },
+    {
+      "url": "/api/participants/43511/logo.png",
+      "local": "/assets/remote/bd8a8e3dc160465a60.png",
+      "bytes": 21432,
+      "sha256": "1936d05e86cc14e409ccc5f5a4a13b0d66c74f416943b62f4662048150182670"
+    },
+    {
+      "url": "/api/participants/529769/logo.png",
+      "local": "/assets/remote/97034312ecb3f2b024.png",
+      "bytes": 8217,
+      "sha256": "5eda6441a49c6e95f1ad2831cd515a531bf231ff5e0af6fba614889f01be64d6"
+    },
+    {
+      "url": "/api/participants/66774/logo.png",
+      "local": "/assets/remote/2cc88da1c933d9fc97.png",
+      "bytes": 17567,
+      "sha256": "140159217f342f74f8c8c5af35d66045edd5e045f0d85572c8038be9abc93fdd"
+    },
+    {
+      "url": "/api/participants/494374/logo.png",
+      "local": "/assets/remote/cbb351cfc47c329b9e.png",
+      "bytes": 16217,
+      "sha256": "16f6660f9e0f0722af8e5b9974c79c1ea3e92a42fc46f1055ec4a2a8bbead455"
+    },
+    {
+      "url": "/api/participants/606004/logo.png",
+      "local": "/assets/remote/e9a15ff169b9232af7.png",
+      "bytes": 32153,
+      "sha256": "20b6935c729380da7fb20ad8d32bc86f97cb703ebb71a4ac81d553dced033743"
+    },
+    {
+      "url": "/api/participants/499630/logo.png",
+      "local": "/assets/remote/dd7f9b9c30496fb753.png",
+      "bytes": 14815,
+      "sha256": "2c67cbb3fcafd9845f91c69c19b7d906435e4170ff5e13ba423a87224bd793bf"
+    },
+    {
+      "url": "/api/participants/36704/logo.png",
+      "local": "/assets/remote/bf624efbf63f9437a6.png",
+      "bytes": 20812,
+      "sha256": "fae3ab658570e8900bacf6452e3bfe5e118fb2c900d18d31f5b3811b05d4881f"
+    },
+    {
+      "url": "/api/participants/500646/logo.png",
+      "local": "/assets/remote/4f2d2f36781decba0a.png",
+      "bytes": 3799,
+      "sha256": "a800b45c99a12bc03caedcd71157d70d1420ec9631303df7d45fb2a82b690ba6"
+    },
+    {
+      "url": "/api/participants/301890/logo.png",
+      "local": "/assets/remote/f20bf89bf93d6ae782.png",
+      "bytes": 7707,
+      "sha256": "c8294c5169712d1f7afead4eec201d7baa46964ed4f4647cff03d2f2b7e6172e"
+    },
+    {
+      "url": "/api/participants/6678/logo.png",
+      "local": "/assets/remote/78427c0a09e6abc28e.png",
+      "bytes": 9667,
+      "sha256": "31326ffdb57a935ef7fca4a0f2edf39408170c12a8e3659bf45af6a5a929aa07"
+    },
+    {
+      "url": "/api/participants/3540/logo.png",
+      "local": "/assets/remote/a0b8489fe275572189.png",
+      "bytes": 14679,
+      "sha256": "e7b26963248c55839918511a4fb2cb2ac4c018b28255bad37bc3aa2d8a43d803"
+    },
+    {
+      "url": "/api/participants/75253/logo.png",
+      "local": "/assets/remote/37b8eb8ba113a7c834.png",
+      "bytes": 18429,
+      "sha256": "a8af5ad6d9b16fd9a5f5281a3fbfd2527e58ef8520f3c26f83174988d4604cbe"
+    },
+    {
+      "url": "/api/participants/438552/logo.png",
+      "local": "/assets/remote/342766d6713e6c8e40.png",
+      "bytes": 49874,
+      "sha256": "ef8fbb5d0734f8460b8d7bb6669f9ed7e0abe054018de75f6dc7a6d689b2e9df"
+    },
+    {
+      "url": "/api/participants/372788/logo.png",
+      "local": "/assets/remote/76bfad66d4bf927b25.png",
+      "bytes": 12206,
+      "sha256": "bb08eb18b3727c44f5dd10c0916ca2bbfdf9b9d43ac60243b597d5355d9e10f0"
+    },
+    {
+      "url": "/api/participants/41204/logo.png",
+      "local": "/assets/remote/c74b280651c20c0a2e.png",
+      "bytes": 5008,
+      "sha256": "bf452a82f42e3f9ba7ef95ec945feff55eac33d7b9aa797ec42fb479b5a971c1"
+    },
+    {
+      "url": "/api/participants/369334/logo.png",
+      "local": "/assets/remote/75afcf8e1200edaf87.png",
+      "bytes": 20745,
+      "sha256": "e72019ae454460d3e11d54a588cbdde918654acfe5a0fe7cf64dd83864e17ecb"
+    },
+    {
+      "url": "/api/participants/1180039/logo.png",
+      "local": "/assets/remote/0d875bedb3510123ca.png",
+      "bytes": 33195,
+      "sha256": "8e97b710f0cac17b2d6186dba6720281793063c18a7792ef5e9e21d1d8d8f2a4"
+    },
+    {
+      "url": "/api/participants/88336/logo.png",
+      "local": "/assets/remote/5b7b60263964f0136a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/25760/logo.png",
+      "local": "/assets/remote/752fa4d3b1524b0f93.png",
+      "bytes": 4828,
+      "sha256": "9486dfe58923624b98b39a575311adef966a8ef44f80bd99e95487c89ab11edc"
+    },
+    {
+      "url": "/api/participants/230004/logo.png",
+      "local": "/assets/remote/039313cbf793020dd9.png",
+      "bytes": 13568,
+      "sha256": "4327381d49423f6a6f511b185ce8671a9c6239edee009ab4a85cd0c0e352e19b"
+    },
+    {
+      "url": "/api/participants/44458/logo.png",
+      "local": "/assets/remote/494fa51218529f9ec4.png",
+      "bytes": 14651,
+      "sha256": "eee6a37cb28af57a7b3d6f5ce17a8c0942db1f6e13656654a466a28082ad84bb"
+    },
+    {
+      "url": "/api/participants/505288/logo.png",
+      "local": "/assets/remote/052762c0a2b0e07e36.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/7842/logo.png",
+      "local": "/assets/remote/627b14d585a9b0b78f.png",
+      "bytes": 24359,
+      "sha256": "370562b576d8b307e2dff57a26821e28e0db1a22e58c5072310f23d36628b5f9"
+    },
+    {
+      "url": "/api/participants/504434/logo.png",
+      "local": "/assets/remote/499f8908548718e70a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/551891/logo.png",
+      "local": "/assets/remote/3375d0456595bc1e75.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/110317/logo.png",
+      "local": "/assets/remote/ba2d6ae7feb1a37c2e.png",
+      "bytes": 15203,
+      "sha256": "e517b901ec0821aeb4619fde4641d34fd0725f3441dd920967006d6d455f8ad6"
+    },
+    {
+      "url": "/api/participants/949685/logo.png",
+      "local": "/assets/remote/6785c7d8e03f6a5004.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/418307/logo.png",
+      "local": "/assets/remote/4bd16d53cae86459f1.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/80619/logo.png",
+      "local": "/assets/remote/da84790364f0ca93c5.png",
+      "bytes": 18291,
+      "sha256": "38247b3ba9d440959d22e8b9649406fe10afec060b8ccc3329f9e5bfa8c3d0d8"
+    },
+    {
+      "url": "/api/participants/294176/logo.png",
+      "local": "/assets/remote/50896f405085940066.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/376210/logo.png",
+      "local": "/assets/remote/95d84e5dc9523811fe.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/45076/logo.png",
+      "local": "/assets/remote/41e57a26df7ab687d4.png",
+      "bytes": 14642,
+      "sha256": "6edb28d37d64674d48a7341f46797c0b8e1d1c31706786efe03053564dd9ca90"
+    },
+    {
+      "url": "/api/participants/393776/logo.png",
+      "local": "/assets/remote/0d92e11eb9312867e1.png",
+      "bytes": 12526,
+      "sha256": "cb72e68ee29bb941313cceab032f2994d4a77f1d9579dfdc427e0f854267ce04"
+    },
+    {
+      "url": "/api/participants/289007/logo.png",
+      "local": "/assets/remote/bf1dc06ea0f6313934.png",
+      "bytes": 17205,
+      "sha256": "8a8f3d38478e276aabb252dbb4fb7c9bebd8cb2134f7d5d3d6a44e8c13f4f55c"
+    },
+    {
+      "url": "/api/participants/175410/logo.png",
+      "local": "/assets/remote/f665436afed0f62efd.png",
+      "bytes": 22741,
+      "sha256": "8dd670a061b014c84e1cc8477896ba5dd7449c375bd8753e25e629d3120f37d8"
+    },
+    {
+      "url": "/api/participants/6661/logo.png",
+      "local": "/assets/remote/25606d95ac341cc0a7.png",
+      "bytes": 8315,
+      "sha256": "515a64f7442890b75b54adc7897682c60cdec73ea5447507800e9fce28f6b454"
+    },
+    {
+      "url": "/api/participants/6648/logo.png",
+      "local": "/assets/remote/6767a40c7e96f6e82a.png",
+      "bytes": 15681,
+      "sha256": "352cbbb59b6a6e7f54f1637124ae4803b78562f459486adfd83766d72e5413dc"
+    },
+    {
+      "url": "/api/participants/204163/logo.png",
+      "local": "/assets/remote/a6e6e021f2030302d3.png",
+      "bytes": 15457,
+      "sha256": "19957979b83722137038517886b21d0aff0a4345df31c2f893627047cabf6c8f"
+    },
+    {
+      "url": "/api/participants/38219/logo.png",
+      "local": "/assets/remote/83ab1e6453df543bef.png",
+      "bytes": 23900,
+      "sha256": "c175583514e6e2cc165d5512fe297ab00308fede2181fbd7d407d347ec0f27ba"
+    },
+    {
+      "url": "/api/participants/227244/logo.png",
+      "local": "/assets/remote/ecdcc74e04934e2ba5.png",
+      "bytes": 13854,
+      "sha256": "020e4fea66a0f276b9b1e215cd95d4a23823f6c5c7535da2b5b2df7aaf8d4558"
+    },
+    {
+      "url": "/api/participants/3505/logo.png",
+      "local": "/assets/remote/e083dd10c34c3efb4b.png",
+      "bytes": 11802,
+      "sha256": "391c35055360a44187d45b7f7b5cd33eabaa0773e74eb03a61fe3d6d221ea109"
+    },
+    {
+      "url": "/api/participants/177652/logo.png",
+      "local": "/assets/remote/0d6613f4b55581b050.png",
+      "bytes": 12997,
+      "sha256": "7e1374cb740ef870656fb6f7e983a504d0ebbd6f9a92e70b2f5a5b5bc803e0e2"
+    },
+    {
+      "url": "/api/participants/45075/logo.png",
+      "local": "/assets/remote/74174a8598cd8c9b42.png",
+      "bytes": 14379,
+      "sha256": "d134e17dc1d0e17ed5e867871f643142e37ff19f190c925ba2e3ab43673841ae"
+    },
+    {
+      "url": "/api/participants/1205783/logo.png",
+      "local": "/assets/remote/0d94468087b47d87c5.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/6646/logo.png",
+      "local": "/assets/remote/0df127f46e20847b9c.png",
+      "bytes": 58709,
+      "sha256": "577e706f535c3ff4ba23aaf254970eee4b78606a4416e889b0848dedf121c099"
+    },
+    {
+      "url": "/api/participants/3537/logo.png",
+      "local": "/assets/remote/d059f30fc9503030aa.png",
+      "bytes": 6715,
+      "sha256": "1ce7fee08c92e06e6d6c444081418bbc4db3e4389e36200e2542a2e89a341712"
+    },
+    {
+      "url": "/api/participants/6635/logo.png",
+      "local": "/assets/remote/9c02a355440b27a1fb.png",
+      "bytes": 16549,
+      "sha256": "b5180e10fe36e43029af9e86b3b982b97b3ba212bdb5c89bc98951108830bded"
+    },
+    {
+      "url": "/api/participants/204935/logo.png",
+      "local": "/assets/remote/13f8f64e7110e2fa35.png",
+      "bytes": 19528,
+      "sha256": "57cbc54ee2678e1462247f28a78dc2858bdf9aeed2e29594e659a7ec86765893"
+    },
+    {
+      "url": "/api/participants/5742/logo.png",
+      "local": "/assets/remote/b515728763ea1d02ab.png",
+      "bytes": 40239,
+      "sha256": "27f2cce71bf3e0b1a2681107c67460bbc795961b5596ab03afe350375ce9f6d6"
+    },
+    {
+      "url": "/api/participants/26070/logo.png",
+      "local": "/assets/remote/2bffa5d514f53a5724.png",
+      "bytes": 10234,
+      "sha256": "f5ab23702ad5df779e15a889770282c7cd5d2c9e6055d08084f554698c916530"
+    },
+    {
+      "url": "/api/participants/37760/logo.png",
+      "local": "/assets/remote/71fa616527bb76d9f2.png",
+      "bytes": 9744,
+      "sha256": "a06848ad2810bc8798b08528c26823d9559eb68d49e83acc6bd1da46eaa5b187"
+    },
+    {
+      "url": "/api/participants/1191177/logo.png",
+      "local": "/assets/remote/4390afc109130cde13.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/228724/logo.png",
+      "local": "/assets/remote/92e50e208c0871e93e.png",
+      "bytes": 18244,
+      "sha256": "870672295bfec34ea88b39796e6b74ac021d1d9c8a573444f576d3c0bb8390d0"
+    },
+    {
+      "url": "/api/participants/6894/logo.png",
+      "local": "/assets/remote/9173d4dc58d8cb056a.png",
+      "bytes": 26121,
+      "sha256": "4794898de0d5cfd0936a88ba62a024e5ec9850a17d4e971d88bbd53ebde2c386"
+    },
+    {
+      "url": "/api/participants/24510/logo.png",
+      "local": "/assets/remote/99fd319b7c3748e892.png",
+      "bytes": 19796,
+      "sha256": "5c41dc378ce571056be6fab66751b35049839e276185bb988de7079142b4c490"
+    },
+    {
+      "url": "/api/participants/173656/logo.png",
+      "local": "/assets/remote/500914ec5d422e99d4.png",
+      "bytes": 19118,
+      "sha256": "0a506866865feae650bd2e47a76d8cb8cbac94419e71e28295d0027837a3c972"
+    },
+    {
+      "url": "/api/participants/403315/logo.png",
+      "local": "/assets/remote/39c948ae10d3c3772d.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/38008/logo.png",
+      "local": "/assets/remote/6ca1c4d9ef655def00.png",
+      "bytes": 12340,
+      "sha256": "d9b91c34afd81bba12f0f1b7d8041c2b30c41faa0ca8c88adb96be3fcc04b88a"
+    },
+    {
+      "url": "/api/participants/5688/logo.png",
+      "local": "/assets/remote/4faa2c818a5b2f8d0f.png",
+      "bytes": 5144,
+      "sha256": "403b94275881bcc31d06ffddc837e3ea245ef51baaedfbfa439bd27e7c9d2d88"
+    },
+    {
+      "url": "/api/participants/3525/logo.png",
+      "local": "/assets/remote/f015d92bf6d93b292c.png",
+      "bytes": 14293,
+      "sha256": "27a1779590552d5af16c81bd00ca60b6ee3b952e5bb6701df73b03a05559e023"
+    },
+    {
+      "url": "/api/participants/5628/logo.png",
+      "local": "/assets/remote/46477a12c0b58ed480.png",
+      "bytes": 14015,
+      "sha256": "6605162b7bd8497857abd444e2fabdceeab8c08c110dced11ef20c5ce287db3b"
+    },
+    {
+      "url": "/api/participants/3530/logo.png",
+      "local": "/assets/remote/9f2eae6fb27a042a6d.png",
+      "bytes": 15983,
+      "sha256": "7379e77b4703d84073843489d31c9cb1efbeefba7e76849f345cf1aff687d0af"
+    },
+    {
+      "url": "/api/participants/41198/logo.png",
+      "local": "/assets/remote/165922eaac6da480fc.png",
+      "bytes": 5117,
+      "sha256": "31a9b80939c6a9cc497f56b41243dbba23e97f6e76ad530bebc1f20ed75becdf"
+    },
+    {
+      "url": "/api/participants/377624/logo.png",
+      "local": "/assets/remote/10c26716486a5de341.png",
+      "bytes": 19159,
+      "sha256": "41b96b7a1517373b331039260eab1eebbbbb273577a7f031476d3b8c4380a771"
+    },
+    {
+      "url": "/api/participants/625056/logo.png",
+      "local": "/assets/remote/92eb40b8eb9499c0f1.png",
+      "bytes": 15087,
+      "sha256": "79388e9df9dfa2f8aa8eb37d5be66a6d46c3de45aa092da4dfc4f312b90c5498"
+    },
+    {
+      "url": "/api/participants/6660/logo.png",
+      "local": "/assets/remote/2e0b71c2a19cb8520e.png",
+      "bytes": 23079,
+      "sha256": "87b5c6db49a6047b744fa15c1bd1a2641026047718f3a5d5c4ac88b58e3d4752"
+    },
+    {
+      "url": "/api/participants/3550/logo.png",
+      "local": "/assets/remote/da571ff00a37a17a31.png",
+      "bytes": 14660,
+      "sha256": "27d13c8d4e3ae7ca6f80f1bd7a0628554039c06d36f11f0931af6ed3391af8e8"
+    },
+    {
+      "url": "/api/participants/591621/logo.png",
+      "local": "/assets/remote/193debc30545887b76.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/86666/logo.png",
+      "local": "/assets/remote/25cb15e2429038bdec.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/58769/logo.png",
+      "local": "/assets/remote/883acda6f145f641f5.png",
+      "bytes": 20496,
+      "sha256": "1992a93a98731803055e6287b91f2e8b32499f32ce9e9e033f982f01337b5566"
+    },
+    {
+      "url": "/api/participants/285905/logo.png",
+      "local": "/assets/remote/1bf43c24476cd02876.png",
+      "bytes": 15177,
+      "sha256": "62670264cba8d0f9b5ceb8dd38c02de08185da98c0a28f2b8076526968871f49"
+    },
+    {
+      "url": "/api/participants/3527/logo.png",
+      "local": "/assets/remote/ff2cf8465ff0d12d0c.png",
+      "bytes": 7111,
+      "sha256": "f578d58d1ca581b71f846c3c31c1dacc6fb68bbe877808af0fa80fddd9ec7e67"
+    },
+    {
+      "url": "/api/participants/1409568/logo.png",
+      "local": "/assets/remote/44b27a7a807d43c4bd.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1341656/logo.png",
+      "local": "/assets/remote/95a1f4312e074eed06.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/895073/logo.png",
+      "local": "/assets/remote/b203c2685382d85279.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1228553/logo.png",
+      "local": "/assets/remote/5d823f86d6732660a3.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/373348/logo.png",
+      "local": "/assets/remote/33187ce1c0a900c75b.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/834054/logo.png",
+      "local": "/assets/remote/955fd44431a1068c2c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/457059/logo.png",
+      "local": "/assets/remote/c85d82b44a3e84ae5f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/225052/logo.png",
+      "local": "/assets/remote/1bbc136ba9aa70a1cb.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1218105/logo.png",
+      "local": "/assets/remote/b3edaaf05fcaab3eb4.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1239053/logo.png",
+      "local": "/assets/remote/d8a23a6a54bc854188.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1030001/logo.png",
+      "local": "/assets/remote/5c7c7e14714d0120c1.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1316484/logo.png",
+      "local": "/assets/remote/0c6de29d2ea36abc70.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/262979/logo.png",
+      "local": "/assets/remote/11424a59a05029a36e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1252683/logo.png",
+      "local": "/assets/remote/4bb73004d49ddcbc0b.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/617158/logo.png",
+      "local": "/assets/remote/fe86d23d974e4ae534.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/359850/logo.png",
+      "local": "/assets/remote/e3b470638457a260e8.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1167903/logo.png",
+      "local": "/assets/remote/1e0caab982d5a9594e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/297588/logo.png",
+      "local": "/assets/remote/0ec422a7afda832213.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1407034/logo.png",
+      "local": "/assets/remote/1e2456384a5aa59f41.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/660423/logo.png",
+      "local": "/assets/remote/f4e86ac8ad0490bd2e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/812472/logo.png",
+      "local": "/assets/remote/95f1d63934c6378929.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/209718/logo.png",
+      "local": "/assets/remote/72eaa9b2d75d0ab926.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1299298/logo.png",
+      "local": "/assets/remote/88b5d70ce438c45e09.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/915827/logo.png",
+      "local": "/assets/remote/00fd663de238c8e878.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/60276/logo.png",
+      "local": "/assets/remote/cb204eb5335cd8aae6.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/345060/logo.png",
+      "local": "/assets/remote/ca0675aded9d9ee46b.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/822262/logo.png",
+      "local": "/assets/remote/5fa5a0b201749066f4.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1292311/logo.png",
+      "local": "/assets/remote/8640efb154a0c61d54.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/369572/logo.png",
+      "local": "/assets/remote/488148dde5db4bcbb3.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1215925/logo.png",
+      "local": "/assets/remote/913188a17e548ba59c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/121668/logo.png",
+      "local": "/assets/remote/443f8769b83cb4b2cf.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1293867/logo.png",
+      "local": "/assets/remote/7782ed3961b63c2dd5.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1189933/logo.png",
+      "local": "/assets/remote/114adb0104b7059804.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1326678/logo.png",
+      "local": "/assets/remote/a1bbd1c3383f06ead0.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/517028/logo.png",
+      "local": "/assets/remote/9aec8385a556c5b9d1.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1409650/logo.png",
+      "local": "/assets/remote/06e038ac20eba0301b.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1049821/logo.png",
+      "local": "/assets/remote/718f59c72fc62264ac.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/925359/logo.png",
+      "local": "/assets/remote/1417d78fbcf5e238d7.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/822176/logo.png",
+      "local": "/assets/remote/c13e88ff518364d4f0.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/780890/logo.png",
+      "local": "/assets/remote/c619509dcba7ed3c19.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1383190/logo.png",
+      "local": "/assets/remote/7d50c08a71ef22441d.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/522848/logo.png",
+      "local": "/assets/remote/6c4cd62366075e8419.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1371366/logo.png",
+      "local": "/assets/remote/2f6c4b597c420b2576.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1308028/logo.png",
+      "local": "/assets/remote/3619ba86fbec1d2458.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1171195/logo.png",
+      "local": "/assets/remote/85484a011ea9de9ad0.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1264217/logo.png",
+      "local": "/assets/remote/7ff45c7b38aed72dab.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1254733/logo.png",
+      "local": "/assets/remote/bff2bbd08f4b4bb76f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1209069/logo.png",
+      "local": "/assets/remote/cd6c9f7ddf037e5029.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1009705/logo.png",
+      "local": "/assets/remote/09d90ad31ad1ddb404.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/4366/logo.png",
+      "local": "/assets/remote/a0434cb9075ae562d9.png",
+      "bytes": 3873,
+      "sha256": "116182783c40b7d7aa178b82e4ce2d7b9ac4fa2fd918ef3c55e6b0d2fa1b7fa7"
+    },
+    {
+      "url": "/api/participants/396902/logo.png",
+      "local": "/assets/remote/3f74c41dfce0fe6914.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/4282/logo.png",
+      "local": "/assets/remote/f4fe4dfd72eca7cfd4.png",
+      "bytes": 7874,
+      "sha256": "46271b4cdba55ec60e3cedcd617f909d3855e1f4253651ab12a360ac107c3551"
+    },
+    {
+      "url": "/api/participants/396906/logo.png",
+      "local": "/assets/remote/b6697b788a99bfa642.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/4288/logo.png",
+      "local": "/assets/remote/2adb04adf81d35ac2c.png",
+      "bytes": 12341,
+      "sha256": "f40b14cba7f4740caa4ca362fda2b156ac81e7bfac18542f40deeae9a411897b"
+    },
+    {
+      "url": "/api/participants/4329/logo.png",
+      "local": "/assets/remote/40e2d9465a83efada3.png",
+      "bytes": 3543,
+      "sha256": "c9d71e417ab446597cccbe33e8308eaa3fa9719601b8b9b138dc8115af39042d"
+    },
+    {
+      "url": "/api/participants/4381/logo.png",
+      "local": "/assets/remote/64ba2ab09efcd5eb36.png",
+      "bytes": 6499,
+      "sha256": "a32b4ac7c50eba7a346140c8b041dc84526a73c5bc80dfa06f0478b6315c1539"
+    },
+    {
+      "url": "/api/participants/4316/logo.png",
+      "local": "/assets/remote/e255aacc5da4eaaede.png",
+      "bytes": 5272,
+      "sha256": "cd5a764023b5631adc8a5f4b2daa06db9083fb38a5a5c2acae67266c2f409822"
+    },
+    {
+      "url": "/api/participants/4320/logo.png",
+      "local": "/assets/remote/f925f812392d23e504.png",
+      "bytes": 11196,
+      "sha256": "cea216c134a3a2bafb14da54e452470607c90f26b0fe68daacb1b043a20fd165"
+    },
+    {
+      "url": "/api/participants/4327/logo.png",
+      "local": "/assets/remote/f9c88e5bf2cb5c5f8d.png",
+      "bytes": 13010,
+      "sha256": "284ac622e5e47aad4133af4b1bc3a4efda8cc45d7c5ac22590be1612b8d4e944"
+    },
+    {
+      "url": "/api/participants/4352/logo.png",
+      "local": "/assets/remote/23c9fae265e93a4067.png",
+      "bytes": 10651,
+      "sha256": "3510cf2ac16c9d733f72f6200158b314700f8327b918c5bb13cb5a61497f55ee"
+    },
+    {
+      "url": "/api/participants/4330/logo.png",
+      "local": "/assets/remote/6dc6051e6fcbbf2eaa.png",
+      "bytes": 5890,
+      "sha256": "ad91cdc727225b47d9b3af7a055005462af8c0006419b3cd82eafc42afc57418"
+    },
+    {
+      "url": "/api/participants/234266/logo.png",
+      "local": "/assets/remote/98249bebf50abca2f3.png",
+      "bytes": 8803,
+      "sha256": "dcddc6ba64361efa0968bb5e958b7239c58aee1177b2c58a9ca54ef8b5631052"
+    },
+    {
+      "url": "/api/participants/4301/logo.png",
+      "local": "/assets/remote/f8815e89aa1340573f.png",
+      "bytes": 7273,
+      "sha256": "a00fbd481143e80082010a5391960275a80e578bf8bda3e0e6f4098080aa44c2"
+    },
+    {
+      "url": "/api/participants/4317/logo.png",
+      "local": "/assets/remote/13c33ef3e0326c78db.png",
+      "bytes": 4506,
+      "sha256": "9587dc7033509de4b67325f7f91fb515097b825785eede720a9d1f384e260ba0"
+    },
+    {
+      "url": "/api/participants/4369/logo.png",
+      "local": "/assets/remote/8e10ca5be81bdae9d8.png",
+      "bytes": 13968,
+      "sha256": "19f3e285ea3b05aab435d17d90785e919badbe100dda55d677c080d070a10791"
+    },
+    {
+      "url": "/api/participants/4289/logo.png",
+      "local": "/assets/remote/f94ee7943a1bcb6b27.png",
+      "bytes": 8426,
+      "sha256": "eba54558f09ed1dc8a127fda6bdaf83e0af1c3303181e1b93a28862eff1ef35a"
+    },
+    {
+      "url": "/api/participants/47359/logo.png",
+      "local": "/assets/remote/ca2a270b044bfa7a77.png",
+      "bytes": 13037,
+      "sha256": "81d3d49f37c5d8c9d206fd61bafb5d75e1bd8fbd4a7bbe68e4ea5adade723dd0"
+    },
+    {
+      "url": "/api/participants/4383/logo.png",
+      "local": "/assets/remote/a2d255320bb43d2287.png",
+      "bytes": 8176,
+      "sha256": "330a77f93e3ccc58b4548ad68398f3edd0e90fc83dcb3a2650fd21cae9a8f78c"
+    },
+    {
+      "url": "/api/participants/4307/logo.png",
+      "local": "/assets/remote/ec19473003bfcdc217.png",
+      "bytes": 6684,
+      "sha256": "06ae107cf5223b607f66a2b32cfe8c66b9d6952319a0a838005ce0527ccf4877"
+    },
+    {
+      "url": "/api/participants/61356/logo.png",
+      "local": "/assets/remote/084556bca3ed397dfd.png",
+      "bytes": 8371,
+      "sha256": "2a2cd1487e15eaaf035ab3fd7cdba8e5aa822229c54ccbfe8ae0f4c5994a1628"
+    },
+    {
+      "url": "/api/participants/295142/logo.png",
+      "local": "/assets/remote/b9951935e6855161bd.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/245555/logo.png",
+      "local": "/assets/remote/5eb94da12eb92fd85f.png",
+      "bytes": 25010,
+      "sha256": "15243b4167cf8363661d0b721330f8c30669aa78128236a1b9489ea417096aa5"
+    },
+    {
+      "url": "/api/participants/364484/logo.png",
+      "local": "/assets/remote/082d65ede3cd4127ff.png",
+      "bytes": 5798,
+      "sha256": "7f13c05ca65a2b9716712af8e234bc8f9e2e7afe8293941e29537215073247b4"
+    },
+    {
+      "url": "/api/participants/4318/logo.png",
+      "local": "/assets/remote/ef6233cb53824128b1.png",
+      "bytes": 7169,
+      "sha256": "45fc9da13cd0e80c8991cbc6ece6203143beb9d0c415a3304a3b80b4ee6a18c1"
+    },
+    {
+      "url": "/api/participants/628490/logo.png",
+      "local": "/assets/remote/8eee92c2360b853355.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/316831/logo.png",
+      "local": "/assets/remote/3b18653351eb8d8570.png",
+      "bytes": 17591,
+      "sha256": "21454820328ca4fbde9278b860489894bff67e1925c17296ccaeaec9443ec05d"
+    },
+    {
+      "url": "/api/participants/143420/logo.png",
+      "local": "/assets/remote/0c43fc463bfb221815.png",
+      "bytes": 22581,
+      "sha256": "c6fd9e60a12900a5c5f166798962fa9b7704a6d92a25f9cb88d9a63334bee51a"
+    },
+    {
+      "url": "/api/participants/862105/logo.png",
+      "local": "/assets/remote/660bb7cfe0d9fbbb39.png",
+      "bytes": 22669,
+      "sha256": "54dfb5d60d7d916603dc4025dbc3fc52af81560dbf9da18e2eb320b2ebdb8012"
+    },
+    {
+      "url": "/api/participants/286203/logo.png",
+      "local": "/assets/remote/ee39766c012bcf1606.png",
+      "bytes": 15989,
+      "sha256": "a50aa0f4195928d5c21cefddc25e1e374920f7c63200aa73da979d2bb04b92b3"
+    },
+    {
+      "url": "/api/participants/186078/logo.png",
+      "local": "/assets/remote/6c07ca4228804175db.png",
+      "bytes": 16095,
+      "sha256": "836ccbb5eb9b9adc79944cea3fd64fdb6b995f0937d4108aae73deb9de715c0d"
+    },
+    {
+      "url": "/api/participants/590369/logo.png",
+      "local": "/assets/remote/73db8fd2cd1716984d.png",
+      "bytes": 16092,
+      "sha256": "55a3562e6b31ef7f0d7b9c5c9d781f2be86c32485aa8d647cbab6d8f27708bf5"
+    },
+    {
+      "url": "/api/participants/590095/logo.png",
+      "local": "/assets/remote/a304744583984f4fb6.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/320691/logo.png",
+      "local": "/assets/remote/a19337ccddf2d721f9.png",
+      "bytes": 16743,
+      "sha256": "c8aa5cb2872595691da9cc657ddd47618f8551f869c8450b1de0c54dd80a818c"
+    },
+    {
+      "url": "/api/participants/1186161/logo.png",
+      "local": "/assets/remote/d1785cca3ce3345203.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1276826/logo.png",
+      "local": "/assets/remote/a7adb5faf5b380e4d0.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/26280/logo.png",
+      "local": "/assets/remote/248c5ff077c499061c.png",
+      "bytes": 22776,
+      "sha256": "ae8e53bf66cd947c20b63d12ccc396ffedafbd859b101325ebdeb9515fd019ae"
+    },
+    {
+      "url": "/api/participants/163422/logo.png",
+      "local": "/assets/remote/3b9b35385722db669a.png",
+      "bytes": 16240,
+      "sha256": "290ff92829c864f289d218b1494f1eb6a85f2ad4e314ad5c6545baff547aa0b1"
+    },
+    {
+      "url": "/api/participants/191294/logo.png",
+      "local": "/assets/remote/b1453400dfae1d3c52.png",
+      "bytes": 23023,
+      "sha256": "f66821d354848d5926431c0bf214328894c734dd5bc67fc839edc413ef4fdfcb"
+    },
+    {
+      "url": "/api/participants/756395/logo.png",
+      "local": "/assets/remote/68d8e918a513dcd734.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1063034/logo.png",
+      "local": "/assets/remote/868fcf92fe6131feae.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/26110/logo.png",
+      "local": "/assets/remote/9e4f9ad3917a403ad8.png",
+      "bytes": 16203,
+      "sha256": "929209650a11c58346288c133dd72693eab4599834fd815e37296ed8402907df"
+    },
+    {
+      "url": "/api/participants/441656/logo.png",
+      "local": "/assets/remote/bcbf0909c5e0e07c9a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1026697/logo.png",
+      "local": "/assets/remote/0548af99bb8a46efb0.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/396490/logo.png",
+      "local": "/assets/remote/bc8e79cb0890da4c73.png",
+      "bytes": 23823,
+      "sha256": "f88ebdac25cb51b82700688552ac44b85964036c77410f23723a8f761bc337a1"
+    },
+    {
+      "url": "/api/participants/1185501/logo.png",
+      "local": "/assets/remote/527c5a403a22c9306d.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1282105/logo.png",
+      "local": "/assets/remote/153bf00f5df1726e40.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/909465/logo.png",
+      "local": "/assets/remote/9b4444ce60165bb005.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1221677/logo.png",
+      "local": "/assets/remote/daef2fca84e948dec9.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/6769/logo.png",
+      "local": "/assets/remote/cc4574a12a5f2f6a67.png",
+      "bytes": 12250,
+      "sha256": "a873d8d8539e6292982e0f8eb752245587f92f296edd4a0c1bf4df9f39d535c3"
+    },
+    {
+      "url": "/api/participants/1286669/logo.png",
+      "local": "/assets/remote/3dcdd38d05ebca9f64.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1005683/logo.png",
+      "local": "/assets/remote/59b0db846973ca14fb.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/256117/logo.png",
+      "local": "/assets/remote/0a2216c8af5f108a58.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/630306/logo.png",
+      "local": "/assets/remote/442f1868465a32abd6.png",
+      "bytes": 40239,
+      "sha256": "c612c739e6deaa829d49aa04523bbc85ee59da403797e0ec7b727bd4d296a56e"
+    },
+    {
+      "url": "/api/participants/173404/logo.png",
+      "local": "/assets/remote/3a1a082facda691c07.png",
+      "bytes": 15086,
+      "sha256": "20040d6c8504131db355fb6fe12fd867e20bce0b73964ae8b7c6b65c3d4ac859"
+    },
+    {
+      "url": "/api/participants/6843/logo.png",
+      "local": "/assets/remote/e40abb29947d54dda5.png",
+      "bytes": 16110,
+      "sha256": "1c1576146253a330979292a71f60be1f0afcf752397e45332ce589ba26201e6d"
+    },
+    {
+      "url": "/api/participants/6949/logo.png",
+      "local": "/assets/remote/9ef8c0710d22d95430.png",
+      "bytes": 40221,
+      "sha256": "5009cf2d156431b9429ab10e9770e19d06eea7657fcf68fd4cebac23b93163d4"
+    },
+    {
+      "url": "/api/participants/306782/logo.png",
+      "local": "/assets/remote/bf0f1f38ed1b1a26e4.png",
+      "bytes": 19615,
+      "sha256": "05e923862b4eee2a1adecb1caeb5ca02ee920160002c160599ff96b9e5c18142"
+    },
+    {
+      "url": "/api/participants/6758/logo.png",
+      "local": "/assets/remote/81e9e713c96f135e36.png",
+      "bytes": 17101,
+      "sha256": "3ddb34a793377049b156a011ec4acb7ef2b3fb086e8c411145924a4e52a93eea"
+    },
+    {
+      "url": "/api/participants/4051/logo.png",
+      "local": "/assets/remote/f4d9828da51c310059.png",
+      "bytes": 40221,
+      "sha256": "d9c6befacf1bd6d1b96cec5bdfe66231830726a5bc952d4612244f58ca7fa865"
+    },
+    {
+      "url": "/api/participants/7737/logo.png",
+      "local": "/assets/remote/bb9759cc48b70d702c.png",
+      "bytes": 13126,
+      "sha256": "05fa323a215598f53662e4ff1abfb983d12015d9e62776e5c5cb30a1271df30f"
+    },
+    {
+      "url": "/api/participants/117688/logo.png",
+      "local": "/assets/remote/2e1cdd87ba3f1f793a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/4069/logo.png",
+      "local": "/assets/remote/9b88af2136e65f95c4.png",
+      "bytes": 21412,
+      "sha256": "3d6ee84b1e263e9beca6e6992ad776c4f16e73ca296563a002227934a7f3dd21"
+    },
+    {
+      "url": "/api/participants/500668/logo.png",
+      "local": "/assets/remote/76831d7021cd9c04a1.png",
+      "bytes": 18515,
+      "sha256": "d19e926ab26d11db37b80604d91622397560b16597dd95951de2fd990cd4fe3d"
+    },
+    {
+      "url": "/api/participants/6782/logo.png",
+      "local": "/assets/remote/af103f38b53856596a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/4037/logo.png",
+      "local": "/assets/remote/dc488b84c6c2ae84c0.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/4031/logo.png",
+      "local": "/assets/remote/f693647149da3c11f4.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/37693/logo.png",
+      "local": "/assets/remote/239282318ff18ae7db.png",
+      "bytes": 40221,
+      "sha256": "f834ddab5dd629a407ebc71686d0500a8f5352fe72bef0a6e587871ac6f5cbfb"
+    },
+    {
+      "url": "/api/participants/10002430179812/logo.png",
+      "local": "/assets/remote/f198e08efc26463ca6.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/453895/logo.png",
+      "local": "/assets/remote/37a0d5891eaad27c1d.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/929867/logo.png",
+      "local": "/assets/remote/14d51155977bf2c350.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/4067/logo.png",
+      "local": "/assets/remote/79a02f4525890923b4.png",
+      "bytes": 15599,
+      "sha256": "a5f29d07ecc78f9cf245e79e5fa0eb6399e8bf47cdfe936e7646eab95a628e7f"
+    },
+    {
+      "url": "/api/participants/5648/logo.png",
+      "local": "/assets/remote/86dbbb5d22077e5a2c.png",
+      "bytes": 17702,
+      "sha256": "3fa5e56b0910f7d31173e9059c3a77153dea6cc6791671fe0f91beb718fdddde"
+    },
+    {
+      "url": "/api/participants/33804/logo.png",
+      "local": "/assets/remote/f428362f45e545da93.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/4085/logo.png",
+      "local": "/assets/remote/ae341733ced58afa68.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/4073/logo.png",
+      "local": "/assets/remote/2117b90211d1c404da.png",
+      "bytes": 2032,
+      "sha256": "ebee0eb6a161077b22db972fa8198b0bf50636a3d42c9714d8e66a9ce600bdf7"
+    },
+    {
+      "url": "/api/participants/10003742217934/logo.png",
+      "local": "/assets/remote/56e1b5f73c2674093f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/93139/logo.png",
+      "local": "/assets/remote/6bd818e6c61f5213e7.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/52637/logo.png",
+      "local": "/assets/remote/768317a8650cd16707.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/37576/logo.png",
+      "local": "/assets/remote/539659867c428fe14a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/5581/logo.png",
+      "local": "/assets/remote/aad46e7348e8f1a81e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/35304/logo.png",
+      "local": "/assets/remote/abe0c729fc3d5024c5.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/43984/logo.png",
+      "local": "/assets/remote/0206e31204cc1f5f46.png",
+      "bytes": 11591,
+      "sha256": "9194cf9d138e424b814b7f1e9a087cadf8cdac1c701c29b358f608d116c9c182"
+    },
+    {
+      "url": "/api/participants/4076/logo.png",
+      "local": "/assets/remote/5984fe2af381096649.png",
+      "bytes": 13576,
+      "sha256": "a6cb2c9ee1e981100ad8ab58f49e304c27a9d71b80333a090c922cf233c51a31"
+    },
+    {
+      "url": "/api/participants/6772/logo.png",
+      "local": "/assets/remote/4b8bc29886b1225bda.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/41506/logo.png",
+      "local": "/assets/remote/121a233de52dd73c66.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/637780/logo.png",
+      "local": "/assets/remote/eb807ffbffdb2473db.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/109719/logo.png",
+      "local": "/assets/remote/b241880ac4510c9501.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/52663/logo.png",
+      "local": "/assets/remote/649a58aac7c626e305.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/177486/logo.png",
+      "local": "/assets/remote/46da0f4f9a6af7ecc0.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/495486/logo.png",
+      "local": "/assets/remote/3be7aec520040c8cd3.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/38229/logo.png",
+      "local": "/assets/remote/6792aba99dd9d5e514.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/43988/logo.png",
+      "local": "/assets/remote/06dc200ccae2d38313.png",
+      "bytes": 40239,
+      "sha256": "b25228470f1349268ef254075df0076586e0c1df2d2dbba370de0a899fd401fa"
+    },
+    {
+      "url": "/api/participants/177484/logo.png",
+      "local": "/assets/remote/e990479db0ff50766e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/249409/logo.png",
+      "local": "/assets/remote/954fd5b2402c64a8c1.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/128450/logo.png",
+      "local": "/assets/remote/598de43e5f4e1a9e6c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/146854/logo.png",
+      "local": "/assets/remote/7236fcfca384cbcbb1.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/37925/logo.png",
+      "local": "/assets/remote/837a264dd0564c8943.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/4026/logo.png",
+      "local": "/assets/remote/4542c813fa383033de.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/460995/logo.png",
+      "local": "/assets/remote/a13da44ec022ecb99d.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/6841/logo.png",
+      "local": "/assets/remote/49965acca6847e2bbc.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/651956/logo.png",
+      "local": "/assets/remote/adbbc40230255ba270.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/84087/logo.png",
+      "local": "/assets/remote/6f1057749922bcf7f2.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/662009/logo.png",
+      "local": "/assets/remote/aedf2f1fc561c282ea.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/4123/logo.png",
+      "local": "/assets/remote/a73612f30fdd53237c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/737645/logo.png",
+      "local": "/assets/remote/7ac7768ca581b7d24c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/284581/logo.png",
+      "local": "/assets/remote/144cf25cad0fc14f3b.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/6754/logo.png",
+      "local": "/assets/remote/724a62dc0cef4f289c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/5642/logo.png",
+      "local": "/assets/remote/0eff5545e381a37822.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/177492/logo.png",
+      "local": "/assets/remote/ff1b79e0915c795318.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/748715/logo.png",
+      "local": "/assets/remote/5239ce59fb40cf570f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/301354/logo.png",
+      "local": "/assets/remote/d5d659f06d1caeb2fb.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1269372/logo.png",
+      "local": "/assets/remote/bc4f83157233c86a01.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/128390/logo.png",
+      "local": "/assets/remote/e46da83761180093b7.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/6837/logo.png",
+      "local": "/assets/remote/c4b027a76b2892de11.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/5453/logo.png",
+      "local": "/assets/remote/73c4097f1f8640c7ec.png",
+      "bytes": 14112,
+      "sha256": "48d081ac1505a35ebb83fa30c83d00b2a2c7f29c9692d837489c47e4d0fd32dc"
+    },
+    {
+      "url": "/api/participants/45015/logo.png",
+      "local": "/assets/remote/6447b3e411929f3a66.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/226964/logo.png",
+      "local": "/assets/remote/224607bc4c26be6ace.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/56111/logo.png",
+      "local": "/assets/remote/04aa8871f3101e0ba6.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/284177/logo.png",
+      "local": "/assets/remote/c01b6adf7d8a943952.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/663553/logo.png",
+      "local": "/assets/remote/a772b598f707eaa73c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/974643/logo.png",
+      "local": "/assets/remote/dbf1e24539a7897cc3.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/34948/logo.png",
+      "local": "/assets/remote/b9c0e0f0e31a87892c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/603444/logo.png",
+      "local": "/assets/remote/1e35dbae8c74966b7a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/232160/logo.png",
+      "local": "/assets/remote/4dfdc93beb2a2b8154.png",
+      "bytes": 22249,
+      "sha256": "af12d374e27aa55b9c0b39497a75fec2c3d64cb9c865aac8a03cc08cdf94ffb9"
+    },
+    {
+      "url": "/api/participants/38860/logo.png",
+      "local": "/assets/remote/d965d5ac91cdbf7e91.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/107525/logo.png",
+      "local": "/assets/remote/bbdb38f78030e75a08.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/25974/logo.png",
+      "local": "/assets/remote/264ee6683b14d3dcf6.png",
+      "bytes": 10963,
+      "sha256": "58ee76d173ffb6ee7f75131c5925e9ac68023671fd08e4daabcba30ec493a0a6"
+    },
+    {
+      "url": "/api/participants/291958/logo.png",
+      "local": "/assets/remote/aed73c4a54353bfbc4.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/288793/logo.png",
+      "local": "/assets/remote/2d1d6a4898f7ee6959.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/218420/logo.png",
+      "local": "/assets/remote/b509d7c479842f6e87.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/232186/logo.png",
+      "local": "/assets/remote/e1b90bc882b66e08b9.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1072184/logo.png",
+      "local": "/assets/remote/ec7ffa9ac027973549.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/44666/logo.png",
+      "local": "/assets/remote/ce838ab36d78f9010b.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/378290/logo.png",
+      "local": "/assets/remote/ec1cefdd99f3fe1557.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/652274/logo.png",
+      "local": "/assets/remote/6c5cfdf424fbd0839c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/170682/logo.png",
+      "local": "/assets/remote/5c8f4beb3cb9693bd8.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/566217/logo.png",
+      "local": "/assets/remote/e4495f5cda547c0920.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/122228/logo.png",
+      "local": "/assets/remote/61453b62c2588f13a9.png",
+      "bytes": 13470,
+      "sha256": "6f0c2abbc3427566a5fb145b1910e745aa3f756f8a2e93120e5db9b6d9ec2ebc"
+    },
+    {
+      "url": "/api/participants/368186/logo.png",
+      "local": "/assets/remote/5aa6ea65c24fa5af8f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/646340/logo.png",
+      "local": "/assets/remote/d7bbde51331d853747.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/124564/logo.png",
+      "local": "/assets/remote/6e1c4ca3020cb9106d.png",
+      "bytes": 16502,
+      "sha256": "ad31ef4fc0c956f97c9784dc68814e89743ae45297fd584c45287332c44726b3"
+    },
+    {
+      "url": "/api/participants/36733/logo.png",
+      "local": "/assets/remote/fca94e3b000c5b8afd.png",
+      "bytes": 16512,
+      "sha256": "19c76b8957d7af68c6b271ce6651ecc45dd7f7c35d29da64241ab5eafdb177f8"
+    },
+    {
+      "url": "/api/participants/43386/logo.png",
+      "local": "/assets/remote/3aa9bfb18545d85484.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/940501/logo.png",
+      "local": "/assets/remote/541b38f98b8945fcda.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/52451/logo.png",
+      "local": "/assets/remote/bf24ed09de2f60c9bb.png",
+      "bytes": 22652,
+      "sha256": "c4b50a34a36340fb87dcd31c1fc44cf018befe86fab5309e35b9669c6861cdb0"
+    },
+    {
+      "url": "/api/participants/161184/logo.png",
+      "local": "/assets/remote/ad9a02ae5612ef3d79.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/81365/logo.png",
+      "local": "/assets/remote/f2348c3a9cb73989bc.png",
+      "bytes": 9899,
+      "sha256": "7e5e7e7acf7b07d6a8ff3938eec412664c6208cedb5a0ca083e3ff1835f8ce1a"
+    },
+    {
+      "url": "/api/participants/81361/logo.png",
+      "local": "/assets/remote/9b97ac4b7ae2547fae.png",
+      "bytes": 21905,
+      "sha256": "8963734fd9a8882e822d91d65caf04b725a6ae57bc7f05c5911dbd880d8ebda4"
+    },
+    {
+      "url": "/api/participants/342898/logo.png",
+      "local": "/assets/remote/fec093ef679a8fd72d.png",
+      "bytes": 14475,
+      "sha256": "84575cceb9c6c8c7879ec2506ea65b4ec0ae203e542d585d6afd03ada118e71d"
+    },
+    {
+      "url": "/api/participants/52460/logo.png",
+      "local": "/assets/remote/87438ba0dddaad1b6e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/396330/logo.png",
+      "local": "/assets/remote/8ec1755d7c77e11976.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1390576/logo.png",
+      "local": "/assets/remote/4872d27c17c6a4294d.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/313451/logo.png",
+      "local": "/assets/remote/d351837e2010fd5524.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/293292/logo.png",
+      "local": "/assets/remote/a081058ef468e45373.png",
+      "bytes": 28141,
+      "sha256": "299fe2983b462d2ed6960e50b77b39a439b37c29c90ab3d091b01f933b2b67b2"
+    },
+    {
+      "url": "/api/participants/477226/logo.png",
+      "local": "/assets/remote/afc2a03380ed89808f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1177147/logo.png",
+      "local": "/assets/remote/b61cf4bd87ec974c18.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/584227/logo.png",
+      "local": "/assets/remote/7e71f3b90591e9b812.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/275309/logo.png",
+      "local": "/assets/remote/595d3370fdba356efc.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1203685/logo.png",
+      "local": "/assets/remote/6b46e9ae2a55102d9b.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/45685/logo.png",
+      "local": "/assets/remote/625cc62965a57f501e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/79873/logo.png",
+      "local": "/assets/remote/9cd2e6fae3841cbcee.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/43389/logo.png",
+      "local": "/assets/remote/617935fd2380174dae.png",
+      "bytes": 6013,
+      "sha256": "9cf7d2cbbb4fb5eb60d1e2f6ea2e683a59361cd4d2f8c0fba161ec4f99bb9bb7"
+    },
+    {
+      "url": "/api/participants/43059/logo.png",
+      "local": "/assets/remote/8032a51bc4a04c950b.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/887277/logo.png",
+      "local": "/assets/remote/f2f0be156560ffcd27.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/230984/logo.png",
+      "local": "/assets/remote/37dd03f5e719fe6db0.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/5666/logo.png",
+      "local": "/assets/remote/2a5782665db4483dae.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1177159/logo.png",
+      "local": "/assets/remote/00e0cb05a9fc26766f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/896093/logo.png",
+      "local": "/assets/remote/2c6b917c77e32ba87a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/500064/logo.png",
+      "local": "/assets/remote/46f562a1b7f7da883f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1067154/logo.png",
+      "local": "/assets/remote/24cd98ed19c1256959.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/906127/logo.png",
+      "local": "/assets/remote/350f5ef3d1984b09d5.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/292230/logo.png",
+      "local": "/assets/remote/d1da065e3683c7ed2c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/935339/logo.png",
+      "local": "/assets/remote/9525cae28c80c50e23.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/115115/logo.png",
+      "local": "/assets/remote/a2b5b67d58cfcaf244.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/174998/logo.png",
+      "local": "/assets/remote/7249105992f9486342.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/629250/logo.png",
+      "local": "/assets/remote/1fc6d745dfc7dd5031.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/79865/logo.png",
+      "local": "/assets/remote/246c988a401b511ebf.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/121054/logo.png",
+      "local": "/assets/remote/2919387a3c85767d63.png",
+      "bytes": 13672,
+      "sha256": "ff282f6eb933ea07bf04adf49cb2b89dc7e0c74fb6343d3f516f52cd59f84cab"
+    },
+    {
+      "url": "/api/participants/622606/logo.png",
+      "local": "/assets/remote/01fffdd58edb62c1c4.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/643436/logo.png",
+      "local": "/assets/remote/390ec3a79f9b44bad1.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/121052/logo.png",
+      "local": "/assets/remote/f439646cff155b133c.png",
+      "bytes": 14468,
+      "sha256": "0775e587c2cd523fc878acaa08a7b5917a13b4d62f3fe34337d69808e6b9ea95"
+    },
+    {
+      "url": "/api/participants/121060/logo.png",
+      "local": "/assets/remote/b24d7af5165c823470.png",
+      "bytes": 24733,
+      "sha256": "f9d585174694ea020870dcf3f964b95dee2074b2d58cfc8b613a2be033b3f970"
+    },
+    {
+      "url": "/api/participants/1080786/logo.png",
+      "local": "/assets/remote/6766e637d40794e2f7.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1065902/logo.png",
+      "local": "/assets/remote/6ff2e7960dfaab26b6.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/829520/logo.png",
+      "local": "/assets/remote/d3fccdba74157794b4.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1106517/logo.png",
+      "local": "/assets/remote/c73abc92e2d699e3b9.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10000212137883/logo.png",
+      "local": "/assets/remote/bb65448faa9a8ab87e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10000783464838/logo.png",
+      "local": "/assets/remote/f2a3dd486e3438aaa5.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10002187954719/logo.png",
+      "local": "/assets/remote/577cb0de06cb5437f6.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10002275223058/logo.png",
+      "local": "/assets/remote/55a60c2bf26ad3c5ab.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10000387921129/logo.png",
+      "local": "/assets/remote/4e3978d19bafd5fcb9.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/23707/logo.png",
+      "local": "/assets/remote/31a59f561e76f936e5.png",
+      "bytes": 25164,
+      "sha256": "02f74fc27ebb83f2124d1ec822c5c10669bcba2efce6d405d163cb33038fe0e4"
+    },
+    {
+      "url": "/api/participants/1309572/logo.png",
+      "local": "/assets/remote/40541dec78829c31c2.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10001216792325/logo.png",
+      "local": "/assets/remote/d0948506495e23897f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10001732300478/logo.png",
+      "local": "/assets/remote/90b056e0bb4ef14169.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1370318/logo.png",
+      "local": "/assets/remote/c8144da42b3f8f118e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/741123/logo.png",
+      "local": "/assets/remote/b500a35e82120df832.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/828596/logo.png",
+      "local": "/assets/remote/5e685b3961a868dedd.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/738869/logo.png",
+      "local": "/assets/remote/095aad86a8b5bd2458.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10002396726085/logo.png",
+      "local": "/assets/remote/71461283dfa2c688f3.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/988489/logo.png",
+      "local": "/assets/remote/e853b1f0e3c0a13300.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/339917/logo.png",
+      "local": "/assets/remote/a755bd0b2e6851c688.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/908831/logo.png",
+      "local": "/assets/remote/dfadfb2ccdea5bccb8.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/738429/logo.png",
+      "local": "/assets/remote/1c4ea7c1b2e1267dde.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10001446146572/logo.png",
+      "local": "/assets/remote/6ac4296bbf205e6058.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10001848286164/logo.png",
+      "local": "/assets/remote/92679cac50c7908530.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/738419/logo.png",
+      "local": "/assets/remote/47cb930c838d79baa5.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10003520087467/logo.png",
+      "local": "/assets/remote/5414407e0247b082b1.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1181515/logo.png",
+      "local": "/assets/remote/a6b31c5b580c3fdf12.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10003075222783/logo.png",
+      "local": "/assets/remote/24d10d357e7635df08.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/382676/logo.png",
+      "local": "/assets/remote/c850d7bade7a31b6ec.png",
+      "bytes": 21944,
+      "sha256": "08dccbae68c268fa950d15c3138d172e92d60a47bf02a60406d3fdd468eb8ff8"
+    },
+    {
+      "url": "/api/participants/884967/logo.png",
+      "local": "/assets/remote/eb64b61bbd70256d6a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/986559/logo.png",
+      "local": "/assets/remote/9b40cd7eeb6dde60d7.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1307454/logo.png",
+      "local": "/assets/remote/f3d073727e2d3e6d4d.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/973329/logo.png",
+      "local": "/assets/remote/75745da792fc204663.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/850727/logo.png",
+      "local": "/assets/remote/cd7599925e4cf9460b.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/952449/logo.png",
+      "local": "/assets/remote/6a8745c24a2787ea0e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/976281/logo.png",
+      "local": "/assets/remote/ead0b97b0bef61ce0c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1026913/logo.png",
+      "local": "/assets/remote/1214ed4b69b0c88a77.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/388216/logo.png",
+      "local": "/assets/remote/e5aad1848544b4e70e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1076012/logo.png",
+      "local": "/assets/remote/88d9de4d7d4f6a39fb.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1097011/logo.png",
+      "local": "/assets/remote/6f749291dfa5a9bf2b.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1026047/logo.png",
+      "local": "/assets/remote/126cae990382c80961.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10003101933274/logo.png",
+      "local": "/assets/remote/40d8d1883e91e3b91e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10003591121600/logo.png",
+      "local": "/assets/remote/e7959537083f83b665.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10000942797511/logo.png",
+      "local": "/assets/remote/78031ef4fc5c7bb9e7.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10000171958157/logo.png",
+      "local": "/assets/remote/c5c641e3d272b329da.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10003147745622/logo.png",
+      "local": "/assets/remote/c123080a601e7567f4.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10002482398508/logo.png",
+      "local": "/assets/remote/5739cd19ac2af1cdbb.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10003129607883/logo.png",
+      "local": "/assets/remote/998b59c86a15450a57.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/894607/logo.png",
+      "local": "/assets/remote/1b9c9d19d82961cd70.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1054963/logo.png",
+      "local": "/assets/remote/6232a5f19560a22a8d.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/147922/logo.png",
+      "local": "/assets/remote/f2ebd9602d411179f3.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1316884/logo.png",
+      "local": "/assets/remote/d7fc30dec1189aa73e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1069662/logo.png",
+      "local": "/assets/remote/1c59f4e784d914b50c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10003139798184/logo.png",
+      "local": "/assets/remote/6b652859080d357005.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1024297/logo.png",
+      "local": "/assets/remote/e890e339c0d5c55a85.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1379742/logo.png",
+      "local": "/assets/remote/4c26d33cc75b6daba2.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/967125/logo.png",
+      "local": "/assets/remote/7414227826d6379a39.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10003912530323/logo.png",
+      "local": "/assets/remote/0d59ab00bef5581179.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10001453181495/logo.png",
+      "local": "/assets/remote/834d1ee5f922340816.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/126106/logo.png",
+      "local": "/assets/remote/f825c36366be0fed1e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1332932/logo.png",
+      "local": "/assets/remote/2a750dbf3402ab0d11.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10000254650302/logo.png",
+      "local": "/assets/remote/738532c21fa4b0359b.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10001906771010/logo.png",
+      "local": "/assets/remote/039797406ffffba19a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10003135240276/logo.png",
+      "local": "/assets/remote/edb0200a1d5dc1c46f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1351582/logo.png",
+      "local": "/assets/remote/29ade38a6bd9f49958.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/827176/logo.png",
+      "local": "/assets/remote/d66a227bc70905451d.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10001569160735/logo.png",
+      "local": "/assets/remote/5c4e0a51ead5ff556c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10001816753164/logo.png",
+      "local": "/assets/remote/b68615ce2fd29cbc4c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1395268/logo.png",
+      "local": "/assets/remote/65cf3052b9c55d9a5a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/986183/logo.png",
+      "local": "/assets/remote/287cd4091dfacfae25.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1395804/logo.png",
+      "local": "/assets/remote/234eea5f605feaefe7.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/739919/logo.png",
+      "local": "/assets/remote/e1724df980cd07ab83.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/25083/logo.png",
+      "local": "/assets/remote/e049b93f2534baa2b5.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1400156/logo.png",
+      "local": "/assets/remote/e03262977055f148ce.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10001373063298/logo.png",
+      "local": "/assets/remote/9460e8e983e487caee.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10001922097195/logo.png",
+      "local": "/assets/remote/5ad0a491d39f09f3da.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10000956592923/logo.png",
+      "local": "/assets/remote/77ce6881457735af3a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10004091211809/logo.png",
+      "local": "/assets/remote/4654889951cd7c1815.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/964963/logo.png",
+      "local": "/assets/remote/d3e3a9cc0cb936a32e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1027635/logo.png",
+      "local": "/assets/remote/424e52cf38898ba87f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/883893/logo.png",
+      "local": "/assets/remote/f2ae65bdff077568ec.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/888623/logo.png",
+      "local": "/assets/remote/86a1a3863113c5dc04.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10000687066324/logo.png",
+      "local": "/assets/remote/0dd5a95300b389196e.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10003738371864/logo.png",
+      "local": "/assets/remote/6f53a3634ace558d64.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10002170308614/logo.png",
+      "local": "/assets/remote/51395af44391967b3c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10001600814309/logo.png",
+      "local": "/assets/remote/089c7146094ec1e674.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/5172/logo.png",
+      "local": "/assets/remote/7dd4615f10694c9669.png",
+      "bytes": 9017,
+      "sha256": "8c7a9617ecb37d2f0de4d88c8ee38a172133d0f815bebfbc04f6efbf6c07a187"
+    },
+    {
+      "url": "/api/participants/1783/logo.png",
+      "local": "/assets/remote/fd79727e2b52a3ce0b.png",
+      "bytes": 14848,
+      "sha256": "dbbea4af387fb9d9b1d10f3ccca76c665f6f1a29d8e382376a1fdb0ce5e5c4d3"
+    },
+    {
+      "url": "/api/participants/2454/logo.png",
+      "local": "/assets/remote/95083d10c87b15bebb.png",
+      "bytes": 12353,
+      "sha256": "1129e1e852e6394d991a6c4a20f5a6c92148bf92e7d3c1aadbc9b4d34abae6d0"
+    },
+    {
+      "url": "/api/participants/2953/logo.png",
+      "local": "/assets/remote/aeb213e41376820000.png",
+      "bytes": 19380,
+      "sha256": "aa844adf9552a39e0c81a991f5a882adb4a3395cd4ad683cf10f1c7c2bd87405"
+    },
+    {
+      "url": "/api/participants/10003256904676/logo.png",
+      "local": "/assets/remote/8a3251d5cc8f4869a7.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/881507/logo.png",
+      "local": "/assets/remote/d106932ee34ea9e2ad.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/30/logo.png",
+      "local": "/assets/remote/f857ac571a057d9803.png",
+      "bytes": 9679,
+      "sha256": "08c231226bd9ae012ab25f8d6a9936ca6fbebc61bd80e8eb1ccd91f343b7b229"
+    },
+    {
+      "url": "/api/participants/116312/logo.png",
+      "local": "/assets/remote/516ba32e908ad96b1b.png",
+      "bytes": 9074,
+      "sha256": "eefe96aa40f78369547bbf15b5c11cc35816c5795e47cfdcd0ab19c0dc7c4733"
+    },
+    {
+      "url": "/api/participants/2205/logo.png",
+      "local": "/assets/remote/2b704a60cbf4254527.png",
+      "bytes": 10780,
+      "sha256": "269de236a642658da5390b6d80f4a2fe4b440d642dded4646cfb1f9b917214f8"
+    },
+    {
+      "url": "/api/participants/2859/logo.png",
+      "local": "/assets/remote/5ca0bb7b991f170a13.png",
+      "bytes": 15768,
+      "sha256": "a1e7890edfe8b6dcb6ef123f304039b2b3db559d3e2a0408c0b358218291168a"
+    },
+    {
+      "url": "/api/participants/2443/logo.png",
+      "local": "/assets/remote/b9fdd9510407a630c1.png",
+      "bytes": 3496,
+      "sha256": "d8548bb2397352394c309d17aaf6f817b63a83087852057cf97f0f7a557d79c3"
+    },
+    {
+      "url": "/api/participants/10000156369613/logo.png",
+      "local": "/assets/remote/e1e3ed7c4d3aa4bf89.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/80741/logo.png",
+      "local": "/assets/remote/ccbe3f1694f22ce9c2.png",
+      "bytes": 8402,
+      "sha256": "77cf5054d4ac632c3983cee4f38dcffb9f7f4a832abddc5ec38d8590f3eb877c"
+    },
+    {
+      "url": "/api/participants/1653/logo.png",
+      "local": "/assets/remote/0934e6b60651a7d3f0.png",
+      "bytes": 11459,
+      "sha256": "ceb2eba99024560f6342caefeea148e64305c0e0c5fe25c865f81127bff02e5d"
+    },
+    {
+      "url": "/api/participants/162368/logo.png",
+      "local": "/assets/remote/3143e7b27b00ff43fd.png",
+      "bytes": 20282,
+      "sha256": "faaad56620361247a97d205ea428e1cab85a7321d77bae12cf57e5bae67d2fad"
+    },
+    {
+      "url": "/api/participants/2353/logo.png",
+      "local": "/assets/remote/d1bdf998883d987fbe.png",
+      "bytes": 20585,
+      "sha256": "9a32d3652a177742ed49ab22f17216e29f26ffc8c68555b256103db0888bc91e"
+    },
+    {
+      "url": "/api/participants/372056/logo.png",
+      "local": "/assets/remote/6f68b38a22b21be489.png",
+      "bytes": 14040,
+      "sha256": "4edac60d99e8a8fbf3be874652050d0cf050d10b535ea806082c81da42a03e32"
+    },
+    {
+      "url": "/api/participants/126304/logo.png",
+      "local": "/assets/remote/27e766b3bf460e348c.png",
+      "bytes": 16319,
+      "sha256": "150528ec1dc18b48876a638891fe257d411bdbb092b86e18aec43eb9c338f67f"
+    },
+    {
+      "url": "/api/participants/116223/logo.png",
+      "local": "/assets/remote/02af542c6b017ea045.png",
+      "bytes": 13094,
+      "sha256": "d8aa09a8f244d3742ed3bddd5035d2c4f96f7e42fcfcd641933a04c8390bfc0e"
+    },
+    {
+      "url": "/api/participants/171626/logo.png",
+      "local": "/assets/remote/167e261121c7645e5e.png",
+      "bytes": 13603,
+      "sha256": "0d6ae0944fa2fb03dd3485385e1407dd99db5ee008a0ad9cc715ee9fc45ec0d3"
+    },
+    {
+      "url": "/api/participants/1159/logo.png",
+      "local": "/assets/remote/6a9e6168593ac97077.png",
+      "bytes": 6598,
+      "sha256": "277ed79361b4a56541c877a2a01e79b9c7e9a9985aca794d41ed4fbdd5f5fb88"
+    },
+    {
+      "url": "/api/participants/1291/logo.png",
+      "local": "/assets/remote/7e8eded6529fdba953.png",
+      "bytes": 14842,
+      "sha256": "aa30d944853e153d510b226f621e9e93caa6a3320d4a7d09ae8106243e069259"
+    },
+    {
+      "url": "/api/participants/1292/logo.png",
+      "local": "/assets/remote/439381b9bec0bab94c.png",
+      "bytes": 11140,
+      "sha256": "43e3f50b6fcffb61c1b52c2b8d3d9307a5b2bf0f551e1e846d633b1cba48dfd6"
+    },
+    {
+      "url": "/api/participants/1289/logo.png",
+      "local": "/assets/remote/a0c44386cbb1a638d7.png",
+      "bytes": 10772,
+      "sha256": "df3b003aebbae6a3c1e0c6ae369b2cca264437f2d36be932b708a27647423bf4"
+    },
+    {
+      "url": "/api/participants/3248/logo.png",
+      "local": "/assets/remote/b1eac0a09d00aea7f4.png",
+      "bytes": 12357,
+      "sha256": "17546ce1408ec978f988054c3ccb39b842a726f093c9d826ead9c00636bdac3b"
+    },
+    {
+      "url": "/api/participants/2686/logo.png",
+      "local": "/assets/remote/4c4cf2a847936d83e2.png",
+      "bytes": 10638,
+      "sha256": "80cd2f18d8e76352d20c381f26913f13089a1bbe2ad5cd3cff8e74b5a5253ec0"
+    },
+    {
+      "url": "/api/participants/5235/logo.png",
+      "local": "/assets/remote/7896eeb4dbb1d5de8b.png",
+      "bytes": 16622,
+      "sha256": "4b3e830a906ab6ad87fc30b174e2a886243b72c4f8158bfc0213284824548429"
+    },
+    {
+      "url": "/api/participants/3415/logo.png",
+      "local": "/assets/remote/3440ffa4768ebfb8f0.png",
+      "bytes": 14171,
+      "sha256": "e3b15e2659b3e482a34b427e18831d91ae4002dc069b676e6530e734f9e798cf"
+    },
+    {
+      "url": "/api/participants/3419/logo.png",
+      "local": "/assets/remote/28c3d5f9ad1f8c5ca1.png",
+      "bytes": 18183,
+      "sha256": "9bda37e396742c7780ed631949b56bd9481b175597c1da209092e3709d933591"
+    },
+    {
+      "url": "/api/participants/3432/logo.png",
+      "local": "/assets/remote/447e0f5eb265f98885.png",
+      "bytes": 18401,
+      "sha256": "6d4c6770e3517e262263871c5fe82e6f2fb6f0f528b04bff961ffb4510cf5504"
+    },
+    {
+      "url": "/api/participants/3412/logo.png",
+      "local": "/assets/remote/7b79d97c8b69473faa.png",
+      "bytes": 9230,
+      "sha256": "70579057c166256efef5195120f0dc6913f5806f6e32b878a886eb4d5a540d68"
+    },
+    {
+      "url": "/api/participants/3437/logo.png",
+      "local": "/assets/remote/4ac8a9f64c4eb571a5.png",
+      "bytes": 8581,
+      "sha256": "81f248d2fc5528beffc838429e6d625dba1691ada819c008ec503674920de2bc"
+    },
+    {
+      "url": "/api/participants/3410/logo.png",
+      "local": "/assets/remote/82175e52a082bc6f4e.png",
+      "bytes": 22572,
+      "sha256": "144451e873b31a828ae925067b3e24fa53d8c416abd567441cd949eecee46fdc"
+    },
+    {
+      "url": "/api/participants/3436/logo.png",
+      "local": "/assets/remote/8d56772c46280b71f0.png",
+      "bytes": 7273,
+      "sha256": "5030a4434a71426b9cd6ba72abb6a62654eb5c57e3d52e1375e9864fa3e555bb"
+    },
+    {
+      "url": "/api/participants/3420/logo.png",
+      "local": "/assets/remote/22a1ca15dc8e349c15.png",
+      "bytes": 19007,
+      "sha256": "0e3d04088171a055848d79076bec96eb7cf44e57f74acbb69d548dafba8fa26e"
+    },
+    {
+      "url": "/api/participants/3409/logo.png",
+      "local": "/assets/remote/3a6d207e706869d6e7.png",
+      "bytes": 15960,
+      "sha256": "d353d89350ff0d79d68fc67985541e35b67562e44169567a3dd97a1f062f5630"
+    },
+    {
+      "url": "/api/participants/3411/logo.png",
+      "local": "/assets/remote/417478fbaa63aceecf.png",
+      "bytes": 17596,
+      "sha256": "41004f4a5cd88c6d83e84d01d517a68182a21131a0df29228c18f3e75a54df2b"
+    },
+    {
+      "url": "/api/participants/3433/logo.png",
+      "local": "/assets/remote/54b45f0db7d0275249.png",
+      "bytes": 12504,
+      "sha256": "dbce2725935e23d93156f752a07dae7be8c1fadaaf40935b2f926309cb7c6d01"
+    },
+    {
+      "url": "/api/participants/3431/logo.png",
+      "local": "/assets/remote/ac87b849f05063d757.png",
+      "bytes": 20739,
+      "sha256": "ffac5296552dfcf0e53882788216c449b38cc9c61943c04aed7837bba5a682d3"
+    },
+    {
+      "url": "/api/participants/3435/logo.png",
+      "local": "/assets/remote/2624a324106ff85b99.png",
+      "bytes": 13180,
+      "sha256": "2e30b97129092247405da8853aaa19a06fa0711f51dc5d170bd008e3ae477851"
+    },
+    {
+      "url": "/api/participants/3424/logo.png",
+      "local": "/assets/remote/a381f5b26170fb693b.png",
+      "bytes": 15215,
+      "sha256": "6f09f1afbf3cccc63d0bb467a3bb74cdfe45766c6f243176bfb433e4376032d5"
+    },
+    {
+      "url": "/api/participants/3428/logo.png",
+      "local": "/assets/remote/bb8003b0798ccd5e52.png",
+      "bytes": 14862,
+      "sha256": "df94a09d960bae14a0300b39113ea536c8b8950d449318b4c598fecc8a70dabb"
+    },
+    {
+      "url": "/api/participants/5539/logo.png",
+      "local": "/assets/remote/0d6b333ca311f5687c.png",
+      "bytes": 7251,
+      "sha256": "10720fbd99bf319bfa643098301d9a0df5aaa8fb67c1eb3d46698d3b32fe727c"
+    },
+    {
+      "url": "/api/participants/3418/logo.png",
+      "local": "/assets/remote/014c629fda378d36aa.png",
+      "bytes": 17355,
+      "sha256": "d8ec0f1395f9200c464d5f9e6069946ce19a0bf184fcb77eddd9de175ca92cce"
+    },
+    {
+      "url": "/api/participants/3423/logo.png",
+      "local": "/assets/remote/d5e3a95c82f53e5b6b.png",
+      "bytes": 19125,
+      "sha256": "19d926ab8bbdbe9e9d091b40e3833d5a6a4752e26810e1efc8667ddab5066ce4"
+    },
+    {
+      "url": "/api/participants/3417/logo.png",
+      "local": "/assets/remote/0eda774e1de82c79bf.png",
+      "bytes": 20267,
+      "sha256": "261945f6c97d214d388ac014b1442bb1b4c5dfa23d31e049505f8e9b2cd89653"
+    },
+    {
+      "url": "/api/participants/3422/logo.png",
+      "local": "/assets/remote/426758d91e2827486c.png",
+      "bytes": 19054,
+      "sha256": "5b0c3059b6cec684a0ed436e6340d981fbe6ee0433fb0a627b2fb312d9817b06"
+    },
+    {
+      "url": "/api/participants/3413/logo.png",
+      "local": "/assets/remote/6c4bc18fcd4c1bc912.png",
+      "bytes": 13289,
+      "sha256": "98fac9d75f302879ee3be624855eccaab573b940dfcd8b6522391bb8d7a34e35"
+    },
+    {
+      "url": "/api/participants/3427/logo.png",
+      "local": "/assets/remote/e5330e2a19a77e8671.png",
+      "bytes": 12441,
+      "sha256": "1bb96ff5994c96b90ffeec39988f865c583452d832d489bfc6161b88b25e32d8"
+    },
+    {
+      "url": "/api/participants/3434/logo.png",
+      "local": "/assets/remote/7eb891ed664ecfc709.png",
+      "bytes": 40239,
+      "sha256": "f2489e8ff14c1a6f3c30cc8b44701ea0deb6cb115b1ae86c54ee8ec9549a4dd3"
+    },
+    {
+      "url": "/api/participants/3416/logo.png",
+      "local": "/assets/remote/cc63501e8f02f23ac7.png",
+      "bytes": 16579,
+      "sha256": "fbdda4f9c99012417c2138052eb4901d1207dd80a6b64384feab06348551d094"
+    },
+    {
+      "url": "/api/participants/10002402328179/logo.png",
+      "local": "/assets/remote/9bf7c5842b1715a097.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/54315/logo.png",
+      "local": "/assets/remote/bbd12d9d46a04dc296.png",
+      "bytes": 23352,
+      "sha256": "3697a68c878716a351710e37a8dd7d8f73065bbd21f822e27789fe970b403b04"
+    },
+    {
+      "url": "/api/participants/124616/logo.png",
+      "local": "/assets/remote/4ecc78c7f6a58b383d.png",
+      "bytes": 14361,
+      "sha256": "cf18a47c960824b7ab5a333f3f3fd349a64ec886d3c8d63d383c0724ad7647e1"
+    },
+    {
+      "url": "/api/participants/6640/logo.png",
+      "local": "/assets/remote/dede35d6f42a2d79df.png",
+      "bytes": 19017,
+      "sha256": "fcebf7f25aed15c46f58b32a30eabfc54ea0e8d88ee94a530d20ccbf372d8d3b"
+    },
+    {
+      "url": "/api/participants/183585/logo.png",
+      "local": "/assets/remote/aa6c665da7b98a2cfe.png",
+      "bytes": 13121,
+      "sha256": "81a2aac0d7eefcf10d4851ee0eb3bc3e5ebf0322425eb0a70bcdaba8c749da41"
+    },
+    {
+      "url": "/api/participants/124618/logo.png",
+      "local": "/assets/remote/c0c2b8b689e6661973.png",
+      "bytes": 16471,
+      "sha256": "5ab47a2bea16cb1a4fc5d925295fc77df139642d330c1dc8eecbc429f577bff8"
+    },
+    {
+      "url": "/api/participants/1202589/logo.png",
+      "local": "/assets/remote/e63c7b7b98b2ef025c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/57533/logo.png",
+      "local": "/assets/remote/bb2469924e8c581a14.png",
+      "bytes": 12499,
+      "sha256": "980b624d1e1b31db43add380ca449925e765d05125e381f8950a15780dc4b396"
+    },
+    {
+      "url": "/api/participants/274925/logo.png",
+      "local": "/assets/remote/34385433fd83093c23.png",
+      "bytes": 21696,
+      "sha256": "e50d7a2587ae208c84b4eac7ffc8afac9be9e5fb7b4a4a828611897e9791f714"
+    },
+    {
+      "url": "/api/participants/1269522/logo.png",
+      "local": "/assets/remote/06fb39fece410a1ff7.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/382678/logo.png",
+      "local": "/assets/remote/6944f40f739b4e7b7b.png",
+      "bytes": 19221,
+      "sha256": "9b88c9a46dce9ccbb868ded0003d75293d12284342b4a42d2492ac503cc1e361"
+    },
+    {
+      "url": "/api/participants/43519/logo.png",
+      "local": "/assets/remote/c0ea32eb145c1b190a.png",
+      "bytes": 9453,
+      "sha256": "18850554348144a524f2e026455722ba49fce9c0770fc2a224d4c6713bb6b0a6"
+    },
+    {
+      "url": "/api/participants/171968/logo.png",
+      "local": "/assets/remote/56e480324f47e3a05d.png",
+      "bytes": 5001,
+      "sha256": "080c2a7d3390aae7875a64266ef4dd86cbe2e6f8055b4169390ccb078a23de61"
+    },
+    {
+      "url": "/api/participants/231936/logo.png",
+      "local": "/assets/remote/91c03de3d611bd00bb.png",
+      "bytes": 10787,
+      "sha256": "c2f29cb851263c0a130a8535b37ff8a73a580a6ab9b327e0716b6d004902fe6a"
+    },
+    {
+      "url": "/api/participants/342902/logo.png",
+      "local": "/assets/remote/691eca3934891e74b2.png",
+      "bytes": 15816,
+      "sha256": "bf934030ed170e9b11aecb46f73a7a3e0250fcfc40e0e3ded08586ac88904ea8"
+    },
+    {
+      "url": "/api/participants/196380/logo.png",
+      "local": "/assets/remote/7a5af3274a329d057b.png",
+      "bytes": 12359,
+      "sha256": "999fd55c7e4bd14597d68555fb1b147515904bc55b5368d5b16f6a824a46c680"
+    },
+    {
+      "url": "/api/participants/1067284/logo.png",
+      "local": "/assets/remote/04565e4005051ced3a.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/79867/logo.png",
+      "local": "/assets/remote/a846a3ea0126e629c6.png",
+      "bytes": 14963,
+      "sha256": "014fea5ed1e4a63e6966553c2d87fcb8688748c01bf4bdc42f885862faec08a7"
+    },
+    {
+      "url": "/api/participants/25968/logo.png",
+      "local": "/assets/remote/50d63686f56930269e.png",
+      "bytes": 16829,
+      "sha256": "c9e13a05674abcb36dc7f4a81719a56dbb18c5e32807e74b9f644f2f4bab97ed"
+    },
+    {
+      "url": "/api/participants/274927/logo.png",
+      "local": "/assets/remote/a5f67dbb870d0bba6c.png",
+      "bytes": 17814,
+      "sha256": "5ce2b72500edb5ef1169e5287e13bf7a968e05bd142ab098cb310b046fa23507"
+    },
+    {
+      "url": "/api/participants/10002486895749/logo.png",
+      "local": "/assets/remote/02d3615a00079d30c7.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/788548/logo.png",
+      "local": "/assets/remote/c663e2d2129eeee95c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10000235765626/logo.png",
+      "local": "/assets/remote/af4f0984468a793779.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10002859393288/logo.png",
+      "local": "/assets/remote/baf6b80c2ede281673.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1046421/logo.png",
+      "local": "/assets/remote/1e09d273e22f5a26ba.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/248695/logo.png",
+      "local": "/assets/remote/b33ae6b023c47f41f5.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1027481/logo.png",
+      "local": "/assets/remote/dfe206b4368ff0b517.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1053023/logo.png",
+      "local": "/assets/remote/ebefa9697ac92dd588.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/924273/logo.png",
+      "local": "/assets/remote/14887c5d31cbf1dab3.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/6836/logo.png",
+      "local": "/assets/remote/3756205d2114320d8f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/117658/logo.png",
+      "local": "/assets/remote/a329144e62bf688a09.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/45682/logo.png",
+      "local": "/assets/remote/e1a3c65bb9281b3634.png",
+      "bytes": 19329,
+      "sha256": "f760545a6441733bb817d7f876e14a0b7d9f0b2683fba65a900c8a188c646eff"
+    },
+    {
+      "url": "/api/participants/6781/logo.png",
+      "local": "/assets/remote/321e10acea9520fbee.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/80271/logo.png",
+      "local": "/assets/remote/bf9236b9ca0b0977fa.png",
+      "bytes": 6726,
+      "sha256": "9ea066381143c5ca3ee671460b196a91f408aa37540d21c696b894926d734e3a"
+    },
+    {
+      "url": "/api/participants/1246297/logo.png",
+      "local": "/assets/remote/d7cd1a40a26968c07d.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/850805/logo.png",
+      "local": "/assets/remote/8ad5ee5dacce75c691.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/969373/logo.png",
+      "local": "/assets/remote/8a57865d8b02a96be0.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/597422/logo.png",
+      "local": "/assets/remote/82e08acbec824ead30.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/804472/logo.png",
+      "local": "/assets/remote/749ed2a9635e17d3d0.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/10001958089164/logo.png",
+      "local": "/assets/remote/4c33ad449bf51bdf1c.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1327694/logo.png",
+      "local": "/assets/remote/3e4c5b359d590cd87f.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1201557/logo.png",
+      "local": "/assets/remote/c52df623eac7b9aba1.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1318100/logo.png",
+      "local": "/assets/remote/7df94479ab4c5c3411.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1173029/logo.png",
+      "local": "/assets/remote/9e9f81ad2ca06cc8f7.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/288819/logo.png",
+      "local": "/assets/remote/74151edfd37a210673.png",
+      "bytes": 11194,
+      "sha256": "2d1cea7c2b37b4cea3589395b9daa23f600225b84b6e4006a3e29ecd17dc32ec"
+    },
+    {
+      "url": "/api/participants/1363472/logo.png",
+      "local": "/assets/remote/f3dec592dd2dc57001.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1118965/logo.png",
+      "local": "/assets/remote/e1e67a18cec5f1e1dc.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1410800/logo.png",
+      "local": "/assets/remote/66fc29c4e455764241.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1363136/logo.png",
+      "local": "/assets/remote/743937765567264706.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/653851/logo.png",
+      "local": "/assets/remote/799c8701e9fee988fb.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1159095/logo.png",
+      "local": "/assets/remote/f8f79e813e408d5235.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1410804/logo.png",
+      "local": "/assets/remote/f29fb0621c05177829.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/207913/logo.png",
+      "local": "/assets/remote/a1a2091e8003f17b32.png",
+      "bytes": 8560,
+      "sha256": "f28949423e7242349bdc827a3103c3e0218f79b2511f17c61c8e268ddde1c7d5"
+    },
+    {
+      "url": "/api/participants/78971/logo.png",
+      "local": "/assets/remote/6b72eb3255e31a4c2d.png",
+      "bytes": 8716,
+      "sha256": "2ee33c9975e84af99ea44cda5805f2d7a7909234f04be10d917c43e0b99e3299"
+    },
+    {
+      "url": "/api/participants/74521/logo.png",
+      "local": "/assets/remote/2193566b5721ab3be1.png",
+      "bytes": 19732,
+      "sha256": "a22618aea470fc230eff549298d5e7a9861a422914cb6f631c23af53ef46872b"
+    },
+    {
+      "url": "/api/participants/6239/logo.png",
+      "local": "/assets/remote/21c26e05587c66af81.png",
+      "bytes": 15496,
+      "sha256": "aa6cd81a35684298f280e80178309d917aac3f9d01e79046536054e4de4d87d5"
+    },
+    {
+      "url": "/api/participants/5747/logo.png",
+      "local": "/assets/remote/10dfb7ec55945354d2.png",
+      "bytes": 11016,
+      "sha256": "a1a98ddb5043b5912ce4bd46a92c164891ccd4edbbe565e78564bb1a148b7ff8"
+    },
+    {
+      "url": "/api/participants/1380180/logo.png",
+      "local": "/assets/remote/2f4c15eb476b27c381.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/78977/logo.png",
+      "local": "/assets/remote/8520822d72af284ba5.png",
+      "bytes": 13518,
+      "sha256": "04da6a964ff173211cb253319154ee6d99205f39fe7c343d37129c9c6de79ca8"
+    },
+    {
+      "url": "/api/participants/78975/logo.png",
+      "local": "/assets/remote/c426ae682335adc120.png",
+      "bytes": 15723,
+      "sha256": "dfde39e7808cd366e56c36c4ea93cd98f15fcb000980e94b176c5cab4f2db515"
+    },
+    {
+      "url": "/api/participants/78979/logo.png",
+      "local": "/assets/remote/b750f3e285fe7a3099.png",
+      "bytes": 18061,
+      "sha256": "6bc103e5c245cb1f34af0c6c79f74e434945ee2c8804ee3be8c08ec968b2e16c"
+    },
+    {
+      "url": "/api/participants/8081/logo.png",
+      "local": "/assets/remote/bb79c66f4b70b2cc14.png",
+      "bytes": 10653,
+      "sha256": "5872d6978a1d069ea84fc6f97a25c694bcb29db29cfa257614fb9d5199bf34e7"
+    },
+    {
+      "url": "/api/participants/364502/logo.png",
+      "local": "/assets/remote/fe60f0eae99d199534.png",
+      "bytes": 12211,
+      "sha256": "11032d4921662831b8970d7091928f73758c8172d6b834cb13d3e0da2d0390ba"
+    },
+    {
+      "url": "/api/participants/275027/logo.png",
+      "local": "/assets/remote/e745b4ab3a6a895f30.png",
+      "bytes": 20053,
+      "sha256": "b80b4e277ec82d491ef381aff439d3390ef04ee69535a062456a602e833e91e2"
+    },
+    {
+      "url": "/api/participants/1209913/logo.png",
+      "local": "/assets/remote/2d9af688e89260fb98.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/670453/logo.png",
+      "local": "/assets/remote/e03a123add51e320ca.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/5749/logo.png",
+      "local": "/assets/remote/3904a2a7049659381f.png",
+      "bytes": 12469,
+      "sha256": "daed6899ed6d79491f49ef9f6691344881db4e6dd8b8f48afc9ff08f4f39b69f"
+    },
+    {
+      "url": "/api/participants/606366/logo.png",
+      "local": "/assets/remote/56f398b28e76504f5b.png",
+      "bytes": 17883,
+      "sha256": "b9a242bb148982da812d96430057b3ef0f8e756f1b6a03498a2553b26ecd89de"
+    },
+    {
+      "url": "/api/participants/78981/logo.png",
+      "local": "/assets/remote/9ecca3ca0187e10091.png",
+      "bytes": 11473,
+      "sha256": "ea6d58d39ebbf5c37a78f4ac00b6d3b53dcaa28d913380df04ae6663dbc50cc1"
+    },
+    {
+      "url": "/api/participants/5751/logo.png",
+      "local": "/assets/remote/ded37df594eb3c0928.png",
+      "bytes": 10471,
+      "sha256": "53088e17b676abe1ee433e59fd1b8969bbafb8f1ead8f7f241da6aecc986d8bb"
+    },
+    {
+      "url": "/api/participants/5755/logo.png",
+      "local": "/assets/remote/3f61f88459ea9e48da.png",
+      "bytes": 18887,
+      "sha256": "92540a0d04472b637c3c0ab1ba1789067262de9d6e05db47042680d507c980f2"
+    },
+    {
+      "url": "/api/participants/1151111/logo.png",
+      "local": "/assets/remote/49b8b74642c570e2dc.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1009211/logo.png",
+      "local": "/assets/remote/841d59e3470d5e2f68.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    },
+    {
+      "url": "/api/participants/1410802/logo.png",
+      "local": "/assets/remote/4e8e2113e1b8a3be23.png",
+      "bytes": 380,
+      "sha256": "c4c9179edd1ba900a85f4e172ba4708762663e53d5abaf48d11ca4acac95e991"
+    }
+  ],
+  "errors": []
+}

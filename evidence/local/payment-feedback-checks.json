@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-18T18:25:08.704Z",
+  "confirmation": {
+    "title": "Depósito confirmado!",
+    "amount": "R$ 10,00",
+    "balance": "R$ 10,00",
+    "tabs": 0
+  },
+  "registration": {
+    "toast": "Bilhete registrado.",
+    "dialogs": 0,
+    "slips": 0,
+    "balance": "R$8,00"
+  },
+  "browserErrors": [],
+  "source": {
+    "originalCss": "evidence/site.css",
+    "originalScript": "evidence/app-original.js",
+    "resultRenderer": "Ua",
+    "toast": "#toast"
+  },
+  "typecheck": "passed",
+  "productionBuild": "passed",
+  "checks": [
+    "Aposta mostra somente Bilhete registrado.",
+    "Bilhete limpo e saldo atualizado após aposta",
+    "Pix exibe o valor confirmado e o saldo acumulado corretamente",
+    "Entendi fecha o modal",
+    "Fazer outro depósito reabre formulário vazio",
+    "Preferência de movimento reduzido respeitada"
+  ]
+}

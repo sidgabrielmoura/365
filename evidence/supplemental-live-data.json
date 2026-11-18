@@ -1,0 +1,60 @@
+{
+  "source": "Read-only public HTTP requests supplementing REA browser snapshots",
+  "records": [
+    {
+      "url": "/api/live?sport=football&mode=sport&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:20:56.747Z"
+    },
+    {
+      "url": "/api/live?sport=basketball&mode=sport&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:20:57.591Z"
+    },
+    {
+      "url": "/api/live?sport=tennis&mode=sport&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:20:58.166Z"
+    },
+    {
+      "url": "/api/live?sport=handball&mode=sport&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:20:58.409Z"
+    },
+    {
+      "url": "/api/live?sport=table-tennis&mode=sport&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:20:58.910Z"
+    },
+    {
+      "url": "/api/live?sport=volleyball&mode=sport&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:20:59.783Z"
+    },
+    {
+      "url": "/api/live?sport=snooker&mode=sport&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:21:05.031Z"
+    },
+    {
+      "url": "/api/live?sport=curling&mode=sport&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:21:05.965Z"
+    },
+    {
+      "url": "/api/events?sport=boxing&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:21:06.178Z"
+    },
+    {
+      "url": "/api/events?sport=rugby&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:21:15.002Z"
+    },
+    {
+      "url": "/api/events/76482690",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:21:15.836Z"
+    }
+  ]
+}

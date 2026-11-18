@@ -1,0 +1,18 @@
+const fs=require('node:fs'),path=require('node:path');
+function page(route,source){const file=path.join('src/app',route,'page.tsx');fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,source+'\n');}
+page('',`import {Home} from '@/components/sports/workspace';\nexport default function Page(){return <Home/>;}`);
+page('ao-vivo',`import {Live} from '@/components/sports/workspace';\nexport default function Page(){return <Live/>;}`);
+page('proximos',`import {SportsList} from '@/components/sports/workspace';\nexport default function Page(){return <SportsList sport="football" upcoming/>;}`);
+page('esportes',`import {SportsList} from '@/components/sports/workspace';\nexport default function Page(){return <SportsList sport="football"/>;}`);
+for(const sport of require('../src/data/sports-navigation.json').sports)page('esportes/'+sport.id,`import {SportsList} from '@/components/sports/workspace';\nexport default function Page(){return <SportsList sport="${sport.id}"/>;}`);
+page('evento/[id]',`import {notFound} from 'next/navigation';\nimport {eventById} from '@/lib/sports-data';\nimport {EventDetail} from '@/components/sports/event-detail';\nexport default async function Page({params}:{params:Promise<{id:string}>}){const {id}=await params;const event=eventById(id);if(!event)notFound();return <EventDetail event={event}/>;}`);
+page('minhas-apostas',`import {Bets} from '@/components/sports/bets';\nexport default function Page(){return <Bets/>;}`);
+for(const section of ['', 'banco','controles','atividade','historico','preferencias','chat'])page('conta'+(section?'/'+section:''),`import {AccountPage} from '@/components/account/account-page';\nexport default function Page(){return <AccountPage section="${section}"/>;}`);
+for(const [route,category]of [['','inicio'],['ao-vivo','aovivo'],['novidades','novidades'],['slots','slots'],['mesa-e-cartas','mesa'],['arcade','crash'],['jackpots','jackpots'],['todos','todos']])page('cassino'+(route?'/'+route:''),`import {Casino} from '@/components/casino/casino';\nexport default function Page(){return <Casino category="${category}"/>;}`);
+page('cassino/provedor/[id]',`import {notFound} from 'next/navigation';\nimport {Casino} from '@/components/casino/casino';\nimport {games} from '@/lib/casino-data';\nexport default async function Page({params}:{params:Promise<{id:string}>}){const {id}=await params;if(!games.some(game=>game.provider===id))notFound();return <Casino provider={id} category="todos"/>;}`);
+page('cassino/jogo/[id]',`import {notFound} from 'next/navigation';\nimport {CasinoGameView} from '@/components/casino/casino';\nimport {casinoGameById} from '@/lib/casino-data';\nexport default async function Page({params}:{params:Promise<{id:string}>}){const {id}=await params;const game=casinoGameById(id);if(!game)notFound();return <CasinoGameView game={game}/>;}`);
+page('recompensas',`import {Rewards} from '@/components/rewards/rewards';\nexport default function Page(){return <Rewards/>;}`);
+for(const [route,component]of [['ajuda','Help'],['jogo-responsavel','Responsible'],['app','AppInstall'],['termos','Legal']])page(route,`import {${component}} from '@/components/info/info';\nexport default function Page(){return <${component}/>;}`);
+page('privacidade',`import {Legal} from '@/components/info/info';\nexport default function Page(){return <Legal privacy/>;}`);
+fs.writeFileSync('src/app/not-found.tsx',`import Link from 'next/link';\nexport default function NotFound(){return <main id="main" className="section-page"><h1>Página não encontrada</h1><p>O endereço solicitado não está disponível.</p><Link className="button button-accent" href="/">Voltar ao início</Link></main>;}\n`);
+console.log('Created explicit page folders');

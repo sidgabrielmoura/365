@@ -1,0 +1,900 @@
+{
+  "source": "Supplemental read-only public HTTP requests, distinct from REA evidence",
+  "games": 7369,
+  "events": 347,
+  "records": [
+    {
+      "url": "/api/casino/games?page=2&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:45.547Z"
+    },
+    {
+      "url": "/api/casino/games?page=4&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:45.548Z"
+    },
+    {
+      "url": "/api/casino/games?page=3&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:45.558Z"
+    },
+    {
+      "url": "/api/casino/games?page=5&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:45.559Z"
+    },
+    {
+      "url": "/api/casino/games?page=7&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:45.816Z"
+    },
+    {
+      "url": "/api/casino/games?page=6&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:45.891Z"
+    },
+    {
+      "url": "/api/casino/games?page=9&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:45.980Z"
+    },
+    {
+      "url": "/api/casino/games?page=8&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:46.050Z"
+    },
+    {
+      "url": "/api/casino/games?page=10&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:46.262Z"
+    },
+    {
+      "url": "/api/casino/games?page=11&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:46.407Z"
+    },
+    {
+      "url": "/api/casino/games?page=12&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:46.421Z"
+    },
+    {
+      "url": "/api/casino/games?page=13&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:46.489Z"
+    },
+    {
+      "url": "/api/casino/games?page=14&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:46.583Z"
+    },
+    {
+      "url": "/api/casino/games?page=16&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:46.677Z"
+    },
+    {
+      "url": "/api/casino/games?page=15&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:46.721Z"
+    },
+    {
+      "url": "/api/casino/games?page=17&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:46.796Z"
+    },
+    {
+      "url": "/api/casino/games?page=18&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:46.863Z"
+    },
+    {
+      "url": "/api/casino/games?page=19&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:46.942Z"
+    },
+    {
+      "url": "/api/casino/games?page=21&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:47.063Z"
+    },
+    {
+      "url": "/api/casino/games?page=23&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:47.166Z"
+    },
+    {
+      "url": "/api/casino/games?page=20&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:47.268Z"
+    },
+    {
+      "url": "/api/casino/games?page=24&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:47.357Z"
+    },
+    {
+      "url": "/api/casino/games?page=25&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:47.421Z"
+    },
+    {
+      "url": "/api/casino/games?page=22&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:47.450Z"
+    },
+    {
+      "url": "/api/casino/games?page=26&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:47.531Z"
+    },
+    {
+      "url": "/api/casino/games?page=27&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:47.607Z"
+    },
+    {
+      "url": "/api/casino/games?page=28&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:47.662Z"
+    },
+    {
+      "url": "/api/casino/games?page=29&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:47.807Z"
+    },
+    {
+      "url": "/api/casino/games?page=31&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:47.879Z"
+    },
+    {
+      "url": "/api/casino/games?page=30&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:47.970Z"
+    },
+    {
+      "url": "/api/casino/games?page=32&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.000Z"
+    },
+    {
+      "url": "/api/casino/games?page=34&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.113Z"
+    },
+    {
+      "url": "/api/casino/games?page=33&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.165Z"
+    },
+    {
+      "url": "/api/casino/games?page=36&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.263Z"
+    },
+    {
+      "url": "/api/casino/games?page=35&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.356Z"
+    },
+    {
+      "url": "/api/casino/games?page=37&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.380Z"
+    },
+    {
+      "url": "/api/casino/games?page=38&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.416Z"
+    },
+    {
+      "url": "/api/casino/games?page=39&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.512Z"
+    },
+    {
+      "url": "/api/casino/games?page=41&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.610Z"
+    },
+    {
+      "url": "/api/casino/games?page=43&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.739Z"
+    },
+    {
+      "url": "/api/casino/games?page=44&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.880Z"
+    },
+    {
+      "url": "/api/casino/games?page=42&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.920Z"
+    },
+    {
+      "url": "/api/casino/games?page=40&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:48.955Z"
+    },
+    {
+      "url": "/api/casino/games?page=45&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:49.001Z"
+    },
+    {
+      "url": "/api/casino/games?page=46&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:49.146Z"
+    },
+    {
+      "url": "/api/casino/games?page=47&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:49.220Z"
+    },
+    {
+      "url": "/api/casino/games?page=49&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:49.287Z"
+    },
+    {
+      "url": "/api/casino/games?page=50&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:49.405Z"
+    },
+    {
+      "url": "/api/casino/games?page=52&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:49.533Z"
+    },
+    {
+      "url": "/api/casino/games?page=51&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:49.587Z"
+    },
+    {
+      "url": "/api/casino/games?page=53&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:49.805Z"
+    },
+    {
+      "url": "/api/casino/games?page=54&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:49.864Z"
+    },
+    {
+      "url": "/api/casino/games?page=55&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:49.900Z"
+    },
+    {
+      "url": "/api/casino/games?page=48&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:49.922Z"
+    },
+    {
+      "url": "/api/casino/games?page=56&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:50.026Z"
+    },
+    {
+      "url": "/api/casino/games?page=57&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:50.087Z"
+    },
+    {
+      "url": "/api/casino/games?page=60&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:50.295Z"
+    },
+    {
+      "url": "/api/casino/games?page=61&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:50.355Z"
+    },
+    {
+      "url": "/api/casino/games?page=58&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:50.387Z"
+    },
+    {
+      "url": "/api/casino/games?page=62&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:50.525Z"
+    },
+    {
+      "url": "/api/casino/games?page=63&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:50.587Z"
+    },
+    {
+      "url": "/api/casino/games?page=64&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:50.643Z"
+    },
+    {
+      "url": "/api/casino/games?page=65&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:50.746Z"
+    },
+    {
+      "url": "/api/casino/games?page=66&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:50.811Z"
+    },
+    {
+      "url": "/api/casino/games?page=68&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:50.977Z"
+    },
+    {
+      "url": "/api/casino/games?page=59&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:51.373Z"
+    },
+    {
+      "url": "/api/casino/games?page=69&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:51.461Z"
+    },
+    {
+      "url": "/api/casino/games?page=70&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:51.462Z"
+    },
+    {
+      "url": "/api/casino/games?page=67&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:51.498Z"
+    },
+    {
+      "url": "/api/casino/games?page=71&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:51.629Z"
+    },
+    {
+      "url": "/api/casino/games?page=73&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:51.723Z"
+    },
+    {
+      "url": "/api/casino/games?page=72&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:51.779Z"
+    },
+    {
+      "url": "/api/casino/games?page=74&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:51.816Z"
+    },
+    {
+      "url": "/api/casino/games?page=76&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:51.955Z"
+    },
+    {
+      "url": "/api/casino/games?page=77&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.014Z"
+    },
+    {
+      "url": "/api/casino/games?page=75&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.041Z"
+    },
+    {
+      "url": "/api/casino/games?page=79&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.240Z"
+    },
+    {
+      "url": "/api/casino/games?page=78&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.260Z"
+    },
+    {
+      "url": "/api/casino/games?page=80&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.351Z"
+    },
+    {
+      "url": "/api/casino/games?page=81&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.414Z"
+    },
+    {
+      "url": "/api/casino/games?page=82&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.490Z"
+    },
+    {
+      "url": "/api/casino/games?page=83&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.526Z"
+    },
+    {
+      "url": "/api/casino/games?page=84&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.634Z"
+    },
+    {
+      "url": "/api/casino/games?page=85&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.695Z"
+    },
+    {
+      "url": "/api/casino/games?page=86&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.767Z"
+    },
+    {
+      "url": "/api/casino/games?page=87&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.807Z"
+    },
+    {
+      "url": "/api/casino/games?page=88&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:52.881Z"
+    },
+    {
+      "url": "/api/casino/games?page=89&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.005Z"
+    },
+    {
+      "url": "/api/casino/games?page=90&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.022Z"
+    },
+    {
+      "url": "/api/casino/games?page=91&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.060Z"
+    },
+    {
+      "url": "/api/casino/games?page=92&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.264Z"
+    },
+    {
+      "url": "/api/casino/games?page=94&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.324Z"
+    },
+    {
+      "url": "/api/casino/games?page=95&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.417Z"
+    },
+    {
+      "url": "/api/casino/games?page=93&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.460Z"
+    },
+    {
+      "url": "/api/casino/games?page=96&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.507Z"
+    },
+    {
+      "url": "/api/casino/games?page=97&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.572Z"
+    },
+    {
+      "url": "/api/casino/games?page=98&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.627Z"
+    },
+    {
+      "url": "/api/casino/games?page=99&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.742Z"
+    },
+    {
+      "url": "/api/casino/games?page=100&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.768Z"
+    },
+    {
+      "url": "/api/casino/games?page=101&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.879Z"
+    },
+    {
+      "url": "/api/casino/games?page=102&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:53.916Z"
+    },
+    {
+      "url": "/api/casino/games?page=103&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.005Z"
+    },
+    {
+      "url": "/api/casino/games?page=104&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.051Z"
+    },
+    {
+      "url": "/api/casino/games?page=105&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.112Z"
+    },
+    {
+      "url": "/api/casino/games?page=106&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.147Z"
+    },
+    {
+      "url": "/api/casino/games?page=107&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.272Z"
+    },
+    {
+      "url": "/api/casino/games?page=108&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.347Z"
+    },
+    {
+      "url": "/api/casino/games?page=109&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.398Z"
+    },
+    {
+      "url": "/api/casino/games?page=110&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.449Z"
+    },
+    {
+      "url": "/api/casino/games?page=111&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.495Z"
+    },
+    {
+      "url": "/api/casino/games?page=112&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.577Z"
+    },
+    {
+      "url": "/api/casino/games?page=113&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.640Z"
+    },
+    {
+      "url": "/api/casino/games?page=114&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.677Z"
+    },
+    {
+      "url": "/api/casino/games?page=116&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.929Z"
+    },
+    {
+      "url": "/api/casino/games?page=117&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.992Z"
+    },
+    {
+      "url": "/api/casino/games?page=115&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:54.998Z"
+    },
+    {
+      "url": "/api/casino/games?page=118&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:55.032Z"
+    },
+    {
+      "url": "/api/casino/games?page=119&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:55.146Z"
+    },
+    {
+      "url": "/api/casino/games?page=120&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:55.226Z"
+    },
+    {
+      "url": "/api/casino/games?page=121&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:55.314Z"
+    },
+    {
+      "url": "/api/casino/games?page=122&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:55.344Z"
+    },
+    {
+      "url": "/api/casino/games?page=123&limit=60&category=todos&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:55.425Z"
+    },
+    {
+      "url": "/api/casino/games?page=1&limit=60&category=aovivo&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:55.644Z"
+    },
+    {
+      "url": "/api/casino/games?page=1&limit=60&category=novidades&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:55.709Z"
+    },
+    {
+      "url": "/api/casino/games?page=3&limit=60&category=aovivo&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:55.867Z"
+    },
+    {
+      "url": "/api/casino/games?page=2&limit=60&category=aovivo&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:55.939Z"
+    },
+    {
+      "url": "/api/casino/games?page=1&limit=60&category=mesa&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:56.016Z"
+    },
+    {
+      "url": "/api/casino/games?page=1&limit=60&category=crash&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:56.192Z"
+    },
+    {
+      "url": "/api/casino/games?page=3&limit=60&category=mesa&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:56.213Z"
+    },
+    {
+      "url": "/api/casino/games?page=2&limit=60&category=mesa&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:56.293Z"
+    },
+    {
+      "url": "/api/casino/games?page=1&limit=60&category=jackpots&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:56.392Z"
+    },
+    {
+      "url": "/api/casino/games?page=4&limit=60&category=mesa&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:56.448Z"
+    },
+    {
+      "url": "/api/casino/games?page=5&limit=60&category=mesa&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:56.533Z"
+    },
+    {
+      "url": "/api/casino/games?page=6&limit=60&category=mesa&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:56.733Z"
+    },
+    {
+      "url": "/api/casino/games?page=7&limit=60&category=mesa&search=&provider=",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:56.807Z"
+    },
+    {
+      "url": "/api/events?sport=tennis&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:56.968Z"
+    },
+    {
+      "url": "/api/events?sport=football&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:56.987Z"
+    },
+    {
+      "url": "/api/events?sport=basketball&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:57.011Z"
+    },
+    {
+      "url": "/api/events?sport=football&live=false&league=&page=2",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:57.157Z"
+    },
+    {
+      "url": "/api/events?sport=tennis&live=false&league=&page=3",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:07:58.720Z"
+    },
+    {
+      "url": "/api/events?sport=tennis&live=false&league=&page=2",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:01.374Z"
+    },
+    {
+      "url": "/api/events?sport=football&live=false&league=&page=3",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:02.326Z"
+    },
+    {
+      "url": "/api/events?sport=american-football&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:02.497Z"
+    },
+    {
+      "url": "/api/events?sport=basketball&live=false&league=&page=2",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:05.039Z"
+    },
+    {
+      "url": "/api/events?sport=basketball&live=false&league=&page=3",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:06.833Z"
+    },
+    {
+      "url": "/api/events?sport=american-football&live=false&league=&page=3",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:24.781Z"
+    },
+    {
+      "url": "/api/events?sport=darts&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:25.647Z"
+    },
+    {
+      "url": "/api/events?sport=baseball&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:29.246Z"
+    },
+    {
+      "url": "/api/events?sport=american-football&live=false&league=&page=2",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:30.214Z"
+    },
+    {
+      "url": "/api/events?sport=mixed-martial-arts&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:30.347Z"
+    },
+    {
+      "url": "/api/events?sport=darts&live=false&league=&page=2",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:48.137Z"
+    },
+    {
+      "url": "/api/events?sport=darts&live=false&league=&page=3",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:50.799Z"
+    },
+    {
+      "url": "/api/events?sport=baseball&live=false&league=&page=2",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:53.533Z"
+    },
+    {
+      "url": "/api/events?sport=baseball&live=false&league=&page=3",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:08:57.544Z"
+    },
+    {
+      "input": "boxing",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "url": "/api/events?sport=handball&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:09:15.395Z"
+    },
+    {
+      "url": "/api/events?sport=volleyball&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:09:16.512Z"
+    },
+    {
+      "url": "/api/events?sport=table-tennis&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:09:17.221Z"
+    },
+    {
+      "url": "/api/events?sport=handball&live=false&league=&page=3",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:09:39.413Z"
+    },
+    {
+      "url": "/api/events?sport=handball&live=false&league=&page=2",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:09:40.371Z"
+    },
+    {
+      "input": "rugby",
+      "error": "fetch failed"
+    },
+    {
+      "url": "/api/events?sport=volleyball&live=false&league=&page=2",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:09:41.272Z"
+    },
+    {
+      "url": "/api/events?sport=volleyball&live=false&league=&page=3",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:09:43.044Z"
+    },
+    {
+      "url": "/api/events?sport=table-tennis&live=false&league=&page=3",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:09:43.932Z"
+    },
+    {
+      "url": "/api/events?sport=table-tennis&live=false&league=&page=2",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:09:44.827Z"
+    },
+    {
+      "url": "/api/events?sport=aussie-rules&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:09:54.727Z"
+    },
+    {
+      "url": "/api/events?sport=cross-country&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:09:56.529Z"
+    },
+    {
+      "url": "/api/events?sport=bandy&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:09:56.531Z"
+    },
+    {
+      "url": "/api/events?sport=alpine-skiing&live=false&league=&page=1",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:10:04.631Z"
+    },
+    {
+      "url": "/api/events?sport=bandy&live=false&league=&page=3",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:10:06.411Z"
+    },
+    {
+      "url": "/api/events?sport=bandy&live=false&league=&page=2",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:10:08.223Z"
+    },
+    {
+      "url": "/api/events?sport=alpine-skiing&live=false&league=&page=2",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:10:10.046Z"
+    },
+    {
+      "url": "/api/events?sport=alpine-skiing&live=false&league=&page=3",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:10:10.941Z"
+    },
+    {
+      "url": "/api/home?tab=international",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:10:11.237Z"
+    },
+    {
+      "url": "/api/home?tab=nba",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:10:11.486Z"
+    },
+    {
+      "url": "/api/home?tab=nfl",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:10:11.528Z"
+    },
+    {
+      "url": "/api/home?tab=serie-b",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:10:11.854Z"
+    },
+    {
+      "url": "/api/home?tab=tennis",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:10:11.854Z"
+    },
+    {
+      "url": "/api/home?tab=football",
+      "status": 200,
+      "capturedAt": "2026-11-18T16:10:17.536Z"
+    }
+  ]
+}

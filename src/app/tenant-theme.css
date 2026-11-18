@@ -1,0 +1,182 @@
+html[data-tenant-theme] {
+  color-scheme: dark;
+  --bg: var(--tenant-dark-bg, #111);
+  --panel: var(--tenant-dark-surface, #1f1f1f);
+  --surface: var(--tenant-dark-surface-2, #282828);
+  --border: var(--tenant-dark-line, #353535);
+  --text: var(--tenant-dark-text, #eee);
+  --muted: var(--tenant-dark-muted, #aaa);
+  --yellow: var(--tenant-dark-price, #ffdf1b);
+  --tenant-hover: var(--tenant-dark-surface-3, #353535);
+  --tenant-selected: var(--tenant-dark-surface-4, #444);
+  --tenant-live: var(--tenant-dark-live, #ff5a36);
+  --tenant-action: color-mix(in srgb, var(--tenant-brand, #13664d) 45%, black);
+  --accent: color-mix(in srgb, var(--tenant-brand, #28ffbb) 37%, white);
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-tenant-theme="auto"] {
+    color-scheme: light;
+    --bg: var(--tenant-light-bg, #f7f8fa);
+    --panel: var(--tenant-light-surface, #fff);
+    --surface: var(--tenant-light-surface-2, #f0f2f6);
+    --border: var(--tenant-light-line, #d5d9e3);
+    --text: var(--tenant-light-text, #151923);
+    --muted: var(--tenant-light-muted, #52607a);
+    --yellow: var(--tenant-light-price, #18692d);
+    --tenant-hover: var(--tenant-light-surface-3, #e7eaf1);
+    --tenant-selected: var(--tenant-light-surface-4, #dce1ec);
+    --tenant-live: var(--tenant-light-live, #af2915);
+    --accent: color-mix(in srgb, var(--tenant-brand, #10694e) 75%, black);
+  }
+}
+
+html[data-tenant-theme] .app-shell,
+html[data-tenant-theme] .app-shell .brasa-app,
+html[data-tenant-theme] .app-shell .layout,
+html[data-tenant-theme] .app-shell .content-column,
+html[data-tenant-theme] .app-shell .sidebar,
+html[data-tenant-theme] .app-shell .home-tabs {
+  background: var(--bg);
+  color: var(--text);
+}
+
+html[data-tenant-theme] .app-shell .header,
+html[data-tenant-theme] .app-shell .install-strip {
+  background: var(--tenant-action);
+  color: white;
+}
+
+html[data-tenant-theme] .app-shell .boot-screen {
+  background: var(--bg);
+  color: var(--accent);
+}
+
+html[data-tenant-theme] .app-shell .primary-nav a.active {
+  color: white;
+  border-color: white;
+}
+
+html[data-tenant-theme] .app-shell .account-actions .button,
+html[data-tenant-theme] .app-shell .account-actions .acc-balance,
+html[data-tenant-theme] .app-shell .account-avatar .hrm-fd,
+html[data-tenant-theme] .app-shell .rewards-link {
+  border-color: color-mix(in srgb, white 45%, var(--tenant-action));
+}
+
+html[data-tenant-theme] .app-shell .registration-trigger {
+  /* The reference uses important declarations for the registration button. */
+  color: #fff !important;
+  border-color: color-mix(in srgb, white 45%, var(--tenant-action)) !important;
+}
+
+html[data-tenant-theme] .app-shell .acc-balance i {
+  background: #fff;
+}
+
+html[data-tenant-theme] .app-shell .acc-balance i::before,
+html[data-tenant-theme] .app-shell .acc-balance i::after {
+  background: var(--tenant-action);
+}
+
+html[data-tenant-theme] .app-shell .responsible-bar,
+html[data-tenant-theme] .app-shell .footer,
+html[data-tenant-theme] .app-shell .reference-competition .competition-heading,
+html[data-tenant-theme] .app-shell .reference-event,
+html[data-tenant-theme] .app-shell .market-group,
+html[data-tenant-theme] .app-shell .live-competition,
+html[data-tenant-theme] .app-shell .local-live-panel,
+html[data-tenant-theme] .app-shell .mobile-nav,
+html[data-tenant-theme] .app-shell .mb-card:not(.cashout) {
+  background: var(--panel);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+html[data-tenant-theme] .app-shell .global-search-field,
+html[data-tenant-theme] .app-shell .sports-rail a,
+html[data-tenant-theme] .app-shell .bcc-busca,
+html[data-tenant-theme] .app-shell .bcc-cat,
+html[data-tenant-theme] .app-shell .live-competition-heading {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+html[data-tenant-theme] .app-shell .sidebar-title,
+html[data-tenant-theme] .app-shell .sports-rail a:hover,
+html[data-tenant-theme] .app-shell .bcc-cat.on,
+html[data-tenant-theme] .app-shell .mobile-nav a.active {
+  color: var(--accent);
+}
+
+html[data-tenant-theme] .app-shell .bcc-cat.on {
+  background: var(--tenant-selected);
+}
+
+html[data-tenant-theme] .app-shell .match-details .market-count {
+  border-color: var(--border);
+}
+
+html[data-tenant-theme] .app-shell .home-tabs a.active,
+html[data-tenant-theme] .app-shell .button-accent,
+html[data-tenant-theme] .app-shell .registration-submit,
+html[data-tenant-theme] .app-shell .bcpx-head,
+html[data-tenant-theme] .app-shell .bcpx-btn,
+html[data-tenant-theme] .app-shell .slip-place,
+html[data-tenant-theme] .app-shell .install-cta {
+  background: var(--tenant-action);
+  color: #fff;
+}
+
+html[data-tenant-theme] .app-shell .install-cta {
+  border: 1px solid color-mix(in srgb, white 45%, var(--tenant-action));
+}
+
+html[data-tenant-theme] .app-shell .odd {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+html[data-tenant-theme] .app-shell .odd:hover {
+  background: var(--tenant-hover);
+}
+
+html[data-tenant-theme] .app-shell .odd.selected,
+html[data-tenant-theme] .app-shell .odds-grid .odd.selected:hover:not(:disabled) {
+  background: var(--tenant-action);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+html[data-tenant-theme] .app-shell .odd:not(.selected) strong {
+  color: var(--yellow);
+}
+
+html[data-tenant-theme] .app-shell .mb-live {
+  color: var(--tenant-live);
+}
+
+html[data-tenant-theme] .app-shell .reference-event .match-meta,
+html[data-tenant-theme] .app-shell .reference-event .match-league {
+  color: var(--muted);
+}
+
+html[data-tenant-theme] .app-shell .brand img[data-tenant-logo] {
+  object-fit: contain;
+  object-position: left center;
+}
+
+html[data-tenant-theme] .app-shell .install-logo[data-tenant-icon] {
+  background-color: transparent;
+  background-image: var(--tenant-app-icon);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  font-size: 0;
+}
+
+html[data-tenant-theme] .app-shell .install-logo[data-tenant-icon] b {
+  visibility: hidden;
+}

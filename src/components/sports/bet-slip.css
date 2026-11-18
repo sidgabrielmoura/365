@@ -1,0 +1,100 @@
+.demo-slip-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  color: #444;
+  background: #f2f2f2;
+  font-size: 14px;
+}
+.demo-slip-heading button {
+  margin-left: auto;
+  background: none;
+  color: #666;
+  font-size: 11px;
+}
+.demo-slip-reopen {
+  position: fixed;
+  z-index: 40;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 450px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+  padding: 15px;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 -2px 14px #0005;
+  border-radius: 4px 4px 0 0;
+  font-size: 13px;
+}
+.demo-slip-reopen > button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-weight: 700;
+}
+.demo-slip-reopen b {
+  border-radius: 50%;
+  background: #126e51;
+  color: white;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+}
+.demo-slip-minimize {
+  display: none;
+}
+.app-shell .betslip .slip-builder header > b {
+  float: right;
+  color: #444;
+  font-style: normal;
+}
+.app-shell .betslip .slip-builder-event {
+  display: block;
+}
+.app-shell .betslip .slip-builder .slip-builder-selection:last-child {
+  margin-bottom: 8px;
+}
+.app-shell .betslip .slip-selection-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.app-shell .betslip .slip-selection-badge-boost {
+  color: #126e51;
+}
+.app-shell .betslip .slip-place:disabled {
+  opacity: 0.7;
+}
+.app-shell .betslip .slip-close {
+  border: 0;
+  background-color: transparent;
+}
+@media (max-width: 1000px) {
+  .demo-slip-reopen {
+    bottom: calc(60px + env(safe-area-inset-bottom));
+    width: 100%;
+    transform: none;
+    left: 0;
+  }
+  .demo-slip-minimize {
+    display: block;
+    background: #fff;
+    color: #555;
+    width: 100%;
+    height: 23px;
+    font-size: 17px;
+    padding: 0;
+    border: 0;
+  }
+}

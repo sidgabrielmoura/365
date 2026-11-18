@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Futebol",
+    "url": "#/HO/1",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Soccer-72908a6a41.svg"
+  },
+  {
+    "name": "Próximo",
+    "url": "#/NX/",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Next-5e3dbd7674.svg"
+  },
+  {
+    "name": "Série A",
+    "url": "#/HO/1/l/Brasil%20-%20S%C3%A9rie%20A",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/zflag_brazil-717d17346b.svg"
+  },
+  {
+    "name": "Fight Night",
+    "url": "#/HO/162",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/UFC_LOGO_RED-v3-8b2e0712df.svg"
+  },
+  {
+    "name": "Cassino",
+    "url": "#/CASINO/inicio",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Casino-8d32c62bc4.svg"
+  },
+  {
+    "name": "NFL",
+    "url": "#/HO/12",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/zlogo_nfl_official-a6d44463db.svg"
+  },
+  {
+    "name": "Tênis",
+    "url": "#/HO/13",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Tennis-b9bc0430b5.svg"
+  },
+  {
+    "name": "Basquete",
+    "url": "#/HO/18",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Basketball-91ca892bbb.svg"
+  },
+  {
+    "name": "NBA",
+    "url": "#/HO/18/l/NBA",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/zlogo_nba_official-bc5752967c.svg"
+  },
+  {
+    "name": "MLB",
+    "url": "#/HO/16",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/zlogo_mlb_official_oversized1_-3d6972ff4f.svg"
+  },
+  {
+    "name": "Voleibol",
+    "url": "#/HO/91",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Volleyball-294f04c20e.svg"
+  },
+  {
+    "name": "UEFA Champions League",
+    "url": "#/HO/1/l/Liga%20dos%20Campe%C3%B5es%20da%20UEFA",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/UCL-White-2daf2af7fc.svg"
+  },
+  {
+    "name": "Tênis de Mesa",
+    "url": "#/HO/92",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/zClass_26_Table_Tennis-315a7fafaa.svg"
+  },
+  {
+    "name": "Boxe",
+    "url": "#/HO/9",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/9-4b680b34c4.svg"
+  },
+  {
+    "name": "Dardos",
+    "url": "#/HO/15",
+    "icon": "/releases/20261117234105344-1f7bfdfb6fde/assets/images/15-bd02d03622.svg"
+  }
+]

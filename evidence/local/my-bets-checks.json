@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-18T18:07:35.501Z",
+  "reference": "ev_67c3beda1e884ca12d119d688c19e1be2a0f9cf23d20b04593bac08dcfa8d10d",
+  "empty": {
+    "x": 235,
+    "y": 165,
+    "width": 1450,
+    "height": 76,
+    "font": "12px"
+  },
+  "browserErrors": [],
+  "typecheck": "passed",
+  "build": "passed",
+  "functionalChecks": [
+    "Três abas e textos originais",
+    "Filtro preservado na URL e no recarregamento",
+    "Bilhete recolhido e expandido",
+    "Filtro de bilhetes ao vivo",
+    "Cashout com confirmação e saldo atualizado",
+    "Layout móvel sem transbordamento"
+  ]
+}

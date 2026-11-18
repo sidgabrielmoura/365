@@ -1,0 +1,11 @@
+{
+  "wtfsportslive": {
+    "site_id": "wtfsportslive",
+    "front_url": "127.0.0.1",
+    "base_url": "painel.maranguapeloterias.top",
+    "complete_name": "Maranguape Loterias",
+    "status": "actived",
+    "modules": ["bet", "online", "casino", "traditional", "loto", "2p500", "scratchcard", "bet-builder"],
+    "custom_theme": {}
+  }
+}

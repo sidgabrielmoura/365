@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "moneyUnit": "decimal",
+  "sportIds": {
+    "football": "1",
+    "basketball": "2",
+    "mixed-martial-arts": "4",
+    "tennis": "5",
+    "volleyball": "6",
+    "american-football": "8"
+  },
+  "fields": {
+    "userLevel": "nivel",
+    "betCredits": "bonus",
+    "regulation": "regulamento"
+  },
+  "operations": {},
+  "registration": {},
+  "cashout": {
+    "channels": [],
+    "keepAliveMs": 30000
+  }
+}

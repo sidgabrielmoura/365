@@ -1,0 +1,90 @@
+.event-team-fragment {
+  display: contents !important;
+}
+.event-team-fragment > .match-team:first-child {
+  grid-column: 1;
+}
+.event-team-fragment > .match-versus {
+  grid-column: 2;
+  grid-row: 1;
+}
+.event-team-fragment:has(.match-versus) > .match-team {
+  grid-column: 3;
+  grid-row: 1;
+}
+.event-back > span {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #18997099;
+  background: #ffffff0d;
+  display: grid;
+  place-items: center;
+}
+.event-markets-list {
+  margin-top: 10px;
+}
+.builder-notice {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  margin: 10px 0;
+  background: #242424;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.builder-notice > b {
+  font-size: 11px;
+  background: #28ffbb;
+  color: #123c2c;
+  padding: 1px 5px;
+  font-style: italic;
+}
+.app-shell .event-visible-arrow {
+  display: flex;
+  width: 20px;
+  flex-basis: 20px;
+}
+.app-shell .market-options {
+  padding: 0;
+  gap: 1px;
+}
+.app-shell .market-options .odd {
+  display: block;
+  text-align: left;
+  min-height: 45px;
+  padding: 12px 10px;
+}
+.app-shell .market-options .odd > span {
+  display: inline;
+  margin-right: 5px;
+}
+.app-shell .market-options .odd > strong {
+  display: inline;
+  font-weight: 400;
+}
+.app-shell .market-group summary {
+  min-height: 56px;
+  padding: 12px 10px;
+}
+.app-shell .market-group summary:after {
+  margin-left: 10px;
+}
+.app-shell .market-tabs-bar {
+  margin-bottom: 0;
+}
+@media (max-width: 700px) {
+  .app-shell .event-visible-arrow {
+    display: none;
+  }
+  .app-shell .market-options .odd {
+    padding: 10px 7px;
+  }
+  .app-shell .market-options .odd > span {
+    font-size: 11px;
+  }
+  .builder-notice {
+    font-size: 11px;
+  }
+}

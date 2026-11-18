@@ -1,0 +1,90 @@
+.live-dot{display:inline-block;width:6px;height:6px;background:var(--accent);border-radius:50%}
+.live-board{display:grid;grid-template-columns:minmax(0,1fr) clamp(375px,33vw,485px);align-items:start}
+.live-table{min-width:0;padding:0 30px 25px}
+.live-navigation{display:flex;gap:8px;height:70px;align-items:stretch;overflow-x:auto;scrollbar-width:none;margin:0 -30px 14px;padding:0 25px;border-bottom:2px solid #383838}
+.live-navigation a{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;flex:0 0 auto;min-width:59px;font-size:11px;color:#ccc;border-bottom:3px solid transparent;margin-bottom:-2px;padding:9px 4px}
+.live-navigation img{width:24px;height:24px;object-fit:contain}
+.live-navigation .active{color:#fff;font-weight:700;border-color:#ff9d00}
+.live-league-filter{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;padding:9px 12px;border:1px solid #383838;border-left:3px solid #ff9d00;border-radius:3px;background:#2c2925}
+.live-league-filter span{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:13px;font-weight:700}
+.live-league-filter a{flex:none;font-size:12px;color:#ffb000;text-decoration:underline}
+.live-nav-symbol{font-size:25px;line-height:24px;color:#ffb000}
+.live-nav-streaming img{width:22px;height:22px;opacity:.5}
+.live-nav-streaming.active img,.live-nav-streaming:hover img{opacity:1}
+.live-sport{--live-sport-color: #4b793a;margin-bottom:20px}
+.live-sport-basketball{--live-sport-color: #a26632}
+.live-sport-tennis{--live-sport-color: #546b35}
+.live-sport h2{display:flex;align-items:center;gap:8px;font-size:16px;margin:18px 0 12px}
+.live-sport h2 img{width:18px;height:18px;object-fit:contain}
+.live-market-tabs{display:flex;gap:20px;height:34px;align-items:stretch;margin-bottom:8px}
+.live-market-tabs button{background:none;color:#fff;border:0;border-radius:0;border-bottom:2px solid transparent;padding:0;font-size:12px;white-space:nowrap}
+.live-market-tabs .active{border-color:var(--live-sport-color);font-weight:700}
+.live-competition{margin-bottom:10px}
+.live-competition-heading{height:30px;display:grid;grid-template-columns:50% minmax(0,1fr) 60px;align-items:center;background:linear-gradient(100deg,color-mix(in srgb,var(--live-sport-color) 70%,#222),#2c2925);border-radius:3px;padding-left:10px}
+.live-competition-heading>span,.live-league-title>span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:13px;font-weight:700}
+.live-league-title{display:flex;align-items:center;gap:6px;min-width:0}
+.live-column-labels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));font-size:11px;text-align:center;padding-left:5px}
+.live-column-labels-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.live-row{background:#282828;border-radius:4px;margin-top:5px;overflow:hidden}
+.live-row-body{display:grid;grid-template-columns:50% minmax(0,1fr) 60px;padding-top:5px;min-height:65px}
+.live-teams{padding:0 5px 0 10px;display:grid;grid-template-rows:1fr 1fr;grid-template-columns:minmax(0,1fr);min-width:0;font-size:13px}
+.live-teams>div{display:flex;align-items:center;gap:6px;min-width:0;min-height:30px}
+.live-teams .team-logo{flex:none;width:20px;height:20px;object-fit:contain}
+.live-teams span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.live-teams b{flex:none;background:#464646;border-radius:2px;padding:2px 3px;min-width:19px;text-align:center;font-size:14px;font-variant-numeric:tabular-nums;line-height:16px}
+.live-prices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;padding-left:5px;min-width:0}
+.live-prices-totals{grid-template-columns:repeat(2,minmax(0,1fr))}
+.live-price-column{display:grid;grid-template-rows:1fr 1fr;gap:1px;min-width:0}
+.app-shell .live-board .odd{min-height:60px;border:0;border-radius:3px;padding:3px;background-color:#222;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-align:center}
+.app-shell .live-board .odd:hover:not(:disabled){background-color:#414141}
+.app-shell .live-board .odd strong{font-size:13px;color:#ffdf1b;font-weight:400;line-height:16px}
+.app-shell .live-board .live-price-line{color:#eee;font-size:12px;white-space:nowrap;line-height:15px}
+.app-shell .live-board .live-prices-stacked .odd{min-height:43px}
+.app-shell .live-board .odd.selected,.app-shell .live-board .odd.selected:hover:not(:disabled){background-color:#126e51}
+.app-shell .live-board .odd.selected strong{color:#fff}
+.live-price-unavailable{display:grid;min-height:30px;align-items:center;justify-items:center;background:#222;border-radius:3px;color:#666}
+.live-price-unavailable svg{width:12px;height:12px;fill:currentColor;opacity:.65}
+.live-match-link{display:grid;place-items:center;color:#ccc}
+.live-match-link svg{width:22px;height:16px;fill:none;stroke:currentColor}
+.live-match-link.active{color:#28ffbb}
+.live-match-link-stream{color:#28ffbb;border-radius:4px;animation:live-stream-pulse 1.4s ease-in-out infinite}
+.live-match-link-stream svg rect{fill:none}
+.live-match-link-stream .live-stream-play{fill:currentColor;stroke:none}
+@media (prefers-reduced-motion:reduce) {.live-match-link-stream{animation:none;box-shadow:0 0 0 1px #28ffbbcc}}
+.live-row footer{height:30px;display:flex;gap:4px;align-items:center;padding:0 60px 0 10px;font-size:11px}
+.live-row time{font-variant-numeric:tabular-nums}
+.live-row footer small{margin-left:4px;color:#aaa;font-size:10px}
+.live-favorite,.live-stats{display:grid;place-items:center;padding:0;background:none;color:#aaa}
+.live-favorite{width:20px;height:24px;flex:0 0 20px;margin:0;border:0;border-radius:3px;line-height:1}
+.live-favorite svg{display:block;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round}
+.live-favorite.active{color:#ffdf1b}
+.live-favorite.active svg{fill:currentColor}
+.live-favorite:focus-visible{outline:2px solid #ffdf1b;outline-offset:1px}
+.live-league-favorite{color:#ddd}
+.live-stats{width:18px;height:20px}
+.live-stats svg{width:12px;height:12px;fill:none;stroke:currentColor}
+.live-overview{position:sticky;top:0;min-width:0;border-left:1px solid #444}
+.live-overview-card{display:none;min-height:230px;padding:20px 15px;text-align:center;background:#181818}
+.live-overview:not(:has(.match-live-slot)) .live-overview-card,.live-overview:has(.match-live-none) .live-overview-card{display:block}
+.live-overview:has(.match-live:not([hidden]))>.sk,.live-overview:has(.match-live-none)>.sk{display:none}
+.live-overview-card h2{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;font-size:13px;line-height:20px;margin:0 0 10px}
+.live-overview-card strong{color:#ffdf1b;font-size:20px;white-space:nowrap}
+.live-overview-card time{color:#28ffbb}
+.live-overview-card p{color:#aaa;font-size:12px;margin-bottom:20px}
+@media (max-width:999px) {.live-board{display:block}}
+@media (max-width:999px) {.live-overview{display:none}}
+@media (max-width:700px) {.live-table{padding:0 10px 20px}}
+@media (max-width:700px) {.live-navigation{margin:0 -10px 8px;padding:0 6px;height:62px;gap:2px}}
+@media (max-width:700px) {.live-navigation a{min-width:56px;font-size:10px}}
+@media (max-width:700px) {.live-sport h2{font-size:14px;margin-top:12px}}
+@media (max-width:700px) {.live-competition-heading,.live-row-body{grid-template-columns:44% minmax(0,1fr) 25px}}
+@media (max-width:700px) {.live-competition-heading{padding-left:7px}}
+@media (max-width:700px) {.live-competition-heading>span,.live-league-title>span{font-size:12px}}
+@media (max-width:700px) {.live-column-labels{font-size:10px}}
+@media (max-width:700px) {.live-teams{font-size:12px;padding-left:7px}}
+@media (max-width:700px) {.live-teams b{font-size:12px;min-width:16px;padding:1px 2px}}
+@media (max-width:700px) {.live-match-link svg{width:17px}}
+@media (max-width:700px) {.app-shell .live-board .odd strong{font-size:12px}}
+@media (max-width:700px) {.app-shell .live-board .live-price-line{font-size:10px}}
+@media (max-width:700px) {.live-row footer{padding-right:25px;padding-left:7px}}
+@media (max-width:700px) {.live-row footer small{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}

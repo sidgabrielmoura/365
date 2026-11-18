@@ -1,0 +1,46 @@
+{
+  "at": "2026-11-18T17:01:03.257Z",
+  "checks": [
+    {
+      "url": "/",
+      "result": "passed"
+    },
+    {
+      "url": "/ao-vivo",
+      "result": "passed"
+    },
+    {
+      "url": "/evento/66887172",
+      "result": "passed"
+    },
+    {
+      "url": "/cassino",
+      "result": "passed"
+    },
+    {
+      "url": "/cassino/todos?pagina=2",
+      "result": "passed"
+    },
+    {
+      "url": "/cassino/jogo/PGSOFT%3A1695365",
+      "result": "passed"
+    },
+    {
+      "url": "/recompensas",
+      "result": "passed"
+    },
+    {
+      "url": "/conta",
+      "result": "passed"
+    },
+    {
+      "flow": "Sessão HttpOnly e crédito Pix fictício no SQLite",
+      "result": "passed"
+    },
+    {
+      "flow": "Cache local de imagem do catálogo",
+      "result": "passed"
+    }
+  ],
+  "browserErrors": []
+}

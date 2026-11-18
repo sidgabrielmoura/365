@@ -1,0 +1,4092 @@
+{
+  "summary": {
+    "date": "2026-11-18",
+    "project": "C:/Users/gabriel/development/clones/bet365",
+    "sourceDocument": "C:/Users/gabriel/Downloads/backend-api.md",
+    "sourceSha256": "327a8c837187bd190dcccbe00f7a736abbd21b47f391a4c3e208f77a2d2b6ed7",
+    "sourceLines": 375,
+    "catalogueRows": 87,
+    "catalogueOperations": 104,
+    "integratedCatalogueOperations": 0,
+    "pageRoutes": 51,
+    "endpointCountsBySection": {
+      "2.1. Sessão e conta": 17,
+      "2.2. Configuração do tenant": 4,
+      "2.3. Esportes: grade, jogo, destaques e busca": 15,
+      "2.4. Apostas do sportsbook e bilhetes": 11,
+      "2.5. Pagamentos": 4,
+      "2.6. Cambista": 12,
+      "2.7. Tradicional (jogo do bicho)": 13,
+      "2.8. Loterias e 2 Para 500": 15,
+      "2.9. Cassino e raspadinhas": 10,
+      "2.10. Tema (editor aberto pelo painel)": 3
+    },
+    "classificationCounts": {
+      "Tela existente": 28,
+      "Tela a ampliar": 25,
+      "Módulo novo": 48,
+      "Infraestrutura": 3
+    },
+    "limits": [
+      "Análise estática do guia fornecido e do código local; sem alterar produto nem executar operações no painel.",
+      "Contratos completos no vault Obsidian citado pelo guia não foram fornecidos.",
+      "Nenhuma disponibilidade, credencial, tenant real, pagamento ou payload foi validado contra o backend remoto.",
+      "Referências de páginas novas são propostas, exceto páginas públicas explicitamente citadas pelo guia."
+    ]
+  },
+  "legend": {
+    "E": "Tela existente",
+    "A": "Tela a ampliar",
+    "N": "Módulo novo",
+    "I": "Infraestrutura",
+    "L": "Legado: não usar"
+  },
+  "actions": [
+    {
+      "id": "API-001",
+      "sourceRow": 1,
+      "sourceLine": 69,
+      "section": "2.1. Sessão e conta",
+      "method": "POST",
+      "endpoint": "/bet/login",
+      "path": "/bet/login",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Entrar (`username`, `password`)",
+      "classification": "E",
+      "pages": [
+        "modal Login global"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/auth-dialog.tsx",
+        "src/lib/site-context.tsx",
+        "src/app/api/demo/route.ts"
+      ],
+      "current": "Login local por e-mail em SQLite; o formulário aceita um identificador.",
+      "adaptation": "Enviar username/password para /bet/login; guardar o JWT só no servidor. Confirmar se o backend aceita e-mail no campo username. Não reutilizar o token opaco brasa_demo como JWT.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-002",
+      "sourceRow": 2,
+      "sourceLine": 70,
+      "section": "2.1. Sessão e conta",
+      "method": "POST",
+      "endpoint": "/api/auth-logout",
+      "path": "/api/auth-logout",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT",
+      "auth": "JWT",
+      "action": "Sair",
+      "classification": "E",
+      "pages": [
+        "menu da conta > Sair",
+        "todas as páginas com sessão"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-surfaces.tsx",
+        "src/lib/site-context.tsx",
+        "src/app/api/demo/route.ts"
+      ],
+      "current": "Sair apaga a sessão local.",
+      "adaptation": "Encerrar também a sessão do painel, limpar o cookie do BFF e os dados do usuário. Outros níveis que não online/cambista também devem ser deslogados.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-003",
+      "sourceRow": 3,
+      "sourceLine": 71,
+      "section": "2.1. Sessão e conta",
+      "method": "POST",
+      "endpoint": "/api/v3/online/auth",
+      "path": "/api/v3/online/auth",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Dados do jogador logado. Responde 403 para outros níveis, e aí o site tenta o `/api/auth`",
+      "classification": "E",
+      "pages": [
+        "header",
+        "/conta",
+        "todas as páginas com sessão"
+      ],
+      "proposed": [],
+      "files": [
+        "src/app/layout.tsx",
+        "src/lib/site-context.tsx",
+        "src/components/shell.tsx"
+      ],
+      "current": "A sessão inteira vem de readSession no banco local.",
+      "adaptation": "Hidratar o jogador online. Apenas o 403 de nível dispara o fallback /api/auth descrito; 401 expira a sessão, não é fallback indiscriminado.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-004",
+      "sourceRow": 4,
+      "sourceLine": 72,
+      "section": "2.1. Sessão e conta",
+      "method": "POST",
+      "endpoint": "/api/auth",
+      "path": "/api/auth",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT",
+      "auth": "JWT",
+      "action": "Usuário do cambista (`{ user, percents, permissions }`) e dados do perfil (chave PIX etc.)",
+      "classification": "E",
+      "pages": [
+        "hidratação global da sessão",
+        "/conta",
+        "modal Pix"
+      ],
+      "proposed": [],
+      "files": [
+        "src/app/layout.tsx",
+        "src/lib/site-context.tsx",
+        "src/components/account/account-page.tsx"
+      ],
+      "current": "DemoUser não tem nível, permissões nem percentuais.",
+      "adaptation": "Usar no fallback de autenticação/perfil documentado. Separar online de cambista; as telas de vendedor ainda não existem. Não tratar permissions de vendedor como dados de um jogador.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-005",
+      "sourceRow": 5,
+      "sourceLine": 73,
+      "section": "2.1. Sessão e conta",
+      "method": "POST",
+      "endpoint": "/api/online/register",
+      "path": "/api/online/register",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Cadastro. O endpoint depende de `settings.register_mode` do CDN: `default`, `phone` ou `username`",
+      "classification": "A",
+      "pages": [
+        "modal Registre-se global"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/auth-dialog.tsx"
+      ],
+      "current": "Há um formulário único; a operação local salva nome/e-mail/senha. CPF e telefone do formulário não seguem para authenticate.",
+      "adaptation": "Selecionar a variante de cadastro por register_mode e online_can_register. O guia NÃO informa qual modo corresponde a cada versão nem os corpos completos; obter essa matriz antes de integrar.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-006",
+      "sourceRow": 5,
+      "sourceLine": 73,
+      "section": "2.1. Sessão e conta",
+      "method": "POST",
+      "endpoint": "/api/online/v2/register",
+      "path": "/api/online/v2/register",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Cadastro. O endpoint depende de `settings.register_mode` do CDN: `default`, `phone` ou `username`",
+      "classification": "A",
+      "pages": [
+        "modal Registre-se global"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/auth-dialog.tsx"
+      ],
+      "current": "Há um formulário único; a operação local salva nome/e-mail/senha. CPF e telefone do formulário não seguem para authenticate.",
+      "adaptation": "Selecionar a variante de cadastro por register_mode e online_can_register. O guia NÃO informa qual modo corresponde a cada versão nem os corpos completos; obter essa matriz antes de integrar.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-007",
+      "sourceRow": 5,
+      "sourceLine": 73,
+      "section": "2.1. Sessão e conta",
+      "method": "POST",
+      "endpoint": "/api/online/v3/register",
+      "path": "/api/online/v3/register",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Cadastro. O endpoint depende de `settings.register_mode` do CDN: `default`, `phone` ou `username`",
+      "classification": "A",
+      "pages": [
+        "modal Registre-se global"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/auth-dialog.tsx"
+      ],
+      "current": "Há um formulário único; a operação local salva nome/e-mail/senha. CPF e telefone do formulário não seguem para authenticate.",
+      "adaptation": "Selecionar a variante de cadastro por register_mode e online_can_register. O guia NÃO informa qual modo corresponde a cada versão nem os corpos completos; obter essa matriz antes de integrar.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-008",
+      "sourceRow": 6,
+      "sourceLine": 74,
+      "section": "2.1. Sessão e conta",
+      "method": "GET",
+      "endpoint": "/api/online/account/balance",
+      "path": "/api/online/account/balance",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Saldo no header",
+      "classification": "E",
+      "pages": [
+        "header/saldo",
+        "/conta/banco",
+        "modal Pix",
+        "/cassino/jogo/[id]"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/shell.tsx",
+        "src/components/account/account-page.tsx",
+        "src/components/account/account-surfaces.tsx",
+        "src/components/casino/casino.tsx"
+      ],
+      "current": "Saldo e disponível são o mesmo número local.",
+      "adaptation": "Mapear campos monetários reais e atualizar após operações confirmadas. Não deduzir saldo sacável ou bônus do saldo total sem contrato.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-009",
+      "sourceRow": 7,
+      "sourceLine": 75,
+      "section": "2.1. Sessão e conta",
+      "method": "GET",
+      "endpoint": "/api/online/informations",
+      "path": "/api/online/informations",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Perfil no painel da conta",
+      "classification": "E",
+      "pages": [
+        "/conta",
+        "/conta/banco"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-page.tsx",
+        "src/lib/site-context.tsx"
+      ],
+      "current": "Perfil vem de DemoSession/SQLite.",
+      "adaptation": "Carregar o perfil real, adaptar snake_case e tratar campos ausentes. Este GET não é contrato para salvar e-mail, telefone ou endereço.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-010",
+      "sourceRow": 8,
+      "sourceLine": 76,
+      "section": "2.1. Sessão e conta",
+      "method": "GET",
+      "endpoint": "/api/online/withdrawal-data",
+      "path": "/api/online/withdrawal-data",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Dados de saque (chave PIX)",
+      "classification": "E",
+      "pages": [
+        "/conta/banco/sacar",
+        "modal Pix global > Sacar"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-surfaces.tsx",
+        "src/components/account/account-page.tsx"
+      ],
+      "current": "A chave é digitada a cada saque e não é armazenada.",
+      "adaptation": "Ler a chave/dados de saque do perfil e respeitar can_edit_pix. O documento não define endpoint de atualização da chave nem o payload completo para enviá-la no saque.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-011",
+      "sourceRow": 9,
+      "sourceLine": 77,
+      "section": "2.1. Sessão e conta",
+      "method": "PUT",
+      "endpoint": "/api/online/change-pasword",
+      "path": "/api/online/change-pasword",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Trocar a senha. A grafia \"pasword\" é a do painel",
+      "classification": "E",
+      "pages": [
+        "/conta/senha"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-page.tsx",
+        "src/lib/demo-store.ts"
+      ],
+      "current": "Troca local com senha atual/nova/confirmação e revogação das outras sessões locais.",
+      "adaptation": "Manter exatamente change-pasword. Confirmar nomes dos campos, limites e política de revogação no backend; o guia não promete que a troca invalida todos os aparelhos.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-012",
+      "sourceRow": 10,
+      "sourceLine": 78,
+      "section": "2.1. Sessão e conta",
+      "method": "POST",
+      "endpoint": "/api/online/refer-win-code",
+      "path": "/api/online/refer-win-code",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Código do Indique e Ganhe",
+      "classification": "A",
+      "pages": [
+        "/conta/indique"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-page.tsx"
+      ],
+      "current": "A tela existe, mas mostra Programa em breve.",
+      "adaptation": "Exibir código/link real conforme campanha. Validar se o POST só recupera ou também gera o código; não inventar estatísticas de comissão.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-013",
+      "sourceRow": 11,
+      "sourceLine": 79,
+      "section": "2.1. Sessão e conta",
+      "method": "GET",
+      "endpoint": "/api/refer-and-win-rules",
+      "path": "/api/refer-and-win-rules",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT",
+      "auth": "JWT",
+      "action": "Regras do Indique e Ganhe",
+      "classification": "A",
+      "pages": [
+        "/conta/indique"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-page.tsx"
+      ],
+      "current": "Não há conteúdo dinâmico do programa.",
+      "adaptation": "Adicionar regras e elegibilidade do programa na mesma página. Não confundir indicação com créditos de aposta ou promoções do cassino em /recompensas.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-014",
+      "sourceRow": 12,
+      "sourceLine": 80,
+      "section": "2.1. Sessão e conta",
+      "method": "GET",
+      "endpoint": "/api/online/transactions?page&per_page=15",
+      "path": "/api/online/transactions",
+      "query": "page&per_page=15",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Extrato da conta, com as abas `transactions`, `deposits`, `withdrawals` e `casino-plays`",
+      "classification": "A",
+      "pages": [
+        "/conta/historico",
+        "/conta/atividade"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-page.tsx",
+        "src/components/account/account-surfaces.tsx"
+      ],
+      "current": "Histórico/atividade repetem a lista local de movimentações, sem abas nem paginação remota.",
+      "adaptation": "Criar filtros/abas transactions, deposits, withdrawals e casino-plays. Traduzir pagina do front em page e usar per_page=15; histórico esportivo de bilhetes é outro endpoint.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-015",
+      "sourceRow": 12,
+      "sourceLine": 80,
+      "section": "2.1. Sessão e conta",
+      "method": "GET",
+      "endpoint": "/api/online/deposits?page&per_page=15",
+      "path": "/api/online/deposits",
+      "query": "page&per_page=15",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Extrato da conta, com as abas `transactions`, `deposits`, `withdrawals` e `casino-plays`",
+      "classification": "A",
+      "pages": [
+        "/conta/historico",
+        "/conta/atividade"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-page.tsx",
+        "src/components/account/account-surfaces.tsx"
+      ],
+      "current": "Histórico/atividade repetem a lista local de movimentações, sem abas nem paginação remota.",
+      "adaptation": "Criar filtros/abas transactions, deposits, withdrawals e casino-plays. Traduzir pagina do front em page e usar per_page=15; histórico esportivo de bilhetes é outro endpoint.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-016",
+      "sourceRow": 12,
+      "sourceLine": 80,
+      "section": "2.1. Sessão e conta",
+      "method": "GET",
+      "endpoint": "/api/online/withdrawals?page&per_page=15",
+      "path": "/api/online/withdrawals",
+      "query": "page&per_page=15",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Extrato da conta, com as abas `transactions`, `deposits`, `withdrawals` e `casino-plays`",
+      "classification": "A",
+      "pages": [
+        "/conta/historico",
+        "/conta/atividade",
+        "modal Pix > Últimos saques"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-page.tsx",
+        "src/components/account/account-surfaces.tsx"
+      ],
+      "current": "Histórico/atividade repetem a lista local de movimentações, sem abas nem paginação remota.",
+      "adaptation": "Criar filtros/abas transactions, deposits, withdrawals e casino-plays. Traduzir pagina do front em page e usar per_page=15; histórico esportivo de bilhetes é outro endpoint.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-017",
+      "sourceRow": 12,
+      "sourceLine": 80,
+      "section": "2.1. Sessão e conta",
+      "method": "GET",
+      "endpoint": "/api/online/casino-plays?page&per_page=15",
+      "path": "/api/online/casino-plays",
+      "query": "page&per_page=15",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Extrato da conta, com as abas `transactions`, `deposits`, `withdrawals` e `casino-plays`",
+      "classification": "A",
+      "pages": [
+        "/conta/historico",
+        "/conta/atividade"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-page.tsx",
+        "src/components/account/account-surfaces.tsx"
+      ],
+      "current": "Histórico/atividade repetem a lista local de movimentações, sem abas nem paginação remota.",
+      "adaptation": "Criar filtros/abas transactions, deposits, withdrawals e casino-plays. Traduzir pagina do front em page e usar per_page=15; histórico esportivo de bilhetes é outro endpoint.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-018",
+      "sourceRow": 13,
+      "sourceLine": 86,
+      "section": "2.2. Configuração do tenant",
+      "method": "GET",
+      "endpoint": "/api/online/config",
+      "path": "/api/online/config",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Configuração online: depósito e saque, limites e esportes exibidos (ver 4.2). Só é aplicada com o jogador online logado",
+      "classification": "I",
+      "pages": [
+        "header",
+        "modal Pix",
+        "cadastro",
+        "esportes",
+        "bilhete"
+      ],
+      "proposed": [],
+      "files": [
+        "src/app/layout.tsx",
+        "src/lib/site-context.tsx",
+        "src/components/account/account-surfaces.tsx",
+        "src/components/sports/workspace.tsx"
+      ],
+      "current": "Limites, meios de pagamento e exibição são fixos no código.",
+      "adaptation": "Carregar por tenant e aplicar SOMENTE ao jogador online logado, apesar de o endpoint ser público. Não aplicar ao visitante nem ao cambista.",
+      "classificationLabel": "Infraestrutura",
+      "integrated": false
+    },
+    {
+      "id": "API-019",
+      "sourceRow": 14,
+      "sourceLine": 87,
+      "section": "2.2. Configuração do tenant",
+      "method": "GET",
+      "endpoint": "/api/regulamento",
+      "path": "/api/regulamento",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "HTML do regulamento (página e modal). Sanitize antes de exibir",
+      "classification": "A",
+      "pages": [
+        "/termos",
+        "modal de informações/regras no shell"
+      ],
+      "proposed": [
+        "/regulamento (opcional)"
+      ],
+      "files": [
+        "src/components/info/info.tsx",
+        "src/components/account/account-surfaces.tsx"
+      ],
+      "current": "Termos são texto local de demonstração.",
+      "adaptation": "Apresentar regulamento sanitizado, com título apropriado. Confirmar se pode substituir o conteúdo de /termos; não assumir que fornece a política de privacidade.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-020",
+      "sourceRow": 15,
+      "sourceLine": 88,
+      "section": "2.2. Configuração do tenant",
+      "method": "GET",
+      "endpoint": "/api/live-settings",
+      "path": "/api/live-settings",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Filtros e margem do ao vivo, buscados uma vez por carregamento",
+      "classification": "I",
+      "pages": [
+        "/ao-vivo",
+        "/evento/[id] quando ao vivo",
+        "contador do header"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/live.tsx",
+        "src/components/sports/event-detail.tsx",
+        "src/components/shell.tsx"
+      ],
+      "current": "Eventos e estatísticas são capturas; não existe conexão em tempo real.",
+      "adaptation": "Buscar filtros/margem uma vez por carregamento e usar no fluxo Socket.IO. Confirmar forma de aplicar a margem; não aplicá-la duas vezes.",
+      "classificationLabel": "Infraestrutura",
+      "integrated": false
+    },
+    {
+      "id": "API-021",
+      "sourceRow": 16,
+      "sourceLine": 89,
+      "section": "2.2. Configuração do tenant",
+      "method": "POST",
+      "endpoint": "/api/builder",
+      "path": "/api/builder",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Regras e configuração do Criar Aposta (bet builder)",
+      "classification": "E",
+      "pages": [
+        "/evento/[id] > Criar Aposta",
+        "bilhete global"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/event-detail.tsx",
+        "src/components/sports/bet-slip.tsx",
+        "src/lib/bet-data.ts"
+      ],
+      "current": "Criar Aposta existe, com cotação estimada localmente por produto elevado a 0,85.",
+      "adaptation": "Usar regras/configuração do backend. /api/builder NÃO está documentado como endpoint de cotação correlacionada; preço e payload de registro do builder precisam de contrato adicional.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-022",
+      "sourceRow": 17,
+      "sourceLine": 95,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "GET",
+      "endpoint": "/api/v3/app/grid-events/{segment}/{sport_id}",
+      "path": "/api/v3/app/grid-events/{segment}/{sport_id}",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "`user` = JWT",
+      "auth": "Público",
+      "action": "Grade pré-jogo (home, Jogos de hoje, Calendário, Próximos e a liga)",
+      "classification": "E",
+      "pages": [
+        "/",
+        "/proximos",
+        "/esportes",
+        "/esportes/*"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/workspace.tsx",
+        "src/lib/sports-data.ts"
+      ],
+      "current": "Grades e abas vêm de JSONs locais; 12 partidas por página no navegador.",
+      "adaptation": "Normalizar array misto league/event; mapear sport_id, league_id, cotation e enabled. Segmentos 100001..100007 representam dias; 100008 representa próximos. Criar seletor de calendário se necessário; não há rota de calendário atual.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-023",
+      "sourceRow": 17,
+      "sourceLine": 95,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "GET",
+      "endpoint": "/api/v3/user/grid-events/{segment}/{sport_id}",
+      "path": "/api/v3/user/grid-events/{segment}/{sport_id}",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "`user` = JWT",
+      "auth": "JWT",
+      "action": "Grade pré-jogo (home, Jogos de hoje, Calendário, Próximos e a liga)",
+      "classification": "E",
+      "pages": [
+        "/",
+        "/proximos",
+        "/esportes",
+        "/esportes/*"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/workspace.tsx",
+        "src/lib/sports-data.ts"
+      ],
+      "current": "Grades e abas vêm de JSONs locais; 12 partidas por página no navegador.",
+      "adaptation": "Normalizar array misto league/event; mapear sport_id, league_id, cotation e enabled. Segmentos 100001..100007 representam dias; 100008 representa próximos. Criar seletor de calendário se necessário; não há rota de calendário atual.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-024",
+      "sourceRow": 18,
+      "sourceLine": 96,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "POST",
+      "endpoint": "/api/bet/v3/event/{id}",
+      "path": "/api/bet/v3/event/{id}",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Cabeçalho do jogo (times, liga, data) no detalhe",
+      "classification": "E",
+      "pages": [
+        "/evento/[id]",
+        "modal Estat. (título/placar)"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/event-detail.tsx",
+        "src/lib/sports-data.ts",
+        "src/components/sports/event-stats-dialog.tsx"
+      ],
+      "current": "eventById busca dados no snapshot.",
+      "adaptation": "Trocar também o loader da rota /evento/[id], que hoje rejeita IDs fora do snapshot. Mapear IDs/times/liga/data do painel. Este cabeçalho não promete estatísticas avançadas, escalação ou cronologia.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-025",
+      "sourceRow": 19,
+      "sourceLine": 97,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "GET",
+      "endpoint": "/api/v3/app/event-odds/{id}?category=",
+      "path": "/api/v3/app/event-odds/{id}",
+      "query": "category=",
+      "documentedBody": "",
+      "authDocumented": "`user` = JWT",
+      "auth": "Público",
+      "action": "Mercados do jogo, por categoria (`main` = Principais)",
+      "classification": "E",
+      "pages": [
+        "/evento/[id]",
+        "bilhete global"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/event-detail.tsx",
+        "src/lib/sports-data.ts",
+        "src/components/sports/bet-slip.tsx"
+      ],
+      "current": "Mercados e categorias são capturados.",
+      "adaptation": "Traduzir categoria Principais para main e mapear as demais por contrato. Usar internal=vencedor-do-encontro-pa para pagamento antecipado; respeitar mercados/opções fechados e boost.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-026",
+      "sourceRow": 19,
+      "sourceLine": 97,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "GET",
+      "endpoint": "/api/v3/user/event-odds/{id}?category=",
+      "path": "/api/v3/user/event-odds/{id}",
+      "query": "category=",
+      "documentedBody": "",
+      "authDocumented": "`user` = JWT",
+      "auth": "JWT",
+      "action": "Mercados do jogo, por categoria (`main` = Principais)",
+      "classification": "E",
+      "pages": [
+        "/evento/[id]",
+        "bilhete global"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/event-detail.tsx",
+        "src/lib/sports-data.ts",
+        "src/components/sports/bet-slip.tsx"
+      ],
+      "current": "Mercados e categorias são capturados.",
+      "adaptation": "Traduzir categoria Principais para main e mapear as demais por contrato. Usar internal=vencedor-do-encontro-pa para pagamento antecipado; respeitar mercados/opções fechados e boost.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-027",
+      "sourceRow": 20,
+      "sourceLine": 98,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "GET",
+      "endpoint": "/api/v1/featured/events",
+      "path": "/api/v1/featured/events",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "`user` = JWT",
+      "auth": "Público",
+      "action": "Jogos em destaque, no carrossel do topo da home",
+      "classification": "A",
+      "pages": [
+        "/"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/workspace.tsx"
+      ],
+      "current": "A home tem banners e listas por abas, mas não um carrossel de partidas curadas separado.",
+      "adaptation": "Adicionar ou adaptar seção de jogos em destaque; não substituir banners de medias.carousel por jogos. Recarregar a cada 60 s e remover jogos que iniciaram.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-028",
+      "sourceRow": 20,
+      "sourceLine": 98,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "GET",
+      "endpoint": "/api/v1/featured/user/events",
+      "path": "/api/v1/featured/user/events",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "`user` = JWT",
+      "auth": "JWT",
+      "action": "Jogos em destaque, no carrossel do topo da home",
+      "classification": "A",
+      "pages": [
+        "/"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/workspace.tsx"
+      ],
+      "current": "A home tem banners e listas por abas, mas não um carrossel de partidas curadas separado.",
+      "adaptation": "Adicionar ou adaptar seção de jogos em destaque; não substituir banners de medias.carousel por jogos. Recarregar a cada 60 s e remover jogos que iniciaram.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-029",
+      "sourceRow": 21,
+      "sourceLine": 99,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "GET",
+      "endpoint": "/api/v1/featured/boosted-events",
+      "path": "/api/v1/featured/boosted-events",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "`user` = JWT",
+      "auth": "Público",
+      "action": "Vitrine **Superodds**, só com as odds turbinadas",
+      "classification": "A",
+      "pages": [
+        "/",
+        "/evento/[id] > Aposta Aumentada"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/workspace.tsx",
+        "src/components/sports/event-detail.tsx",
+        "src/lib/bet-data.ts"
+      ],
+      "current": "O detalhe usa ofertas locais com pernas e oddAumentada, estrutura diferente do boost percentual do guia.",
+      "adaptation": "Exibir Superodds com original riscado/raio/preço recebido; atualizar em 60 s, aceitar lista vazia. Não aumentar o preço outra vez. Bundles promocionais do clone não têm equivalência garantida.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-030",
+      "sourceRow": 21,
+      "sourceLine": 99,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "GET",
+      "endpoint": "/api/v1/featured/user/boosted-events",
+      "path": "/api/v1/featured/user/boosted-events",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "`user` = JWT",
+      "auth": "JWT",
+      "action": "Vitrine **Superodds**, só com as odds turbinadas",
+      "classification": "A",
+      "pages": [
+        "/",
+        "/evento/[id] > Aposta Aumentada"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/workspace.tsx",
+        "src/components/sports/event-detail.tsx",
+        "src/lib/bet-data.ts"
+      ],
+      "current": "O detalhe usa ofertas locais com pernas e oddAumentada, estrutura diferente do boost percentual do guia.",
+      "adaptation": "Exibir Superodds com original riscado/raio/preço recebido; atualizar em 60 s, aceitar lista vazia. Não aumentar o preço outra vez. Bundles promocionais do clone não têm equivalência garantida.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-031",
+      "sourceRow": 22,
+      "sourceLine": 100,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "GET",
+      "endpoint": "/api/main-leagues?sport_id=",
+      "path": "/api/main-leagues",
+      "query": "sport_id=",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "\"Ligas populares\" e \"Competições em destaque\", na ordem do operador",
+      "classification": "E",
+      "pages": [
+        "sidebar esportiva",
+        "/esportes/*",
+        "/"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/workspace.tsx"
+      ],
+      "current": "Em Alta e ligas vêm da navegação capturada.",
+      "adaptation": "Respeitar ordenação do operador e sport_id. O guia não lista IDs de todas as 16 modalidades do clone; confirmar catálogo/mapeamento.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-032",
+      "sourceRow": 23,
+      "sourceLine": 101,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "GET",
+      "endpoint": "/api/leagues-default-grouped",
+      "path": "/api/leagues-default-grouped",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Ligas por país na busca (sem `sport_id` = futebol)",
+      "classification": "A",
+      "pages": [
+        "busca global",
+        "filtro de competição de /esportes/*"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/search-dialog.tsx",
+        "src/components/sports/workspace.tsx"
+      ],
+      "current": "A busca retorna partidas locais; as ligas são montadas a partir desses dados.",
+      "adaptation": "Adicionar agrupamento de ligas por país. Confirmar parâmetro sport_id se usado; o guia só explicita o padrão futebol quando ausente.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-033",
+      "sourceRow": 24,
+      "sourceLine": 102,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "POST",
+      "endpoint": "/api/search-events",
+      "path": "/api/search-events",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Busca de jogos",
+      "classification": "E",
+      "pages": [
+        "modal Pesquisar",
+        "pesquisa da área esportiva"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/search-dialog.tsx",
+        "src/components/sports/workspace.tsx"
+      ],
+      "current": "Filtro em memória de nomes de times/liga.",
+      "adaptation": "Usar busca remota com debounce/cancelamento de respostas antigas e estados vazio/erro. O nome do campo de busca e o shape da resposta não foram informados.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-034",
+      "sourceRow": 25,
+      "sourceLine": 103,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "GET",
+      "endpoint": "/api/v1/winners",
+      "path": "/api/v1/winners",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Vencedores das últimas 24 h (story \"Greens do dia\")",
+      "classification": "A",
+      "pages": [
+        "/ (nova seção Greens do dia)"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/workspace.tsx"
+      ],
+      "current": "Não há stories nem lista de vencedores na home.",
+      "adaptation": "Criar a apresentação apenas com módulo stories ativo. A lista cobre vencedores das últimas 24 h, não é histórico pessoal de apostas.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-035",
+      "sourceRow": 26,
+      "sourceLine": 104,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "POST",
+      "endpoint": "/api/featured-tickets",
+      "path": "/api/featured-tickets",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Múltiplas e dicas do dia; o bilhete compartilhado por link (`?hash`) e a prévia desse link",
+      "classification": "A",
+      "pages": [
+        "/ (novas dicas/múltiplas)",
+        "bilhete global",
+        "prévia de compartilhamento"
+      ],
+      "proposed": [
+        "/?hash={hash} (novo fluxo)"
+      ],
+      "files": [
+        "src/components/sports/workspace.tsx",
+        "src/components/sports/bet-slip.tsx"
+      ],
+      "current": "Não há lista de dicas, leitura de ?hash ou prévia pública de bilhete.",
+      "adaptation": "Adicionar carregamento de dicas e de hash compartilhado. A tabela atribui POST a ambas as URLs, inclusive a com hash; confirmar o contrato da prévia antes de implementar SSR/metadados.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-036",
+      "sourceRow": 26,
+      "sourceLine": 104,
+      "section": "2.3. Esportes: grade, jogo, destaques e busca",
+      "method": "POST",
+      "endpoint": "/api/featured-tickets/{hash}",
+      "path": "/api/featured-tickets/{hash}",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Múltiplas e dicas do dia; o bilhete compartilhado por link (`?hash`) e a prévia desse link",
+      "classification": "A",
+      "pages": [
+        "/ (novas dicas/múltiplas)",
+        "bilhete global",
+        "prévia de compartilhamento"
+      ],
+      "proposed": [
+        "/?hash={hash} (novo fluxo)"
+      ],
+      "files": [
+        "src/components/sports/workspace.tsx",
+        "src/components/sports/bet-slip.tsx"
+      ],
+      "current": "Não há lista de dicas, leitura de ?hash ou prévia pública de bilhete.",
+      "adaptation": "Adicionar carregamento de dicas e de hash compartilhado. A tabela atribui POST a ambas as URLs, inclusive a com hash; confirmar o contrato da prévia antes de implementar SSR/metadados.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-037",
+      "sourceRow": 27,
+      "sourceLine": 131,
+      "section": "2.4. Apostas do sportsbook e bilhetes",
+      "method": "POST",
+      "endpoint": "/api/online/register-bet",
+      "path": "/api/online/register-bet",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Fazer a aposta do jogador (debita o saldo)",
+      "classification": "E",
+      "pages": [
+        "bilhete global em esportes",
+        "/minhas-apostas"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/bet-slip.tsx",
+        "src/lib/site-context.tsx",
+        "src/lib/demo-store.ts"
+      ],
+      "current": "bet-place debita créditos locais e gera ID DEMO; após sucesso mostra somente Bilhete registrado.",
+      "adaptation": "Substituir por registro real e atualizar saldo/histórico. Preservar o toast, sem reintroduzir modal de confirmação. Tratar up_price/correct_price e não repetir POST cegamente em timeout.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-038",
+      "sourceRow": 28,
+      "sourceLine": 132,
+      "section": "2.4. Apostas do sportsbook e bilhetes",
+      "method": "POST",
+      "endpoint": "/api/seller/register-bet",
+      "path": "/api/seller/register-bet",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Fazer a aposta do cambista",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/apostas (proposta)"
+      ],
+      "files": [
+        "src/components/sports/bet-slip.tsx"
+      ],
+      "current": "O projeto só implementa sessão de demonstração de jogador.",
+      "adaptation": "Requer modo cambista, identificação de cliente, permissões e adaptador próprio. Não enviar um jogador online para esta rota.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-039",
+      "sourceRow": 29,
+      "sourceLine": 133,
+      "section": "2.4. Apostas do sportsbook e bilhetes",
+      "method": "POST",
+      "endpoint": "/api/register-pre-bet",
+      "path": "/api/register-pre-bet",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Pré-bilhete do visitante (PIN, ou PIX quando o tenant exige)",
+      "classification": "A",
+      "pages": [
+        "bilhete global para visitante"
+      ],
+      "proposed": [
+        "/ticket/bet/[id] (se houver página pública)"
+      ],
+      "files": [
+        "src/components/sports/bet-slip.tsx",
+        "src/lib/site-context.tsx"
+      ],
+      "current": "Visitante precisa fazer login; não há PIN nem pré-bilhete.",
+      "adaptation": "Adicionar estados PIN/PIX conforme pin_mode e pre_ticket_option. Pré-bilhete não equivale automaticamente a aposta validada.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-040",
+      "sourceRow": 30,
+      "sourceLine": 134,
+      "section": "2.4. Apostas do sportsbook e bilhetes",
+      "method": "GET",
+      "endpoint": "/api/status-payment",
+      "path": "/api/status-payment",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Status do PIX do pré-bilhete; pago = `{ status: true, type: \"paid_bet\" }`",
+      "classification": "A",
+      "pages": [
+        "bilhete do visitante > PIX de pré-bilhete"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/bet-slip.tsx"
+      ],
+      "current": "Não há esse fluxo; o único PIX é o modal de depósito local.",
+      "adaptation": "Consultar status do pagamento do pré-bilhete e reconhecer status=true/type=paid_bet. Não usar /api/check-payment aqui; parâmetros e intervalo precisam de contrato.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-041",
+      "sourceRow": 31,
+      "sourceLine": 135,
+      "section": "2.4. Apostas do sportsbook e bilhetes",
+      "method": "POST",
+      "endpoint": "/api/tickets/bet/{id}",
+      "path": "/api/tickets/bet/{id}",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Comprovante do bilhete, depois da aposta e no histórico",
+      "classification": "A",
+      "pages": [
+        "/minhas-apostas > card/comprovante",
+        "compartilhamento"
+      ],
+      "proposed": [
+        "/ticket/bet/[id] (proposta)"
+      ],
+      "files": [
+        "src/components/sports/my-bet-card.tsx",
+        "src/components/sports/bets.tsx"
+      ],
+      "current": "O comprovante é construído com dados locais e compartilhado como texto.",
+      "adaptation": "Carregar comprovante pelo identificador real, inclusive dados de validação/liquidação. Pode abrir no card ou em página pública; não exige modal após apostar.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-042",
+      "sourceRow": 32,
+      "sourceLine": 136,
+      "section": "2.4. Apostas do sportsbook e bilhetes",
+      "method": "GET",
+      "endpoint": "/api/shared-ticket/{id}",
+      "path": "/api/shared-ticket/{id}",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Dados do bilhete compartilhado",
+      "classification": "A",
+      "pages": [
+        "compartilhamento em /minhas-apostas"
+      ],
+      "proposed": [
+        "/ticket/bet/[id] (proposta)"
+      ],
+      "files": [
+        "src/components/sports/my-bet-card.tsx"
+      ],
+      "current": "Compartilhar usa navigator.share/clipboard, sem URL que carregue um bilhete.",
+      "adaptation": "Criar leitura pública e link canônico de bilhete. Não confundir ID de bilhete com hash de dicas do endpoint featured-tickets.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-043",
+      "sourceRow": 33,
+      "sourceLine": 137,
+      "section": "2.4. Apostas do sportsbook e bilhetes",
+      "method": "GET",
+      "endpoint": "/api/online/history/bets",
+      "path": "/api/online/history/bets",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "\"Minhas apostas\" (histórico)",
+      "classification": "E",
+      "pages": [
+        "/minhas-apostas",
+        "/minhas-apostas?tab=live",
+        "/minhas-apostas?tab=settled"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/bets.tsx",
+        "src/components/sports/my-bet-card.tsx"
+      ],
+      "current": "Filtra DemoSession.tickets no navegador, em páginas de 20 itens.",
+      "adaptation": "Mapear estados aberto/ao vivo/ganhou/perdeu/anulado/cancelado/cashout, retorno real e seleções. Contrato de filtros/paginação remotos não aparece no guia; não presumir per_page=15 desta rota.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-044",
+      "sourceRow": 34,
+      "sourceLine": 138,
+      "section": "2.4. Apostas do sportsbook e bilhetes",
+      "method": "GET",
+      "endpoint": "/api/online/quantity-opened-bets",
+      "path": "/api/online/quantity-opened-bets",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Contador de apostas em aberto",
+      "classification": "A",
+      "pages": [
+        "header > Minhas Apostas",
+        "resumo/atalho de apostas abertas"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/shell.tsx",
+        "src/components/sports/bets.tsx"
+      ],
+      "current": "Existem o link e a lista, mas não uma consulta dedicada do contador.",
+      "adaptation": "Adicionar badge/contador onde o produto desejar e atualizar após registro/liquidação. Não usar tamanho da página paginada como total global.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-045",
+      "sourceRow": 35,
+      "sourceLine": 139,
+      "section": "2.4. Apostas do sportsbook e bilhetes",
+      "method": "POST",
+      "endpoint": "/api/online/cashout/keep-alive/{ticket_id}",
+      "path": "/api/online/cashout/keep-alive/{ticket_id}",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Mantém viva a oferta de cashout enquanto o bilhete está aberto",
+      "classification": "E",
+      "pages": [
+        "/minhas-apostas > oferta de encerrar bilhete"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/my-bet-card.tsx"
+      ],
+      "current": "Cashout é sempre 80% da aposta local.",
+      "adaptation": "Manter oferta real apenas enquanto o card está em acompanhamento; encerrar keep-alive ao sair. Intervalo, validade e regras da oferta não estão especificados.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-046",
+      "sourceRow": 36,
+      "sourceLine": 140,
+      "section": "2.4. Apostas do sportsbook e bilhetes",
+      "method": "POST",
+      "endpoint": "/api/online/cashout/confirm",
+      "path": "/api/online/cashout/confirm",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Confirmar o cashout",
+      "classification": "E",
+      "pages": [
+        "/minhas-apostas > Encerrar aposta"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/my-bet-card.tsx",
+        "src/lib/demo-store.ts"
+      ],
+      "current": "A segunda confirmação chama bet-cashout local e devolve 80% do stake.",
+      "adaptation": "Enviar a oferta aceita nos campos definidos pelo backend, tratar expiração/recusa e atualizar saldo/estado do card. Nunca calcular a oferta financeira com stake*0,8.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-047",
+      "sourceRow": 37,
+      "sourceLine": 141,
+      "section": "2.4. Apostas do sportsbook e bilhetes",
+      "method": "GET",
+      "endpoint": "/api/online/cashout/ably-token",
+      "path": "/api/online/cashout/ably-token",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Token do Ably para receber as ofertas de cashout em tempo real (ver 5)",
+      "classification": "I",
+      "pages": [
+        "/minhas-apostas > cashout em tempo real"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/my-bet-card.tsx",
+        "src/lib/site-context.tsx"
+      ],
+      "current": "Não há Ably instalado nem assinaturas.",
+      "adaptation": "Autenticação Ably via BFF/cookie, TokenRequest assinado e somente canais do jogador. Nomes de canais/eventos, TTL e payloads precisam do contrato; não expor chave de API Ably.",
+      "classificationLabel": "Infraestrutura",
+      "integrated": false
+    },
+    {
+      "id": "API-048",
+      "sourceRow": 38,
+      "sourceLine": 147,
+      "section": "2.5. Pagamentos",
+      "method": "POST",
+      "endpoint": "/api/online/deposits",
+      "path": "/api/online/deposits",
+      "query": "",
+      "documentedBody": "{ amount }",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Gerar o PIX do depósito (QR e copia-e-cola). Só quando `charge_mode` é `pix`",
+      "classification": "E",
+      "pages": [
+        "/conta/banco",
+        "/conta/banco/depositar",
+        "modal Pix global"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-surfaces.tsx",
+        "src/lib/demo-store.ts"
+      ],
+      "current": "pix-create gera código DEMONSTRACAO-SEM-COBRANCA e ilustração DEMO.",
+      "adaptation": "Com charge_mode=pix, usar QR e copia-e-cola retornados pelo painel. Limites vêm da config. Corpo mínimo documentado é amount; o campo promocional do clone não tem suporte descrito.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-049",
+      "sourceRow": 39,
+      "sourceLine": 148,
+      "section": "2.5. Pagamentos",
+      "method": "GET",
+      "endpoint": "/api/check-payment",
+      "path": "/api/check-payment",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Conferir se o PIX do depósito foi pago (consulta repetida em intervalos)",
+      "classification": "E",
+      "pages": [
+        "modal Pix > aguardando pagamento",
+        "modal Pix > Depósito confirmado"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-surfaces.tsx",
+        "src/components/account/wallet-result.tsx"
+      ],
+      "current": "O usuário clica Simular pagamento e o servidor local credita o saldo.",
+      "adaptation": "Trocar a confirmação manual por consulta do pagamento. Exibir o resultado animado só após confirmação real, atualizar saldo e parar polling ao concluir/expirar/sair. Identificador/intervalo não informados.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-050",
+      "sourceRow": 40,
+      "sourceLine": 149,
+      "section": "2.5. Pagamentos",
+      "method": "POST",
+      "endpoint": "/api/online/can-withdraw",
+      "path": "/api/online/can-withdraw",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Saber se o jogador pode sacar (rollover e progresso)",
+      "classification": "A",
+      "pages": [
+        "/conta/banco/sacar",
+        "modal Pix global > Sacar"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-surfaces.tsx"
+      ],
+      "current": "Saque local verifica valor/saldo/tamanho da chave, sem rollover.",
+      "adaptation": "Consultar elegibilidade e mostrar bloqueio/progresso antes de solicitar. Não equiparar saldo da carteira a saldo disponível para saque.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-051",
+      "sourceRow": 41,
+      "sourceLine": 150,
+      "section": "2.5. Pagamentos",
+      "method": "POST",
+      "endpoint": "/api/online/withdrawals",
+      "path": "/api/online/withdrawals",
+      "query": "",
+      "documentedBody": "{ amount, type: \"pix\" }",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Pedir o saque. Só quando `withdrawal_mode` é `pix`",
+      "classification": "E",
+      "pages": [
+        "/conta/banco/sacar",
+        "modal Pix global > Sacar"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/account/account-surfaces.tsx",
+        "src/lib/demo-store.ts"
+      ],
+      "current": "pix-withdraw só debita créditos e registra uma movimentação local.",
+      "adaptation": "Usar apenas com withdrawal_mode=pix e exibir solicitação/estado recebido, sem prometer pagamento instantâneo. amount/type=pix são documentados; key/keyType não são. Confirmar edição da chave e demais campos.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-052",
+      "sourceRow": 42,
+      "sourceLine": 159,
+      "section": "2.6. Cambista",
+      "method": "GET",
+      "endpoint": "/api/bilhetes",
+      "path": "/api/bilhetes",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "\"Meus bilhetes\" do sportsbook, com filtros de status, cliente e dia, paginado",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/bilhetes (proposta)"
+      ],
+      "files": [],
+      "current": "Não há área, sessão por nível ou interface de cambista.",
+      "adaptation": "Filtrar sportsbook por status, cliente e dia; usar paginação real e permissões de vendedor.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-053",
+      "sourceRow": 43,
+      "sourceLine": 160,
+      "section": "2.6. Cambista",
+      "method": "GET",
+      "endpoint": "/api/cancela-bilhete/{id}",
+      "path": "/api/cancela-bilhete/{id}",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Cancelar o bilhete. O backend decide o prazo e a permissão",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/bilhetes (proposta)"
+      ],
+      "files": [],
+      "current": "Não há área, sessão por nível ou interface de cambista.",
+      "adaptation": "Cancelamento EXCLUSIVO do cambista, com prazo/permissão decididos pelo backend. Embora o método seja GET, é mutação: não usar link com prefetch nem conectar ao Cancelar aposta do jogador.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-054",
+      "sourceRow": 44,
+      "sourceLine": 161,
+      "section": "2.6. Cambista",
+      "method": "GET",
+      "endpoint": "/api/traditional/tickets",
+      "path": "/api/traditional/tickets",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Bilhetes do Tradicional",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/tradicional/bilhetes (proposta)"
+      ],
+      "files": [],
+      "current": "Não há área, sessão por nível ou interface de cambista.",
+      "adaptation": "Listar bilhetes tradicionais do vendedor; não misturar com o histórico online.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-055",
+      "sourceRow": 45,
+      "sourceLine": 162,
+      "section": "2.6. Cambista",
+      "method": "GET",
+      "endpoint": "/api/lottery/tickets",
+      "path": "/api/lottery/tickets",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Bilhetes de Loterias e do 2 Para 500",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/loterias/bilhetes (proposta)"
+      ],
+      "files": [],
+      "current": "Não há área, sessão por nível ou interface de cambista.",
+      "adaptation": "Listar bilhetes loto/2 Para 500 do vendedor, com estrutura própria.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-056",
+      "sourceRow": 46,
+      "sourceLine": 163,
+      "section": "2.6. Cambista",
+      "method": "POST",
+      "endpoint": "/api/seller/get-report",
+      "path": "/api/seller/get-report",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Relatório",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/relatorio (proposta)"
+      ],
+      "files": [],
+      "current": "Não há área, sessão por nível ou interface de cambista.",
+      "adaptation": "Criar filtros e apresentação de relatório; corpo, períodos e totais não estão descritos.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-057",
+      "sourceRow": 47,
+      "sourceLine": 164,
+      "section": "2.6. Cambista",
+      "method": "GET",
+      "endpoint": "/api/seller/current-balances",
+      "path": "/api/seller/current-balances",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Saldos do cambista (sportsbook, JB e loto)",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/saldos (proposta)"
+      ],
+      "files": [],
+      "current": "Não há área, sessão por nível ou interface de cambista.",
+      "adaptation": "Apresentar saldos sportsbook/JB/loto separadamente; saldo do jogador não substitui esses campos.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-058",
+      "sourceRow": 48,
+      "sourceLine": 165,
+      "section": "2.6. Cambista",
+      "method": "GET",
+      "endpoint": "/api/seller/cashier",
+      "path": "/api/seller/cashier",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Caixa",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/caixa (proposta)"
+      ],
+      "files": [],
+      "current": "Não há área, sessão por nível ou interface de cambista.",
+      "adaptation": "Criar visão de caixa do cambista, diferente da carteira Pix do jogador.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-059",
+      "sourceRow": 49,
+      "sourceLine": 166,
+      "section": "2.6. Cambista",
+      "method": "GET",
+      "endpoint": "/api/seller/clients",
+      "path": "/api/seller/clients",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Listar e cadastrar clientes",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/clientes (proposta)"
+      ],
+      "files": [],
+      "current": "Não há área, sessão por nível ou interface de cambista.",
+      "adaptation": "Implementar tanto a listagem GET quanto o cadastro POST; contratos de campos/filtros não fornecidos.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-060",
+      "sourceRow": 49,
+      "sourceLine": 166,
+      "section": "2.6. Cambista",
+      "method": "POST",
+      "endpoint": "/api/seller/clients",
+      "path": "/api/seller/clients",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Listar e cadastrar clientes",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/clientes (proposta)"
+      ],
+      "files": [],
+      "current": "Não há área, sessão por nível ou interface de cambista.",
+      "adaptation": "Implementar tanto a listagem GET quanto o cadastro POST; contratos de campos/filtros não fornecidos.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-061",
+      "sourceRow": 50,
+      "sourceLine": 167,
+      "section": "2.6. Cambista",
+      "method": "DELETE",
+      "endpoint": "/api/clientes/{id}",
+      "path": "/api/clientes/{id}",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Remover o cliente",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/clientes (proposta)"
+      ],
+      "files": [],
+      "current": "Não há área, sessão por nível ou interface de cambista.",
+      "adaptation": "Remover cliente por ação explícita; não é exclusão de conta do jogador.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-062",
+      "sourceRow": 51,
+      "sourceLine": 168,
+      "section": "2.6. Cambista",
+      "method": "PUT",
+      "endpoint": "/api/seller/change-password",
+      "path": "/api/seller/change-password",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Trocar a senha",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/senha (proposta)"
+      ],
+      "files": [],
+      "current": "Não há área, sessão por nível ou interface de cambista.",
+      "adaptation": "Formulário pode reutilizar componentes, mas a rota/nível são de vendedor. Não confundir com change-pasword online.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-063",
+      "sourceRow": 52,
+      "sourceLine": 169,
+      "section": "2.6. Cambista",
+      "method": "POST",
+      "endpoint": "/api/seller/get-pre-ticket/{pin}",
+      "path": "/api/seller/get-pre-ticket/{pin}",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Abrir o pré-bilhete do visitante pelo PIN (Validar PIN)",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/validar-pin (proposta)"
+      ],
+      "files": [],
+      "current": "Não há área, sessão por nível ou interface de cambista.",
+      "adaptation": "Ler o pré-bilhete esportivo do visitante por PIN e seguir validação do cambista.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-064",
+      "sourceRow": 53,
+      "sourceLine": 175,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "POST",
+      "endpoint": "/api/traditional/settings",
+      "path": "/api/traditional/settings",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Configuração do visitante e do jogador (região padrão). Sem configuração, responde 403",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/tradicional (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Carregar configuração da região padrão para visitante/jogador; 403 indica ausência de configuração e deve ter estado próprio.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-065",
+      "sourceRow": 54,
+      "sourceLine": 176,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "GET",
+      "endpoint": "/api/seller/traditional/settings",
+      "path": "/api/seller/traditional/settings",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Configuração da região do cambista",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/tradicional (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Carregar configuração da região do vendedor, com JWT de cambista.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-066",
+      "sourceRow": 55,
+      "sourceLine": 177,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "GET",
+      "endpoint": "/api/traditional/v3/lotteries?date&grouped=1",
+      "path": "/api/traditional/v3/lotteries",
+      "query": "date&grouped=1",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Loterias e extrações do dia escolhido (visitante)",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/tradicional (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Selecionar data e agrupar loterias/extrações do visitante usando a versão v3.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-067",
+      "sourceRow": 56,
+      "sourceLine": 178,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "GET",
+      "endpoint": "/api/traditional/auth/v3/lotteries?date&grouped=1",
+      "path": "/api/traditional/auth/v3/lotteries",
+      "query": "date&grouped=1",
+      "documentedBody": "",
+      "authDocumented": "JWT",
+      "auth": "JWT",
+      "action": "Idem, para jogador e cambista (região do usuário)",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/tradicional (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Carregar extrações da região autenticada. Para cambista, a tela seria /cambista/tradicional.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-068",
+      "sourceRow": 57,
+      "sourceLine": 179,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "POST",
+      "endpoint": "/api/traditional/v3/modalities",
+      "path": "/api/traditional/v3/modalities",
+      "query": "",
+      "documentedBody": "{ lottery? }",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Modalidades e multiplicadores (visitante)",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/tradicional (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Modalidades públicas: mandar lottery=loto_id quando as extrações são da mesma loteria; omitir se misturadas.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-069",
+      "sourceRow": 58,
+      "sourceLine": 180,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "GET",
+      "endpoint": "/api/traditional/auth/v3/modalities?lottery=",
+      "path": "/api/traditional/auth/v3/modalities",
+      "query": "lottery=",
+      "documentedBody": "",
+      "authDocumented": "JWT",
+      "auth": "JWT",
+      "action": "Idem, para jogador e cambista",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/tradicional (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Modalidades autenticadas por loteria; usar auth/v3 e respeitar região e multiplicadores.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-070",
+      "sourceRow": 59,
+      "sourceLine": 181,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "POST",
+      "endpoint": "/api/online/traditional/register-ticket",
+      "path": "/api/online/traditional/register-ticket",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Registrar a pule do jogador",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/tradicional (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Registrar pule online, tratar pule_errors por item e valores definidos pelo backend.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-071",
+      "sourceRow": 60,
+      "sourceLine": 182,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "POST",
+      "endpoint": "/api/seller-tradicional/register-bet",
+      "path": "/api/seller-tradicional/register-bet",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Registrar a pule do cambista (com `client_name`)",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/tradicional (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Registro do vendedor inclui client_name; manter grafia seller-tradicional.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-072",
+      "sourceRow": 61,
+      "sourceLine": 183,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "POST",
+      "endpoint": "/api/traditional/pre-ticket",
+      "path": "/api/traditional/pre-ticket",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Pré-bilhete do visitante (PIN ou PIX)",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/tradicional (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Criar pré-pule de visitante por PIN ou PIX; não reutilizar o modelo de hunch esportivo.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-073",
+      "sourceRow": 62,
+      "sourceLine": 184,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "POST",
+      "endpoint": "/api/seller/traditional/get-pin",
+      "path": "/api/seller/traditional/get-pin",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Abrir e validar o PIN do visitante",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/tradicional/validar-pin (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Duas operações: abrir PIN com get-pin e validar com validate-pin, respeitando o contrato de cada POST.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-074",
+      "sourceRow": 62,
+      "sourceLine": 184,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "POST",
+      "endpoint": "/api/seller/traditional/validate-pin",
+      "path": "/api/seller/traditional/validate-pin",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Abrir e validar o PIN do visitante",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/tradicional/validar-pin (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Duas operações: abrir PIN com get-pin e validar com validate-pin, respeitando o contrato de cada POST.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-075",
+      "sourceRow": 63,
+      "sourceLine": 185,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "GET",
+      "endpoint": "/api/online/traditional/bets",
+      "path": "/api/online/traditional/bets",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Histórico",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/tradicional/minhas-apostas (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Histórico próprio de pules; pode reutilizar navegação, mas não o DTO de DemoTicket esportivo.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-076",
+      "sourceRow": 64,
+      "sourceLine": 186,
+      "section": "2.7. Tradicional (jogo do bicho)",
+      "method": "POST",
+      "endpoint": "/api/tickets/traditional",
+      "path": "/api/tickets/traditional",
+      "query": "",
+      "documentedBody": "{ identifier }",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Comprovante, incluindo a página pública `/ticket/tradicional/{id}`",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/ticket/tradicional/[id] (nova)"
+      ],
+      "files": [],
+      "current": "Não existe módulo Tradicional/jogo do bicho, formulários de extração/modalidade ou comprovantes.",
+      "adaptation": "Comprovante público com identifier. Esta página é explicitamente citada pelo documento, mas não existe no clone.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-077",
+      "sourceRow": 65,
+      "sourceLine": 201,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "GET",
+      "endpoint": "/api/online/loto",
+      "path": "/api/online/loto",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "conforme o nível",
+      "auth": "JWT O",
+      "action": "Jogos de loteria disponíveis",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/loterias (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Catálogo online usa /api/online/loto; cambista usa /api/seller/loto na nova área de vendedor. Não cruzar os níveis.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-078",
+      "sourceRow": 65,
+      "sourceLine": 201,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "GET",
+      "endpoint": "/api/seller/loto",
+      "path": "/api/seller/loto",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "conforme o nível",
+      "auth": "JWT S",
+      "action": "Jogos de loteria disponíveis",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/loterias (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Catálogo online usa /api/online/loto; cambista usa /api/seller/loto na nova área de vendedor. Não cruzar os níveis.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-079",
+      "sourceRow": 66,
+      "sourceLine": 202,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "GET",
+      "endpoint": "/api/loto/settings",
+      "path": "/api/loto/settings",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "conforme o nível",
+      "auth": "conforme o nível",
+      "action": "Configuração das loterias",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/loterias (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Carregar configurações. O guia diz conforme o nível e não detalha escopos/payload; validar contrato.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-080",
+      "sourceRow": 67,
+      "sourceLine": 203,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "GET",
+      "endpoint": "/api/loto/availables-loto",
+      "path": "/api/loto/availables-loto",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "conforme o nível",
+      "auth": "conforme o nível",
+      "action": "Loterias disponíveis",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/loterias (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Listar loterias disponíveis segundo o nível; não substituir por ligas de esporte.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-081",
+      "sourceRow": 68,
+      "sourceLine": 204,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "GET",
+      "endpoint": "/api/loto/{id}/details",
+      "path": "/api/loto/{id}/details",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "conforme o nível",
+      "auth": "conforme o nível",
+      "action": "Detalhe e concursos de uma loteria",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/loterias/[id] (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Duas consultas distintas, detalhe e concursos; modelar identificador e concurso próprios.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-082",
+      "sourceRow": 68,
+      "sourceLine": 204,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "GET",
+      "endpoint": "/api/loto/{id}/contests",
+      "path": "/api/loto/{id}/contests",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "conforme o nível",
+      "auth": "conforme o nível",
+      "action": "Detalhe e concursos de uma loteria",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/loterias/[id] (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Duas consultas distintas, detalhe e concursos; modelar identificador e concurso próprios.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-083",
+      "sourceRow": 69,
+      "sourceLine": 205,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "POST",
+      "endpoint": "/api/online/loto/register-bet",
+      "path": "/api/online/loto/register-bet",
+      "query": "",
+      "documentedBody": "{ hunches: [{ id, loto_id, selections, bet_amount, contest }] }",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Registrar a aposta, também no 2 Para 500",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/loterias e /2para500 (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Registrar hunches com id,loto_id,selections,bet_amount,contest; não é o shape do bilhete esportivo.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-084",
+      "sourceRow": 70,
+      "sourceLine": 206,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "POST",
+      "endpoint": "/api/seller/loto/register-bet",
+      "path": "/api/seller/loto/register-bet",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Idem, para o cambista",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/loterias (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Registro de loteria do cambista; receber usuário e permissões do fluxo de vendedor.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-085",
+      "sourceRow": 71,
+      "sourceLine": 207,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "POST",
+      "endpoint": "/api/loto/register-pre-bet",
+      "path": "/api/loto/register-pre-bet",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Pré-bilhete do visitante",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/loterias (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Pré-bilhete de visitante para loterias; UI PIN/PIX ainda não existe.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-086",
+      "sourceRow": 72,
+      "sourceLine": 208,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "POST",
+      "endpoint": "/api/seller/loto/validate-pin",
+      "path": "/api/seller/loto/validate-pin",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT S",
+      "auth": "JWT S",
+      "action": "Validar o PIN",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/loterias/validar-pin (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Validação de PIN de loteria do vendedor, distinta da validação esportiva/tradicional.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-087",
+      "sourceRow": 73,
+      "sourceLine": 209,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "POST",
+      "endpoint": "/api/loto/2p500/contests",
+      "path": "/api/loto/2p500/contests",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "— · JWT S",
+      "auth": "Público",
+      "action": "Concursos do 2 Para 500",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/2para500 (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Concursos públicos usam /api/loto/2p500/contests; cambista usa /api/seller/loto/2p500-contests. Não inventar a mesma URL para ambos.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-088",
+      "sourceRow": 73,
+      "sourceLine": 209,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "POST",
+      "endpoint": "/api/seller/loto/2p500-contests",
+      "path": "/api/seller/loto/2p500-contests",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "— · JWT S",
+      "auth": "JWT S",
+      "action": "Concursos do 2 Para 500",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/cambista/2para500 (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Concursos públicos usam /api/loto/2p500/contests; cambista usa /api/seller/loto/2p500-contests. Não inventar a mesma URL para ambos.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-089",
+      "sourceRow": 74,
+      "sourceLine": 210,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "POST",
+      "endpoint": "/api/loto/2p500/random-hunch",
+      "path": "/api/loto/2p500/random-hunch",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Surpresinha do 2 Para 500",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/2para500 (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Gerar Surpresinha pelo backend; seleção aleatória local não substitui esta operação.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-090",
+      "sourceRow": 75,
+      "sourceLine": 211,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "GET",
+      "endpoint": "/api/online/loto/bets",
+      "path": "/api/online/loto/bets",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT O",
+      "auth": "JWT O",
+      "action": "Histórico",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/loterias/minhas-apostas (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Histórico online de loteria/2 Para 500; filtros e DTO não estão detalhados.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-091",
+      "sourceRow": 76,
+      "sourceLine": 212,
+      "section": "2.8. Loterias e 2 Para 500",
+      "method": "POST",
+      "endpoint": "/api/tickets/loto",
+      "path": "/api/tickets/loto",
+      "query": "",
+      "documentedBody": "{ identifier }",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Comprovante, incluindo a página pública `/ticket/loto/{id}`",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/ticket/loto/[id] (nova)"
+      ],
+      "files": [],
+      "current": "Não há módulo Loterias ou 2 Para 500 nem seus bilhetes/concursos.",
+      "adaptation": "Comprovante público com identifier; a rota pública citada no guia não existe no clone.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-092",
+      "sourceRow": 77,
+      "sourceLine": 218,
+      "section": "2.9. Cassino e raspadinhas",
+      "method": "GET",
+      "endpoint": "/api/casino/home-categories",
+      "path": "/api/casino/home-categories",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Categorias e vitrines do lobby do cassino",
+      "classification": "E",
+      "pages": [
+        "/cassino"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/casino/casino.tsx",
+        "src/lib/casino-data.ts"
+      ],
+      "current": "Categorias e vitrines vêm de casino-lobby.json e membership local.",
+      "adaptation": "Adaptar IDs, títulos, ordenação e vitrines retornados. As categorias fixas não garantem correspondência com os IDs do painel. Rever casinoImage/proxy de capas, que só resolvem jogos do catálogo capturado.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-093",
+      "sourceRow": 78,
+      "sourceLine": 219,
+      "section": "2.9. Cassino e raspadinhas",
+      "method": "GET",
+      "endpoint": "/api/casino/providers",
+      "path": "/api/casino/providers",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Provedores",
+      "classification": "E",
+      "pages": [
+        "/cassino > Provedores Favoritos",
+        "/cassino/provedor/[id]"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/casino/casino.tsx",
+        "src/lib/casino-data.ts"
+      ],
+      "current": "Provedores e logos são locais.",
+      "adaptation": "Usar IDs e catálogo do backend. O [id] atual é o identificador capturado, não necessariamente o ID/reference do painel.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-094",
+      "sourceRow": 79,
+      "sourceLine": 220,
+      "section": "2.9. Cassino e raspadinhas",
+      "method": "GET",
+      "endpoint": "/api/casino/available-games?categories[]&providers[]&filter_q&page&per_page",
+      "path": "/api/casino/available-games",
+      "query": "categories[]&providers[]&filter_q&page&per_page",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Lista paginada de jogos (sem categoria = `all`)",
+      "classification": "E",
+      "pages": [
+        "/cassino/todos",
+        "/cassino/ao-vivo",
+        "/cassino/novidades",
+        "/cassino/slots",
+        "/cassino/mesa-e-cartas",
+        "/cassino/arcade",
+        "/cassino/jackpots",
+        "/cassino/provedor/[id]"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/casino/casino.tsx",
+        "src/lib/casino-data.ts"
+      ],
+      "current": "Pesquisa/filtros/paginação de 24 itens são feitos sobre 7.369 jogos locais.",
+      "adaptation": "Traduzir pagina/q para page/filter_q e mapear categories[]/providers[]. Confirmar metadados de paginação e classificação por categoria; sem categoria significa all.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-095",
+      "sourceRow": 80,
+      "sourceLine": 221,
+      "section": "2.9. Cassino e raspadinhas",
+      "method": "GET",
+      "endpoint": "/api/casino/game/{reference}",
+      "path": "/api/casino/game/{reference}",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Página do jogo",
+      "classification": "E",
+      "pages": [
+        "/cassino/jogo/[id]"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/casino/casino.tsx",
+        "src/lib/casino-data.ts"
+      ],
+      "current": "A página obtém o jogo do JSON pelo ID capturado.",
+      "adaptation": "Resolver referência real do provedor, nome/capa/disponibilidade e erro de jogo inexistente. Trocar também o loader da rota, que hoje faz notFound para IDs ausentes no JSON. Não assumir equivalência entre [id] atual e reference.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-096",
+      "sourceRow": 81,
+      "sourceLine": 222,
+      "section": "2.9. Cassino e raspadinhas",
+      "method": "POST",
+      "endpoint": "/api/casino/games-url",
+      "path": "/api/casino/games-url",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT",
+      "auth": "JWT",
+      "action": "URL para abrir o jogo",
+      "classification": "E",
+      "pages": [
+        "/cassino/jogo/[id]"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/casino/casino.tsx"
+      ],
+      "current": "Todo jogo abre o mesmo demonstrador de frutas com créditos independentes.",
+      "adaptation": "Substituir a área de demonstração pela execução autorizada da URL do jogo, preservando barra/proporção. O guia não fornece motor, assets internos ou modo grátis do provedor nem payload completo de lançamento.",
+      "classificationLabel": "Tela existente",
+      "integrated": false
+    },
+    {
+      "id": "API-097",
+      "sourceRow": 82,
+      "sourceLine": 223,
+      "section": "2.9. Cassino e raspadinhas",
+      "method": "POST",
+      "endpoint": "/api/casino/games-content",
+      "path": "/api/casino/games-content",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Faixa \"Jogos do cassino\" da home",
+      "classification": "A",
+      "pages": [
+        "/ (nova faixa Jogos do cassino)"
+      ],
+      "proposed": [],
+      "files": [
+        "src/components/sports/workspace.tsx",
+        "src/components/casino/casino.tsx"
+      ],
+      "current": "A home esportiva não possui essa faixa de jogos.",
+      "adaptation": "Adicionar seção opcional reaproveitando cards do cassino. Não usar games-content como rota de lançamento, que é games-url.",
+      "classificationLabel": "Tela a ampliar",
+      "integrated": false
+    },
+    {
+      "id": "API-098",
+      "sourceRow": 83,
+      "sourceLine": 224,
+      "section": "2.9. Cassino e raspadinhas",
+      "method": "GET",
+      "endpoint": "/api/scratch-cards/list",
+      "path": "/api/scratch-cards/list",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Lista e detalhe das raspadinhas",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/raspadinhas (nova)"
+      ],
+      "files": [],
+      "current": "Não existe lista/detalhe de raspadinhas.",
+      "adaptation": "Duas leituras: catálogo e detalhe por slug. Criar superfícies próprias; slots/arcade atuais não representam raspadinhas.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-099",
+      "sourceRow": 83,
+      "sourceLine": 224,
+      "section": "2.9. Cassino e raspadinhas",
+      "method": "GET",
+      "endpoint": "/api/scratch-cards/{slug}/details",
+      "path": "/api/scratch-cards/{slug}/details",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "—",
+      "auth": "Público",
+      "action": "Lista e detalhe das raspadinhas",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/raspadinhas/[slug] (nova)"
+      ],
+      "files": [],
+      "current": "Não existe lista/detalhe de raspadinhas.",
+      "adaptation": "Duas leituras: catálogo e detalhe por slug. Criar superfícies próprias; slots/arcade atuais não representam raspadinhas.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-100",
+      "sourceRow": 84,
+      "sourceLine": 225,
+      "section": "2.9. Cassino e raspadinhas",
+      "method": "POST",
+      "endpoint": "/api/online/scratch-cards/buy",
+      "path": "/api/online/scratch-cards/buy",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT",
+      "auth": "JWT",
+      "action": "Comprar a raspadinha, ou a versão grátis",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/raspadinhas/[slug] (nova)"
+      ],
+      "files": [],
+      "current": "Não há compra/revelação de raspadinhas.",
+      "adaptation": "Duas operações autenticadas: compra e free-buy. Grátis não significa público. O prefixo online não deve ser chamado por cambista; confirmar elegibilidade e payload dos dois fluxos.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-101",
+      "sourceRow": 84,
+      "sourceLine": 225,
+      "section": "2.9. Cassino e raspadinhas",
+      "method": "POST",
+      "endpoint": "/api/scratch-cards/free-buy",
+      "path": "/api/scratch-cards/free-buy",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "JWT",
+      "auth": "JWT",
+      "action": "Comprar a raspadinha, ou a versão grátis",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/raspadinhas/[slug] (nova)"
+      ],
+      "files": [],
+      "current": "Não há compra/revelação de raspadinhas.",
+      "adaptation": "Duas operações autenticadas: compra e free-buy. Grátis não significa público. O prefixo online não deve ser chamado por cambista; confirmar elegibilidade e payload dos dois fluxos.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-102",
+      "sourceRow": 85,
+      "sourceLine": 231,
+      "section": "2.10. Tema (editor aberto pelo painel)",
+      "method": "GET",
+      "endpoint": "/api/site/validate-theme-builder?token=",
+      "path": "/api/site/validate-theme-builder",
+      "query": "token=",
+      "documentedBody": "",
+      "authDocumented": "token do editor",
+      "auth": "token do editor",
+      "action": "Validar o link que o painel abre (`/theme-builder?token=`)",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/theme-builder?token= (nova)"
+      ],
+      "files": [],
+      "current": "O clone não tem editor aberto pelo painel.",
+      "adaptation": "Validar token do EDITOR, distinto do JWT do jogador. Não colocar essa ação na página Preferências do usuário.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-103",
+      "sourceRow": 86,
+      "sourceLine": 232,
+      "section": "2.10. Tema (editor aberto pelo painel)",
+      "method": "GET",
+      "endpoint": "/api/site/themes",
+      "path": "/api/site/themes",
+      "query": "",
+      "documentedBody": "",
+      "authDocumented": "token do editor",
+      "auth": "token do editor",
+      "action": "Temas salvos (presets)",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/theme-builder?token= (nova)"
+      ],
+      "files": [],
+      "current": "Não há presets ou interface de edição de tema.",
+      "adaptation": "Listar presets no editor; o guia não detalha como enviar o token nesta consulta.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    },
+    {
+      "id": "API-104",
+      "sourceRow": 87,
+      "sourceLine": 233,
+      "section": "2.10. Tema (editor aberto pelo painel)",
+      "method": "POST",
+      "endpoint": "/api/site/save-theme-color",
+      "path": "/api/site/save-theme-color",
+      "query": "",
+      "documentedBody": "{ colors: [{ key, value }], token }",
+      "authDocumented": "token do editor",
+      "auth": "token do editor",
+      "action": "Gravar o `custom_theme` do tenant",
+      "classification": "N",
+      "pages": [],
+      "proposed": [
+        "/theme-builder?token= (nova)"
+      ],
+      "files": [],
+      "current": "A identidade visual é fixa no CSS e nos assets.",
+      "adaptation": "Salvar colors e token só pelo editor; validar hex/keys no front/BFF, pois o painel não valida. As keys vêm do layout Betano e exigem um adaptador para o CSS BrasaBet.",
+      "classificationLabel": "Módulo novo",
+      "integrated": false
+    }
+  ],
+  "extraActions": [
+    {
+      "id": "EXT-01",
+      "action": "Proxy /api/backoffice/{path}",
+      "pages": "Browser → BFF; todas as páginas que consomem o painel",
+      "classification": "I",
+      "treatment": "A criar. Resolve tenant pelo host, lê cookie HttpOnly e anexa Bearer. SSR chama diretamente o painel do tenant. É transporte local, não outro endpoint de negócio do painel.",
+      "sourceLine": 28
+    },
+    {
+      "id": "EXT-02",
+      "action": "GET /api/environment",
+      "pages": "Contexto global de marca/módulos/configuração",
+      "classification": "I",
+      "treatment": "Rota local do frontend descrita no guia; ausente no clone. Entregar somente configuração pública necessária, sem credenciais de Redis/cookies. Não confundir com /api/online/config.",
+      "sourceLine": 320
+    },
+    {
+      "id": "EXT-03",
+      "action": "GET https://cdn.assetsfabrica.bet/content/parameters/{site_id}.json?v=<timestamp>",
+      "pages": "Inicialização global; banners, bilhete, cadastro, suporte, rodapé",
+      "classification": "I",
+      "treatment": "A criar. Sem cache conforme o documento; 403 significa arquivo ausente. Sem parâmetros, mostrar Site indisponível. Isso não está coberto pelo not-found de rota atual.",
+      "sourceLine": 328
+    },
+    {
+      "id": "EXT-04",
+      "action": "Redis GET sites + JSON.parse",
+      "pages": "Resolução de tenant no servidor",
+      "classification": "I",
+      "treatment": "A criar. Lista com cache de 60 s por processo e último valor válido se Redis falhar; cópia de desenvolvimento. Apenas leitura. Os números 477 tenants/540 KB são os do guia, não uma medição desta auditoria.",
+      "sourceLine": 248
+    },
+    {
+      "id": "EXT-05",
+      "action": "Conectar Socket.IO wss://ws.fabrica.bet/live",
+      "pages": "/ao-vivo e /evento/[id] ao vivo",
+      "classification": "I",
+      "treatment": "Uma conexão por aba, com ciclo de vida compartilhado. Não usar WebSocket puro como se implementasse Socket.IO. Falta cliente/infra de tempo real no clone.",
+      "sourceLine": 360
+    },
+    {
+      "id": "EXT-06",
+      "action": "Emitir join:grid { locale }",
+      "pages": "/ao-vivo",
+      "classification": "A",
+      "treatment": "Assinar grade ao entrar, respeitar filtros e tratar reconexão; parâmetros exatos de namespace/path/autenticação não estão detalhados.",
+      "sourceLine": 360
+    },
+    {
+      "id": "EXT-07",
+      "action": "Receber grid:update",
+      "pages": "/ao-vivo",
+      "classification": "E",
+      "treatment": "Substituir snapshot por grade completa recebida, normalizar eventos e preços/margem; evitar tratar lista completa como delta.",
+      "sourceLine": 360
+    },
+    {
+      "id": "EXT-08",
+      "action": "Emitir join:event { matchId, locale }",
+      "pages": "/evento/[id] ao vivo; painel lateral do ao vivo",
+      "classification": "A",
+      "treatment": "Assinar somente o jogo em acompanhamento e usar seu ID real, não o ID de captura sem validação.",
+      "sourceLine": 360
+    },
+    {
+      "id": "EXT-09",
+      "action": "Receber event:update",
+      "pages": "/evento/[id] ao vivo; painel lateral",
+      "classification": "E",
+      "treatment": "Atualizar jogo/mercados/estado conforme payload. O guia não garante que inclua todas as estatísticas avançadas do layout.",
+      "sourceLine": 360
+    },
+    {
+      "id": "EXT-10",
+      "action": "Receber grid:count:update",
+      "pages": "header/sidebar/abas de /ao-vivo",
+      "classification": "A",
+      "treatment": "Atualizar contadores reais de jogos; não confundir com quantity-opened-bets, que conta bilhetes do jogador.",
+      "sourceLine": 360
+    },
+    {
+      "id": "EXT-11",
+      "action": "Emitir leave:grid",
+      "pages": "Saída da grade /ao-vivo",
+      "classification": "I",
+      "treatment": "Encerrar assinatura sem criar conexões duplicadas. Não executar mutations de aposta por eventos de navegação.",
+      "sourceLine": 360
+    },
+    {
+      "id": "EXT-12",
+      "action": "Emitir leave:event",
+      "pages": "Saída/troca do jogo acompanhado",
+      "classification": "I",
+      "treatment": "Remover assinatura antiga antes de acompanhar novo jogo, preservando conexão compartilhada da aba.",
+      "sourceLine": 360
+    },
+    {
+      "id": "EXT-13",
+      "action": "Assinar ofertas Ably de cashout",
+      "pages": "/minhas-apostas > cards em acompanhamento",
+      "classification": "I",
+      "treatment": "Token vem de API-047; não é endpoint extra. Nomes dos canais/eventos e formato/validade das ofertas estão ausentes. Somente leitura nos canais do próprio jogador.",
+      "sourceLine": 361
+    },
+    {
+      "id": "EXT-14",
+      "action": "seller/traditional/modality/{id}",
+      "pages": "Nenhuma página atual; legado do Tradicional",
+      "classification": "L",
+      "treatment": "O próprio guia marca como legado e inconsistente: não usar. O método HTTP não foi informado; não foi contado nas 104 operações do catálogo.",
+      "sourceLine": 195
+    }
+  ],
+  "routes": [
+    {
+      "route": "/",
+      "file": "src/app/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade/destaques/Superodds/busca/ligas, banners CDN; novas seções dicas/Greens/cassino opcionais",
+      "references": "API-022, API-023, API-027, API-028, API-029, API-030, API-031, API-032, API-033, API-034, API-035, API-036, API-097; CDN"
+    },
+    {
+      "route": "/ajuda",
+      "file": "src/app/ajuda/page.tsx",
+      "component": "src/components/info/info.tsx",
+      "usage": "Conteúdo local; suporte via support_whatsapp e regulamento como complemento",
+      "references": "G07; G16; configuração CDN"
+    },
+    {
+      "route": "/ao-vivo",
+      "file": "src/app/ao-vivo/page.tsx",
+      "component": "src/components/sports/live.tsx",
+      "usage": "Filtros/margem + Socket.IO grade/evento/contadores; odds no bilhete",
+      "references": "API-020; EXT-05..12"
+    },
+    {
+      "route": "/app",
+      "file": "src/app/app/page.tsx",
+      "component": "src/components/info/info.tsx",
+      "usage": "Nome/logo/ícones do tenant; instalação PWA exige implementação própria",
+      "references": "Configuração tenant/CDN; G21"
+    },
+    {
+      "route": "/cassino",
+      "file": "src/app/cassino/page.tsx",
+      "component": "src/components/casino/casino.tsx",
+      "usage": "Categorias/provedores, catálogo/busca remotos e paginação",
+      "references": "API-092, API-093, API-094"
+    },
+    {
+      "route": "/cassino/ao-vivo",
+      "file": "src/app/cassino/ao-vivo/page.tsx",
+      "component": "src/components/casino/casino.tsx",
+      "usage": "Categorias/provedores, catálogo/busca remotos e paginação",
+      "references": "API-092, API-093, API-094"
+    },
+    {
+      "route": "/cassino/arcade",
+      "file": "src/app/cassino/arcade/page.tsx",
+      "component": "src/components/casino/casino.tsx",
+      "usage": "Categorias/provedores, catálogo/busca remotos e paginação",
+      "references": "API-092, API-093, API-094"
+    },
+    {
+      "route": "/cassino/jackpots",
+      "file": "src/app/cassino/jackpots/page.tsx",
+      "component": "src/components/casino/casino.tsx",
+      "usage": "Categorias/provedores, catálogo/busca remotos e paginação",
+      "references": "API-092, API-093, API-094"
+    },
+    {
+      "route": "/cassino/jogo/[id]",
+      "file": "src/app/cassino/jogo/[id]/page.tsx",
+      "component": "src/components/casino/casino.tsx",
+      "usage": "Detalhe por referência + URL real de execução; barra superior e saldo",
+      "references": "API-008, API-095, API-096; G15"
+    },
+    {
+      "route": "/cassino/mesa-e-cartas",
+      "file": "src/app/cassino/mesa-e-cartas/page.tsx",
+      "component": "src/components/casino/casino.tsx",
+      "usage": "Categorias/provedores, catálogo/busca remotos e paginação",
+      "references": "API-092, API-093, API-094"
+    },
+    {
+      "route": "/cassino/novidades",
+      "file": "src/app/cassino/novidades/page.tsx",
+      "component": "src/components/casino/casino.tsx",
+      "usage": "Categorias/provedores, catálogo/busca remotos e paginação",
+      "references": "API-092, API-093, API-094"
+    },
+    {
+      "route": "/cassino/provedor/[id]",
+      "file": "src/app/cassino/provedor/[id]/page.tsx",
+      "component": "src/components/casino/casino.tsx",
+      "usage": "Categorias/provedores, catálogo/busca remotos e paginação",
+      "references": "API-092, API-093, API-094"
+    },
+    {
+      "route": "/cassino/slots",
+      "file": "src/app/cassino/slots/page.tsx",
+      "component": "src/components/casino/casino.tsx",
+      "usage": "Categorias/provedores, catálogo/busca remotos e paginação",
+      "references": "API-092, API-093, API-094"
+    },
+    {
+      "route": "/cassino/todos",
+      "file": "src/app/cassino/todos/page.tsx",
+      "component": "src/components/casino/casino.tsx",
+      "usage": "Categorias/provedores, catálogo/busca remotos e paginação",
+      "references": "API-092, API-093, API-094"
+    },
+    {
+      "route": "/conta",
+      "file": "src/app/conta/page.tsx",
+      "component": "src/components/account/account-page.tsx",
+      "usage": "Autenticação/perfil; edição de contato sem contrato",
+      "references": "API-003, API-004, API-009; G02"
+    },
+    {
+      "route": "/conta/aparelhos",
+      "file": "src/app/conta/aparelhos/page.tsx",
+      "component": "src/components/account/account-page.tsx",
+      "usage": "Inventário/revogação de sessões não documentados",
+      "references": "G05"
+    },
+    {
+      "route": "/conta/atividade",
+      "file": "src/app/conta/atividade/page.tsx",
+      "component": "src/components/account/account-page.tsx",
+      "usage": "Extratos transactions/deposits/withdrawals/casino-plays; não confundir com bilhetes esportivos",
+      "references": "API-014, API-015, API-016, API-017"
+    },
+    {
+      "route": "/conta/banco",
+      "file": "src/app/conta/banco/page.tsx",
+      "component": "src/components/account/account-page.tsx",
+      "usage": "Saldo, crédito disponível e entrada dos modais de depósito/saque",
+      "references": "API-008, API-018, API-048, API-049, API-050, API-051; G08"
+    },
+    {
+      "route": "/conta/banco/depositar",
+      "file": "src/app/conta/banco/depositar/page.tsx",
+      "component": "src/components/account/account-surfaces.tsx",
+      "usage": "Abrir modal Pix; gerar/consultar depósito; confirmação animada real",
+      "references": "API-018, API-048, API-049; G09"
+    },
+    {
+      "route": "/conta/banco/sacar",
+      "file": "src/app/conta/banco/sacar/page.tsx",
+      "component": "src/components/account/account-surfaces.tsx",
+      "usage": "Dados da chave, elegibilidade e pedido de saque; últimos saques",
+      "references": "API-010, API-014, API-015, API-016, API-017, API-018, API-050, API-051; G10"
+    },
+    {
+      "route": "/conta/chat",
+      "file": "src/app/conta/chat/page.tsx",
+      "component": "src/components/account/account-page.tsx",
+      "usage": "Suporte via support_whatsapp possível; chat interno não documentado",
+      "references": "G07"
+    },
+    {
+      "route": "/conta/controles",
+      "file": "src/app/conta/controles/page.tsx",
+      "component": "src/components/account/account-page.tsx",
+      "usage": "Limite pessoal não documentado; não equivale a limites de operador",
+      "references": "G06"
+    },
+    {
+      "route": "/conta/endereco",
+      "file": "src/app/conta/endereco/page.tsx",
+      "component": "src/components/account/account-page.tsx",
+      "usage": "Endereço: mutação não documentada",
+      "references": "G03"
+    },
+    {
+      "route": "/conta/historico",
+      "file": "src/app/conta/historico/page.tsx",
+      "component": "src/components/account/account-page.tsx",
+      "usage": "Extratos transactions/deposits/withdrawals/casino-plays; não confundir com bilhetes esportivos",
+      "references": "API-014, API-015, API-016, API-017"
+    },
+    {
+      "route": "/conta/indique",
+      "file": "src/app/conta/indique/page.tsx",
+      "component": "src/components/account/account-page.tsx",
+      "usage": "Código/link/regras + parâmetros de campanha",
+      "references": "API-012, API-013; CDN"
+    },
+    {
+      "route": "/conta/preferencias",
+      "file": "src/app/conta/preferencias/page.tsx",
+      "component": "src/components/account/account-page.tsx",
+      "usage": "Preferências: só UI local; não há persistência de conta documentada",
+      "references": "G04"
+    },
+    {
+      "route": "/conta/senha",
+      "file": "src/app/conta/senha/page.tsx",
+      "component": "src/components/account/account-page.tsx",
+      "usage": "Troca de senha online",
+      "references": "API-011"
+    },
+    {
+      "route": "/esportes",
+      "file": "src/app/esportes/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/alpine-skiing",
+      "file": "src/app/esportes/alpine-skiing/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/american-football",
+      "file": "src/app/esportes/american-football/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/aussie-rules",
+      "file": "src/app/esportes/aussie-rules/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/bandy",
+      "file": "src/app/esportes/bandy/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/baseball",
+      "file": "src/app/esportes/baseball/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/basketball",
+      "file": "src/app/esportes/basketball/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/boxing",
+      "file": "src/app/esportes/boxing/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/cross-country",
+      "file": "src/app/esportes/cross-country/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/darts",
+      "file": "src/app/esportes/darts/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/football",
+      "file": "src/app/esportes/football/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/handball",
+      "file": "src/app/esportes/handball/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/mixed-martial-arts",
+      "file": "src/app/esportes/mixed-martial-arts/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/rugby",
+      "file": "src/app/esportes/rugby/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/table-tennis",
+      "file": "src/app/esportes/table-tennis/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/tennis",
+      "file": "src/app/esportes/tennis/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/esportes/volleyball",
+      "file": "src/app/esportes/volleyball/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/evento/[id]",
+      "file": "src/app/evento/[id]/page.tsx",
+      "component": "src/components/sports/event-detail.tsx",
+      "usage": "Cabeçalho/mercados, Criar Aposta, boost; Socket.IO se jogo ao vivo",
+      "references": "API-021, API-024, API-025, API-026, API-029, API-030; EXT-08..09"
+    },
+    {
+      "route": "/jogo-responsavel",
+      "file": "src/app/jogo-responsavel/page.tsx",
+      "component": "src/components/info/info.tsx",
+      "usage": "Conteúdo e link para controles; limites pessoais/autoexclusão sem contrato",
+      "references": "G06"
+    },
+    {
+      "route": "/minhas-apostas",
+      "file": "src/app/minhas-apostas/page.tsx",
+      "component": "src/components/sports/bets.tsx",
+      "usage": "Histórico, comprovante, compartilhar, cashout/Ably e contador; cancelar online sem contrato",
+      "references": "API-041, API-042, API-043, API-044, API-045, API-046, API-047; G11"
+    },
+    {
+      "route": "/privacidade",
+      "file": "src/app/privacidade/page.tsx",
+      "component": "src/components/info/info.tsx",
+      "usage": "Sem feed de política de privacidade documentado",
+      "references": "G16"
+    },
+    {
+      "route": "/proximos",
+      "file": "src/app/proximos/page.tsx",
+      "component": "src/components/sports/workspace.tsx",
+      "usage": "Grade por esporte/dia/liga; próximas usa segment=100008; ligas e busca",
+      "references": "API-022, API-023, API-031, API-032, API-033"
+    },
+    {
+      "route": "/recompensas",
+      "file": "src/app/recompensas/page.tsx",
+      "component": "src/components/rewards/rewards.tsx",
+      "usage": "Recompensas e promoções personalizadas sem contrato fornecido",
+      "references": "G08"
+    },
+    {
+      "route": "/termos",
+      "file": "src/app/termos/page.tsx",
+      "component": "src/components/info/info.tsx",
+      "usage": "Regulamento sanitizado se o conteúdo for apropriado; confirmar substituição",
+      "references": "API-019; G16"
+    }
+  ],
+  "configuration": [
+    {
+      "origin": "Tenant",
+      "field": "site_id",
+      "destination": "Global/BFF/CDN",
+      "classification": "I",
+      "treatment": "Identifica tenant e arquivos; base para moeda/regras específicas. Não é o ID do jogador."
+    },
+    {
+      "origin": "Tenant",
+      "field": "front_url",
+      "destination": "Resolução do host",
+      "classification": "I",
+      "treatment": "Normalizar protocolo/path/porta/www. Um domínio por tenant na lista; não inventar aliases."
+    },
+    {
+      "origin": "Tenant",
+      "field": "base_url",
+      "destination": "Todas as chamadas do BFF/SSR",
+      "classification": "I",
+      "treatment": "Host sem protocolo; montar https. Nunca aceitar destino arbitrário vindo do navegador."
+    },
+    {
+      "origin": "Tenant",
+      "field": "status",
+      "destination": "Inicialização/estado do site",
+      "classification": "I",
+      "treatment": "O guia DESCREVE que o layout Betano não bloqueia disabled. Isso não define política desejada para o clone; confirmar comportamento operacional."
+    },
+    {
+      "origin": "Tenant",
+      "field": "modules",
+      "destination": "Navegação, páginas e fluxos",
+      "classification": "I",
+      "treatment": "Hoje não existe guarda por módulo. Ver matriz de módulos; ocultar/redirect também acesso direto."
+    },
+    {
+      "origin": "Tenant",
+      "field": "complete_name",
+      "destination": "Header, metadata, textos, /app",
+      "classification": "E",
+      "treatment": "Substituir BrasaBet fixo quando houver white-label."
+    },
+    {
+      "origin": "Tenant",
+      "field": "logo_url",
+      "destination": "Header/banner de instalação",
+      "classification": "E",
+      "treatment": "Trocar asset fixo por logo permitido do tenant."
+    },
+    {
+      "origin": "Tenant",
+      "field": "isotype_url",
+      "destination": "Favicon/identidade",
+      "classification": "E",
+      "treatment": "Trocar favicon estático e usar fallback se ausente."
+    },
+    {
+      "origin": "Tenant",
+      "field": "custom_theme",
+      "destination": "CSS global e componentes",
+      "classification": "A",
+      "treatment": "Normalizar [] para {}; aceitar somente #rrggbb e aplicar via adaptador de tokens, sem importar CSS arbitrário."
+    },
+    {
+      "origin": "Tema",
+      "field": "brand",
+      "destination": "Cor da marca",
+      "classification": "A",
+      "treatment": "Vem de custom_theme.brand, não de primary_color. Mapear verde/menta/amarelo do projeto conscientemente."
+    },
+    {
+      "origin": "Tema",
+      "field": "light_*/dark_*: bg,surface,surface_2,surface_3,surface_4,text,muted,line,price,live",
+      "destination": "Todas as páginas, odds e ao vivo",
+      "classification": "A",
+      "treatment": "O clone usa reference.css e CSS com cores fixas. As famílias exigem tokens compatíveis, não troca cega de nomes."
+    },
+    {
+      "origin": "Tema",
+      "field": "color_scheme",
+      "destination": "Modo visual global",
+      "classification": "A",
+      "treatment": "#000000 = escuro em todas as páginas; #ffffff = automático conforme o guia. É configuração de tema, não cor literal do fundo."
+    },
+    {
+      "origin": "Tenant",
+      "field": "gtags",
+      "destination": "Analytics no shell",
+      "classification": "A",
+      "treatment": "Google Analytics não está integrado; tratar instalação e consentimento apropriados. Não é endpoint de negócio."
+    },
+    {
+      "origin": "Tenant",
+      "field": "meta_id",
+      "destination": "Analytics no shell",
+      "classification": "A",
+      "treatment": "Meta Pixel não está integrado; exige implementação e decisão de consentimento."
+    },
+    {
+      "origin": "Tenant sem consumidor atual",
+      "field": "layout",
+      "destination": "Nenhuma página",
+      "classification": "N",
+      "treatment": "O guia diz que é campo do LTE, não usado pelo Betano. O clone é um build único BrasaBet; não há seletor de layouts."
+    },
+    {
+      "origin": "Tenant sem consumidor atual",
+      "field": "first_page",
+      "destination": "Eventual redirecionamento inicial",
+      "classification": "N",
+      "treatment": "Não é usado pelo Betano; a home do clone é fixa em /. Exigiria especificação e comportamento novo."
+    },
+    {
+      "origin": "Tenant sem consumidor atual",
+      "field": "primary_color",
+      "destination": "Nenhum uso automático",
+      "classification": "N",
+      "treatment": "O guia explicitamente não a considera a cor da marca. Não substituir custom_theme.brand por este campo."
+    },
+    {
+      "origin": "Tenant sem consumidor atual",
+      "field": "affiliate_url",
+      "destination": "Eventual link de afiliado",
+      "classification": "N",
+      "treatment": "Sem consumidor atual ou regras de apresentação; não confundir com Indique e Ganhe do jogador."
+    },
+    {
+      "origin": "Tenant sem consumidor atual",
+      "field": "home_sport",
+      "destination": "Eventual esporte inicial",
+      "classification": "N",
+      "treatment": "Não é usado pelo Betano. Clone usa slugs próprios; dependeria de mapeamento e nova regra de seleção."
+    },
+    {
+      "origin": "Tenant sem consumidor atual",
+      "field": "server",
+      "destination": "Nenhuma página",
+      "classification": "N",
+      "treatment": "Metadado de infraestrutura, não destino HTTP nem dado para a UI do jogador."
+    },
+    {
+      "origin": "Ambiente",
+      "field": "REDIS_HOST",
+      "destination": "Somente servidor",
+      "classification": "I",
+      "treatment": "URL redis/rediss com credenciais. Não expor no bundle ou na resposta /api/environment."
+    },
+    {
+      "origin": "Ambiente",
+      "field": "REDIS_DB",
+      "destination": "Somente servidor",
+      "classification": "I",
+      "treatment": "Padrão 1 conforme o guia; não confundir chave sites com uma chave por tenant."
+    },
+    {
+      "origin": "Ambiente",
+      "field": "DEV_HOST_OVERRIDE",
+      "destination": "Desenvolvimento",
+      "classification": "I",
+      "treatment": "Força domínio para testes locais; o guia alerta que funciona também fora de dev. Não configurar em produção."
+    },
+    {
+      "origin": "CDN",
+      "field": "generated",
+      "destination": "Diagnóstico da configuração",
+      "classification": "I",
+      "treatment": "Campo do envelope. Não equivale à validade de odd ou de pagamento."
+    },
+    {
+      "origin": "CDN",
+      "field": "settings",
+      "destination": "Contexto global",
+      "classification": "I",
+      "treatment": "Parâmetros públicos do tenant, distintos da configuração online aplicada após login."
+    },
+    {
+      "origin": "CDN",
+      "field": "min_bet_amount",
+      "destination": "Bilhete global",
+      "classification": "E",
+      "treatment": "Valor mínimo de aposta; substituir a constante local."
+    },
+    {
+      "origin": "CDN",
+      "field": "max_bet_amount",
+      "destination": "Bilhete global",
+      "classification": "E",
+      "treatment": "Valor máximo de aposta; backend continua sendo autoridade."
+    },
+    {
+      "origin": "CDN",
+      "field": "min_hunches",
+      "destination": "Bilhete global",
+      "classification": "E",
+      "treatment": "Quantidade mínima de palpites; adaptar contagem para simples/múltipla/builder."
+    },
+    {
+      "origin": "CDN",
+      "field": "max_hunches",
+      "destination": "Bilhete global",
+      "classification": "E",
+      "treatment": "Quantidade máxima de palpites; não manter 30 como limite universal."
+    },
+    {
+      "origin": "CDN",
+      "field": "min_hunch_amount",
+      "destination": "Bilhete/limites do palpite (a confirmar)",
+      "classification": "A",
+      "treatment": "O guia apenas lista o nome. Confirmar se limita valor monetário, cotação ou outro atributo; não equiparar automaticamente ao valor total do bilhete."
+    },
+    {
+      "origin": "CDN",
+      "field": "max_hunch_amount",
+      "destination": "Bilhete/limites do palpite (a confirmar)",
+      "classification": "A",
+      "treatment": "Sem tipo/unidade/semântica completos. Confirmar como se relaciona com o modelo de apostas e o retorno do registro."
+    },
+    {
+      "origin": "CDN",
+      "field": "max_hunch_award",
+      "destination": "Retorno/limites do palpite (a confirmar)",
+      "classification": "A",
+      "treatment": "Encaixe sugerido pelo nome; esclarecer unidade, escopo e precedência com o teto explícito de pré-jogo."
+    },
+    {
+      "origin": "CDN",
+      "field": "prematch_maximum_award",
+      "destination": "Retorno potencial pré-jogo",
+      "classification": "E",
+      "treatment": "Substituir teto demonstrativo de 1.000.000; não truncar prêmio silenciosamente sem regra do backend."
+    },
+    {
+      "origin": "CDN",
+      "field": "bet_enabled",
+      "destination": "Bilhete e botões de apostar",
+      "classification": "E",
+      "treatment": "Controlar disponibilidade e estado de manutenção; não apenas esconder visualmente."
+    },
+    {
+      "origin": "CDN",
+      "field": "pin_mode",
+      "destination": "Pré-bilhete visitante",
+      "classification": "A",
+      "treatment": "Não existe no clone; adicionar modo PIN conforme contrato completo."
+    },
+    {
+      "origin": "CDN",
+      "field": "pre_ticket_option",
+      "destination": "Pré-bilhete visitante",
+      "classification": "A",
+      "treatment": "Selecionar caminho de pré-bilhete/PIN/PIX conforme valores reais; enum completo ausente."
+    },
+    {
+      "origin": "CDN",
+      "field": "register_mode",
+      "destination": "modal Registre-se",
+      "classification": "A",
+      "treatment": "Seleciona formulário/variante. Não há matriz versão↔modo nem payloads completos no guia."
+    },
+    {
+      "origin": "CDN",
+      "field": "online_can_register",
+      "destination": "Botão/modal de cadastro",
+      "classification": "E",
+      "treatment": "Desabilitar/ocultar cadastro conforme tenant, incluindo acesso indireto pelo login."
+    },
+    {
+      "origin": "CDN",
+      "field": "refer_campaign",
+      "destination": "/conta/indique",
+      "classification": "A",
+      "treatment": "Habilitar apresentação da campanha; hoje a página é um placeholder."
+    },
+    {
+      "origin": "CDN",
+      "field": "refer_campaign_award",
+      "destination": "/conta/indique",
+      "classification": "A",
+      "treatment": "Apresentar prêmio/regra de indicação após confirmar tipo/unidade. Não equivale a todo saldo de recompensas."
+    },
+    {
+      "origin": "CDN",
+      "field": "support_whatsapp",
+      "destination": "/ajuda, /conta/chat, modal Pix por solicitação, rodapé",
+      "classification": "E",
+      "treatment": "Destino de suporte externo. Validar formato/URL antes de montar link."
+    },
+    {
+      "origin": "CDN",
+      "field": "social_*",
+      "destination": "Rodapé/links sociais",
+      "classification": "A",
+      "treatment": "Família de parâmetros, nomes completos não enumerados. O clone não tem seção social dinâmica."
+    },
+    {
+      "origin": "CDN",
+      "field": "footer_text",
+      "destination": "Rodapé global",
+      "classification": "E",
+      "treatment": "Substituir textos locais com sanitização se vier HTML."
+    },
+    {
+      "origin": "CDN",
+      "field": "loto_footer_text",
+      "destination": "Rodapé do módulo Loterias",
+      "classification": "N",
+      "treatment": "Nenhuma página loto atual; não é substituto obrigatório do rodapé esportivo."
+    },
+    {
+      "origin": "CDN/online",
+      "field": "display_* (ex.: display_basket, display_tennis)",
+      "destination": "Sidebar/rail/abas/esportes/ao vivo",
+      "classification": "E",
+      "treatment": "Controlar cobertura por tenant/nível. Não há enumeração de todas as modalidades/IDs."
+    },
+    {
+      "origin": "CDN",
+      "field": "live_block_events",
+      "destination": "/ao-vivo",
+      "classification": "A",
+      "treatment": "O guia cita o campo, sem tipo/semântica detalhada; não inventar se é lista, flag ou regra de bloqueio."
+    },
+    {
+      "origin": "CDN",
+      "field": "date_limit",
+      "destination": "Seletores de datas (a confirmar)",
+      "classification": "A",
+      "treatment": "Sem semântica/unidade/escopo documentados; destino proposto por nome, dependente de contrato."
+    },
+    {
+      "origin": "CDN",
+      "field": "range_days",
+      "destination": "Calendário/seletores de dias (a confirmar)",
+      "classification": "A",
+      "treatment": "Sem semântica/unidade/escopo completos; não criar limite de dias por suposição."
+    },
+    {
+      "origin": "CDN",
+      "field": "minutes_before",
+      "destination": "Fechamento/seleção por horário (a confirmar)",
+      "classification": "A",
+      "treatment": "Unidade sugerida pelo nome, regra efetiva não descrita. Não usar para autorizar aposta no cliente."
+    },
+    {
+      "origin": "CDN",
+      "field": "same_loto",
+      "destination": "Módulo Tradicional/Loterias (a confirmar)",
+      "classification": "N",
+      "treatment": "O guia não descreve interpretação. Não misturar com regra de lottery das modalidades sem contrato."
+    },
+    {
+      "origin": "CDN",
+      "field": "use_latest_app",
+      "destination": "/app/instalação (a confirmar)",
+      "classification": "A",
+      "treatment": "Campo citado sem significado operacional. Não fornece binário/app ou mecanismo de atualização."
+    },
+    {
+      "origin": "CDN",
+      "field": "medias.carousel",
+      "destination": "/ > Promotions",
+      "classification": "E",
+      "treatment": "Banners do topo. Validar schema/ordenação/regras de exibição, diferentes do carrossel de eventos."
+    },
+    {
+      "origin": "Banner",
+      "field": "media",
+      "destination": "/ > banner",
+      "classification": "E",
+      "treatment": "URL/asset do banner com fallback; fonte atualmente local."
+    },
+    {
+      "origin": "Banner",
+      "field": "action",
+      "destination": "/ > clique no banner",
+      "classification": "A",
+      "treatment": "Dispatcher por valores permitidos; enum completo de ações não foi informado."
+    },
+    {
+      "origin": "Banner",
+      "field": "url",
+      "destination": "/ > destino de banner",
+      "classification": "A",
+      "treatment": "Validar destino e distinguir link externo/interno; não usar como host arbitrário do BFF."
+    },
+    {
+      "origin": "Banner",
+      "field": "game_ref",
+      "destination": "/ > banner que abre cassino",
+      "classification": "A",
+      "treatment": "Resolver referência do catálogo para /cassino/jogo/[id]; não confundir com ID capturado."
+    },
+    {
+      "origin": "Banner",
+      "field": "regras de exibição",
+      "destination": "/ > carrossel",
+      "classification": "A",
+      "treatment": "Não foram enumerados campos/condições; depende do contrato completo."
+    },
+    {
+      "origin": "Online",
+      "field": "charge_mode",
+      "destination": "modal Pix > Depositar",
+      "classification": "A",
+      "treatment": "pix usa depósitos; request mostra instrução/suporte sem gerar QR. Hoje só há Pix."
+    },
+    {
+      "origin": "Online",
+      "field": "min_deposit_amount",
+      "destination": "modal Pix > Depositar",
+      "classification": "E",
+      "treatment": "Substituir mínimo fixo 5."
+    },
+    {
+      "origin": "Online",
+      "field": "max_deposit_amount",
+      "destination": "modal Pix > Depositar",
+      "classification": "E",
+      "treatment": "Substituir máximo fixo 2.500; limite do operador não é limite pessoal de jogo responsável."
+    },
+    {
+      "origin": "Online",
+      "field": "withdrawal_mode",
+      "destination": "modal Pix > Sacar",
+      "classification": "A",
+      "treatment": "pix permite solicitar; demais valores orientam suporte, sem inventar transferência."
+    },
+    {
+      "origin": "Online",
+      "field": "min_withdrawal_amount",
+      "destination": "modal Pix > Sacar",
+      "classification": "E",
+      "treatment": "Substituir mínimo fixo 10."
+    },
+    {
+      "origin": "Online",
+      "field": "max_withdrawal_amount",
+      "destination": "modal Pix > Sacar",
+      "classification": "E",
+      "treatment": "Combinar limite do operador com disponibilidade/rollover reais; não apenas session.available."
+    },
+    {
+      "origin": "Online",
+      "field": "can_edit_pix",
+      "destination": "modal Pix > chave de saque",
+      "classification": "A",
+      "treatment": "Controlar edição visual; a operação de gravação ainda precisa de contrato."
+    },
+    {
+      "origin": "Online",
+      "field": "prematch_active_bet",
+      "destination": "Bilhete pré-jogo",
+      "classification": "A",
+      "treatment": "Flag de aposta/exibição citada; confirmar semântica e prioridade em relação a bet_enabled."
+    },
+    {
+      "origin": "Online",
+      "field": "allow_merged_bet",
+      "destination": "Bilhete simples/múltiplo",
+      "classification": "A",
+      "treatment": "Confirmar regra de combinação antes de habilitar mercados/builder; não é autorização para qualquer combinação."
+    },
+    {
+      "origin": "Online",
+      "field": "display_combat",
+      "destination": "Rail/sidebar de lutas",
+      "classification": "E",
+      "treatment": "Controlar exibição de lutas conforme config aplicada somente ao online."
+    }
+  ],
+  "modules": [
+    {
+      "module": "bet",
+      "currentUI": "Sim",
+      "destination": "/, /proximos, /esportes/*, /evento/[id], bilhete, /minhas-apostas",
+      "coverage": "Grade/mercados/registro/histórico estão no catálogo. Falta integração."
+    },
+    {
+      "module": "online",
+      "currentUI": "Sim",
+      "destination": "Login/cadastro, /conta/*, carteira e histórico online",
+      "coverage": "Aplicar nível/config; não representa perfil de cambista."
+    },
+    {
+      "module": "casino",
+      "currentUI": "Sim",
+      "destination": "/cassino e subpáginas",
+      "coverage": "Catálogo/URL de lançamento estão documentados; motor é externo."
+    },
+    {
+      "module": "bet-builder",
+      "currentUI": "Parcial",
+      "destination": "/evento/[id] e bilhete",
+      "coverage": "Há UI e regras documentadas; cotação correlacionada/registro não estão completos."
+    },
+    {
+      "module": "cashout",
+      "currentUI": "Parcial",
+      "destination": "/minhas-apostas",
+      "coverage": "Há UI local e endpoints, mas faltam contratos de oferta/Ably/confirm."
+    },
+    {
+      "module": "stories",
+      "currentUI": "Não",
+      "destination": "Nova seção na home",
+      "coverage": "Há /api/v1/winners para Greens do dia; outros tipos de stories não têm contrato fornecido."
+    },
+    {
+      "module": "traditional",
+      "currentUI": "Não",
+      "destination": "Novas páginas /tradicional e comprovantes",
+      "coverage": "Catálogo existe no guia; exige novo módulo e modelos de dados."
+    },
+    {
+      "module": "loto",
+      "currentUI": "Não",
+      "destination": "Novas páginas /loterias e comprovantes",
+      "coverage": "Catálogo existe no guia; exige novo módulo."
+    },
+    {
+      "module": "2p500",
+      "currentUI": "Não",
+      "destination": "Novas páginas /2para500",
+      "coverage": "Concursos/Surpresinha/registro no catálogo; UI ausente."
+    },
+    {
+      "module": "scratchcard",
+      "currentUI": "Não",
+      "destination": "Novas páginas /raspadinhas",
+      "coverage": "Listagem/detalhe/compra no guia; UI e revelação ausentes."
+    },
+    {
+      "module": "raffle",
+      "currentUI": "Não",
+      "destination": "Nenhuma página definida",
+      "coverage": "Apenas nome de módulo; nenhum endpoint/fluxo especificado."
+    },
+    {
+      "module": "sweepstake",
+      "currentUI": "Não",
+      "destination": "Nenhuma página definida",
+      "coverage": "Apenas nome de módulo; nenhum endpoint/fluxo especificado."
+    },
+    {
+      "module": "crypto",
+      "currentUI": "Não",
+      "destination": "Nenhuma página definida",
+      "coverage": "Apenas nome de módulo; nenhum endpoint/meio de pagamento cripto especificado."
+    },
+    {
+      "module": "arena",
+      "currentUI": "Não",
+      "destination": "Nenhuma página definida",
+      "coverage": "Apenas nome de módulo; nenhum contrato/fluxo especificado."
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G01",
+      "action": "Recuperar acesso/senha",
+      "page": "modal Recuperar acesso",
+      "file": "src/components/account/auth-dialog.tsx",
+      "finding": "O formulário só explica que a conta é local. Não há solicitação de reset, envio de código/link ou confirmação de nova senha no guia.",
+      "decision": "Obter contratos de recuperação; não reaproveitar change-pasword, que exige sessão."
+    },
+    {
+      "id": "G02",
+      "action": "Alterar e-mail/telefone/usuário",
+      "page": "/conta",
+      "file": "src/components/account/account-page.tsx",
+      "finding": "update-contact verifica senha e altera e-mail/telefone localmente; username é derivado do e-mail. O guia só documenta leitura de informações.",
+      "decision": "Obter mutação de contato, validações/verificações e política de alteração de username."
+    },
+    {
+      "id": "G03",
+      "action": "Salvar endereço residencial",
+      "page": "/conta/endereco",
+      "file": "src/components/account/account-page.tsx",
+      "finding": "update-address grava endereço local. Nenhuma mutação de endereço foi fornecida.",
+      "decision": "Obter contrato de leitura/gravação; não presumir que POST /api/auth salva perfil."
+    },
+    {
+      "id": "G04",
+      "action": "Preferências da conta e comunicações",
+      "page": "/conta/preferencias e menu da conta",
+      "file": "src/components/account/account-page.tsx",
+      "finding": "update-preferences salva fuso/inatividade e flags SMS/e-mail localmente. Nenhuma API de preferências/consentimento do jogador aparece no guia.",
+      "decision": "Fuso, esconder saldo e UI podem ficar no navegador; persistência entre aparelhos e consentimentos operacionais exigem contrato."
+    },
+    {
+      "id": "G05",
+      "action": "Aparelhos/sessões conectadas e revogar outras",
+      "page": "/conta/aparelhos",
+      "file": "src/components/account/account-page.tsx",
+      "finding": "O clone mostra o navegador atual e apaga outras sessões SQLite. auth-logout só documenta sair, não inventário/revogação de sessões.",
+      "decision": "Obter listagem e revogação por dispositivo/todas as demais; confirmar efeito de trocar senha."
+    },
+    {
+      "id": "G06",
+      "action": "Limite pessoal de depósito/jogo responsável",
+      "page": "/conta/controles e /jogo-responsavel",
+      "file": "src/components/account/account-page.tsx",
+      "finding": "Há limite local por depósito. min/max da configuração online são limites do operador, não limite pessoal, autoexclusão ou pausa.",
+      "decision": "Obter política e endpoints de limites pessoais, pausa/autoexclusão se essas funções forem desejadas."
+    },
+    {
+      "id": "G07",
+      "action": "Chat ao vivo e atendimento interno",
+      "page": "/conta/chat e /ajuda",
+      "file": "src/components/account/account-page.tsx",
+      "finding": "A tela apenas leva à Ajuda. support_whatsapp oferece link externo; não há conversa, mensagem, histórico ou ticket de suporte na API.",
+      "decision": "Pode usar WhatsApp configurado; chat interno requer serviço/contrato próprio."
+    },
+    {
+      "id": "G08",
+      "action": "Recompensas, bônus/freebets, promoções e resgate",
+      "page": "/recompensas; créditos no Banco/menu",
+      "file": "src/components/rewards/rewards.tsx",
+      "finding": "A página tem contadores/valores zero e abas Esportes/Cassino. Indique e Ganhe e Superodds não equivalem a carteiras de bônus ou promoções personalizadas.",
+      "decision": "Obter saldo de créditos, catálogo/eligibilidade/ativação/uso de recompensas e histórico."
+    },
+    {
+      "id": "G09",
+      "action": "Código promocional no depósito",
+      "page": "modal Pix > Tenho um código promocional",
+      "file": "src/components/account/account-surfaces.tsx",
+      "finding": "O campo aparece, mas não é enviado nem usado na simulação. /api/online/deposits só descreve amount.",
+      "decision": "Confirmar validação e aplicação do código; não enviar promo_code inventado."
+    },
+    {
+      "id": "G10",
+      "action": "Salvar/editar chave Pix e seus tipos",
+      "page": "modal Pix > Sacar",
+      "file": "src/components/account/account-surfaces.tsx",
+      "finding": "A UI permite CPF/e-mail/celular/aleatória; a API informa withdrawal-data e can_edit_pix, mas não define mutação da chave nem campos key/keyType no saque.",
+      "decision": "Obter payload/regra de edição da chave. can_edit_pix não é, por si só, endpoint de gravação."
+    },
+    {
+      "id": "G11",
+      "action": "Cancelar aposta do jogador",
+      "page": "/minhas-apostas > Cancelar aposta",
+      "file": "src/components/sports/my-bet-card.tsx",
+      "finding": "bet-cancel devolve 100% localmente. A única rota de cancelamento fornecida é GET /api/cancela-bilhete/{id}, JWT S, exclusiva de cambista.",
+      "decision": "Obter cancelamento online ou retirar esse controle do fluxo real. Não chamar a rota de cambista como jogador."
+    },
+    {
+      "id": "G12",
+      "action": "Cotação correlacionada e registro de Criar Aposta",
+      "page": "/evento/[id] e bilhete",
+      "file": "src/lib/bet-data.ts",
+      "finding": "A odd é estimada por produto^0,85. /api/builder só promete regras/configuração; não há payload/retorno de cotação combinada e de envio dessas pernas.",
+      "decision": "Obter contrato de cotação/compatibilidade/registro e regras do provedor; não usar a estimativa local com dinheiro real."
+    },
+    {
+      "id": "G13",
+      "action": "Bundles de Aposta Aumentada do clone",
+      "page": "/evento/[id] > Aposta Aumentada",
+      "file": "src/components/sports/event-detail.tsx",
+      "finding": "boosts.json contém ofertas com várias pernas e preço próprio. O guia descreve boost percentual em uma odd e featured-tickets, sem garantir equivalência entre esses modelos.",
+      "decision": "Confirmar se featured-tickets ou outro contrato fornece os bundles; não converter automaticamente em boost unitário."
+    },
+    {
+      "id": "G14",
+      "action": "Estatísticas avançadas, escalação, cronologia e tabela",
+      "page": "modal Estat.; /ao-vivo > painel lateral",
+      "file": "src/components/sports/live.tsx",
+      "finding": "O modal já informa indisponibilidade. O painel lateral usa uma captura e valores padrão. Cabeçalho de evento/socket não detalham feed dessas métricas.",
+      "decision": "Manter estado indisponível até haver contrato real. Não publicar zeros/50% ou snapshot como estatística atual."
+    },
+    {
+      "id": "G15",
+      "action": "Motor e modo demonstrativo de cada jogo do cassino",
+      "page": "/cassino/jogo/[id]",
+      "file": "src/components/casino/casino.tsx",
+      "finding": "Há um único jogo fictício para todas as capas. games-url fornece lançamento, não a implementação do motor nem uma API de giros/prêmios no front.",
+      "decision": "Abrir URL do provedor com contrato de lançamento e eventual modo demo; não portar a matemática local para produção."
+    },
+    {
+      "id": "G16",
+      "action": "Página de privacidade e conteúdo de ajuda",
+      "page": "/privacidade e /ajuda",
+      "file": "src/components/info/info.tsx",
+      "finding": "São textos sobre demonstração local. /api/regulamento não promete política de privacidade nem FAQ/suporte completo.",
+      "decision": "Obter conteúdo institucional do operador e definir onde será mantido; não assumir que o regulamento substitui tudo."
+    },
+    {
+      "id": "G17",
+      "action": "Sessão Explorar demonstração",
+      "page": "modal Login > Explorar demonstração",
+      "file": "src/components/account/auth-dialog.tsx",
+      "finding": "Cria usuário fictício local via action=demo. Nenhuma rota de criação de jogador temporário está documentada.",
+      "decision": "Manter somente como ambiente de demonstração separado, ou trocar por visitante/modo demo realmente suportado."
+    },
+    {
+      "id": "G18",
+      "action": "Confirmar depósito manualmente",
+      "page": "modal Pix > Simular pagamento",
+      "file": "src/components/account/account-surfaces.tsx",
+      "finding": "pix-confirm credita o saldo por clique. O backend real só fornece geração de depósito e consulta de pagamento.",
+      "decision": "Retirar a mutação manual no fluxo real; a confirmação animada depende da confirmação do backend."
+    },
+    {
+      "id": "G19",
+      "action": "Cashout fixo em 80% e liquidação local",
+      "page": "/minhas-apostas",
+      "file": "src/lib/demo-store.ts",
+      "finding": "Oferta/retorno são calculados localmente. O guia tem Ably/keep-alive/confirm, mas não detalha canais, eventos, validade e payload de aceitação.",
+      "decision": "Usar oferta autorizada pelo backend e saldo/liquidação retornados; complementar contrato de tempo real e confirmação."
+    },
+    {
+      "id": "G20",
+      "action": "Garantir suporte às 16 modalidades atuais",
+      "page": "/esportes/* e filtros de /ao-vivo",
+      "file": "src/lib/sports-data.ts",
+      "finding": "Slugs e eventos são de outra referência. O guia usa sport_id e display_*, mas não fornece catálogo/matriz completa de modalidades e categorias.",
+      "decision": "Obter IDs e cobertura efetiva por tenant; ocultar modalidades indisponíveis em vez de inventar endpoints."
+    },
+    {
+      "id": "G21",
+      "action": "PWA instalável completo",
+      "page": "/app e banner de instalação",
+      "file": "src/components/info/info.tsx",
+      "finding": "Há instruções e toast de instalação, sem manifest/service worker próprios encontrados no projeto. O guia só descreve ícones e geração externa pwa:generate-icons.",
+      "decision": "Implementação de PWA é trabalho do frontend e provisionamento de ícones; não é uma operação HTTP de aposta descrita no catálogo."
+    },
+    {
+      "id": "G22",
+      "action": "Persistir favoritos esportivos e consentimento entre aparelhos",
+      "page": "/ao-vivo e banner de consentimento",
+      "file": "src/components/shell.tsx",
+      "finding": "Favoritos e consentimento ficam no localStorage; não há endpoint desses dados no guia.",
+      "decision": "Pode continuar como preferência local. Persistência de conta/consentimento auditável exige contrato próprio."
+    }
+  ],
+  "localActions": [
+    {
+      "action": "login",
+      "equivalent": "API de login real",
+      "reference": "API-001",
+      "note": "Mapear identifier/e-mail para username conforme contrato."
+    },
+    {
+      "action": "register",
+      "equivalent": "Cadastro real",
+      "reference": "API-005, API-006, API-007",
+      "note": "Formulários/configuração por modo; payloads incompletos."
+    },
+    {
+      "action": "demo",
+      "equivalent": "Sem operação equivalente",
+      "reference": "G17",
+      "note": "Manter somente no ambiente de demonstração."
+    },
+    {
+      "action": "logout",
+      "equivalent": "Logout real",
+      "reference": "API-002",
+      "note": "Apagar sessão local e encerrar sessão do painel."
+    },
+    {
+      "action": "pix-create",
+      "equivalent": "Gerar depósito",
+      "reference": "API-048",
+      "note": "Backend devolve QR/copia-e-cola reais."
+    },
+    {
+      "action": "pix-confirm",
+      "equivalent": "Não há confirmação financeira por clique",
+      "reference": "API-049; G18",
+      "note": "Substituir por consulta/estado confirmado do backend."
+    },
+    {
+      "action": "pix-withdraw",
+      "equivalent": "Solicitar saque",
+      "reference": "API-010, API-050, API-051; G10",
+      "note": "Mapear chave, elegibilidade e estado da solicitação."
+    },
+    {
+      "action": "bet-place",
+      "equivalent": "Registrar aposta online",
+      "reference": "API-037; G12",
+      "note": "Substituir DEMO por contrato real; preservar toast Bilhete registrado."
+    },
+    {
+      "action": "bet-cancel",
+      "equivalent": "Sem cancelamento online documentado",
+      "reference": "G11",
+      "note": "Rota /api/cancela-bilhete é de cambista."
+    },
+    {
+      "action": "bet-cashout",
+      "equivalent": "Confirmar oferta real de cashout",
+      "reference": "API-045, API-046, API-047",
+      "note": "Eliminar regra de 80%; usar oferta do painel/Ably."
+    },
+    {
+      "action": "update-preferences",
+      "equivalent": "Sem persistência de preferências documentada",
+      "reference": "G04; G06",
+      "note": "Algumas escolhas podem continuar locais; limites pessoais exigem backend."
+    },
+    {
+      "action": "update-contact",
+      "equivalent": "Sem mutação documentada",
+      "reference": "G02",
+      "note": "GET informations só lê."
+    },
+    {
+      "action": "update-password",
+      "equivalent": "Troca de senha online",
+      "reference": "API-011",
+      "note": "Não presumir mesma política de senha/revogação da demo."
+    },
+    {
+      "action": "revoke-sessions",
+      "equivalent": "Sem mutação documentada",
+      "reference": "G05",
+      "note": "Logout atual não documenta revogar outras sessões."
+    },
+    {
+      "action": "update-address",
+      "equivalent": "Sem mutação documentada",
+      "reference": "G03",
+      "note": "Confirmar persistência e validações no backend."
+    },
+    {
+      "action": "update-profile",
+      "equivalent": "Sem mutação documentada",
+      "reference": "G02",
+      "note": "Existe no demo-store, sem formulário de nome correspondente na UI atual."
+    }
+  ]
+}
