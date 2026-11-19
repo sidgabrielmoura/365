@@ -195,12 +195,11 @@ export function SportsRail() {
 export function Promotions() {
   const rail = useRef<HTMLDivElement>(null),
     { openModal, runtime, session } = useSite();
-  const banners = runtime.branding && tenantBanners(runtime.carousel, Boolean(session.user), (kind) => openModal({ kind }));
-  if (banners?.length === 0) return null;
+  const banners = tenantBanners(runtime.carousel, Boolean(session.user), (kind) => openModal({ kind }));
   return (
     <section className="promotion-carousel" aria-label={"Destaques de " + (runtime.branding?.name ?? "BrasaBet")}>
       <div className="promotion-rail" ref={rail}>
-        {banners ?? <>
+        {banners.length ? banners : <>
         <Link className="promotion-card" href="/esportes/football?antecipado=1">
           <img
             src={asset(
@@ -217,8 +216,9 @@ export function Promotions() {
             openModal({
               kind: "info",
               title: "Encerrar Aposta",
-              payload:
-                "Consulte o bilhete em Minhas Apostas para encerrar antecipadamente uma aposta de demonstração. O valor disponível aparece no próprio bilhete.",
+              payload: runtime.mode === "backoffice"
+                ? "Consulte a oferta de encerramento antecipado em Minhas Apostas. O valor aparece no bilhete quando estiver disponível."
+                : "Consulte o bilhete em Minhas Apostas para encerrar antecipadamente uma aposta de demonstração. O valor disponível aparece no próprio bilhete.",
             })
           }
         >
@@ -273,7 +273,7 @@ export function Promotions() {
       </div>
       <button
         className="promotion-arrow prev"
-        hidden={banners?.length === 1}
+        hidden={banners.length === 1}
         aria-label="Cards anteriores"
         onClick={() =>
           rail.current?.scrollBy({ left: -350, behavior: "smooth" })
@@ -283,7 +283,7 @@ export function Promotions() {
       </button>
       <button
         className="promotion-arrow next"
-        hidden={banners?.length === 1}
+        hidden={banners.length === 1}
         aria-label="Próximos cards"
         onClick={() =>
           rail.current?.scrollBy({ left: 350, behavior: "smooth" })

@@ -31,7 +31,7 @@ A implementação atual usa o guia `layout-betano-backend-api.md`. O catálogo d
 
 O domínio resolve o tenant no Redis ou no arquivo local configurado. O `site_id` desse tenant seleciona o JSON do CDN. O nome, o logo do cabeçalho e o favicon vêm do registro do tenant. O ícone de instalação pode vir de `settings.native_app_logo`. O tema ativo do CDN tem precedência sobre as chaves correspondentes de `custom_theme`.
 
-O backoffice aplica a identidade da banca por padrão. O carrossel usa os banners configurados que se aplicam à sessão e fica oculto quando essa lista está vazia. O modo de demonstração e a opção explícita `BACKOFFICE_BRANDING=clone` usam a identidade de referência.
+O backoffice aplica a identidade da banca por padrão. O carrossel prioriza os banners configurados que se aplicam à sessão. Quando a lista está vazia, usa as quatro imagens de referência do projeto. O modo de demonstração e a opção explícita `BACKOFFICE_BRANDING=clone` usam a identidade de referência.
 
 ### Fonte de bancas na Vercel
 
