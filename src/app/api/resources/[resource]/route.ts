@@ -61,6 +61,7 @@ export async function POST(request: NextRequest, route: Route) {
     if (name === "game-launch") {
       const { data } = await panelCall(context, "POST", "/api/casino/games-url", {
         body: { game_id: requiredText(body.reference, "o jogo", 1, 100), is_mobile: body.mobile === true },
+        signal: request.signal,
       });
       const candidate = record(data).url;
       const url = typeof candidate === "string" ? URL.parse(candidate) : null;

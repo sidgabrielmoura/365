@@ -1454,6 +1454,10 @@
         "className": "\"casino-play-stage\""
       },
       {
+        "tag": "iframe",
+        "className": "\"casino-game-frame\""
+      },
+      {
         "tag": "section",
         "className": "\"casino-demo\""
       },
@@ -3674,7 +3678,7 @@
   "styles": {
     "src/app/globals.css": "e56c3c8a313a579a84cf40f4b89e3b113cc72da64a03623153e75a3f17bcfae9",
     "src/components/account/account.css": "71488a42d41a291359df7963e316aa5702b57fe07bdbb3d225a68064378769fe",
-    "src/components/casino/casino.css": "6048aff119171575d1cb25deca4211a0475fe9d235f76034d4cb1eeaa621e371",
+    "src/components/casino/casino.css": "0ee97a29032855539bfb0d7a70f0cbe8ad407d3d99858d036218f82b019998a8",
     "src/components/sports/bet-slip.css": "e47aafdefd74d7fc1e6c40eeb0e3a13ed239527a898d5f68952d9162ec7cfc73",
     "src/components/sports/bets.css": "4cab5ce4fac4a2cc8faa021b273381f013b3f39bc9b87a6e5935aced8065a7cd",
     "src/components/sports/event.css": "c77fc3a3deca8e4fa5489472c43651ce0817e04d8b6cd2c32e9c9b753901ffc6",

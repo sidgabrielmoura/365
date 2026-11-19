@@ -268,29 +268,49 @@ export function Casino({
   );
 }
 export function CasinoGameView({ game }: { game: CasinoGame }) {
-  const { session, openModal, runtime, notify } = useSite();
+  const { session, openModal, runtime } = useSite();
   const remote = runtime.mode === "backoffice";
+  const playerId = session.user?.id;
+  const launchRequest = useRef<AbortController | null>(null);
+  const [embeddedGame, setEmbeddedGame] = useState<{
+    url: string;
+    gameId: string;
+    playerId: string;
+  } | null>(null);
   const [launching, setLaunching] = useState(false);
   const [credit, setCredit] = useState(1000),
     [spinning, setSpinning] = useState(false),
     [symbols, setSymbols] = useState([0, 1, 2]),
     [message, setMessage] = useState("");
+  const gameUrl = remote && embeddedGame?.gameId === game.id && embeddedGame.playerId === playerId
+    ? embeddedGame.url
+    : undefined;
+
+  useEffect(() => {
+    setEmbeddedGame(null);
+    return () => launchRequest.current?.abort();
+  }, [game.id, playerId, remote]);
+
   async function launch() {
-    if (!session.user) { openModal({ kind: "login" }); return; }
-    if (launching) return;
-    const tab = window.open("about:blank", "_blank");
-    if (!tab) { notify("Permita abrir uma nova aba para iniciar o jogo."); return; }
-    tab.opener = null;
+    if (!playerId) { openModal({ kind: "login" }); return; }
+    if (launchRequest.current) return;
+    const controller = new AbortController();
+    launchRequest.current = controller;
+    setMessage("");
     setLaunching(true);
     try {
       const { url } = await siteFetch<{ url: string }>("/api/resources/game-launch", {
-        method: "POST", body: { reference: game.id, mobile: window.matchMedia("(pointer: coarse)").matches },
+        method: "POST",
+        body: { reference: game.id, mobile: window.matchMedia("(pointer: coarse)").matches },
+        signal: controller.signal,
       });
-      if (!tab.closed) tab.location.replace(url);
+      if (!controller.signal.aborted) setEmbeddedGame({ url, gameId: game.id, playerId });
     } catch (error) {
-      tab.close();
-      setMessage((error as Error).message);
-    } finally { setLaunching(false); }
+      if (!controller.signal.aborted) setMessage((error as Error).message);
+    } finally {
+      launchRequest.current = null;
+      setLaunching(false);
+    }
   }
   useEffect(() => {
     if (!spinning) return;
@@ -351,7 +371,16 @@ export function CasinoGameView({ game }: { game: CasinoGame }) {
           backgroundImage: `linear-gradient(#00150fb8,#111c),url(${casinoImage(game)})`,
         }}
       >
-        <section className="casino-demo">
+        {gameUrl ? (
+          <iframe
+            className="casino-game-frame"
+            src={gameUrl}
+            title={game.name}
+            sandbox="allow-forms allow-same-origin allow-scripts allow-orientation-lock"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        ) : <section className="casino-demo">
           <img
             className="casino-demo-cover"
             src={casinoImage(game)}
@@ -382,14 +411,14 @@ export function CasinoGameView({ game }: { game: CasinoGame }) {
             {remote ? launching ? "Abrindo…" : "Jogar" : spinning ? "Girando…" : "Girar demonstração"}
           </button>
           <p role="status">
-            {message || (remote ? "O jogo abre em uma nova aba." : "Valor por giro R$ 10,00 em créditos de demonstração.")}
+            {message || (remote ? "O jogo será exibido nesta tela." : "Valor por giro R$ 10,00 em créditos de demonstração.")}
           </p>
           {credit < 10 && (
             <button className="button" onClick={() => setCredit(1000)}>
               Reiniciar créditos
             </button>
           )}
-        </section>
+        </section>}
       </div>
     </main>
   );
