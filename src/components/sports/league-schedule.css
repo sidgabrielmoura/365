@@ -1,0 +1,128 @@
+.league-search-results {
+  margin: 16px 0 22px;
+}
+
+.league-search-results h2 {
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+
+.league-search-results ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.league-search-results a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 54px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.league-search-results a:hover {
+  border-color: var(--accent);
+}
+
+.league-search-results a > img,
+.league-search-results a > svg {
+  flex-shrink: 0;
+}
+
+.league-search-results a > svg {
+  margin-left: auto;
+  color: var(--accent);
+}
+
+.league-search-results small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+}
+
+.league-schedule {
+  margin-top: 22px;
+}
+
+.league-schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.league-schedule-header p {
+  color: var(--muted);
+  margin: 0 0 5px;
+}
+
+.league-schedule-header h1 {
+  font-size: clamp(20px, 2.2vw, 28px);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.league-schedule-header button {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 10px;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+.league-schedule-message {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
+
+.league-schedule-day {
+  margin-top: 18px;
+}
+
+.league-day-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  border-left: 2px solid var(--accent);
+  background: var(--panel);
+  margin-bottom: 8px;
+}
+
+.league-day-heading h2 {
+  margin: 0;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.league-day-outcomes {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (max-width: 699px) {
+  .league-day-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .league-day-outcomes {
+    display: none;
+  }
+}

@@ -43,6 +43,9 @@ test("league links preserve panel IDs and only resolve unambiguous legacy names"
   assert.equal(leagueIdForName("Brasil - Série A", leagues.filter(({ id }) => id !== "42")), "1789");
   assert.equal(sportsLeagueHref("football", leagueIdForName("Brasileirão Série A", leagues)), "/esportes/football?liga=1789");
   assert.deepEqual(searchLeagueGroups("serie a", [...groups, groups[0]]).map((item) => item.id), ["1789", "42", "43"]);
+  assert.deepEqual(searchLeagueGroups("Liga dos Campeões da UEFA", panelLeagueGroups([
+    { key: "europa", location: "Europa", leagues: [{ league_id: 2197, league: "UEFA Champions League" }] },
+  ])).map((item) => item.id), ["2197"]);
   assert.equal(eventFromPanel({ id: 12, league_id: 10, sport: "Basquete", home: "A", away: "B" }).sport, "basketball");
 });
 test("search results use the match ID from the panel, keep its ordering and need no odds", () => {

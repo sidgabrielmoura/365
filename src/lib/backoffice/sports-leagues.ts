@@ -55,9 +55,11 @@ export function searchLeagueGroups(query: string, groups: ReturnType<typeof pane
   const term = normalize(query);
   if (term.length < 3) return [];
   const seen = new Set<string>();
+  const alias = legacyNames[term];
   return groups.flatMap((group) => group.leagues.flatMap((league) => {
-    const name = normalize(league.location + " " + league.name);
-    if (seen.has(league.id) || (!name.includes(term) && name !== legacyNames[term])) return [];
+    const name = normalize(league.name);
+    const qualified = normalize(league.location + " " + league.name);
+    if (seen.has(league.id) || (!qualified.includes(term) && qualified !== alias && name !== alias)) return [];
     seen.add(league.id);
     return [{ ...league, icon: group.icon }];
   }));

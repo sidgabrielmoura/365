@@ -6,15 +6,14 @@ import { Dialog } from "@/components/dialog";
 import { events, eventTime } from "@/lib/sports-data";
 import { asset } from "@/lib/assets";
 import { useSite } from "@/lib/site-context";
-import { useSearchSource } from "@/lib/backoffice/search-source";
-import { useLeagueGroups } from "@/lib/backoffice/sports-source";
-import { searchLeagueGroups, sportsLeagueHref } from "@/lib/backoffice/sports-leagues";
+import { useLeagueSearch, useSearchSource } from "@/lib/backoffice/search-source";
+import { sportsLeagueHref } from "@/lib/backoffice/sports-leagues";
 export function SearchDialog() {
   const { closeModal } = useSite(),
     [query, setQuery] = useState("");
   const source = useSearchSource(query);
   const term = query.trim();
-  const directory = useLeagueGroups("football", source.remote && term.length >= 3);
+  const directory = useLeagueSearch(term);
   const list =
     term.length > 1
       ? source.remote ? source.events : events
@@ -30,7 +29,7 @@ export function SearchDialog() {
       key: "event:" + event.id, href: `/evento/${event.id}`, icon: event.homeLogo,
       title: `${event.home} x ${event.away}`, subtitle: `${event.league} · ${eventTime(event.start)}`,
     })),
-    ...searchLeagueGroups(term, directory.groups).map((league) => ({
+    ...directory.leagues.map((league) => ({
       key: "league:" + league.id, href: sportsLeagueHref("football", league.id), icon: league.icon,
       title: league.name, subtitle: league.location,
     })),

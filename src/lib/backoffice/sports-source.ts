@@ -11,18 +11,18 @@ export function useSportsSource(sport = "football", segment: string | null = "10
   const sportId = runtime.sportIds[sport];
   const resource = useResource<unknown>(remote && sportId && segment
     ? "/api/backoffice/api/v3/" + (session.user ? "user" : "app") + "/grid-events/" +
-      encodeURIComponent(segment) + "/" + encodeURIComponent(sportId) : null);
+      encodeURIComponent(segment) + "/" + encodeURIComponent(sportId) : null, { keepDataOnRetry: true });
   return useMemo(() => {
     let events: SportsEvent[] = [], error = resource.error;
     try { if (resource.data !== undefined) events = gridFromPanel(resource.data, sport); }
     catch (issue) { error = (issue as Error).message; }
-    return { remote, events, error, loading: resource.loading };
-  }, [remote, resource.data, resource.error, resource.loading, sport]);
+    return { remote, events, error, loading: resource.loading, retry: resource.retry };
+  }, [remote, resource.data, resource.error, resource.loading, resource.retry, sport]);
 }
-export function useFeaturedLeagues(sport = "football") {
+export function useFeaturedLeagues(sport = "football", enabled = true) {
   const { runtime } = useSite();
   const sportId = runtime.sportIds[sport];
-  const resource = useResource<unknown>(runtime.mode === "backoffice" && sportId
+  const resource = useResource<unknown>(runtime.mode === "backoffice" && sportId && enabled
     ? "/api/backoffice/api/main-leagues?sport_id=" + encodeURIComponent(sportId) : null);
   const leagues = useMemo(() => {
     try {
@@ -30,7 +30,7 @@ export function useFeaturedLeagues(sport = "football") {
         ({ ...league, slug: league.id, href: sportsLeagueHref(sport, league.id) }));
     } catch { return []; }
   }, [resource.data, sport]);
-  return { leagues, loading: resource.loading };
+  return { leagues, loading: resource.loading, error: resource.error };
 }
 
 export function useLeagueGroups(sport: string, enabled = true) {

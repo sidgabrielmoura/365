@@ -1,12 +1,8 @@
 .app-shell .sports-navigation .sport-menu-icon {
-  display: grid;
   flex: 0 0 26px;
   width: 26px;
   height: 26px;
-  place-items: center;
-  color: var(--sport-icon-color);
-  background: color-mix(in srgb, var(--sport-icon-color) 15%, transparent);
-  border-radius: 7px;
+  object-fit: contain;
 }
 
 .app-shell .sports-navigation .sport-link[aria-current="page"] {

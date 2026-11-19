@@ -3318,6 +3318,10 @@
         "className": ""
       },
       {
+        "tag": "LeagueSearchResults",
+        "className": ""
+      },
+      {
         "tag": "MatchCard",
         "className": ""
       },
@@ -3575,6 +3579,10 @@
       },
       {
         "tag": "Workspace",
+        "className": ""
+      },
+      {
+        "tag": "LeagueSchedule",
         "className": ""
       },
       {

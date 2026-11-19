@@ -32,11 +32,12 @@ import "./sports.css";
 import "./odds-movement.css";
 import "./sidebar-sports.css";
 import { SportMenuIcon } from "./sport-menu-icon";
+import { LeagueSchedule, LeagueSearchResults } from "./league-schedule";
 import { useOddMovement } from "./use-odd-movement";
 import { useSportsSource, useFeaturedLeagues, useFeaturedEvents, useLeagueGroups } from "@/lib/backoffice/sports-source";
 import { isLeagueId, leagueIdForName, sportsLeagueHref } from "@/lib/backoffice/sports-leagues";
 import { tenantBanners } from "./tenant-banners";
-import { useSearchSource } from "@/lib/backoffice/search-source";
+import { useLeagueSearch, useSearchSource } from "@/lib/backoffice/search-source";
 
 const numericSports: Record<string, string> = {
   "1": "football",
@@ -140,7 +141,9 @@ export function Workspace({
   searchLabel?: string;
 }) {
   const [query, setQuery] = useState("");
+  const router = useRouter();
   const searchSource = useSearchSource(query);
+  const leagueSearch = useLeagueSearch(query);
   const term = query.trim();
   const results = term.length < 2 ? [] : searchSource.remote ? searchSource.events : events
     .filter((event) =>
@@ -148,7 +151,8 @@ export function Workspace({
     )
     .slice(0, 20);
   const searchStatus = searchSource.remote && term.length < 3 ? "Digite pelo menos 3 caracteres."
-    : searchSource.error || (searchSource.loading ? "Buscando jogos…" : "Nenhum jogo encontrado.");
+    : searchSource.error || leagueSearch.error || (searchSource.loading || leagueSearch.loading
+      ? "Buscando jogos e competições…" : "Nenhum jogo ou competição encontrado.");
   return (
     <div className={`layout ${!sidebar ? "wide-workspace" : ""}`}>
       {sidebar && <Sidebar />}
@@ -157,7 +161,14 @@ export function Workspace({
           <form
             className="global-search-field"
             role="search"
-            onSubmit={(event) => event.preventDefault()}
+            onSubmit={(event) => {
+              event.preventDefault();
+              const leagueId = leagueIdForName(term, leagueSearch.leagues);
+              if (leagueId) {
+                setQuery("");
+                router.push(sportsLeagueHref("football", leagueId));
+              }
+            }}
           >
             <Search size={20} strokeWidth={1} />
             <input
@@ -176,13 +187,14 @@ export function Workspace({
                 <h1>Resultados para “{query}”</h1>
                 <button onClick={() => setQuery("")}>Limpar</button>
               </div>
+              <LeagueSearchResults leagues={leagueSearch.leagues} onSelect={() => setQuery("")} />
               {results.length ? (
                 results.map((event) => (
                   <MatchCard key={event.id} event={event} />
                 ))
-              ) : (
+              ) : !leagueSearch.leagues.length ? (
                 <p className="empty-local" role="status">{searchStatus}</p>
-              )}
+              ) : null}
             </section>
           ) : (
             children
@@ -566,7 +578,10 @@ export function SportsList({
     const value = source.remote ? event.leagueId : event.league;
     return value ? [[value, event.league] as const] : [];
   }));
-  const name = source.remote && league ? filtered[0]?.league || sportName : sportName;
+  const name = league
+    ? filtered[0]?.league || (isLeagueId(league) ? sportName : league)
+    : sportName;
+  const pageEvents = filtered.slice((page - 1) * 12, page * 12);
   const unavailableSport = source.remote && (!runtime.features.search || !runtime.sportIds[sport]);
   const emptyTitle = source.loading || directory.loading ? "Carregando jogos…"
     : unavailableSport ? "Modalidade indisponível"
@@ -576,31 +591,42 @@ export function SportsList({
     : "Escolha outra competição ou confira os jogos do dia.");
   return (
     <Workspace key={`${sport}:${remoteLeagueId ?? league}:${day}:${page}`}>
-      <SportsRail />
-      <div className="section-heading">
-        <h1>{name}</h1>
-        <span>{filtered.length} jogos capturados</span>
-      </div>
-      {leagues.size > 0 && (
-        <form className="sports-filter">
-          <label htmlFor="league-filter">Competição</label>
-          <select
-            id="league-filter"
-            value={remoteLeagueId ?? ""}
-            onChange={(event) => {
-              router.push(sportsLeagueHref(sport, event.target.value));
-            }}
-          >
-            <option value="">Todas as competições</option>
-            {[...leagues].map(([value, label]) => (
-              <option key={value} value={value}>{label}</option>
-            ))}
-          </select>
-        </form>
+      {league ? (
+        <LeagueSchedule
+          name={name}
+          games={pageEvents}
+          loading={source.loading || directory.loading}
+          error={source.error}
+          onRefresh={source.remote && remoteLeagueId && !unavailableSport ? source.retry : undefined}
+          MatchCard={MatchCard}
+        />
+      ) : (
+        <>
+          <SportsRail />
+          <div className="section-heading">
+            <h1>{name}</h1>
+            <span>{filtered.length} jogos capturados</span>
+          </div>
+          {leagues.size > 0 && (
+            <form className="sports-filter">
+              <label htmlFor="league-filter">Competição</label>
+              <select
+                id="league-filter"
+                value={remoteLeagueId ?? ""}
+                onChange={(event) => {
+                  router.push(sportsLeagueHref(sport, event.target.value));
+                }}
+              >
+                <option value="">Todas as competições</option>
+                {[...leagues].map(([value, label]) => (
+                  <option key={value} value={value}>{label}</option>
+                ))}
+              </select>
+            </form>
+          )}
+          {pageEvents.map((event) => <MatchCard key={event.id} event={event} />)}
+        </>
       )}
-      {filtered.slice((page - 1) * 12, page * 12).map((event) => (
-        <MatchCard key={event.id} event={event} />
-      ))}
       {!filtered.length && (
         <div className="empty-local">
           <h2>{emptyTitle}</h2>
