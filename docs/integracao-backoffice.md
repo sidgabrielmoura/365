@@ -33,6 +33,16 @@ O domínio resolve o tenant no Redis ou no arquivo local configurado. O `site_id
 
 O backoffice aplica a identidade da banca por padrão. O carrossel usa os banners configurados que se aplicam à sessão e fica oculto quando essa lista está vazia. O modo de demonstração e a opção explícita `BACKOFFICE_BRANDING=clone` usam a identidade de referência.
 
+### Fonte de bancas na Vercel
+
+Com `BACKOFFICE_MODE=backoffice`, configure `REDIS_HOST` para ler a chave `sites`, ou use `BACKOFFICE_TENANTS_JSON` com a mesma estrutura de `sites`. Para a instância atual em `365-smoky.vercel.app`, este é o valor da variável pela opção JSON.
+
+```json
+{"wtfsportslive":{"site_id":"wtfsportslive","front_url":"365-smoky.vercel.app","base_url":"painel.maranguapeloterias.top","complete_name":"Maranguape Loterias","status":"actived","modules":["bet","casino","online","traditional","loto","2p500","scratchcard","bet-builder"],"logo_url":"https://d3b875vnwmvuxq.cloudfront.net/storage/wtfsportslive/images/wtfsportslive_logo.webp","isotype_url":"https://d3b875vnwmvuxq.cloudfront.net/storage/wtfsportslive/images/wtfsportslive_logo.png"}}
+```
+
+O domínio acessado deve corresponder a `front_url`. Use o domínio estável do projeto, ou substitua-o pelo domínio final quando fizer a mudança. O arquivo `.local` tem prioridade quando configurado. Na Vercel, mantenha `BACKOFFICE_TENANTS_FILE` e `BACKOFFICE_CONTRACTS_FILE` ausentes e configure `BACKOFFICE_SESSION_SECRET` como segredo próprio do ambiente. O JSON tem prioridade sobre o Redis quando ambos estão presentes. Aplique a configuração ao fazer um novo deploy e confirme o `site_id` retornado por `/api/environment`.
+
 ## Registro histórico da etapa inicial
 
 Atualizado em 18/11/2026. Projeto: C:/Users/gabriel/development/clones/bet365.

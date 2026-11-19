@@ -48,13 +48,20 @@ function parseTenant(id: string, value: unknown): Tenant {
 
 async function loadSites() {
   const localFile = process.env.BACKOFFICE_TENANTS_FILE;
-  // A local snapshot is an explicit configuration source, never a silent
-  // fallback from real data to the demonstration database.
+  const inline = process.env.BACKOFFICE_TENANTS_JSON?.trim();
   let data: unknown;
   if (localFile) data = await readJsonFile(localFile);
+  else if (inline) {
+    try { data = JSON.parse(inline); }
+    catch {
+      throw new BackofficeError("JSON de bancas inválido.", 503, "INVALID_TENANTS_JSON");
+    }
+    if (!Object.keys(record(data)).length)
+      throw new BackofficeError("Configure pelo menos uma banca no JSON.", 503, "INVALID_TENANTS_JSON");
+  }
   else {
     if (!process.env.REDIS_HOST)
-      throw new BackofficeError("Configure os tenants do backoffice.", 503, "CONFIGURATION");
+      throw new BackofficeError("Configure BACKOFFICE_TENANTS_JSON ou REDIS_HOST.", 503, "TENANTS_NOT_CONFIGURED");
     if (!connection) {
       connection = new Redis(process.env.REDIS_HOST, {
         db: Number(process.env.REDIS_DB || 1),

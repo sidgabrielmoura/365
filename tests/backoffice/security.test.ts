@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { operations } from "../../src/lib/backoffice/catalogue";
-import { normalizeHost, backendOrigin } from "../../src/server/backoffice/tenant";
+import { normalizeHost, backendOrigin, resolveTenant } from "../../src/server/backoffice/tenant";
 import { authorizeOperation, matchOperation, panelCall, withoutSecrets } from "../../src/server/backoffice/http";
 import { openSession, sealSession } from "../../src/server/backoffice/session";
 import { fillTemplate, money } from "../../src/server/backoffice/adapters";
@@ -98,6 +98,30 @@ test("BFF forwards cookie-owned Bearer, does not cache, follows no redirects and
 test("host normalization follows the tenant resolution rules", () => {
   assert.equal(normalizeHost("https://www.A.TEST:443/path"), "a.test");
   assert.equal(normalizeHost("a.test:3000"), "a.test");
+});
+test("a hosted site can resolve its explicitly configured tenant without Redis or a local file", async () => {
+  const env = process.env;
+  const keys = ["BACKOFFICE_TENANTS_JSON", "BACKOFFICE_TENANTS_FILE", "REDIS_HOST", "DEV_HOST_OVERRIDE"];
+  const old = keys.map((key) => env[key]);
+  try {
+    for (const key of keys) delete env[key];
+    await assert.rejects(resolveTenant("site.example.test"), { code: "TENANTS_NOT_CONFIGURED" });
+    env.BACKOFFICE_TENANTS_JSON = "{";
+    await assert.rejects(resolveTenant("site.example.test"), { code: "INVALID_TENANTS_JSON" });
+    env.BACKOFFICE_TENANTS_JSON = JSON.stringify({
+      test: { ...tenant, front_url: "site.example.test" },
+    });
+    const configured = await resolveTenant("site.example.test:443");
+    assert.equal(configured.site_id, "test");
+    assert.equal(backendOrigin(configured), "https://painel.a.test");
+    await assert.rejects(resolveTenant("unconfigured.example.test"), { code: "TENANT_NOT_FOUND" });
+  } finally {
+    keys.forEach((key, index) => {
+      const value = old[index];
+      if (value === undefined) delete env[key];
+      else env[key] = value;
+    });
+  }
 });
 test("registration selects the documented fields and route for each tenant mode", () => {
   const input = {
