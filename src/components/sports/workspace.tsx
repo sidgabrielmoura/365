@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useSearchParams, useRouter } from "next/navigation";
+import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   Search,
@@ -25,10 +25,13 @@ import {
   type SportsOption,
 } from "@/lib/sports-data";
 import { asset } from "@/lib/assets";
+import { catalogSportName, sportsMenu } from "@/lib/sports-catalog";
 import { useSite } from "@/lib/site-context";
 import { Footer } from "@/components/shell";
 import "./sports.css";
 import "./odds-movement.css";
+import "./sidebar-sports.css";
+import { SportMenuIcon } from "./sport-menu-icon";
 import { useOddMovement } from "./use-odd-movement";
 import { useSportsSource, useFeaturedLeagues, useFeaturedEvents, useLeagueGroups } from "@/lib/backoffice/sports-source";
 import { isLeagueId, leagueIdForName, sportsLeagueHref } from "@/lib/backoffice/sports-leagues";
@@ -49,15 +52,25 @@ const numericSports: Record<string, string> = {
 };
 export function Sidebar() {
   const { runtime } = useSite();
-  const remoteLeagues = useFeaturedLeagues();
+  const { leagues: remoteLeagues, loading: featuredLoading } = useFeaturedLeagues();
+  const needsDirectory = runtime.features.search && !featuredLoading && sportsMenu.some((entry) =>
+    entry.kind === "league" && !leagueIdForName(entry.league, remoteLeagues));
+  const { groups, loading: directoryLoading } = useLeagueGroups("football", needsDirectory);
   const featured = runtime.mode === "backoffice" ? remoteLeagues : sportsNavigation.emAlta.map((league) =>
     ({ ...league, href: sportsLeagueHref(league.sport, league.name) }));
-  const alphabetical = [...sportsNavigation.sports]
-    .filter(
-      (sport) =>
-        !["alpine-skiing", "cross-country", "bandy"].includes(sport.id),
-    )
-    .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+  const path = usePathname();
+  const league = useSearchParams().get("liga");
+  const current = league ? `${path}?liga=${encodeURIComponent(league)}` : path;
+  const footballLeagues = [...remoteLeagues, ...groups.flatMap((group) => group.leagues)];
+  const alphabetical = sportsMenu.map((entry) => {
+    if (entry.kind === "route") return { ...entry, pending: false };
+    if (entry.kind === "sport") return { ...entry, pending: false, href: sportsLeagueHref(entry.id) };
+    if (runtime.mode === "demo")
+      return { ...entry, pending: false, href: sportsLeagueHref("football", entry.league) };
+    const id = leagueIdForName(entry.league, footballLeagues);
+    return { ...entry, pending: !id && (featuredLoading || directoryLoading),
+      href: id ? sportsLeagueHref("football", id) : "/esportes/ligas" };
+  });
   return (
     <aside className="sidebar" aria-label="Esportes e competições">
       <p className="sidebar-title">Em Alta</p>
@@ -81,22 +94,29 @@ export function Sidebar() {
       </nav>
       <p className="sidebar-title">A-Z</p>
       <nav className="sports-navigation" aria-label="Lista de esportes">
-        <Link className="sport-link" href="/proximos">
-          <img src={asset("NextToStart-ba9fb01ee0.svg")} alt="" />
+        <Link className="sport-link" href="/proximos" aria-current={current === "/proximos" ? "page" : undefined}>
+          <SportMenuIcon id="upcoming" />
           Próximo a Começar
         </Link>
         {alphabetical.map((sport) => (
           <Link
             className="sport-link"
             key={sport.id}
-            href={`/esportes/${sport.id}`}
+            href={sport.href}
+            prefetch={false}
+            aria-current={current === sport.href ? "page" : undefined}
+            aria-disabled={sport.pending || undefined}
+            aria-description={sport.pending ? "Carregando competição." : undefined}
+            onClick={(event) => {
+              if (sport.pending) event.preventDefault();
+            }}
           >
-            <img src={asset(sport.icon)} alt="" />
+            <SportMenuIcon id={sport.id} />
             <span>{sport.name}</span>
           </Link>
         ))}
-        <Link className="sport-link" href="/cassino">
-          <img src={asset("zClass_26_Casino-8d32c62bc4.svg")} alt="" />
+        <Link className="sport-link" href="/cassino" aria-current={current === "/cassino" ? "page" : undefined}>
+          <SportMenuIcon id="casino" />
           Cassino
         </Link>
       </nav>
@@ -518,7 +538,7 @@ export function SportsList({
     page = Math.max(1, Number(query.get("pagina")) || 1);
   const sportName = upcoming
     ? "Próximo a Começar"
-    : label || sportsNavigation.sports.find((item) => item.id === sport)?.name || sport;
+    : catalogSportName(sport) || label || sportsNavigation.sports.find((item) => item.id === sport)?.name || sport;
   const legacyLeague = runtime.mode === "backoffice" && Boolean(league) && !isLeagueId(league);
   const directory = useLeagueGroups(sport, legacyLeague);
   const remoteLeagueId = legacyLeague
@@ -547,8 +567,13 @@ export function SportsList({
     return value ? [[value, event.league] as const] : [];
   }));
   const name = source.remote && league ? filtered[0]?.league || sportName : sportName;
+  const unavailableSport = source.remote && (!runtime.features.search || !runtime.sportIds[sport]);
   const emptyTitle = source.loading || directory.loading ? "Carregando jogos…"
-    : legacyLeague && !remoteLeagueId ? "Competição indisponível" : "Nenhuma partida disponível";
+    : unavailableSport ? "Modalidade indisponível"
+      : legacyLeague && !remoteLeagueId ? "Competição indisponível" : "Nenhuma partida disponível";
+  const emptyText = source.error || directory.error || (unavailableSport
+    ? "Esta modalidade ainda não está disponível nesta banca."
+    : "Escolha outra competição ou confira os jogos do dia.");
   return (
     <Workspace key={`${sport}:${remoteLeagueId ?? league}:${day}:${page}`}>
       <SportsRail />
@@ -579,7 +604,7 @@ export function SportsList({
       {!filtered.length && (
         <div className="empty-local">
           <h2>{emptyTitle}</h2>
-          <p>{source.error || directory.error || "Escolha outra competição ou confira os jogos do dia."}</p>
+          <p>{emptyText}</p>
           <Link href="/" className="button button-outline">
             Jogos do Dia
           </Link>

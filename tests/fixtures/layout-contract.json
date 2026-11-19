@@ -3242,7 +3242,7 @@
         "className": "\"sport-link\""
       },
       {
-        "tag": "img",
+        "tag": "SportMenuIcon",
         "className": ""
       },
       {
@@ -3250,7 +3250,7 @@
         "className": "\"sport-link\""
       },
       {
-        "tag": "img",
+        "tag": "SportMenuIcon",
         "className": ""
       },
       {
@@ -3262,7 +3262,7 @@
         "className": "\"sport-link\""
       },
       {
-        "tag": "img",
+        "tag": "SportMenuIcon",
         "className": ""
       },
       {

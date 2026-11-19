@@ -24,12 +24,13 @@ export function useFeaturedLeagues(sport = "football") {
   const sportId = runtime.sportIds[sport];
   const resource = useResource<unknown>(runtime.mode === "backoffice" && sportId
     ? "/api/backoffice/api/main-leagues?sport_id=" + encodeURIComponent(sportId) : null);
-  return useMemo(() => {
+  const leagues = useMemo(() => {
     try {
-      return resource.data === undefined ? [] : panelLeagues(resource.data).map(({ id, name }) =>
-        ({ slug: id, name, href: sportsLeagueHref(sport, id) }));
+      return resource.data === undefined ? [] : panelLeagues(resource.data).map((league) =>
+        ({ ...league, slug: league.id, href: sportsLeagueHref(sport, league.id) }));
     } catch { return []; }
   }, [resource.data, sport]);
+  return { leagues, loading: resource.loading };
 }
 
 export function useLeagueGroups(sport: string, enabled = true) {
