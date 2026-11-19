@@ -14,7 +14,7 @@ const quote = (ticket: DataRecord) => Number(ticket.boost_cotation) || Number(ti
 function FeaturedLists() {
   const boosted = useFeaturedEvents("boosted-events");
   const featured = useFeaturedEvents("events");
-  const tips = usePanel("/api/featured-tickets", "POST");
+  const tips = usePanel("/api/featured-tickets", "POST", {});
   const winners = usePanel("/api/v1/winners");
   return <>
     <h2>Jogos em destaque</h2>
@@ -45,7 +45,7 @@ function FeaturedLists() {
 
 function Tip({ hash }: { hash: string }) {
   const { session, request, openModal, notify } = useSite();
-  const resource = usePanel("/api/featured-tickets/" + hash, "POST");
+  const resource = usePanel("/api/featured-tickets/" + hash, "POST", {});
   const ticket = record(resource.data);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");

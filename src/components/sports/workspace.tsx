@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
-import { useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   Search,
   ChevronLeft,
@@ -30,7 +30,8 @@ import { Footer } from "@/components/shell";
 import "./sports.css";
 import "./odds-movement.css";
 import { useOddMovement } from "./use-odd-movement";
-import { useSportsSource, useFeaturedLeagues, useFeaturedEvents } from "@/lib/backoffice/sports-source";
+import { useSportsSource, useFeaturedLeagues, useFeaturedEvents, useLeagueGroups } from "@/lib/backoffice/sports-source";
+import { isLeagueId, leagueIdForName, sportsLeagueHref } from "@/lib/backoffice/sports-leagues";
 import { tenantBanners } from "./tenant-banners";
 import { useSearchSource } from "@/lib/backoffice/search-source";
 
@@ -46,17 +47,11 @@ const numericSports: Record<string, string> = {
   "9": "boxing",
   "15": "darts",
 };
-export function referenceHref(url: string) {
-  if (url.includes("CASINO")) return "/cassino";
-  if (url.includes("NX")) return "/proximos";
-  const sport = numericSports[url.split("/")[2]] || "football";
-  const league = url.split("/l/")[1];
-  return `/esportes/${sport}${league ? `?liga=${encodeURIComponent(decodeURIComponent(league))}` : ""}`;
-}
 export function Sidebar() {
   const { runtime } = useSite();
   const remoteLeagues = useFeaturedLeagues();
-  const featured = runtime.mode === "backoffice" ? remoteLeagues : sportsNavigation.emAlta;
+  const featured = runtime.mode === "backoffice" ? remoteLeagues : sportsNavigation.emAlta.map((league) =>
+    ({ ...league, href: sportsLeagueHref(league.sport, league.name) }));
   const alphabetical = [...sportsNavigation.sports]
     .filter(
       (sport) =>
@@ -70,7 +65,7 @@ export function Sidebar() {
         {featured.map((league) => (
           <Link
             key={league.slug}
-            href={`/esportes/${league.sport}?liga=${encodeURIComponent(league.name)}`}
+            href={league.href}
           >
             <img
               src={asset(
@@ -126,16 +121,14 @@ export function Workspace({
 }) {
   const [query, setQuery] = useState("");
   const searchSource = useSearchSource(query);
-  const results =
-    query.trim().length > 1
-      ? (searchSource.remote ? searchSource.events : events)
-          .filter((event) =>
-            `${event.home} ${event.away} ${event.league}`
-              .toLowerCase()
-              .includes(query.trim().toLowerCase()),
-          )
-          .slice(0, 20)
-      : [];
+  const term = query.trim();
+  const results = term.length < 2 ? [] : searchSource.remote ? searchSource.events : events
+    .filter((event) =>
+      `${event.home} ${event.away} ${event.league}`.toLowerCase().includes(term.toLowerCase()),
+    )
+    .slice(0, 20);
+  const searchStatus = searchSource.remote && term.length < 3 ? "Digite pelo menos 3 caracteres."
+    : searchSource.error || (searchSource.loading ? "Buscando jogos…" : "Nenhum jogo encontrado.");
   return (
     <div className={`layout ${!sidebar ? "wide-workspace" : ""}`}>
       {sidebar && <Sidebar />}
@@ -157,7 +150,7 @@ export function Workspace({
           </form>
         )}
         <main id="main" tabIndex={-1}>
-          {query.trim().length > 1 ? (
+          {term.length > 1 ? (
             <section className="search-local">
               <div className="section-heading">
                 <h1>Resultados para “{query}”</h1>
@@ -168,7 +161,7 @@ export function Workspace({
                   <MatchCard key={event.id} event={event} />
                 ))
               ) : (
-                <p className="empty-local">Nenhum jogo encontrado.</p>
+                <p className="empty-local" role="status">{searchStatus}</p>
               )}
             </section>
           ) : (
@@ -181,6 +174,27 @@ export function Workspace({
   );
 }
 export function SportsRail() {
+  const { runtime } = useSite();
+  const football = useLeagueGroups("football");
+  const basketball = useLeagueGroups("basketball");
+  const baseball = useLeagueGroups("baseball");
+  const directories: Record<string, typeof football> = { football, basketball, baseball };
+
+  function referenceHref(url: string) {
+    if (url.includes("CASINO")) return "/cassino";
+    if (url.includes("NX")) return "/proximos";
+    const sport = numericSports[url.split("/")[2]] || "football";
+    const encodedLeague = url.split("/l/")[1];
+    if (!encodedLeague) return sportsLeagueHref(sport);
+
+    const league = decodeURIComponent(encodedLeague);
+    if (runtime.mode !== "backoffice") return sportsLeagueHref(sport, league);
+
+    const directory = directories[sport];
+    const id = directory && leagueIdForName(league, directory.groups.flatMap((group) => group.leagues));
+    return sportsLeagueHref(sport, id);
+  }
+
   return (
     <nav className="sports-rail" aria-label="Esportes populares">
       {railData.map((item) => (
@@ -422,10 +436,19 @@ const tabs = [
   ["tennis", "Tênis"],
   ["serie-b", "Série B"],
 ];
+const homeLeagues = new Map([
+  ["nba", "NBA"],
+  ["nfl", "NFL"],
+  ["serie-b", "Brasil - Série B"],
+]);
 export function Home() {
   const params = useSearchParams(),
     tab = params.get("tab") || "day";
-  const source = useSportsSource(tab === "nba" ? "basketball" : tab === "tennis" ? "tennis" : tab === "nfl" ? "american-football" : "football");
+  const sport = tab === "nba" ? "basketball" : tab === "tennis" ? "tennis" : tab === "nfl" ? "american-football" : "football";
+  const league = homeLeagues.get(tab);
+  const directory = useLeagueGroups(sport, Boolean(league));
+  const leagueId = league && leagueIdForName(league, directory.groups.flatMap((group) => group.leagues));
+  const source = useSportsSource(sport, league ? leagueId || null : undefined);
   const featured = useFeaturedEvents("events", tab === "day");
   const featuredIds = new Set(featured.events.map((event) => event.id));
   const todaysEvents = [...featured.events, ...source.events.filter((event) => !featuredIds.has(event.id))];
@@ -456,7 +479,7 @@ export function Home() {
               ? "Principais Jogos do Dia"
               : tabs.find((item) => item[0] === tab)?.[1]}
           </h2>
-          <Link href="/esportes/football">Ver Mais</Link>
+          <Link href={sportsLeagueHref(sport, leagueId)}>Ver Mais</Link>
         </div>
         <div className="competition-heading">
           <span>{source.remote ? new Intl.DateTimeFormat("pt-BR", { dateStyle: "medium", timeZone: "America/Sao_Paulo" }).format(new Date()) : "Qua 18 Nov"}</span>
@@ -470,7 +493,9 @@ export function Home() {
           list.map((event) => <MatchCard key={event.id} event={event} />)
         ) : (
           <div className="empty-local">
-            {source.remote ? source.error || featured.error || (source.loading || featured.loading ? "Carregando jogos…" : "Nenhum jogo disponível nesta categoria.") : "Não há jogos desta categoria na captura disponível."}
+            {source.remote ? source.error || featured.error || directory.error ||
+              (source.loading || featured.loading || directory.loading ? "Carregando jogos…" : "Nenhum jogo disponível nesta categoria.") :
+              "Não há jogos desta categoria na captura disponível."}
           </div>
         )}
       </section>
@@ -479,59 +504,71 @@ export function Home() {
 }
 export function SportsList({
   sport,
+  label,
   upcoming = false,
 }: {
   sport: string;
+  label?: string;
   upcoming?: boolean;
 }) {
+  const { runtime } = useSite();
   const query = useSearchParams(),
     router = useRouter(),
     league = query.get("liga") || "",
     page = Math.max(1, Number(query.get("pagina")) || 1);
-  const name = upcoming
+  const sportName = upcoming
     ? "Próximo a Começar"
-    : sportsNavigation.sports.find((item) => item.id === sport)?.name || sport;
-  const featuredLeagues = useFeaturedLeagues();
-  const remoteLeagueId = featuredLeagues.find((item) => item.name === league)?.leagueId;
+    : label || sportsNavigation.sports.find((item) => item.id === sport)?.name || sport;
+  const legacyLeague = runtime.mode === "backoffice" && Boolean(league) && !isLeagueId(league);
+  const directory = useLeagueGroups(sport, legacyLeague);
+  const remoteLeagueId = legacyLeague
+    ? leagueIdForName(league, directory.groups.flatMap((group) => group.leagues))
+    : league;
+  useEffect(() => {
+    if (!legacyLeague || !remoteLeagueId) return;
+    const canonical = new URLSearchParams(query.toString());
+    canonical.set("liga", remoteLeagueId);
+    router.replace(`${sportsLeagueHref(sport)}?${canonical}`, { scroll: false });
+  }, [legacyLeague, remoteLeagueId, query, router, sport]);
+
   const day = query.get("dia");
   const segment = day && /^[1-7]$/.test(day) ? "10000" + day : upcoming ? "100008" : "100001";
-  const source = useSportsSource(sport, remoteLeagueId || (league && /^\d+$/.test(league) ? league : segment));
+  const source = useSportsSource(sport, league ? remoteLeagueId || null : segment);
   const sourceEvents = source.remote ? source.events : events;
   const filtered = sourceEvents.filter(
     (event) =>
       (upcoming || event.sport === sport) &&
-      (!league || event.league === league || event.leagueId === league || (source.remote && event.league.endsWith(" - " + league))) &&
+      (source.remote || !league || event.league === league || event.leagueId === league) &&
       event.status !== "live",
   );
-  const leagues = [
-    ...new Set(
-      sourceEvents
-        .filter((event) => event.sport === sport)
-        .map((event) => event.league),
-    ),
-  ];
+  const leagues = new Map(sourceEvents.flatMap((event) => {
+    if (event.sport !== sport) return [];
+    const value = source.remote ? event.leagueId : event.league;
+    return value ? [[value, event.league] as const] : [];
+  }));
+  const name = source.remote && league ? filtered[0]?.league || sportName : sportName;
+  const emptyTitle = source.loading || directory.loading ? "Carregando jogos…"
+    : legacyLeague && !remoteLeagueId ? "Competição indisponível" : "Nenhuma partida disponível";
   return (
-    <Workspace>
+    <Workspace key={`${sport}:${remoteLeagueId ?? league}:${day}:${page}`}>
       <SportsRail />
       <div className="section-heading">
         <h1>{name}</h1>
         <span>{filtered.length} jogos capturados</span>
       </div>
-      {leagues.length > 0 && (
+      {leagues.size > 0 && (
         <form className="sports-filter">
           <label htmlFor="league-filter">Competição</label>
           <select
             id="league-filter"
-            value={league}
+            value={remoteLeagueId ?? ""}
             onChange={(event) => {
-              router.push(
-                `/esportes/${sport}?liga=${encodeURIComponent(event.target.value)}`,
-              );
+              router.push(sportsLeagueHref(sport, event.target.value));
             }}
           >
             <option value="">Todas as competições</option>
-            {leagues.map((item) => (
-              <option key={item}>{item}</option>
+            {[...leagues].map(([value, label]) => (
+              <option key={value} value={value}>{label}</option>
             ))}
           </select>
         </form>
@@ -541,8 +578,8 @@ export function SportsList({
       ))}
       {!filtered.length && (
         <div className="empty-local">
-          <h2>Nenhuma partida disponível</h2>
-          <p>Escolha outra competição ou confira os jogos do dia.</p>
+          <h2>{emptyTitle}</h2>
+          <p>{source.error || directory.error || "Escolha outra competição ou confira os jogos do dia."}</p>
           <Link href="/" className="button button-outline">
             Jogos do Dia
           </Link>
@@ -552,9 +589,12 @@ export function SportsList({
         total={filtered.length}
         page={page}
         perPage={12}
-        href={(number) =>
-          `${upcoming ? "/proximos" : `/esportes/${sport}`}?pagina=${number}&liga=${encodeURIComponent(league)}`
-        }
+        href={(number) => {
+          const next = new URLSearchParams(query.toString());
+          next.set("pagina", String(number));
+          if (remoteLeagueId) next.set("liga", remoteLeagueId);
+          return `${upcoming && !league ? "/proximos" : sportsLeagueHref(sport)}?${next}`;
+        }}
       />
     </Workspace>
   );

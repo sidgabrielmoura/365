@@ -1,7 +1,8 @@
 import { test } from "node:test";
 import { brandingFromTenant, themeColors, themeProperties } from "../../src/lib/backoffice/branding";
 import assert from "node:assert/strict";
-import { ticketFromPanel, gridFromPanel, marketsFromPanel } from "../../src/lib/backoffice/public-adapters";
+import { ticketFromPanel, eventFromPanel, gridFromPanel, marketsFromPanel, searchEventsFromPanel } from "../../src/lib/backoffice/public-adapters";
+import { leagueIdForName, panelLeagueGroups, searchLeagueGroups, sportsLeagueHref } from "../../src/lib/backoffice/sports-leagues";
 import { selectionForEvent, type SportsEvent } from "../../src/lib/sports-data";
 import { liveEventFromPanel, liveEventsFromPanel } from "../../src/lib/backoffice/live-markets";
 test("receipt uses backend numeric amounts instead of formatted currency labels", () => {
@@ -15,17 +16,46 @@ test("receipt uses backend numeric amounts instead of formatted currency labels"
   assert.equal(ticket.potential, 7.5); assert.equal(ticket.picks.length, 1);
   assert.equal(ticket.canCancel, false);
 });
-test("mixed grade retains internal match ID, suspended prices and original boosted price", () => {
-  const events = gridFromPanel([{ type: "league", league: "Liga" }, {
+test("mixed grid retains league and match IDs, suspended prices and original boosted price", () => {
+  const events = gridFromPanel([{ type: "league", league: "Liga", league_id: 42 }, {
     id: 22, event_id: 9999, home: "Casa", away: "Fora", datetime_iso: "2026-11-18T20:00:00-03:00",
     odds: [{ id: 10, mk_id: 5, market: "Vencedor", option: "Casa", cotation: "2.30",
       boost: { original_cotation: "2.00", percent: 15 }, suspended: false },
       { id: 11, mk_id: 5, market: "Vencedor", option: "Fora", cotation: "1.90", suspended: true }],
   }]);
   assert.equal(events[0].id, "22"); assert.equal(events[0].league, "Liga");
+  assert.equal(events[0].leagueId, "42");
   assert.equal(events[0].markets[0].options[0].odd, 2.3);
   assert.equal(events[0].markets[0].options[0].originalOdd, 2);
   assert.equal(events[0].markets[0].options[1].odd, null);
+});
+test("league links preserve panel IDs and only resolve unambiguous legacy names", () => {
+  const groups = panelLeagueGroups([
+    { key: "brasil", location: "Brasil", leagues: [
+      { league_id: 1789, league: "Brasileirão Série A" }, { league_id: 42, league: "Série A" },
+    ] },
+    { key: "italia", location: "Itália", leagues: [{ league_id: 43, league: "Série A" }] },
+  ]);
+  const leagues = groups.flatMap((group) => group.leagues);
+  assert.equal(leagueIdForName("Série A", leagues), undefined);
+  assert.equal(leagueIdForName("Itália: Série A", leagues), "43");
+  assert.equal(leagueIdForName("Brasil - Série A", leagues), "42");
+  assert.equal(leagueIdForName("Brasil - Série A", leagues.filter(({ id }) => id !== "42")), "1789");
+  assert.equal(sportsLeagueHref("football", leagueIdForName("Brasileirão Série A", leagues)), "/esportes/football?liga=1789");
+  assert.deepEqual(searchLeagueGroups("serie a", [...groups, groups[0]]).map((item) => item.id), ["1789", "42", "43"]);
+  assert.equal(eventFromPanel({ id: 12, league_id: 10, sport: "Basquete", home: "A", away: "B" }).sport, "basketball");
+});
+test("search results use the match ID from the panel, keep its ordering and need no odds", () => {
+  const rows = [12, 7].map((id) => ({
+    id, event_id: "ext-" + id, sport: "soccer", home: "A", away: "B", league: "Série A",
+    home_img: "team-a.png", away_img: "no-flag.png", date: "2026-11-20 19:00:00",
+  }));
+  const events = searchEventsFromPanel(rows);
+  assert.deepEqual(events.map((event) => event.id), ["12", "7"]);
+  assert.equal(events[0].start, "2026-11-20T19:00:00-03:00");
+  assert.match(events[0].homeLogo!, /\/flags\/medium\/team-a\.png$/);
+  assert.equal(events[0].awayLogo, "");
+  assert.deepEqual(events[0].markets, []);
 });
 test("detail merges flat and grouped odds by the panel ID and keeps each distinct selection", () => {
   const event: SportsEvent = { id: "1163531", sport: "football", league: "Série A", leagueId: "1",

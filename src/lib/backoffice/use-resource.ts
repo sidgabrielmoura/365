@@ -9,12 +9,16 @@ export function useResource<T>(
 ) {
   const body = options.body === undefined ? undefined : JSON.stringify(options.body);
   const method = options.method || "GET";
+  const requestKey = JSON.stringify([url, method, body]);
   const [generation, setGeneration] = useState(0);
-  const [state, setState] = useState<{ data?: T; loading: boolean; error: string }>({ loading: Boolean(url), error: "" });
-  const latest = useRef(url);
-  latest.current = url;
+  const [state, setState] = useState<{ key: string; data?: T; loading: boolean; error: string }>({
+    key: requestKey, loading: Boolean(url), error: "",
+  });
+  const latest = useRef(requestKey);
+  latest.current = requestKey;
   useEffect(() => {
-    if (!url) { setState({ loading: false, error: "" }); return; }
+    setState({ key: requestKey, loading: Boolean(url), error: "" });
+    if (!url) return;
     let active = true;
     const controller = new AbortController();
     let timer: ReturnType<typeof setTimeout>;
@@ -25,16 +29,18 @@ export function useResource<T>(
         const data = await siteFetch<T>(url, {
           method, body: body === undefined ? undefined : JSON.parse(body), signal: controller.signal,
         });
-        if (active && latest.current === url) setState({ data, loading: false, error: "" });
+        if (active && latest.current === requestKey)
+          setState({ key: requestKey, data, loading: false, error: "" });
       } catch (error) {
-        if (active && !controller.signal.aborted)
-          setState({ loading: false, error: (error as Error).message });
+        if (active && latest.current === requestKey && !controller.signal.aborted)
+          setState({ key: requestKey, loading: false, error: (error as Error).message });
       }
       if (active && options.refreshMs) timer = setTimeout(load, options.refreshMs);
     };
-    setState({ loading: true, error: "" });
     void load();
     return () => { active = false; controller.abort(); clearTimeout(timer); };
-  }, [url, method, body, generation, options.refreshMs]);
-  return { ...state, retry: useCallback(() => setGeneration((old) => old + 1), []) };
+  }, [url, method, body, requestKey, generation, options.refreshMs]);
+  const current = state.key === requestKey ? state : { data: undefined, loading: Boolean(url), error: "" };
+  return { data: current.data, loading: current.loading, error: current.error,
+    retry: useCallback(() => setGeneration((old) => old + 1), []) };
 }

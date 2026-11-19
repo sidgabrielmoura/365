@@ -32,7 +32,19 @@ function uniqueOptions(values: unknown[], home: string, away: string): SportsOpt
   }
   return [...options.values()];
 }
-export function eventFromPanel(value: unknown, sport = "football", league?: string): SportsEvent {
+const panelSports = new Map([
+  ["futebol", "football"], ["soccer", "football"], ["football", "football"],
+  ["basquete", "basketball"], ["basketball", "basketball"],
+  ["boxe", "boxing"], ["boxing", "boxing"], ["mma", "mixed-martial-arts"],
+  ["tenis", "tennis"], ["tennis", "tennis"], ["volei", "volleyball"], ["volleyball", "volleyball"],
+  ["futebol americano", "american-football"], ["american football", "american-football"],
+  ["beisebol", "baseball"], ["baseball", "baseball"],
+  ["sinuca", "snooker"], ["snooker", "snooker"], ["futsal", "futsal"],
+  ["e-sports", "esports"], ["esports", "esports"],
+  ["handebol", "handball"], ["handball", "handball"], ["dardos", "darts"], ["darts", "darts"],
+]);
+
+export function eventFromPanel(value: unknown, sport?: string, league?: { name: string; id: string }): SportsEvent {
   const row = record(value);
   if (row.id == null || typeof row.home !== "string" || typeof row.away !== "string")
     throw new Error("Não foi possível carregar os dados do jogo.");
@@ -51,9 +63,11 @@ export function eventFromPanel(value: unknown, sport = "football", league?: stri
   });
   const rawDate = String(row.datetime_iso || "");
   const validDate = !Number.isNaN(Date.parse(rawDate));
+  const sportLabel = String(row.sport ?? "").trim().normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
   return {
-    id: String(row.id), sport, league: league || [row.location, row.league].filter(Boolean).join(" - "),
-    leagueId: String(row.league_id || ""),
+    id: String(row.id), sport: sport || panelSports.get(sportLabel) || "football",
+    league: league?.name || [row.location, row.league].filter(Boolean).join(" - "),
+    leagueId: String(row.league_id || league?.id || ""),
     home: row.home, away: row.away, homeLogo: String(row.home_img || row.home_flag || ""),
     awayLogo: String(row.away_img || row.away_flag || ""),
     start: validDate ? rawDate : "", status: row.status === "live" ? "live" : "prematch", markets,
@@ -61,11 +75,23 @@ export function eventFromPanel(value: unknown, sport = "football", league?: stri
   };
 }
 export function gridFromPanel(value: unknown, sport = "football") {
-  let league = "";
+  let league: { name: string; id: string } | undefined;
   return publicRows(value).flatMap((item) => {
     const row = record(item);
-    if (row.type === "league") { league = String(row.league || ""); return []; }
-    return [eventFromPanel(item, sport, league || undefined)];
+    if (row.type === "league") {
+      league = { name: String(row.league ?? ""), id: String(row.league_id ?? "") };
+      return [];
+    }
+    return [eventFromPanel(item, sport, league)];
+  });
+}
+export function searchEventsFromPanel(value: unknown) {
+  const logo = (value: unknown) => typeof value === "string" && /^[a-z0-9_.-]+$/i.test(value) && value !== "no-flag.png"
+    ? "https://d1wdv02om1ylps.cloudfront.net/flags/medium/" + value : "";
+  return publicRows(value).map((item) => {
+    const row = record(item);
+    return eventFromPanel({ ...row, home_img: logo(row.home_img), away_img: logo(row.away_img),
+      datetime_iso: typeof row.date === "string" ? row.date.replace(" ", "T") + "-03:00" : "" });
   });
 }
 export function marketsFromPanel(value: unknown, event: SportsEvent, category: string) {

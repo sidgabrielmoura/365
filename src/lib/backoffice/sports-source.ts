@@ -3,13 +3,13 @@ import { useMemo } from "react";
 import { useSite } from "@/lib/site-context";
 import { useResource } from "./use-resource";
 import { eventFromPanel, gridFromPanel, publicRows } from "./public-adapters";
-import { record } from "./types";
+import { panelLeagueGroups, panelLeagues, sportsLeagueHref } from "./sports-leagues";
 import type { SportsEvent } from "@/lib/sports-data";
-export function useSportsSource(sport = "football", segment = "100001") {
+export function useSportsSource(sport = "football", segment: string | null = "100001") {
   const { runtime, session } = useSite();
   const remote = runtime.mode === "backoffice";
   const sportId = runtime.sportIds[sport];
-  const resource = useResource<unknown>(remote && sportId
+  const resource = useResource<unknown>(remote && sportId && segment
     ? "/api/backoffice/api/v3/" + (session.user ? "user" : "app") + "/grid-events/" +
       encodeURIComponent(segment) + "/" + encodeURIComponent(sportId) : null);
   return useMemo(() => {
@@ -19,17 +19,30 @@ export function useSportsSource(sport = "football", segment = "100001") {
     return { remote, events, error, loading: resource.loading };
   }, [remote, resource.data, resource.error, resource.loading, sport]);
 }
-export function useFeaturedLeagues() {
+export function useFeaturedLeagues(sport = "football") {
   const { runtime } = useSite();
-  const resource = useResource<unknown>(runtime.mode === "backoffice" ? "/api/backoffice/api/main-leagues?sport_id=1" : null);
+  const sportId = runtime.sportIds[sport];
+  const resource = useResource<unknown>(runtime.mode === "backoffice" && sportId
+    ? "/api/backoffice/api/main-leagues?sport_id=" + encodeURIComponent(sportId) : null);
   return useMemo(() => {
     try {
-      return resource.data === undefined ? [] : publicRows(resource.data).map((item) => {
-        const row = record(item);
-        return { slug: String(row.league_id), sport: "football", name: String(row.league), leagueId: String(row.league_id) };
-      });
+      return resource.data === undefined ? [] : panelLeagues(resource.data).map(({ id, name }) =>
+        ({ slug: id, name, href: sportsLeagueHref(sport, id) }));
     } catch { return []; }
-  }, [resource.data]);
+  }, [resource.data, sport]);
+}
+
+export function useLeagueGroups(sport: string, enabled = true) {
+  const { runtime } = useSite();
+  const sportId = runtime.sportIds[sport];
+  const resource = useResource<unknown>(runtime.mode === "backoffice" && sportId && enabled
+    ? "/api/backoffice/api/leagues-default-grouped?sport_id=" + encodeURIComponent(sportId) : null);
+  return useMemo(() => {
+    let groups: ReturnType<typeof panelLeagueGroups> = [], error = resource.error;
+    try { if (resource.data !== undefined) groups = panelLeagueGroups(resource.data); }
+    catch (issue) { error = (issue as Error).message; }
+    return { groups, error, loading: resource.loading };
+  }, [resource.data, resource.error, resource.loading]);
 }
 
 export function useFeaturedEvents(kind: "events" | "boosted-events", enabled = true) {

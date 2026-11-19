@@ -13,6 +13,7 @@ import { boostedOffers, boostPick } from "@/lib/bet-data";
 import { useSite } from "@/lib/site-context";
 import { useResource } from "@/lib/backoffice/use-resource";
 import { marketsFromPanel } from "@/lib/backoffice/public-adapters";
+import { isLeagueId, sportsLeagueHref } from "@/lib/backoffice/sports-leagues";
 import { Workspace, Odd } from "./workspace";
 import "./event.css";
 
@@ -175,6 +176,8 @@ export function EventDetail({ event }: { event: SportsEvent }) {
   const [category, setCategory] = useState("Popular"),
     rail = useRef<HTMLElement>(null);
   const { runtime, session } = useSite();
+  const leagueHref = runtime.mode !== "backoffice" ? sportsLeagueHref(event.sport, event.league)
+    : event.status === "live" ? "/ao-vivo" : sportsLeagueHref(event.sport, isLeagueId(event.leagueId) ? event.leagueId : undefined);
   const categories: Record<string, string> = { "Principais": "main", Gols: "goals", Jogadores: "players",
     "Escanteios": "corners", "Cartões": "cards", "1º Tempo/2º Tempo": "half_full_time" };
   const panelCategory = categories[category];
@@ -208,7 +211,7 @@ export function EventDetail({ event }: { event: SportsEvent }) {
       <section className="match-header">
         <Link
           className="event-back"
-          href={`/esportes/${event.sport}?liga=${encodeURIComponent(event.league)}`}
+          href={leagueHref}
           aria-label="Voltar"
         >
           <span>
@@ -218,7 +221,7 @@ export function EventDetail({ event }: { event: SportsEvent }) {
         <div className="match-heading">
           <p className="match-meta-heading">
             <Link
-              href={`/esportes/${event.sport}?liga=${encodeURIComponent(event.league)}`}
+              href={leagueHref}
             >
               {event.league}
             </Link>
@@ -270,7 +273,7 @@ export function EventDetail({ event }: { event: SportsEvent }) {
         <Link
           className="match-markets-jump"
           aria-label="Jogos da competição"
-          href={`/esportes/${event.sport}?liga=${encodeURIComponent(event.league)}`}
+          href={leagueHref}
         />
       </section>
       <div className="market-tabs-bar">

@@ -54,6 +54,7 @@ export async function POST(request: NextRequest, route: Route) {
       if (q.length < 3) return json([]);
       const { data } = await panelCall(context, "POST", "/api/search-events", {
         body: { q: requiredText(q, "o termo da busca", 3, 120), sport: "soccer" },
+        signal: request.signal,
       });
       return json(withoutSecrets(data));
     }
